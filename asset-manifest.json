@@ -1,0 +1,22 @@
+{
+  "files": {
+    "app.js": "/infinity_app/static/js/app.309172ba.chunk.js",
+    "app.js.map": "/infinity_app/static/js/app.309172ba.chunk.js.map",
+    "runtime~app.js": "/infinity_app/static/js/runtime~app.66033198.js",
+    "runtime~app.js.map": "/infinity_app/static/js/runtime~app.66033198.js.map",
+    "static/js/2.4b2e2c24.chunk.js": "/infinity_app/static/js/2.4b2e2c24.chunk.js",
+    "static/js/2.4b2e2c24.chunk.js.map": "/infinity_app/static/js/2.4b2e2c24.chunk.js.map",
+    "favicon-16.png": "/infinity_app/favicon-16.png",
+    "favicon-32.png": "/infinity_app/favicon-32.png",
+    "favicon.ico": "/infinity_app/favicon.ico",
+    "index.html": "/infinity_app/index.html",
+    "manifest.json": "/infinity_app/manifest.json",
+    "serve.json": "/infinity_app/serve.json",
+    "static/js/2.4b2e2c24.chunk.js.LICENSE.txt": "/infinity_app/static/js/2.4b2e2c24.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime~app.66033198.js",
+    "static/js/2.4b2e2c24.chunk.js",
+    "static/js/app.309172ba.chunk.js"
+  ]
+}
