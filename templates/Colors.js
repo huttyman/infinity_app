@@ -3,6 +3,7 @@ export default {
     rangeYellow: '#f2bb13',
     rangeRed: '#e62e2d',
     rangeGreen: '#93d14a',
+    rangeBlue: '#59b0f3',
 
 
 };

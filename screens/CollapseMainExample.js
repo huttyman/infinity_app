@@ -16,8 +16,7 @@ import Collapsible from 'react-native-collapsible';
 //import for the collapsible/Expandable view
 import Accordion from 'react-native-collapsible/Accordion';
 //import for the Accordion view
-import Cart from '../components/Cart'
-import { WEAPON, EQUIPMENT, ARMY_UNIT } from '../datas/data-army-unit';
+import { WEAPON, EQUIPMENT,ARMY_UNIT } from '../datas/data-army-unit';
 import AllCart from '../components/AllCart';
 
 
@@ -67,7 +66,7 @@ const SELECTORS = [
   { title: 'Reset all' },
 ];
 
-export default class CollapseExample extends Component {
+export default class CollapseMainExample extends Component {
   state = {
     //default active selector
     activeSections: [],
@@ -103,9 +102,8 @@ export default class CollapseExample extends Component {
     );
   };
 
-  renderContent(section, _, isActive) {
+  renderContent =(section, _, isActive) => {
     //Accordion Content view
-    console.log(section);
     return (
       <Animatable.View
         duration={400}
@@ -113,16 +111,16 @@ export default class CollapseExample extends Component {
         transition="backgroundColor">
         <Animatable.Text
           style={{ textAlign: 'center' }}>
-          <View style={styles.listContainer}>
-            <Text>{section.title}</Text>
-            <Cart data={section} />
-          </View>
+          {section.title}
+         
+          <AllCart data={section} navigation={this.props.navigation} />
         </Animatable.Text>
       </Animatable.View>
     );
-  }
+  };
 
   render() {
+  
     const { multipleSelect, activeSections } = this.state;
     return (
       <View style={styles.container}>
@@ -168,8 +166,8 @@ export default class CollapseExample extends Component {
               <TouchableOpacity
                 key={selector.title}
                 onPress={() => this.setSections([selector.value])}
-              //on Press of any selector sending the selector value to
-              // setSections function which will expand the Accordion accordingly
+                //on Press of any selector sending the selector value to
+                // setSections function which will expand the Accordion accordingly
               >
                 <View style={styles.selector}>
                   <Text
@@ -184,7 +182,7 @@ export default class CollapseExample extends Component {
             ))}
           </View>
           {/*Code for Selector ends here*/}
-
+         
           {/*Code for Accordion/Expandable List starts here*/}
           <Accordion
             activeSections={activeSections}
@@ -205,7 +203,7 @@ export default class CollapseExample extends Component {
             duration={400}
             //Duration for Collapse and expand
             onChange={this.setSections}
-          //setting the state of active sections
+            //setting the state of active sections
           />
           {/*Code for Accordion/Expandable List ends here*/}
         </ScrollView>
@@ -215,9 +213,6 @@ export default class CollapseExample extends Component {
 }
 
 const styles = StyleSheet.create({
-  listContainer:{
-    backgroundColor: 'grey',
-  },
   container: {
     flex: 1,
     backgroundColor: '#F5FCFF',
