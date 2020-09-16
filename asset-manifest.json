@@ -1,23 +1,35 @@
 {
   "files": {
-    "app.js": "/infinity_app/static/js/app.c723ef3b.chunk.js",
-    "app.js.map": "/infinity_app/static/js/app.c723ef3b.chunk.js.map",
+    "app.js": "/infinity_app/static/js/app.7763ec0e.chunk.js",
+    "app.js.map": "/infinity_app/static/js/app.7763ec0e.chunk.js.map",
     "runtime~app.js": "/infinity_app/static/js/runtime~app.66033198.js",
     "runtime~app.js.map": "/infinity_app/static/js/runtime~app.66033198.js.map",
-    "static/js/2.1b6fbbdb.chunk.js": "/infinity_app/static/js/2.1b6fbbdb.chunk.js",
-    "static/js/2.1b6fbbdb.chunk.js.map": "/infinity_app/static/js/2.1b6fbbdb.chunk.js.map",
+    "static/js/2.b937b375.chunk.js": "/infinity_app/static/js/2.b937b375.chunk.js",
+    "static/js/2.b937b375.chunk.js.map": "/infinity_app/static/js/2.b937b375.chunk.js.map",
+    "fonts/AntDesign.ttf": "/infinity_app/./fonts/AntDesign.ttf",
+    "fonts/Entypo.ttf": "/infinity_app/./fonts/Entypo.ttf",
+    "fonts/Feather.ttf": "/infinity_app/./fonts/Feather.ttf",
+    "fonts/FontAwesome.ttf": "/infinity_app/./fonts/FontAwesome.ttf",
+    "fonts/FontAwesome5_Brands.ttf": "/infinity_app/./fonts/FontAwesome5_Brands.ttf",
+    "fonts/FontAwesome5_Solid.ttf": "/infinity_app/./fonts/FontAwesome5_Solid.ttf",
+    "fonts/Fontisto.ttf": "/infinity_app/./fonts/Fontisto.ttf",
+    "fonts/Foundation.ttf": "/infinity_app/./fonts/Foundation.ttf",
+    "fonts/Ionicons.ttf": "/infinity_app/./fonts/Ionicons.ttf",
+    "fonts/MaterialCommunityIcons.ttf": "/infinity_app/./fonts/MaterialCommunityIcons.ttf",
+    "fonts/MaterialIcons.ttf": "/infinity_app/./fonts/MaterialIcons.ttf",
+    "fonts/SimpleLineIcons.ttf": "/infinity_app/./fonts/SimpleLineIcons.ttf",
     "favicon-16.png": "/infinity_app/favicon-16.png",
     "favicon-32.png": "/infinity_app/favicon-32.png",
     "favicon.ico": "/infinity_app/favicon.ico",
     "index.html": "/infinity_app/index.html",
     "manifest.json": "/infinity_app/manifest.json",
     "serve.json": "/infinity_app/serve.json",
-    "static/js/2.1b6fbbdb.chunk.js.LICENSE.txt": "/infinity_app/static/js/2.1b6fbbdb.chunk.js.LICENSE.txt",
+    "static/js/2.b937b375.chunk.js.LICENSE.txt": "/infinity_app/static/js/2.b937b375.chunk.js.LICENSE.txt",
     "static/media/logo_1.svg": "/infinity_app/static/media/logo_1.19daa363.svg"
   },
   "entrypoints": [
     "static/js/runtime~app.66033198.js",
-    "static/js/2.1b6fbbdb.chunk.js",
-    "static/js/app.c723ef3b.chunk.js"
+    "static/js/2.b937b375.chunk.js",
+    "static/js/app.7763ec0e.chunk.js"
   ]
 }
