@@ -55,13 +55,14 @@ export default class CollapseMainExample extends Component {
 
   renderHeader = (section, _, isActive) => {
     //Accordion Header view
+  
     return (
       <Animatable.View
         duration={400}
         style={[styles.header, isActive ? styles.active : styles.inactive,{flexDirection:"row",backgroundColor:Color.mainBlack}]}
         transition="backgroundColor">
           <View style={{zIndex:1,backgroundColor:Color.mainBlack,borderRadius:45,maxWidth:86,minWidth:86,flex:1,borderWidth:7,borderColor:Color.mainBlack}}>
-            <Image source={require('../assets/logo_1.svg')} style={{height:70,width:70}}/>
+            <Image source={require('../assets/logos/'+section.idTitle+'.svg')} style={{height:70,width:70}}/>
           </View>
           <View style={{zIndex:0, margin:2,backgroundColor:Color.mainGrey,flex:6,alignItems:"flex-start",marginLeft:-40, paddingLeft:50,paddingVertical:20,justifyContent:"center"}}>
             <Text style={styles.headerText}>{section.shortTitle}</Text>
@@ -92,12 +93,15 @@ export default class CollapseMainExample extends Component {
 
   render() {
     const { multipleSelect, activeSections } = this.state;
-    const filterArmy = ARMY_UNIT.filter(army => army.attr_armyId == '1');
+    const armyId = this.props.navigation.getParam('armyId');
+    console.log('army id');
+    console.log(armyId);
+    const filterArmy = ARMY_UNIT.filter(army => army.attr_armyId == armyId);
   
     return (
       <View style={styles.container}>
         {/* score count header*/}
-        <View style={{backgroundColor:Color.mainGrey, padding:15}}>
+        <View style={{backgroundColor:Color.mainGrey, paddingHorizontal:15,paddingBottom:15}}>
            <ScoreTitle/>
         </View>
         <ScrollView contentContainerStyle={{ paddingTop: 5 }}>

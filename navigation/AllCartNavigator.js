@@ -6,16 +6,48 @@ import CollapseMainExample from '../screens/CollapseMainExample';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import Colors from '../templates/Colors';
+import ArmyScreen from '../screens/ArmyScreen';
 
 
-const AllCartNavigator = createStackNavigator({
-    AllCartScreen: CollapseMainExample,
-    CartScreen: CollapseExample,
+const AllCartStackNavigator = createStackNavigator({
+    Army: {
+        screen: ArmyScreen,
+        navigationOptions: {
+            headerTitle: "Army selection",
+            headerStyle: {
+                backgroundColor:Colors.mainGrey,
+                height: 40,
+                borderColor: Colors.mainGrey,
+                borderWidth: 0,
+                marginBottom: -30,
+            },
+            headerTitleStyle:{
+                color: Colors.mainWhite,
+            },
+        },
+    } ,
+    AllCartScreen: {
+        screen: CollapseMainExample,
+        navigationOptions: {
+            headerTitle: "Unit selection",
+            headerStyle: {
+                backgroundColor:Colors.mainGrey,
+                height: 40,
+                borderColor: Colors.mainGrey,
+                borderWidth: 0,
+                marginBottom: -30,
+            },
+            headerTitleStyle:{
+                color: Colors.mainWhite,
+            },
+            headerTintColor: Colors.mainWhite,
+        },
+    }
 });
 
 const AllCartTabNavigator = createBottomTabNavigator({
-    AllCarts: {
-        screen: CollapseMainExample, 
+    Army: {
+        screen: AllCartStackNavigator,
         navigationOptions: {
             tabBarLabel: 'Army',
             tabBarIcon: (tabInfo) => {
@@ -35,7 +67,7 @@ const AllCartTabNavigator = createBottomTabNavigator({
     tabBarOptions: {
         activeTintColor: '#ffffff',
         activeBackgroundColor: Colors.mainBlack,
-        style:{backgroundColor:Colors.mainGrey}
+        style: { backgroundColor: Colors.mainGrey }
     }
 });
 

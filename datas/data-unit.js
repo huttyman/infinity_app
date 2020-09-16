@@ -447,13 +447,13 @@ export const UNITLIST = [
         },
         {
             "idTitle": "dao1",
-            "gunList": ['bshot1','bshot2','pist1','ccwp'],
+            "gunList": ['bshot1','bshot2','pist','ccwp'],
             "swc": "0",
             "points": "4.5"
         },
         {
             "idTitle": "dao2",
-            "gunList": ['bshot1','bshot2','pist1','ccwp'],
+            "gunList": ['bshot1','bshot2','pist','ccwp'],
             "skillList": ['lt'],
             "swc": "0",
             "points": "4.5"
@@ -495,7 +495,7 @@ export const UNITLIST = [
         },
         {
             "idTitle": "juj2",
-            "gunList": ['bshot1','bshot2','pist1','ccwp'],
+            "gunList": ['bshot1','bshot2','pist','ccwp'],
             "swc": "0",
             "points": "2"
         },
@@ -514,7 +514,7 @@ export const UNITLIST = [
         },
         {
             "idTitle": "juj5",
-            "gunList": ['bshot1','bshot2','pist1','ccwp'],
+            "gunList": ['bshot1','bshot2','pist','ccwp'],
             "skillList": ['eng'],
             "swc": "0",
             "points": "2.5"

@@ -11,7 +11,9 @@ const weaponItem = (weaponId, index, gunLength) => {
         endText = "";
     }
     const weaponObject = WEAPON.filter(item => item.idTitle == weaponId);
-    
+    console.log("weapon");
+    console.log(weaponId);
+    console.log(weaponObject);
     return (<Text style={styles.listTitle}>{weaponObject[0].title}{endText}</Text>);
 };
 
@@ -72,8 +74,6 @@ const AllCart = props => {
             <TouchableOpacity
 
                 onPress={() => {
-                    console.log(props.data);
-                    console.log(unitList);
                     /*props.navigation.navigate({ routeName: 'CartScreen' })*/
                     addUnitListHandler(props.data.idTitle,unitList.item);
                     scoreContext.addSWCHandler(item.swc);
