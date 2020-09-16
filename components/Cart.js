@@ -1,16 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { ARMY_UNIT, UNITSET, WEAPON } from '../datas/data-army-unit';
+import { ARMY_UNIT, UNITLIST, WEAPON } from '../datas/data-unit';
 import Color from '../templates/Colors';
 
 
 
 
 const weaponCard = weaponId => {
-    const weaponItem = WEAPON.filter(item => item.id == weaponId)[0];
-
-    let rangDetail =
+    const weaponItem = WEAPON.filter(item => item.idTitle == weaponId)[0];
+    
+    let rangDetail = <View></View>;
+        
+    
+    console.log("unit");
+    console.log('unitId')
+    console.log(weaponItem);
+    if (weaponItem.noRange === "false") {
+        console.log("false");
+        rangDetail = 
         <View>
             <View style={styles.rowContainer}>
                 <View style={styles.rowWidth}><Text>Short</Text></View>
@@ -20,15 +28,12 @@ const weaponCard = weaponId => {
             </View>
             <View style={styles.underline}></View>
             <View style={styles.rowContainer}>
-                <View style={[styles.rowWidth, { backgroundColor: modColor(weaponItem.attribute.range.short_mod) }]}><Text style={styles.rowBodyText}>{weaponItem.attribute.range.short_range} {weaponItem.attribute.range.short_mod}</Text></View>
-                <View style={[styles.rowWidth, { backgroundColor: modColor(weaponItem.attribute.range.medium_mod) }]}><Text style={styles.rowBodyText}>{weaponItem.attribute.range.medium_range} {weaponItem.attribute.range.medium_mod}</Text></View>
-                <View style={[styles.rowWidth, { backgroundColor: modColor(weaponItem.attribute.range.long_mod) }]}><Text style={styles.rowBodyText}>{weaponItem.attribute.range.long_range} {weaponItem.attribute.range.long_mod}</Text></View>
-                <View style={[styles.rowWidth, { backgroundColor: modColor(weaponItem.attribute.range.max_mod) }]}><Text style={styles.rowBodyText}>{weaponItem.attribute.range.max_range} {weaponItem.attribute.range.max_mod}</Text></View>
+                <View style={[styles.rowWidth, { backgroundColor: modColor(weaponItem.short_mod) }]}><Text style={styles.rowBodyText}>{weaponItem.short_range} {weaponItem.short_mod}</Text></View>
+                <View style={[styles.rowWidth, { backgroundColor: modColor(weaponItem.medium_mod) }]}><Text style={styles.rowBodyText}>{weaponItem.medium_range} {weaponItem.medium_mod}</Text></View>
+                <View style={[styles.rowWidth, { backgroundColor: modColor(weaponItem.long_mod) }]}><Text style={styles.rowBodyText}>{weaponItem.long_range} {weaponItem.long_mod}</Text></View>
+                <View style={[styles.rowWidth, { backgroundColor: modColor(weaponItem.max_mod) }]}><Text style={styles.rowBodyText}>{weaponItem.max_range} {weaponItem.max_mod}</Text></View>
             </View>
         </View>;
-
-    if (weaponItem.attribute.range.no_range == true) {
-        rangDetail = <View></View>;
     }
 
     let traitDetail =
@@ -54,10 +59,10 @@ const weaponCard = weaponId => {
                 </View>
                 <View style={styles.underline}></View>
                 <View style={styles.rowContainer}>
-                    <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{weaponItem.attribute.dam}</Text></View>
-                    <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{weaponItem.attribute.b}</Text></View>
-                    <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{weaponItem.attribute.ammo}</Text></View>
-                    <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{weaponItem.attribute.save}</Text></View>
+                    <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{weaponItem.attr_dam}</Text></View>
+                    <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{weaponItem.attr_b}</Text></View>
+                    <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{weaponItem.attr_ammo}</Text></View>
+                    <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{weaponItem.attr_save}</Text></View>
                 </View>
                 {rangDetail}
                 {traitDetail}
@@ -72,7 +77,7 @@ const modColor = modValue => {
         modColor = Color.rangeYellow;
     } else if (modValue == "0") {
         modColor = Color.rangeBlue;
-    } else if (modValue == "+3") {
+    } else if (modValue == "+3" || modValue == "+6" ) {
         modColor = Color.rangeGreen;
     } else if (modValue == "-6") {
         modColor = Color.rangeRed;
@@ -86,23 +91,17 @@ const modColor = modValue => {
 
 
 const Cart = props => {
-    const unitId = '1';
-    const unitSetId = '7';
+    const unitId = props.data.unitId;
+    const unitSetId = props.data.unitSetId;
 
-    const unitItem = ARMY_UNIT.filter(item => item.id == unitId)[0];
-    const unitSetItem = UNITSET.filter(item => item.id == unitSetId)[0];
+    const unitItem = ARMY_UNIT.filter(item => item.idTitle == unitId)[0];
+    const unitSetItem = UNITLIST.filter(item => item.idTitle == unitSetId)[0];
 
-    console.log(unitItem);
-    console.log(unitSetItem);
-    console.log("secondStep");
 
     return (
         <View style={styles.container}>
 
             <View style={styles.listContainer}>
-                <View style={styles.troopTitle}>
-                    <Text style={styles.troopTitleText}>{props.data.title}</Text>
-                </View>
                 <View style={styles.detailContainer}>
                     <View style={styles.rowContainer}>
                         <View style={styles.rowWidth}><Text>MOV</Text></View>
@@ -118,16 +117,16 @@ const Cart = props => {
                     </View>
                     <View style={styles.underline}></View>
                     <View style={styles.rowContainer}>
-                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{unitItem.attribute.mov}</Text></View>
-                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{unitItem.attribute.cc}</Text></View>
-                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{unitItem.attribute.bs}</Text></View>
-                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{unitItem.attribute.ph}</Text></View>
-                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{unitItem.attribute.wip}</Text></View>
-                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{unitItem.attribute.arm}</Text></View>
-                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{unitItem.attribute.bts}</Text></View>
-                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{unitItem.attribute.w}</Text></View>
-                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{unitItem.attribute.s}</Text></View>
-                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{unitItem.attribute.ava}</Text></View>
+                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{unitItem.attr_mov}</Text></View>
+                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{unitItem.attr_cc}</Text></View>
+                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{unitItem.attr_bs}</Text></View>
+                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{unitItem.attr_ph}</Text></View>
+                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{unitItem.attr_wip}</Text></View>
+                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{unitItem.attr_arm}</Text></View>
+                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{unitItem.attr_bts}</Text></View>
+                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{unitItem.attr_w}</Text></View>
+                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{unitItem.attr_s}</Text></View>
+                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{unitItem.attr_ava}</Text></View>
                     </View>
                 </View>
             </View>
@@ -141,24 +140,27 @@ const styles = StyleSheet.create({
     detailContainer: {
         paddingHorizontal: '3%',
         width: '100%',
+        backgroundColor: 'white',
     },
     cardContainer: {
         width: '100%',
-        margin: 10,
+        alignItems: "center",
+        backgroundColor: 'white',
         padding: 10,
-        alignItems: "center"
     },
     underline: {
         width: '100%',
         borderBottomColor: 'black',
         borderBottomWidth: 1,
         alignItems: "center",
+        backgroundColor: 'white'
 
     },
     troopTitle: {
         padding: 10,
         backgroundColor: Color.mainGrey,
         width: '100%',
+        borderTopRightRadius: 45
 
     },
     troopTitleText: {
@@ -174,12 +176,12 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: 'white',
         alignItems: 'center',
-        justifyContent: 'center',
-        width: '100%'
+        width: '100%',
     },
     listContainer: {
+        padding: 5,
         width: '100%',
         alignItems: "center",
     },

@@ -1,5 +1,6 @@
 {
   "main": "node_modules/expo/AppEntry.js",
+  "homepage": "http://huttyman.github.io/infinity_app",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -9,8 +10,8 @@
     "deploy": "gh-pages -d web-build",
     "predeploy": "expo build:web"
   },
-  "homepage": "http://huttyman.github.io/infinity_app",
   "dependencies": {
+    "@expo/vector-icons": "^10.2.1",
     "@react-native-community/masked-view": "^0.1.10",
     "expo": "~38.0.8",
     "expo-status-bar": "^1.0.2",
@@ -28,7 +29,9 @@
     "react-native-web": "~0.11.7",
     "react-navigation": "^4.4.0",
     "react-navigation-stack": "^2.8.2",
-    "react-navigation-tabs": "^2.9.0"
+    "react-navigation-tabs": "^2.9.0",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",

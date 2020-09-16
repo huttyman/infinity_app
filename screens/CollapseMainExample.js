@@ -1,5 +1,5 @@
 /*Example of Collapsible - Accordion - Expandable View in React Native*/
-import React, { Component } from 'react';
+import React, { Component, useContext } from 'react';
 //import react in our project
 import {
   Switch,
@@ -7,66 +7,27 @@ import {
   StyleSheet,
   Text,
   View,
+  Image,
   TouchableOpacity,
 } from 'react-native';
 //import basic react native components
 import * as Animatable from 'react-native-animatable';
 //import for the animation of Collapse and Expand
-import Collapsible from 'react-native-collapsible';
 //import for the collapsible/Expandable view
 import Accordion from 'react-native-collapsible/Accordion';
 //import for the Accordion view
-import { WEAPON, EQUIPMENT,ARMY_UNIT } from '../datas/data-army-unit';
+import {  ARMY_UNIT } from '../datas/data-unit';
 import AllCart from '../components/AllCart';
-
-
+import Color from '../templates/Colors'
+import { ScoreContext } from '../App';
+import ScoreTitle from '../components/ScoreTitle';
 //Dummy content to show
 //You can also use dynamic data by calling webservice
 
 
-const CONTENT = [
-  {
-    title: 'Terms and Conditions',
-    content:
-      'The following terms and conditions, together with any referenced documents (collectively, "Terms of Use") form a legal agreement between you and your employer, employees, agents, contractors and any other entity on whose behalf you accept these terms (collectively, “you” and “your”), and ServiceNow, Inc. (“ServiceNow,” “we,” “us” and “our”).',
-  },
-  {
-    title: 'Privacy Policy',
-    content:
-      'A Privacy Policy agreement is the agreement where you specify if you collect personal data from your users, what kind of personal data you collect and what you do with that data.',
-  },
-  {
-    title: 'Return Policy',
-    content:
-      'Our Return & Refund Policy template lets you get started with a Return and Refund Policy agreement. This template is free to download and use.According to TrueShip study, over 60% of customers review a Return/Refund Policy before they make a purchasing decision.',
-  },
-];
-const CONTENT2 = [
-  {
-    title: 'Terms and Cons',
-    content:
-      'The following terms and conditions, together with any referenced documents (collectively, "Terms of Use") form a legal agreement between you and your employer, employees, agents, contractors and any other entity on whose behalf you accept these terms (collectively, “you” and “your”), and ServiceNow, Inc. (“ServiceNow,” “we,” “us” and “our”).',
-  },
-  {
-    title: 'Privfasdfadsfadsicy',
-    content:
-      'A Privacy adsfsadfsadt personal data from your users, what kind of personal data you collect and what you do with that data.',
-  },
-  {
-    title: 'Return Policy',
-    content:
-      'Our Return & Refund Policy template lets you get started with a Return and Refund Policy agreement. This template is free to download and use.According to TrueShip study, over 60% of customers review a Return/Refund Policy before they make a purchasing decision.',
-  },
-];
-//To make the selector (Something like tabs)
-const SELECTORS = [
-  { title: 'T&C', value: 0 },
-  { title: 'Privacy Policy', value: 1 },
-  { title: 'Return Policy', value: 2 },
-  { title: 'Reset all' },
-];
 
 export default class CollapseMainExample extends Component {
+  
   state = {
     //default active selector
     activeSections: [],
@@ -77,6 +38,8 @@ export default class CollapseMainExample extends Component {
     //false: One can be expand at a time and other will be closed automatically
     multipleSelect: false,
   };
+
+
 
   toggleExpanded = () => {
     //Toggling the state of single Collapsible
@@ -95,15 +58,25 @@ export default class CollapseMainExample extends Component {
     return (
       <Animatable.View
         duration={400}
-        style={[styles.header, isActive ? styles.active : styles.inactive]}
+        style={[styles.header, isActive ? styles.active : styles.inactive,{flexDirection:"row",backgroundColor:Color.mainBlack}]}
         transition="backgroundColor">
-        <Text style={styles.headerText}>{section.title}</Text>
+          <View style={{zIndex:1,backgroundColor:Color.mainBlack,borderRadius:45,maxWidth:86,minWidth:86,flex:1,borderWidth:7,borderColor:Color.mainBlack}}>
+            <Image source={require('../assets/logo_1.svg')} style={{height:70,width:70}}/>
+          </View>
+          <View style={{zIndex:0, margin:2,backgroundColor:Color.mainGrey,flex:6,alignItems:"flex-start",marginLeft:-40, paddingLeft:50,paddingVertical:20,justifyContent:"center"}}>
+            <Text style={styles.headerText}>{section.shortTitle}</Text>
+          </View>
+          <View style={{margin:2,backgroundColor:Color.mainGrey,borderTopRightRadius:13,borderBottomRightRadius:13,flex:1,alignItems:"center",justifyContent:"center"}}>
+            <Text style={[styles.headerText,{textTransform:"uppercase"}]}>{section.size}</Text>
+          </View>
+      
       </Animatable.View>
     );
   };
 
-  renderContent =(section, _, isActive) => {
+  renderContent = (section, _, isActive) => {
     //Accordion Content view
+    
     return (
       <Animatable.View
         duration={400}
@@ -111,8 +84,6 @@ export default class CollapseMainExample extends Component {
         transition="backgroundColor">
         <Animatable.Text
           style={{ textAlign: 'center' }}>
-          {section.title}
-         
           <AllCart data={section} navigation={this.props.navigation} />
         </Animatable.Text>
       </Animatable.View>
@@ -120,31 +91,17 @@ export default class CollapseMainExample extends Component {
   };
 
   render() {
-  
     const { multipleSelect, activeSections } = this.state;
+    const filterArmy = ARMY_UNIT.filter(army => army.attr_armyId == '1');
+  
     return (
       <View style={styles.container}>
-        <ScrollView contentContainerStyle={{ paddingTop: 30 }}>
-          <Text style={styles.title}>Collapsible/Accordion Example</Text>
-
-          {/*Code for Single Collapsible Start*/}
-          <TouchableOpacity onPress={this.toggleExpanded}>
-            <View style={styles.header}>
-              <Text style={styles.headerText}>Single Collapsible</Text>
-              {/*Heading of Single Collapsible*/}
-            </View>
-          </TouchableOpacity>
-          {/*Content of Single Collapsible*/}
-          <Collapsible collapsed={this.state.collapsed} align="center">
-            <View style={styles.content}>
-              <Text style={{ textAlign: 'center' }}>
-                This is a dummy text of Single Collapsible View
-              </Text>
-            </View>
-          </Collapsible>
-          {/*Code for Single Collapsible Ends*/}
-
-          <View style={{ backgroundColor: '#000', height: 1, marginTop: 10 }} />
+        {/* score count header*/}
+        <View style={{backgroundColor:Color.mainGrey, padding:15}}>
+           <ScoreTitle/>
+        </View>
+        <ScrollView contentContainerStyle={{ paddingTop: 5 }}>
+          
           <View style={styles.multipleToggle}>
             <Text style={styles.multipleToggle__title}>
               Multiple Expand Allowed?
@@ -156,38 +113,12 @@ export default class CollapseMainExample extends Component {
               }
             />
           </View>
-          <Text style={styles.selectTitle}>
-            Please select below option to expand
-          </Text>
 
-          {/*Code for Selector starts here*/}
-          <View style={styles.selectors}>
-            {SELECTORS.map(selector => (
-              <TouchableOpacity
-                key={selector.title}
-                onPress={() => this.setSections([selector.value])}
-                //on Press of any selector sending the selector value to
-                // setSections function which will expand the Accordion accordingly
-              >
-                <View style={styles.selector}>
-                  <Text
-                    style={
-                      activeSections.includes(selector.value) &&
-                      styles.activeSelector
-                    }>
-                    {selector.title}
-                  </Text>
-                </View>
-              </TouchableOpacity>
-            ))}
-          </View>
-          {/*Code for Selector ends here*/}
-         
           {/*Code for Accordion/Expandable List starts here*/}
           <Accordion
             activeSections={activeSections}
             //for any default active section
-            sections={ARMY_UNIT}
+            sections={filterArmy}
             //title and content of accordion
             touchableComponent={TouchableOpacity}
             //which type of touchable component you want
@@ -203,7 +134,7 @@ export default class CollapseMainExample extends Component {
             duration={400}
             //Duration for Collapse and expand
             onChange={this.setSections}
-            //setting the state of active sections
+          //setting the state of active sections
           />
           {/*Code for Accordion/Expandable List ends here*/}
         </ScrollView>
@@ -215,8 +146,7 @@ export default class CollapseMainExample extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5FCFF',
-    paddingTop: 30,
+    backgroundColor: Color.mainBlack,
   },
   title: {
     textAlign: 'center',
@@ -226,16 +156,17 @@ const styles = StyleSheet.create({
   },
   header: {
     backgroundColor: '#F5FCFF',
-    padding: 10,
+    padding: 3,
   },
   headerText: {
     textAlign: 'center',
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: '500',
+    color: Color.mainWhite,
   },
   content: {
-    padding: 20,
-    backgroundColor: '#fff',
+    width:'100%',
+    backgroundColor: Color.mainWhite,
   },
   active: {
     backgroundColor: 'rgba(255,255,255,1)',
@@ -263,12 +194,14 @@ const styles = StyleSheet.create({
   },
   multipleToggle: {
     flexDirection: 'row',
-    justifyContent: 'center',
-    marginVertical: 30,
+    justifyContent: 'flex-end',
+    marginVertical: 10,
     alignItems: 'center',
+    paddingHorizontal: 10,
   },
   multipleToggle__title: {
     fontSize: 16,
     marginRight: 8,
+    color:Color.mainWhite,
   },
 });

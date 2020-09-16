@@ -11,60 +11,49 @@ import {
 } from 'react-native';
 //import basic react native components
 import * as Animatable from 'react-native-animatable';
-//import for the animation of Collapse and Expand
-import Collapsible from 'react-native-collapsible';
 //import for the collapsible/Expandable view
 import Accordion from 'react-native-collapsible/Accordion';
 //import for the Accordion view
 import Cart from '../components/Cart'
-import { WEAPON, EQUIPMENT, ARMY_UNIT } from '../datas/data-army-unit';
-import AllCart from '../components/AllCart';
+import { WEAPON, EQUIPMENT, ARMY_UNIT, UNITLIST, SKILL } from '../datas/data-unit';
+import ScoreTitle from '../components/ScoreTitle';
+import Color from '../templates/Colors';
 
 
 //Dummy content to show
 //You can also use dynamic data by calling webservice
+const weaponItem = (weaponId, index, gunLength) => {
+  let endText = " • ";
+  if (gunLength == index + 1) {
+    endText = "";
+  }
+  const weaponObject = WEAPON.filter(item => item.idTitle == weaponId);
+  return (<Text style={styles.listTitle}>{weaponObject[0].shortTitle}{endText}</Text>);
+};
 
+const equipmentItem = (equipmentId, index, length) => {
+  let endText = " • ";
+  if (length == index + 1) {
+    endText = "";
+  }
 
-const CONTENT = [
-  {
-    title: 'Terms and Conditions',
-    content:
-      'The following terms and conditions, together with any referenced documents (collectively, "Terms of Use") form a legal agreement between you and your employer, employees, agents, contractors and any other entity on whose behalf you accept these terms (collectively, “you” and “your”), and ServiceNow, Inc. (“ServiceNow,” “we,” “us” and “our”).',
-  },
-  {
-    title: 'Privacy Policy',
-    content:
-      'A Privacy Policy agreement is the agreement where you specify if you collect personal data from your users, what kind of personal data you collect and what you do with that data.',
-  },
-  {
-    title: 'Return Policy',
-    content:
-      'Our Return & Refund Policy template lets you get started with a Return and Refund Policy agreement. This template is free to download and use.According to TrueShip study, over 60% of customers review a Return/Refund Policy before they make a purchasing decision.',
-  },
-];
-const CONTENT2 = [
-  {
-    title: 'Terms and Cons',
-    content:
-      'The following terms and conditions, together with any referenced documents (collectively, "Terms of Use") form a legal agreement between you and your employer, employees, agents, contractors and any other entity on whose behalf you accept these terms (collectively, “you” and “your”), and ServiceNow, Inc. (“ServiceNow,” “we,” “us” and “our”).',
-  },
-  {
-    title: 'Privfasdfadsfadsicy',
-    content:
-      'A Privacy adsfsadfsadt personal data from your users, what kind of personal data you collect and what you do with that data.',
-  },
-  {
-    title: 'Return Policy',
-    content:
-      'Our Return & Refund Policy template lets you get started with a Return and Refund Policy agreement. This template is free to download and use.According to TrueShip study, over 60% of customers review a Return/Refund Policy before they make a purchasing decision.',
-  },
-];
+  const equipmentObject = EQUIPMENT.filter(item => item.idTitle == equipmentId);
+  return (<Text style={styles.listTitle}>{equipmentObject[0].title}{endText} </Text>);
+};
+
+const skillItem = (skillId, index, length) => {
+  let endText = " • ";
+  if (length == index + 1) {
+    endText = "";
+  }
+
+  const skillObject = SKILL.filter(item => item.idTitle == skillId);
+  return (<Text style={styles.listTitle}>{skillObject[0].title}{endText} </Text>);
+};
+
 //To make the selector (Something like tabs)
 const SELECTORS = [
-  { title: 'T&C', value: 0 },
-  { title: 'Privacy Policy', value: 1 },
-  { title: 'Return Policy', value: 2 },
-  { title: 'Reset all' },
+  { title: 'Refresh all', value: 9 },
 ];
 
 export default class CollapseExample extends Component {
@@ -79,6 +68,8 @@ export default class CollapseExample extends Component {
     multipleSelect: false,
   };
 
+
+
   toggleExpanded = () => {
     //Toggling the state of single Collapsible
     this.setState({ collapsed: !this.state.collapsed });
@@ -92,20 +83,56 @@ export default class CollapseExample extends Component {
   };
 
   renderHeader = (section, _, isActive) => {
+
+    const unitItem = ARMY_UNIT.filter(item => item.idTitle == section.unitId)[0];
+    const unitSetItem = UNITLIST.filter(item => item.idTitle == section.unitSetId)[0];
+    console.log("cccc");
+    console.log(section);
+    console.log(unitSetItem);
+    const gunLength = unitSetItem.gunList.length;
+    const skillLength = unitSetItem.skillList ? unitSetItem.skillList.length : 0;
+    const equipmentLength = unitSetItem.equipmentList ? unitSetItem.equipmentList.length : 0;
+    let skillText = <Text></Text>;
+    let equipmentText = <Text></Text>;
+
+    if (skillLength != 0) {
+      skillText = <Text style={{ color: 'green' }}>Skill: {unitSetItem.skillList.map((gunId, index) => <Text key={index}>{skillItem(gunId, index, skillLength)}</Text>)}</Text>;
+    }
+
+    if (equipmentLength != 0) {
+      equipmentText = <Text style={{ color: 'red' }} >Equipment: {unitSetItem.equipmentList.map((gunId, index) => <Text key={index}>{equipmentItem(gunId, index, equipmentLength)}</Text>)}</Text>;
+    }
     //Accordion Header view
     return (
       <Animatable.View
         duration={400}
         style={[styles.header, isActive ? styles.active : styles.inactive]}
         transition="backgroundColor">
-        <Text style={styles.headerText}>{section.title}</Text>
+        <View style={{ backgroundColor: Color.mainGrey }}>
+          <Text style={styles.headerText}>{unitItem.title}</Text>
+        </View>
+        <View style={{ flexDirection: "row", backgroundColor: Color.mainWhite }}>
+          <View style={{ flex: 1 }}></View>
+          <View style={{ flex: 6, alignItems: "flex-start", padding: 5 }}>
+            <View style={{ alignContent: "flex-start" }} >
+              <Text style={{ textAlign: "left" }}>{unitSetItem.gunList.map((gunId, index) => <Text key={index}>{weaponItem(gunId, index, gunLength)}</Text>)}</Text>
+            </View>
+            {skillText}
+            {equipmentText}
+          </View>
+          <View style={{ flex: 1, alignContent: "center", justifyContent: "center" }}>
+            <Text>{unitSetItem.swc}</Text>
+          </View>
+          <View style={{ flex: 1, alignContent: "center", justifyContent: "center" }}>
+            <Text>{unitSetItem.points}</Text>
+          </View>
+        </View>
       </Animatable.View>
     );
   };
 
   renderContent(section, _, isActive) {
     //Accordion Content view
-    console.log(section);
     return (
       <Animatable.View
         duration={400}
@@ -113,10 +140,7 @@ export default class CollapseExample extends Component {
         transition="backgroundColor">
         <Animatable.Text
           style={{ textAlign: 'center' }}>
-          <View style={styles.listContainer}>
-            <Text>{section.title}</Text>
-            <Cart data={section} />
-          </View>
+          <Cart data={section} />
         </Animatable.Text>
       </Animatable.View>
     );
@@ -124,29 +148,15 @@ export default class CollapseExample extends Component {
 
   render() {
     const { multipleSelect, activeSections } = this.state;
+    // global.unitList = [{ unitId: '1', unitSetId: '4' }, { unitId: '2', unitSetId: '2' }];
     return (
       <View style={styles.container}>
-        <ScrollView contentContainerStyle={{ paddingTop: 30 }}>
-          <Text style={styles.title}>Collapsible/Accordion Example</Text>
 
-          {/*Code for Single Collapsible Start*/}
-          <TouchableOpacity onPress={this.toggleExpanded}>
-            <View style={styles.header}>
-              <Text style={styles.headerText}>Single Collapsible</Text>
-              {/*Heading of Single Collapsible*/}
-            </View>
-          </TouchableOpacity>
-          {/*Content of Single Collapsible*/}
-          <Collapsible collapsed={this.state.collapsed} align="center">
-            <View style={styles.content}>
-              <Text style={{ textAlign: 'center' }}>
-                This is a dummy text of Single Collapsible View
-              </Text>
-            </View>
-          </Collapsible>
-          {/*Code for Single Collapsible Ends*/}
+        <View style={{ backgroundColor: Color.mainGrey, padding: 15 }}>
+          <ScoreTitle />
+        </View>
+        <ScrollView contentContainerStyle={{ paddingTop: 3 }}>
 
-          <View style={{ backgroundColor: '#000', height: 1, marginTop: 10 }} />
           <View style={styles.multipleToggle}>
             <Text style={styles.multipleToggle__title}>
               Multiple Expand Allowed?
@@ -158,23 +168,20 @@ export default class CollapseExample extends Component {
               }
             />
           </View>
-          <Text style={styles.selectTitle}>
-            Please select below option to expand
-          </Text>
 
           {/*Code for Selector starts here*/}
           <View style={styles.selectors}>
             {SELECTORS.map(selector => (
               <TouchableOpacity
                 key={selector.title}
-                onPress={() => this.setSections([selector.value])}
+                onPress={() => this.setSections([9])}
               //on Press of any selector sending the selector value to
               // setSections function which will expand the Accordion accordingly
               >
                 <View style={styles.selector}>
                   <Text
                     style={
-                      activeSections.includes(selector.value) &&
+                      activeSections.includes(9) &&
                       styles.activeSelector
                     }>
                     {selector.title}
@@ -189,7 +196,7 @@ export default class CollapseExample extends Component {
           <Accordion
             activeSections={activeSections}
             //for any default active section
-            sections={ARMY_UNIT}
+            sections={global.unitList}
             //title and content of accordion
             touchableComponent={TouchableOpacity}
             //which type of touchable component you want
@@ -215,13 +222,12 @@ export default class CollapseExample extends Component {
 }
 
 const styles = StyleSheet.create({
-  listContainer:{
-    backgroundColor: 'grey',
+  listContainer: {
+    backgroundColor: Color.mainGrey,
   },
   container: {
     flex: 1,
-    backgroundColor: '#F5FCFF',
-    paddingTop: 30,
+    backgroundColor: Color.mainBlack,
   },
   title: {
     textAlign: 'center',
@@ -230,23 +236,27 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   header: {
-    backgroundColor: '#F5FCFF',
-    padding: 10,
+    flex: 1,
+    paddingHorizontal: 3,
+    backgroundColor: Color.mainBlack,
+    alignContent: "flex-start",
   },
   headerText: {
-    textAlign: 'center',
+    textAlign: "left",
     fontSize: 16,
     fontWeight: '500',
+    color: Color.mainWhite,
+    padding: 5,
   },
   content: {
-    padding: 20,
-    backgroundColor: '#fff',
+    paddingHorizontal: 20,
+    backgroundColor: Color.mainBlack,
   },
   active: {
-    backgroundColor: 'rgba(255,255,255,1)',
+    backgroundColor: Color.mainBlack,
   },
   inactive: {
-    backgroundColor: 'rgba(245,252,255,1)',
+    backgroundColor: Color.mainBlack,
   },
   selectors: {
     marginBottom: 10,
@@ -268,12 +278,17 @@ const styles = StyleSheet.create({
   },
   multipleToggle: {
     flexDirection: 'row',
-    justifyContent: 'center',
-    marginVertical: 30,
+    justifyContent: 'flex-end',
+    marginVertical: 10,
     alignItems: 'center',
+    paddingHorizontal: 10,
   },
   multipleToggle__title: {
     fontSize: 16,
     marginRight: 8,
+    color: Color.mainWhite,
+  },
+  listTitle: {
+    fontWeight: "bold",
   },
 });

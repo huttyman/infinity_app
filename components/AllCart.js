@@ -1,39 +1,37 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View, FlatList,TouchableOpacity } from 'react-native';
+import React, { useContext } from 'react';
+import { StyleSheet, Text, View, FlatList, TouchableOpacity } from 'react-native';
 import Color from '../templates/Colors';
-import { EQUIPMENT, SKILL, UNITSET, WEAPON } from '../datas/data-army-unit';
+import { EQUIPMENT, SKILL, UNITLIST, WEAPON } from '../datas/data-unit';
+import { ScoreContext } from '../App';
 
-const weaponItem = (weaponId,index,gunLength) => {
+const weaponItem = (weaponId, index, gunLength) => {
     let endText = " • ";
-    if(gunLength == index+1){
+    if (gunLength == index + 1) {
         endText = "";
     }
-
-    const weaponObject = WEAPON.filter(item => item.id == weaponId);
-    console.log(weaponObject);
+    const weaponObject = WEAPON.filter(item => item.idTitle == weaponId);
+    
     return (<Text style={styles.listTitle}>{weaponObject[0].title}{endText}</Text>);
 };
 
-const equipmentItem = (equipmentId,index,length) => {
+const equipmentItem = (equipmentId, index, length) => {
     let endText = " • ";
-    if(length == index+1){
+    if (length == index + 1) {
         endText = "";
     }
 
-    const equipmentObject = EQUIPMENT.filter(item => item.id == equipmentId);
-    console.log(equipmentObject);
+    const equipmentObject = EQUIPMENT.filter(item => item.idTitle == equipmentId);
     return (<Text style={styles.listTitle}>{equipmentObject[0].title}{endText} </Text>);
 };
 
-const skillItem = (skillId,index,length) => {
+const skillItem = (skillId, index, length) => {
     let endText = " • ";
-    if(length == index+1){
+    if (length == index + 1) {
         endText = "";
     }
-
-    const skillObject = SKILL.filter(item => item.id == skillId);
-    console.log(skillObject);
+  
+    const skillObject = SKILL.filter(item => item.idTitle == skillId);
     return (<Text style={styles.listTitle}>{skillObject[0].title}{endText} </Text>);
 };
 
@@ -41,52 +39,67 @@ const skillItem = (skillId,index,length) => {
 
 
 const AllCart = props => {
-    const unitList = props.data.unitList;
-
+    const unitList = props.data.unitSet;
+    const scoreContext = useContext(ScoreContext);
+    const {addPointContext} = scoreContext;
+    console.log('what score');
+    console.log(scoreContext);
 
     const rederItemUnitList = (unitList) => {
-        const item = UNITSET.filter(unitSet=>unitSet.id == unitList.item.unitSetId)[0];
-        console.log("aaaa");
-        console.log(unitList);
-        console.log(item);
+        const item = UNITLIST.filter(unitSet => unitSet.idTitle == unitList.item)[0];
+       
         const gunLength = item.gunList.length;
-        const skillLength = item.skillList.length;
-        const equipmentLength = item.equipmentList.length;
+        const skillLength =  item.skillList ? item.skillList.length : 0;
+        const equipmentLength = item.equipmentList ? item.equipmentList.length : 0;
+        let skillText = <Text></Text>;
+        let equipmentText = <Text></Text>;
 
-        let skillText =<Text style={{color:'green'}}>Skill: {item.skillList.map((gunId,index) => <Text key={index}>{skillItem(gunId,index,skillLength)}</Text>)}</Text> ;
-        if(skillLength <= 0){
-            skillText = <Text></Text>;
+        if(skillLength != 0){
+             skillText = <Text style={{ color: 'green' }}>Skill: {item.skillList.map((gunId, index) => <Text key={index}>{skillItem(gunId, index, skillLength)}</Text>)}</Text>;
         }
 
-        let equipmentText= <Text style={{color:'red'}} >Equipment: {item.equipmentList.map((gunId,index) => <Text key={index}>{equipmentItem(gunId,index,equipmentLength)}</Text>)}</Text>;
-        if(equipmentLength <= 0){
-            equipmentText = <Text></Text>
-        }      
+        if(equipmentLength != 0){
+             equipmentText = <Text style={{ color: 'red' }} >Equipment: {item.equipmentList.map((gunId, index) => <Text key={index}>{equipmentItem(gunId, index, equipmentLength)}</Text>)}</Text>; 
+        }
+
+        const addUnitListHandler = (unitId,unitSetId) =>{
+              const gUnitList = global.unitList;
+              global.unitList = [...gUnitList,{unitId:unitId,unitSetId:unitSetId}];
+        };
+
+ 
         return (
             <TouchableOpacity
-              
-                onPress={() => {props.navigation.navigate({routeName:'CartScreen'})}}
-                //on Press of any selector sending the selector value to
-                // setSections function which will expand the Accordion accordingly
-              >
-            <View style={styles.itemContainer}>
-                <View style={{ flex: 1 }}>
+
+                onPress={() => {
+                    console.log(props.data);
+                    console.log(unitList);
+                    /*props.navigation.navigate({ routeName: 'CartScreen' })*/
+                    addUnitListHandler(props.data.idTitle,unitList.item);
+                    scoreContext.addSWCHandler(item.swc);
+                    addPointContext(item.point);
+                }}
+            //on Press of any selector sending the selector value to
+            // setSections function which will expand the Accordion accordingly
+            >
+                <View style={styles.itemContainer}>
+                    <View style={{ flex: 1 }}>
+
+                    </View>
+                    <View style={{ flex: 6, alignItems: "flex-start" }}>
+                        <Text>{props.data.title}</Text>
+                        <View style={{ marginVertical: 2, alignContent: "flex-start" }} ><Text style={{ textAlign: "left" }}>{item.gunList.map((gunId, index) => <Text key={index}>{weaponItem(gunId, index, gunLength)}</Text>)}</Text></View>
+                        {skillText}
+                        {equipmentText}
+                    </View>
+                    <View style={{ flex: 1 }}>
+                        <Text>{item.swc}</Text>
+                    </View>
+                    <View style={{ flex: 1 }}>
+                        <Text>{item.points}</Text>
+                    </View>
 
                 </View>
-                <View style={{ flex: 6, alignItems: "flex-start" }}>
-                    <Text>{props.data.title}</Text>
-                    <View style={{marginVertical:2, alignContent:"flex-start"}} ><Text style={{textAlign:"left"}}>{item.gunList.map((gunId,index) => <Text key={index}>{weaponItem(gunId,index,gunLength)}</Text>)}</Text></View>
-                    {skillText} 
-                    {equipmentText}
-                </View>
-                <View style={{ flex: 1 }}>
-                    <Text>{item.swc}</Text>
-                </View>
-                <View style={{ flex: 1 }}>
-                    <Text>{item.point}</Text>
-                </View>
-
-            </View>
             </TouchableOpacity>
         );
     };
@@ -115,19 +128,19 @@ const AllCart = props => {
                     </View>
                     <View style={styles.underline}></View>
                     <View style={styles.rowContainer}>
-                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{props.data.attribute.mov}</Text></View>
-                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{props.data.attribute.cc}</Text></View>
-                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{props.data.attribute.bs}</Text></View>
-                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{props.data.attribute.ph}</Text></View>
-                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{props.data.attribute.wip}</Text></View>
-                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{props.data.attribute.arm}</Text></View>
-                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{props.data.attribute.bts}</Text></View>
-                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{props.data.attribute.w}</Text></View>
-                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{props.data.attribute.s}</Text></View>
-                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{props.data.attribute.ava}</Text></View>
+                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{props.data.attr_mov}</Text></View>
+                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{props.data.attr_cc}</Text></View>
+                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{props.data.attr_bs}</Text></View>
+                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{props.data.attr_ph}</Text></View>
+                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{props.data.attr_wip}</Text></View>
+                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{props.data.attr_arm}</Text></View>
+                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{props.data.attr_bts}</Text></View>
+                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{props.data.attr_w}</Text></View>
+                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{props.data.attr_s}</Text></View>
+                        <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{props.data.attr_ava}</Text></View>
                     </View>
                 </View>
-                <View style={{ backgroundColor: Color.mainGrey, flexDirection: 'row', width:'100%' }}>
+                <View style={{ backgroundColor: Color.mainGrey, flexDirection: 'row', width: '100%',paddingVertical:3 }}>
                     <View style={{ flex: 1 }}></View>
                     <View style={{ flex: 6, alignItems: "flex-start" }}><Text style={{ color: 'white' }}>Name</Text></View>
                     <View style={{ flex: 1 }}><Text style={{ color: 'white' }}>SWC</Text></View>
@@ -146,14 +159,14 @@ const AllCart = props => {
 const styles = StyleSheet.create({
     itemContainer: {
         marginBottom: 5,
-        backgroundColor: 'white',
+        backgroundColor: Color.mainWhite,
         flexDirection: 'row',
-        paddingVertical:6,
+        paddingVertical: 6,
     },
     detailContainer: {
         paddingHorizontal: '3%',
         width: '100%',
-        backgroundColor: 'white',
+        backgroundColor: Color.mainWhite,
     },
     cardContainer: {
         width: '100%',
@@ -190,11 +203,11 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: Color.mainBlack,
         alignItems: 'center',
         justifyContent: 'center',
         width: '100%',
-        backgroundColor: Color.mainGrey,
+        paddingHorizontal:7,
     },
     listContainer: {
         width: '100%',

@@ -1,82 +1,51 @@
 /*Example of Collapsible - Accordion - Expandable View in React Native*/
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 //import react in our project
 import {
+  Button,
   StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
 } from 'react-native';
-import CollapseExample from './screens/CollapseExample';
 import AllCartNavigator from './navigation/AllCartNavigator';
 
+global.unitList = [];
 
-export default function App () {
-       return(
-         <AllCartNavigator />
-       );
-}
+export const ScoreContext = React.createContext();
 
-const styles = StyleSheet.create({
-  listContainer:{
-    backgroundColor: 'grey',
-  },
-  container: {
-    flex: 1,
-    backgroundColor: '#F5FCFF',
-    paddingTop: 30,
-  },
-  title: {
-    textAlign: 'center',
-    fontSize: 18,
-    fontWeight: '300',
-    marginBottom: 20,
-  },
-  header: {
-    backgroundColor: '#F5FCFF',
-    padding: 10,
-  },
-  headerText: {
-    textAlign: 'center',
-    fontSize: 16,
-    fontWeight: '500',
-  },
-  content: {
-    padding: 20,
-    backgroundColor: '#fff',
-  },
-  active: {
-    backgroundColor: 'rgba(255,255,255,1)',
-  },
-  inactive: {
-    backgroundColor: 'rgba(245,252,255,1)',
-  },
-  selectors: {
-    marginBottom: 10,
-    flexDirection: 'row',
-    justifyContent: 'center',
-  },
-  selector: {
-    backgroundColor: '#F5FCFF',
-    padding: 10,
-  },
-  activeSelector: {
-    fontWeight: 'bold',
-  },
-  selectTitle: {
-    fontSize: 14,
-    fontWeight: '500',
-    padding: 10,
-    textAlign: 'center',
-  },
-  multipleToggle: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    marginVertical: 30,
-    alignItems: 'center',
-  },
-  multipleToggle__title: {
-    fontSize: 16,
-    marginRight: 8,
-  },
-});
+
+export default function App() {
+
+  const [scoreContext, setScoreContext] = useState({ points: 1, swc: 3, unit: 0 });
+  const [pointContext, setPointContext] = useState(0);
+
+  const addSWCHandler = (input) => {
+    console.log("old");
+    console.log(scoreContext)
+
+    let tempScore = scoreContext;
+    tempScore.swc = scoreContext.swc + input;
+    setScoreContext(tempScore);
+  };
+
+  const addSWCHandler_but = (input) => {
+    console.log("old");
+    console.log(scoreContext)
+
+    let tempScore = scoreContext;
+    tempScore.swc = scoreContext.swc + input;
+    setScoreContext(tempScore);
+    
+  };
+
+  const addPointsHandler = (input) =>{
+     console.log("vv");
+     setPointContext(input+pointContext);
+  };
+
+
+  return (
+    <ScoreContext.Provider value={{ state: scoreContext,points: pointContext, addSWCHandler: addSWCHandler,addPointContext:addPointsHandler }}>
+      <AllCartNavigator />
+    </ScoreContext.Provider>
+  );
+};
+

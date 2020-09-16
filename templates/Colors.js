@@ -4,6 +4,8 @@ export default {
     rangeRed: '#e62e2d',
     rangeGreen: '#93d14a',
     rangeBlue: '#59b0f3',
+    mainBlack: '#202020',
+    mainWhite: '#dddddd',
 
 
 };
