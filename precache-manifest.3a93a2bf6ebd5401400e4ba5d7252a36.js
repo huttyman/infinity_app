@@ -8,8 +8,8 @@ self.__precacheManifest = [
     "url": "/infinity_app/static/js/runtime~app.66033198.js"
   },
   {
-    "revision": "0bb46aadef22803e6188",
-    "url": "/infinity_app/static/js/2.a9d25d6e.chunk.js"
+    "revision": "d902dbe50458227d8b84",
+    "url": "/infinity_app/static/js/2.7f57e4d2.chunk.js"
   },
   {
     "revision": "b2e0fc821c6886fb3940f85a3320003e",
@@ -108,7 +108,7 @@ self.__precacheManifest = [
     "url": "/infinity_app/./fonts/SimpleLineIcons.ttf"
   },
   {
-    "revision": "e0da4aaffe0ea924acbd8db0a50575ae",
+    "revision": "7a49dadc92fedf8d1ba88515296b3578",
     "url": "/infinity_app/index.html"
   },
   {
@@ -125,7 +125,7 @@ self.__precacheManifest = [
   },
   {
     "revision": "1cca25f2e61cdb7dd28b898e81578b23",
-    "url": "/infinity_app/static/js/2.a9d25d6e.chunk.js.LICENSE.txt"
+    "url": "/infinity_app/static/js/2.7f57e4d2.chunk.js.LICENSE.txt"
   },
   {
     "revision": "d324ddc823eca6c86688f62576c81e76",
@@ -140,7 +140,7 @@ self.__precacheManifest = [
     "url": "/infinity_app/favicon.ico"
   },
   {
-    "revision": "3d890f57e54de6d90a98da61b0b2c9af",
+    "revision": "ad15c0aa09cbfd06d1c407bcf33a9af4",
     "url": "/infinity_app/manifest.json"
   }
 ];

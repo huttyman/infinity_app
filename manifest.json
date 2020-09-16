@@ -3,8 +3,8 @@
   "description": "",
   "display": "standalone",
   "lang": "en",
-  "name": "cooking_recipe_app",
-  "short_name": "cooking_recipe_app",
+  "name": "infinity_codeone_app",
+  "short_name": "infinity_codeone_app",
   "start_url": "/?utm_source=web_app_manifest",
   "orientation": "portrait",
   "icons": [
