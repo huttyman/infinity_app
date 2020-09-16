@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "cooking_recipe_app",
-    "slug": "cooking_recipe_app",
+    "name": "infinity_codeone_app",
+    "slug": "infinity_codeone_app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

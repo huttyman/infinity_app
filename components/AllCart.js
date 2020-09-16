@@ -32,50 +32,73 @@ const skillItem = (skillId, index, length) => {
     if (length == index + 1) {
         endText = "";
     }
-  
+
     const skillObject = SKILL.filter(item => item.idTitle == skillId);
     return (<Text style={styles.listTitle}>{skillObject[0].title}{endText} </Text>);
 };
 
+const unitTraitContainer = (item) => {
+    console.log(item);
+    const skillLength = item.unitSkill ? item.unitSkill.length : 0;
+    const equipmentLength = item.unitEquipment ? item.unitEquipment.length : 0;
 
+    let skillText = <Text></Text>;
+    let equipmentText = <Text></Text>;
+
+    if (skillLength != 0) {
+        skillText = <Text style={{ color: 'green' }}>Skill: {item.unitSkill.map((gunId, index) => <Text key={index}>{skillItem(gunId, index, skillLength)}</Text>)}</Text>;
+    }
+
+    if (equipmentLength != 0) {
+        equipmentText = <Text style={{ color: 'red' }} >Equipment: {item.unitEquipment.map((gunId, index) => <Text key={index}>{equipmentItem(gunId, index, equipmentLength)}</Text>)}</Text>;
+    }
+
+    return (
+        <View>            
+            {skillText}
+            {equipmentText}
+        </View>
+
+    );
+};
 
 
 const AllCart = props => {
     const unitList = props.data.unitSet;
     const scoreContext = useContext(ScoreContext);
-    const {addPointContext} = scoreContext;
+    const { addPointContext } = scoreContext;
     console.log('what score');
     console.log(scoreContext);
 
     const rederItemUnitList = (unitList) => {
         const item = UNITLIST.filter(unitSet => unitSet.idTitle == unitList.item)[0];
-       
+
         const gunLength = item.gunList.length;
-        const skillLength =  item.skillList ? item.skillList.length : 0;
+        const skillLength = item.skillList ? item.skillList.length : 0;
         const equipmentLength = item.equipmentList ? item.equipmentList.length : 0;
         let skillText = <Text></Text>;
         let equipmentText = <Text></Text>;
 
-        if(skillLength != 0){
-             skillText = <Text style={{ color: 'green' }}>Skill: {item.skillList.map((gunId, index) => <Text key={index}>{skillItem(gunId, index, skillLength)}</Text>)}</Text>;
+        if (skillLength != 0) {
+            skillText = <Text style={{ color: 'green' }}>Skill: {item.skillList.map((gunId, index) => <Text key={index}>{skillItem(gunId, index, skillLength)}</Text>)}</Text>;
         }
 
-        if(equipmentLength != 0){
-             equipmentText = <Text style={{ color: 'red' }} >Equipment: {item.equipmentList.map((gunId, index) => <Text key={index}>{equipmentItem(gunId, index, equipmentLength)}</Text>)}</Text>; 
+        if (equipmentLength != 0) {
+            equipmentText = <Text style={{ color: 'red' }} >Equipment: {item.equipmentList.map((gunId, index) => <Text key={index}>{equipmentItem(gunId, index, equipmentLength)}</Text>)}</Text>;
         }
 
-        const addUnitListHandler = (unitId,unitSetId) =>{
-              const gUnitList = global.unitList;
-              global.unitList = [...gUnitList,{unitId:unitId,unitSetId:unitSetId}];
+        const addUnitListHandler = (unitId, unitSetId) => {
+            const gUnitList = global.unitList;
+            global.unitList = [...gUnitList, { unitId: unitId, unitSetId: unitSetId }];
         };
 
- 
+
         return (
             <TouchableOpacity
 
                 onPress={() => {
                     /*props.navigation.navigate({ routeName: 'CartScreen' })*/
-                    addUnitListHandler(props.data.idTitle,unitList.item);
+                    addUnitListHandler(props.data.idTitle, unitList.item);
                     scoreContext.addSWCHandler(item.swc);
                     addPointContext(item.point);
                 }}
@@ -139,8 +162,9 @@ const AllCart = props => {
                         <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{props.data.attr_s}</Text></View>
                         <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{props.data.attr_ava}</Text></View>
                     </View>
+                    {unitTraitContainer(props.data)}
                 </View>
-                <View style={{ backgroundColor: Color.mainGrey, flexDirection: 'row', width: '100%',paddingVertical:3 }}>
+                <View style={{ backgroundColor: Color.mainGrey, flexDirection: 'row', width: '100%', paddingVertical: 3 }}>
                     <View style={{ flex: 1 }}></View>
                     <View style={{ flex: 6, alignItems: "flex-start" }}><Text style={{ color: 'white' }}>Name</Text></View>
                     <View style={{ flex: 1 }}><Text style={{ color: 'white' }}>SWC</Text></View>
@@ -207,7 +231,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         width: '100%',
-        paddingHorizontal:7,
+        paddingHorizontal: 7,
     },
     listContainer: {
         width: '100%',

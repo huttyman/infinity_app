@@ -64,13 +64,13 @@ export default class ArmyScreen extends Component {
                     this.props.navigation.navigate({ routeName: 'AllCartScreen',params:{armyId:section.section.id} });
                     }}>
                 <View key={section.section.id} style={styles.header} >
-                    <View style={{ zIndex: 1, backgroundColor: Color.mainBlack, borderRadius: 45, maxWidth: 86, minWidth: 86, flex: 1, borderWidth: 7, borderColor: Color.mainBlack }}>
+                    <View style={{ zIndex: 1, backgroundColor: Color.mainBlack, borderRadius: 45,maxWidth:80,minWidth:80,flex:1,borderWidth:4,borderColor:Color.mainBlack,overflow:"hidden"}}>
                         <Image source={require('../assets/logos/'+section.section.title+'.svg')} style={{ height: 70, width: 70 }} />
                     </View>
-                    <View style={{ zIndex: 0, margin: 2, backgroundColor: Color.mainGrey, flex: 6, alignItems: "flex-start", marginLeft: -40, paddingLeft: 50, paddingVertical: 20, justifyContent: "center" }}>
+                    <View style={{ zIndex: 0, backgroundColor: Color.mainGrey, flex: 6, alignItems: "flex-start", marginLeft: -40, paddingLeft: 50, paddingVertical: 20, justifyContent: "center" }}>
                         <Text style={styles.headerText}>{section.section.title}</Text>
                     </View>
-                    <View style={{ margin: 2, backgroundColor: Color.mainGrey, borderTopRightRadius: 13, borderBottomRightRadius: 13, flex: 1, alignItems: "center", justifyContent: "center" }}>
+                    <View style={{  backgroundColor: Color.mainGrey, borderTopRightRadius: 13, borderBottomRightRadius: 13, flex: 1, alignItems: "center", justifyContent: "center" }}>
                         <Text style={[styles.headerText, { textTransform: "uppercase" }]}>{section.title}</Text>
                     </View>
                 </View>
@@ -102,7 +102,7 @@ export default class ArmyScreen extends Component {
             <View style={styles.container}>
 
                 {/* score count header*/}
-                <View style={{ backgroundColor: Color.mainGrey,  paddingHorizontal:15,paddingBottom:15}}>
+                <View style={{ backgroundColor: Color.mainGrey,  paddingHorizontal:15,paddingBottom:15,marginBottom:3}}>
                     <ScoreTitle />
                 </View>
 

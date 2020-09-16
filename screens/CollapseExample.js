@@ -86,21 +86,41 @@ export default class CollapseExample extends Component {
 
     const unitItem = ARMY_UNIT.filter(item => item.idTitle == section.unitId)[0];
     const unitSetItem = UNITLIST.filter(item => item.idTitle == section.unitSetId)[0];
-    console.log("cccc");
-    console.log(section);
-    console.log(unitSetItem);
+
+    let combinedSkill;
+    if(unitSetItem.skillList){
+      combinedSkill = unitSetItem.skillList;
+    }else{
+      combinedSkill = [];
+    }
+    if(unitItem.unitSkill){
+      combinedSkill = unitItem.unitSkill.concat(combinedSkill);
+    }
+
+    
+    let combinedEquipment;
+    if(unitSetItem.equipmentList){
+      combinedEquipment = unitSetItem.equipmentList;
+    }else{
+      combinedEquipment = [];
+    }
+    if(unitItem.unitEquipment){
+      combinedEquipment = unitItem.unitEquipment.concat(combinedEquipment);
+    }
+
+
     const gunLength = unitSetItem.gunList.length;
-    const skillLength = unitSetItem.skillList ? unitSetItem.skillList.length : 0;
-    const equipmentLength = unitSetItem.equipmentList ? unitSetItem.equipmentList.length : 0;
+    const skillLength = combinedSkill ? combinedSkill.length : 0;
+    const equipmentLength = combinedEquipment ? combinedEquipment.length : 0;
     let skillText = <Text></Text>;
     let equipmentText = <Text></Text>;
 
     if (skillLength != 0) {
-      skillText = <Text style={{ color: 'green' }}>Skill: {unitSetItem.skillList.map((gunId, index) => <Text key={index}>{skillItem(gunId, index, skillLength)}</Text>)}</Text>;
+      skillText = <Text style={{ color: 'green' }}>Skill: {combinedSkill.map((gunId, index) => <Text key={index}>{skillItem(gunId, index, skillLength)}</Text>)}</Text>;
     }
 
     if (equipmentLength != 0) {
-      equipmentText = <Text style={{ color: 'red' }} >Equipment: {unitSetItem.equipmentList.map((gunId, index) => <Text key={index}>{equipmentItem(gunId, index, equipmentLength)}</Text>)}</Text>;
+      equipmentText = <Text style={{ color: 'red' }} >Equipment: {combinedEquipment.map((gunId, index) => <Text key={index}>{equipmentItem(gunId, index, equipmentLength)}</Text>)}</Text>;
     }
     //Accordion Header view
     return (
