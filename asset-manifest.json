@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/infinity_app/static/js/app.7763ec0e.chunk.js",
-    "app.js.map": "/infinity_app/static/js/app.7763ec0e.chunk.js.map",
+    "app.js": "/infinity_app/static/js/app.ce759a78.chunk.js",
+    "app.js.map": "/infinity_app/static/js/app.ce759a78.chunk.js.map",
     "runtime~app.js": "/infinity_app/static/js/runtime~app.66033198.js",
     "runtime~app.js.map": "/infinity_app/static/js/runtime~app.66033198.js.map",
-    "static/js/2.b937b375.chunk.js": "/infinity_app/static/js/2.b937b375.chunk.js",
-    "static/js/2.b937b375.chunk.js.map": "/infinity_app/static/js/2.b937b375.chunk.js.map",
+    "static/js/2.a9d25d6e.chunk.js": "/infinity_app/static/js/2.a9d25d6e.chunk.js",
+    "static/js/2.a9d25d6e.chunk.js.map": "/infinity_app/static/js/2.a9d25d6e.chunk.js.map",
     "fonts/AntDesign.ttf": "/infinity_app/./fonts/AntDesign.ttf",
     "fonts/Entypo.ttf": "/infinity_app/./fonts/Entypo.ttf",
     "fonts/Feather.ttf": "/infinity_app/./fonts/Feather.ttf",
@@ -24,12 +24,23 @@
     "index.html": "/infinity_app/index.html",
     "manifest.json": "/infinity_app/manifest.json",
     "serve.json": "/infinity_app/serve.json",
-    "static/js/2.b937b375.chunk.js.LICENSE.txt": "/infinity_app/static/js/2.b937b375.chunk.js.LICENSE.txt",
-    "static/media/logo_1.svg": "/infinity_app/static/media/logo_1.19daa363.svg"
+    "static/js/2.a9d25d6e.chunk.js.LICENSE.txt": "/infinity_app/static/js/2.a9d25d6e.chunk.js.LICENSE.txt",
+    "static/media/pano-fusi.svg": "/infinity_app/static/media/pano-fusi.19daa363.svg",
+    "static/media/pano-infirm.svg": "/infinity_app/static/media/pano-infirm.94312b43.svg",
+    "static/media/pano-koj.svg": "/infinity_app/static/media/pano-koj.6894da02.svg",
+    "static/media/pano-nok.svg": "/infinity_app/static/media/pano-nok.c1b35a29.svg",
+    "static/media/pano-orc.svg": "/infinity_app/static/media/pano-orc.fe5ee18c.svg",
+    "static/media/panoceania.svg": "/infinity_app/static/media/panoceania.bfe11989.svg",
+    "static/media/yj-daofei.svg": "/infinity_app/static/media/yj-daofei.c2e55228.svg",
+    "static/media/yj-guliang.svg": "/infinity_app/static/media/yj-guliang.fa66ad40.svg",
+    "static/media/yj-hundun.svg": "/infinity_app/static/media/yj-hundun.30ef9837.svg",
+    "static/media/yj-jujak.svg": "/infinity_app/static/media/yj-jujak.f4c3050d.svg",
+    "static/media/yj-zhan.svg": "/infinity_app/static/media/yj-zhan.feed96f7.svg",
+    "static/media/yu-jin.svg": "/infinity_app/static/media/yu-jin.61efa295.svg"
   },
   "entrypoints": [
     "static/js/runtime~app.66033198.js",
-    "static/js/2.b937b375.chunk.js",
-    "static/js/app.7763ec0e.chunk.js"
+    "static/js/2.a9d25d6e.chunk.js",
+    "static/js/app.ce759a78.chunk.js"
   ]
 }

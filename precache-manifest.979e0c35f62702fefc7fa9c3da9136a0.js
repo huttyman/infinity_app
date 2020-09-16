@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "9fc5d5013309e03986a9",
-    "url": "/infinity_app/static/js/app.7763ec0e.chunk.js"
+    "revision": "fdbf395d706afbe9bafa",
+    "url": "/infinity_app/static/js/app.ce759a78.chunk.js"
   },
   {
     "revision": "910ec9977756ac925f1c",
     "url": "/infinity_app/static/js/runtime~app.66033198.js"
   },
   {
-    "revision": "7b5dc85001974cd40053",
-    "url": "/infinity_app/static/js/2.b937b375.chunk.js"
+    "revision": "0bb46aadef22803e6188",
+    "url": "/infinity_app/static/js/2.a9d25d6e.chunk.js"
   },
   {
     "revision": "b2e0fc821c6886fb3940f85a3320003e",
@@ -17,7 +17,51 @@ self.__precacheManifest = [
   },
   {
     "revision": "4e2386c7cc4bc2213c452c74934823ea",
-    "url": "/infinity_app/static/media/logo_1.19daa363.svg"
+    "url": "/infinity_app/static/media/pano-fusi.19daa363.svg"
+  },
+  {
+    "revision": "2725c6bcf33d6d3d75938da95a142255",
+    "url": "/infinity_app/static/media/pano-infirm.94312b43.svg"
+  },
+  {
+    "revision": "d48a94c0a0c9a2a70d3293f4434950a4",
+    "url": "/infinity_app/static/media/pano-koj.6894da02.svg"
+  },
+  {
+    "revision": "81e442a7c5f1e7573698e707df442619",
+    "url": "/infinity_app/static/media/pano-nok.c1b35a29.svg"
+  },
+  {
+    "revision": "72d20b9ef8fd129f424a38d914e6874d",
+    "url": "/infinity_app/static/media/pano-orc.fe5ee18c.svg"
+  },
+  {
+    "revision": "bf80b37b45efc6b7296775bad65e696a",
+    "url": "/infinity_app/static/media/panoceania.bfe11989.svg"
+  },
+  {
+    "revision": "10f50bdf6f7dd8732d77ed59aedef7e4",
+    "url": "/infinity_app/static/media/yj-daofei.c2e55228.svg"
+  },
+  {
+    "revision": "e55ec2e72eb75045df1ea7a7167ffa00",
+    "url": "/infinity_app/static/media/yj-guliang.fa66ad40.svg"
+  },
+  {
+    "revision": "7471bc0f321a63efd043585997dc7367",
+    "url": "/infinity_app/static/media/yj-hundun.30ef9837.svg"
+  },
+  {
+    "revision": "107c35dca634fdf0818fc927bb901d7b",
+    "url": "/infinity_app/static/media/yj-jujak.f4c3050d.svg"
+  },
+  {
+    "revision": "a8a0b90127e6cd354a66d84529174fdf",
+    "url": "/infinity_app/static/media/yj-zhan.feed96f7.svg"
+  },
+  {
+    "revision": "b57c1dc54d816def1fc6cfb9b90c1794",
+    "url": "/infinity_app/static/media/yu-jin.61efa295.svg"
   },
   {
     "revision": "3a2ba31570920eeb9b1d217cabe58315",
@@ -64,7 +108,7 @@ self.__precacheManifest = [
     "url": "/infinity_app/./fonts/SimpleLineIcons.ttf"
   },
   {
-    "revision": "43d9ce9e795d9e34f0a2e4ba19b5695b",
+    "revision": "75a20172dda5c04e0be5708c4d683215",
     "url": "/infinity_app/index.html"
   },
   {
@@ -81,7 +125,7 @@ self.__precacheManifest = [
   },
   {
     "revision": "1cca25f2e61cdb7dd28b898e81578b23",
-    "url": "/infinity_app/static/js/2.b937b375.chunk.js.LICENSE.txt"
+    "url": "/infinity_app/static/js/2.a9d25d6e.chunk.js.LICENSE.txt"
   },
   {
     "revision": "d324ddc823eca6c86688f62576c81e76",
