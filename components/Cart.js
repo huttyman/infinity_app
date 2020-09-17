@@ -152,7 +152,8 @@ const styles = StyleSheet.create({
 
     },
     troopTitle: {
-        padding: 10,
+        paddingHorizontal: 10,
+        paddingVertical:3,
         backgroundColor: Color.mainGrey,
         width: '100%',
         borderTopRightRadius: 45

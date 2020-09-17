@@ -7,7 +7,8 @@ import {
   StyleSheet,
   Text,
   View,
-  TouchableOpacity
+  TouchableOpacity,
+  TextInput
 } from 'react-native';
 import { Button } from 'react-native-elements';
 //import basic react native components
@@ -70,7 +71,7 @@ const removeUnitHandler = (key, unitItem) => {
 
 };
 
-export default class CollapseExample extends Component {
+export default class CollapseExampleTestTemplate extends Component {
   state = {
     //default active selector
     activeSections: [],
@@ -147,7 +148,7 @@ export default class CollapseExample extends Component {
         style={[styles.header, isActive ? styles.active : styles.inactive]}
         transition="backgroundColor">
         <View style={styles.headerTopTitle}>
-          <Text style={styles.headerText}>{unitItem.shortTitle}</Text>
+          <Text style={styles.headerText}>{unitItem.shortTitle}</Text><TextInput style={{height:'90%',width:80,color:Color.mainBlack,textAlign:"right",borderBottomColor:Color.mainBlack,borderBottomWidth:1,fontSize:16}}/>
           <Text style={styles.headerSizeText}>{unitItem.size.toUpperCase()}</Text>
           <Button
             style={styles.headerRemoveButton}
@@ -165,7 +166,7 @@ export default class CollapseExample extends Component {
         </View>
         <View style={styles.headerDetailContainer}>
           <View style={{ flex: 1 }}></View>
-          <View style={{ flex: 6, alignItems: "flex-start", padding: 5 }}>
+          <View style={{ flex: 6, alignItems: "flex-start", paddingHorizontal: 5,paddingBottom:5 }}>
             <View style={styles.headerDetailText} >
               <Text style={{ textAlign: "left" }}>{unitSetItem.gunList.map((gunId, index) => <Text key={index}>{weaponItem(gunId, index, gunLength)}</Text>)}</Text>
             </View>
@@ -284,11 +285,12 @@ const styles = StyleSheet.create({
     paddingBottom: 5,
   },
   headerTopTitle: {
-    backgroundColor: Color.mainGrey,
+    backgroundColor: Color.mainWhite,
     flexDirection: "row",
   },
   headerRemoveButton: {
     flex: 1,
+    height:1,
   },
   listContainer: {
     backgroundColor: Color.mainGrey,
@@ -306,27 +308,29 @@ const styles = StyleSheet.create({
   header: {
     flex: 1,
     paddingHorizontal: 3,
-    backgroundColor: Color.mainBlack,
+    backgroundColor: Color.mainWhite,
     alignContent: "flex-start",
-    paddingTop:10,
+    paddingTop:5,
   },
   headerText: {
     flex: 8,
     textAlign: "left",
     fontSize: 16,
     fontWeight: '500',
-    color: Color.mainWhite,
+    color: Color.mainBlack,
     paddingLeft:10,
-    paddingVertical:3,
+    paddingTop:3,
+    textAlignVertical:"center",
   },
   headerSizeText:{
     flex: 1,
     textAlign: "right",
     fontSize: 16,
     fontWeight: '500',
-    color: Color.mainWhite,
+    color: Color.mainBlack,
     paddingRight:7,
-    paddingVertical:3,
+    paddingTop:3,
+    textAlignVertical:"center",
   },
   content: {
     paddingHorizontal: 20,

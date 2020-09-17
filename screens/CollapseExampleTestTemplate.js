@@ -7,7 +7,8 @@ import {
   StyleSheet,
   Text,
   View,
-  TouchableOpacity
+  TouchableOpacity,
+  TextInput
 } from 'react-native';
 import { Button } from 'react-native-elements';
 //import basic react native components
@@ -147,7 +148,7 @@ export default class CollapseExampleTestTemplate extends Component {
         style={[styles.header, isActive ? styles.active : styles.inactive]}
         transition="backgroundColor">
         <View style={styles.headerTopTitle}>
-          <Text style={styles.headerText}>{unitItem.shortTitle}</Text>
+          <Text style={styles.headerText}>{unitItem.shortTitle}</Text><TextInput style={{height:'90%',width:80,color:Color.mainBlack,textAlign:"right",borderBottomColor:Color.mainBlack,borderBottomWidth:1,fontSize:16}}/>
           <Text style={styles.headerSizeText}>{unitItem.size.toUpperCase()}</Text>
           <Button
             style={styles.headerRemoveButton}
@@ -309,7 +310,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 3,
     backgroundColor: Color.mainWhite,
     alignContent: "flex-start",
-    paddingTop:10,
+    paddingTop:5,
   },
   headerText: {
     flex: 8,
@@ -319,6 +320,7 @@ const styles = StyleSheet.create({
     color: Color.mainBlack,
     paddingLeft:10,
     paddingTop:3,
+    textAlignVertical:"center",
   },
   headerSizeText:{
     flex: 1,
@@ -328,6 +330,7 @@ const styles = StyleSheet.create({
     color: Color.mainBlack,
     paddingRight:7,
     paddingTop:3,
+    textAlignVertical:"center",
   },
   content: {
     paddingHorizontal: 20,

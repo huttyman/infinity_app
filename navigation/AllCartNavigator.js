@@ -8,7 +8,9 @@ import { Ionicons } from '@expo/vector-icons';
 import Colors from '../templates/Colors';
 import ArmyScreen from '../screens/ArmyScreen';
 import CollapseExampleTestTemplate from '../screens/CollapseExampleTestTemplate';
-
+import SummaryOrderScreen from '../screens/SummaryOrderScreen';
+import TeachOrderScreen from '../screens/TeachOrderScreen';
+import AllOrderScreen from '../screens/AllOrderScreen';
 
 const AllCartStackNavigator = createStackNavigator({
     Army: {
@@ -46,7 +48,14 @@ const AllCartStackNavigator = createStackNavigator({
     }
 });
 
+const OrderSummaryStackNavigator = createStackNavigator({
+    All: AllOrderScreen,
+    Order: SummaryOrderScreen,
+    Teaching: TeachOrderScreen,
+});
+
 const AllCartTabNavigator = createBottomTabNavigator({
+    
     Army: {
         screen: AllCartStackNavigator,
         navigationOptions: {
@@ -74,19 +83,7 @@ const AllCartTabNavigator = createBottomTabNavigator({
 
         }
     },
-    Carts2: {
-        screen: CollapseExampleTestTemplate, navigationOptions: {
-            tabBarLabel: 'Choosen List',
-            tabBarIcon: (tabInfo) => {
-                return <Ionicons name='ios-star' size={24} color={tabInfo.tintColor} />
-            },
-            tabBarOnPress: ({defaultHandler,navigation}) => {
-                navigation.setParams({name:'test'});
-                defaultHandler();
-            },
-
-        }
-    },
+    Order: OrderSummaryStackNavigator,
 }, {
     tabBarOptions: {
         activeTintColor: '#ffffff',
