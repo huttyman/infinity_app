@@ -1,13 +1,13 @@
 /*Example of Collapsible - Accordion - Expandable View in React Native*/
 import React, { useState } from 'react';
 //import react in our project
-import {
-  Button,
-  StyleSheet,
-} from 'react-native';
+
 import AllCartNavigator from './navigation/AllCartNavigator';
 
 global.unitList = [];
+global.swc = 0;
+global.points = 0;
+global.unit = 0;
 
 export const ScoreContext = React.createContext();
 
@@ -38,7 +38,7 @@ export default function App() {
 
   const addPointsHandler = (input) =>{
      console.log("vv");
-     setPointContext(input+pointContext);
+   //  setPointContext(input+pointContext);
   };
 
 

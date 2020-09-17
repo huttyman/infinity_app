@@ -2,8 +2,6 @@
 import React, { Component, useContext } from 'react';
 //import react in our project
 import {
-    Switch,
-    ScrollView,
     StyleSheet,
     Text,
     View,
@@ -12,14 +10,10 @@ import {
 } from 'react-native';
 //import basic react native components
 import * as Animatable from 'react-native-animatable';
-//import for the animation of Collapse and Expand
-//import for the collapsible/Expandable view
-import Accordion from 'react-native-collapsible/Accordion';
 //import for the Accordion view
 import { ARMY_UNIT, ARMY } from '../datas/data-unit';
 import AllCart from '../components/AllCart';
 import Color from '../templates/Colors'
-import { ScoreContext } from '../App';
 import ScoreTitle from '../components/ScoreTitle';
 //Dummy content to show
 //You can also use dynamic data by calling webservice

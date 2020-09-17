@@ -1,5 +1,5 @@
 /*Example of Collapsible - Accordion - Expandable View in React Native*/
-import React, { Component, useContext } from 'react';
+import React, { Component } from 'react';
 //import react in our project
 import {
   Switch,
@@ -19,7 +19,6 @@ import Accordion from 'react-native-collapsible/Accordion';
 import {  ARMY_UNIT } from '../datas/data-unit';
 import AllCart from '../components/AllCart';
 import Color from '../templates/Colors'
-import { ScoreContext } from '../App';
 import ScoreTitle from '../components/ScoreTitle';
 //Dummy content to show
 //You can also use dynamic data by calling webservice
@@ -37,9 +36,14 @@ export default class CollapseMainExample extends Component {
     //true: You can expand multiple at a time
     //false: One can be expand at a time and other will be closed automatically
     multipleSelect: false,
+    toggleFalse:false,
+
   };
 
-
+  setToggleFalse = () => {
+    this.setState({ toggleFalse: !this.state.toggleFalse});
+ 
+  };
 
   toggleExpanded = () => {
     //Toggling the state of single Collapsible
@@ -85,7 +89,7 @@ export default class CollapseMainExample extends Component {
         transition="backgroundColor">
         <Animatable.Text
           style={{ textAlign: 'center' }}>
-          <AllCart data={section} navigation={this.props.navigation} />
+          <AllCart data={section} toggleFalse={this.setToggleFalse} navigation={this.props.navigation} />
         </Animatable.Text>
       </Animatable.View>
     );

@@ -580,7 +580,7 @@ export const WEAPON = [
             "attr_save": "ARM",
             "noRange": "false",
             "short_range": "0-8\"",
-            "short_mod": "-3",
+            "short_mod": "+3",
             "medium_range": "8-16\"",
             "medium_mod": "+3",
             "long_range": "16-32\"",

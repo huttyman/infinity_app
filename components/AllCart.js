@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useContext } from 'react';
+import React, { useContext,useState } from 'react';
 import { StyleSheet, Text, View, FlatList, TouchableOpacity } from 'react-native';
 import Color from '../templates/Colors';
 import { EQUIPMENT, SKILL, UNITLIST, WEAPON } from '../datas/data-unit';
@@ -11,10 +11,7 @@ const weaponItem = (weaponId, index, gunLength) => {
         endText = "";
     }
     const weaponObject = WEAPON.filter(item => item.idTitle == weaponId);
-    console.log("weapon");
-    console.log(weaponId);
-    console.log(weaponObject);
-    return (<Text style={styles.listTitle}>{weaponObject[0].title}{endText}</Text>);
+    return (<Text style={styles.listTitle}>{weaponObject[0].shortTitle}{endText}</Text>);
 };
 
 const equipmentItem = (equipmentId, index, length) => {
@@ -87,9 +84,14 @@ const AllCart = props => {
             equipmentText = <Text style={{ color: 'red' }} >Equipment: {item.equipmentList.map((gunId, index) => <Text key={index}>{equipmentItem(gunId, index, equipmentLength)}</Text>)}</Text>;
         }
 
-        const addUnitListHandler = (unitId, unitSetId) => {
+        const addUnitListHandler = (unitId, unitSetId, unitItem) => {
             const gUnitList = global.unitList;
-            global.unitList = [...gUnitList, { unitId: unitId, unitSetId: unitSetId }];
+
+            global.unitList = [...gUnitList, { randomKey: Math.random(), unitId: unitId, unitSetId: unitSetId }];
+            global.swc = global.swc+parseFloat(unitItem.swc);
+            global.points = global.points+ parseFloat(unitItem.points);
+            global.unit = global.unit +parseInt(1);
+            props.toggleFalse();
         };
 
 
@@ -98,9 +100,9 @@ const AllCart = props => {
 
                 onPress={() => {
                     /*props.navigation.navigate({ routeName: 'CartScreen' })*/
-                    addUnitListHandler(props.data.idTitle, unitList.item);
-                    scoreContext.addSWCHandler(item.swc);
-                    addPointContext(item.point);
+                    addUnitListHandler(props.data.idTitle, unitList.item, item);
+                    // scoreContext.addSWCHandler(item.swc);
+                    //addPointContext(item.point);
                 }}
             //on Press of any selector sending the selector value to
             // setSections function which will expand the Accordion accordingly

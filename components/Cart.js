@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, {useState} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { ARMY_UNIT, UNITLIST, WEAPON } from '../datas/data-unit';
 import Color from '../templates/Colors';
@@ -12,12 +12,7 @@ const weaponCard = weaponId => {
     
     let rangDetail = <View></View>;
         
-    
-    console.log("unit");
-    console.log('unitId')
-    console.log(weaponItem);
     if (weaponItem.noRange === "false") {
-        console.log("false");
         rangDetail = 
         <View>
             <View style={styles.rowContainer}>
