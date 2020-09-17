@@ -10,8 +10,13 @@ const weaponItem = (weaponId, index, gunLength) => {
     if (gunLength == index + 1) {
         endText = "";
     }
+
     const weaponObject = WEAPON.filter(item => item.idTitle == weaponId);
-    return (<Text style={styles.listTitle}>{weaponObject[0].shortTitle}{endText}</Text>);
+    if(weaponObject[0].type=="main"){
+      return (<Text style={styles.listTitle}>{weaponObject[0].shortTitle}{endText}</Text>);
+    }else{
+      return (<Text >{weaponObject[0].shortTitle}{endText}</Text>);
+    }
 };
 
 const equipmentItem = (equipmentId, index, length) => {

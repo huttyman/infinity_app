@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 import CollapseExample from '../screens/CollapseExample';
@@ -15,29 +15,29 @@ const AllCartStackNavigator = createStackNavigator({
         navigationOptions: {
             headerTitle: "Army selection",
             headerStyle: {
-                backgroundColor:Colors.mainGrey,
+                backgroundColor: Colors.mainGrey,
                 height: 40,
                 borderColor: Colors.mainGrey,
                 borderWidth: 0,
                 marginBottom: -30,
             },
-            headerTitleStyle:{
+            headerTitleStyle: {
                 color: Colors.mainWhite,
             },
         },
-    } ,
+    },
     AllCartScreen: {
         screen: CollapseMainExample,
         navigationOptions: {
             headerTitle: "Unit selection",
             headerStyle: {
-                backgroundColor:Colors.mainGrey,
+                backgroundColor: Colors.mainGrey,
                 height: 40,
                 borderColor: Colors.mainGrey,
                 borderWidth: 0,
                 marginBottom: -30,
             },
-            headerTitleStyle:{
+            headerTitleStyle: {
                 color: Colors.mainWhite,
             },
             headerTintColor: Colors.mainWhite,
@@ -53,14 +53,24 @@ const AllCartTabNavigator = createBottomTabNavigator({
             tabBarIcon: (tabInfo) => {
                 return <Ionicons name='ios-archive' size={24} color={tabInfo.tintColor} />
             },
-        }
+            tabBarOnPress: ({defaultHandler,navigation}) => {
+                navigation.setParams({name:'test'});
+                defaultHandler();
+            },
+        },
+
     },
     Carts: {
         screen: CollapseExample, navigationOptions: {
             tabBarLabel: 'Choosen List',
             tabBarIcon: (tabInfo) => {
                 return <Ionicons name='ios-star' size={24} color={tabInfo.tintColor} />
-            }
+            },
+            tabBarOnPress: ({defaultHandler,navigation}) => {
+                navigation.setParams({name:'test'});
+                defaultHandler();
+            },
+
         }
     },
 }, {
@@ -70,7 +80,6 @@ const AllCartTabNavigator = createBottomTabNavigator({
         style: { backgroundColor: Colors.mainGrey }
     }
 });
-
 
 
 export default createAppContainer(AllCartTabNavigator);

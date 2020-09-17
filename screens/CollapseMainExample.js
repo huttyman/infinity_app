@@ -40,6 +40,7 @@ export default class CollapseMainExample extends Component {
 
   };
 
+
   setToggleFalse = () => {
     this.setState({ toggleFalse: !this.state.toggleFalse});
  

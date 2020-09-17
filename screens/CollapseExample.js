@@ -30,7 +30,11 @@ const weaponItem = (weaponId, index, gunLength) => {
     endText = "";
   }
   const weaponObject = WEAPON.filter(item => item.idTitle == weaponId);
-  return (<Text style={styles.listTitle}>{weaponObject[0].shortTitle}{endText}</Text>);
+  if(weaponObject[0].type=="main"){
+    return (<Text style={styles.listTitle}>{weaponObject[0].shortTitle}{endText}</Text>);
+  }else{
+    return (<Text >{weaponObject[0].shortTitle}{endText}</Text>);
+  }
 };
 
 const equipmentItem = (equipmentId, index, length) => {
@@ -78,7 +82,6 @@ export default class CollapseExample extends Component {
     multipleSelect: false,
     toggleFalse: false,
   };
-
 
 
   toggleExpanded = () => {
@@ -131,11 +134,11 @@ export default class CollapseExample extends Component {
     let equipmentText = <Text></Text>;
 
     if (skillLength != 0) {
-      skillText = <Text style={{ color: 'green' }}>Skill: {combinedSkill.map((gunId, index) => <Text key={index}>{skillItem(gunId, index, skillLength)}</Text>)}</Text>;
+      skillText = <Text style={[styles.headerDetailText,{ color: 'green' }]}>Skill: {combinedSkill.map((gunId, index) => <Text key={index}>{skillItem(gunId, index, skillLength)}</Text>)}</Text>;
     }
 
     if (equipmentLength != 0) {
-      equipmentText = <Text style={{ color: 'red' }} >Equipment: {combinedEquipment.map((gunId, index) => <Text key={index}>{equipmentItem(gunId, index, equipmentLength)}</Text>)}</Text>;
+      equipmentText = <Text style={[styles.headerDetailText,{ color: 'red' }]} >Equipment: {combinedEquipment.map((gunId, index) => <Text key={index}>{equipmentItem(gunId, index, equipmentLength)}</Text>)}</Text>;
     }
     //Accordion Header view
     return (
@@ -144,7 +147,7 @@ export default class CollapseExample extends Component {
         style={[styles.header, isActive ? styles.active : styles.inactive]}
         transition="backgroundColor">
         <View style={styles.headerTopTitle}>
-          <Text style={styles.headerText}>{unitItem.title}</Text>
+          <Text style={styles.headerText}>{unitItem.shortTitle}</Text>
           <Button
             style={styles.headerRemoveButton}
             icon={
@@ -155,14 +158,14 @@ export default class CollapseExample extends Component {
               />
             }
             title=""
-            buttonStyle={{backgroundColor:'red',borderRadius:0}}
+            buttonStyle={{ backgroundColor: 'red', borderRadius: 0 }}
             onPress={() => { removeUnitHandler(section.randomKey, unitSetItem); this.setToggleFalse(); }}
           />
         </View>
-        <View style={{ flexDirection: "row", backgroundColor: Color.mainWhite }}>
+        <View style={styles.headerDetailContainer}>
           <View style={{ flex: 1 }}></View>
           <View style={{ flex: 6, alignItems: "flex-start", padding: 5 }}>
-            <View style={{ alignContent: "flex-start" }} >
+            <View style={styles.headerDetailText} >
               <Text style={{ textAlign: "left" }}>{unitSetItem.gunList.map((gunId, index) => <Text key={index}>{weaponItem(gunId, index, gunLength)}</Text>)}</Text>
             </View>
             {skillText}
@@ -270,6 +273,15 @@ export default class CollapseExample extends Component {
 }
 
 const styles = StyleSheet.create({
+  headerDetailText: {
+    alignContent: "flex-start",
+    paddingVertical: 0,
+  },
+  headerDetailContainer: {
+    flexDirection: "row",
+    backgroundColor: Color.mainWhite,
+    paddingBottom: 5,
+  },
   headerTopTitle: {
     backgroundColor: Color.mainGrey,
     flexDirection: "row",
@@ -295,6 +307,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 3,
     backgroundColor: Color.mainBlack,
     alignContent: "flex-start",
+    paddingTop:5,
   },
   headerText: {
     flex: 8,
@@ -302,7 +315,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '500',
     color: Color.mainWhite,
-    padding: 5,
+    paddingLeft:10,
+    paddingVertical:7,
   },
   content: {
     paddingHorizontal: 20,

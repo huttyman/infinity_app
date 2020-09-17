@@ -22,7 +22,7 @@ export const ARMY_UNIT = [
         "id": "2",
         "idTitle": "pano-nok",
         "title": "Nokken, Special Intervention and Recon Team",
-        "shortTitle": "Nooken",
+        "shortTitle": "Nokken",
         "unitSet": ['nok1','nok2','nok3'],
         "unitSkill": ['mimet6','forwdep8'],
         "size": "li",
