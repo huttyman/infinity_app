@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "e479f3b0a1d823da76a2",
-    "url": "/infinity_app/static/js/app.42fd8cf8.chunk.js"
+    "revision": "ceffde98f32607b366bc",
+    "url": "/infinity_app/static/js/app.293ca35a.chunk.js"
   },
   {
     "revision": "910ec9977756ac925f1c",
@@ -124,7 +124,7 @@ self.__precacheManifest = [
     "url": "/infinity_app/static/media/yu-jin.61efa295.svg"
   },
   {
-    "revision": "6beb5187aab6ff54c5ccaf560f5d68c0",
+    "revision": "b068663ffcf7d05192f92752643aa03f",
     "url": "/infinity_app/index.html"
   },
   {
