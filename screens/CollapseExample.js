@@ -1,5 +1,5 @@
 /*Example of Collapsible - Accordion - Expandable View in React Native*/
-import React, { Component,useState } from 'react';
+import React, { Component, useState } from 'react';
 //import react in our project
 import {
   Switch,
@@ -7,9 +7,9 @@ import {
   StyleSheet,
   Text,
   View,
-  TouchableOpacity,
-  Button
+  TouchableOpacity
 } from 'react-native';
+import { Button } from 'react-native-elements';
 //import basic react native components
 import * as Animatable from 'react-native-animatable';
 //import for the collapsible/Expandable view
@@ -19,7 +19,7 @@ import Cart from '../components/Cart'
 import { WEAPON, EQUIPMENT, ARMY_UNIT, UNITLIST, SKILL } from '../datas/data-unit';
 import ScoreTitle from '../components/ScoreTitle';
 import Color from '../templates/Colors';
-
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 //Dummy content to show
 //You can also use dynamic data by calling webservice
@@ -58,11 +58,11 @@ const SELECTORS = [
   { title: 'Refresh all', value: 9 },
 ];
 
-const removeUnitHandler = (key,unitItem) =>{
+const removeUnitHandler = (key, unitItem) => {
   global.unitList = global.unitList.filter(item => item.randomKey != key);
-  global.swc = global.swc-parseFloat(unitItem.swc);
-  global.points = global.points- parseFloat(unitItem.points);
-  global.unit = global.unit -parseInt(1);
+  global.swc = global.swc - parseFloat(unitItem.swc);
+  global.points = global.points - parseFloat(unitItem.points);
+  global.unit = global.unit - parseInt(1);
 
 };
 
@@ -76,10 +76,10 @@ export default class CollapseExample extends Component {
     //true: You can expand multiple at a time
     //false: One can be expand at a time and other will be closed automatically
     multipleSelect: false,
-    toggleFalse:false,
+    toggleFalse: false,
   };
 
-  
+
 
   toggleExpanded = () => {
     //Toggling the state of single Collapsible
@@ -87,8 +87,8 @@ export default class CollapseExample extends Component {
   };
 
   setToggleFalse = () => {
-    this.setState({ toggleFalse: !this.state.toggleFalse});
- 
+    this.setState({ toggleFalse: !this.state.toggleFalse });
+
   };
 
   setSections = sections => {
@@ -103,23 +103,23 @@ export default class CollapseExample extends Component {
     const unitSetItem = UNITLIST.filter(item => item.idTitle == section.unitSetId)[0];
 
     let combinedSkill;
-    if(unitSetItem.skillList){
+    if (unitSetItem.skillList) {
       combinedSkill = unitSetItem.skillList;
-    }else{
+    } else {
       combinedSkill = [];
     }
-    if(unitItem.unitSkill){
+    if (unitItem.unitSkill) {
       combinedSkill = unitItem.unitSkill.concat(combinedSkill);
     }
 
-    
+
     let combinedEquipment;
-    if(unitSetItem.equipmentList){
+    if (unitSetItem.equipmentList) {
       combinedEquipment = unitSetItem.equipmentList;
-    }else{
+    } else {
       combinedEquipment = [];
     }
-    if(unitItem.unitEquipment){
+    if (unitItem.unitEquipment) {
       combinedEquipment = unitItem.unitEquipment.concat(combinedEquipment);
     }
 
@@ -145,7 +145,19 @@ export default class CollapseExample extends Component {
         transition="backgroundColor">
         <View style={styles.headerTopTitle}>
           <Text style={styles.headerText}>{unitItem.title}</Text>
-          <Button style={styles.headerRemoveButton} icon={<Icon name="arrow-right" size={15} color='white'/>}  onPress={()=>{removeUnitHandler(section.randomKey,unitSetItem);this.setToggleFalse();}} />
+          <Button
+            style={styles.headerRemoveButton}
+            icon={
+              <Icon
+                name="trash"
+                size={15}
+                color="white"
+              />
+            }
+            title=""
+            buttonStyle={{backgroundColor:'red',borderRadius:0}}
+            onPress={() => { removeUnitHandler(section.randomKey, unitSetItem); this.setToggleFalse(); }}
+          />
         </View>
         <View style={{ flexDirection: "row", backgroundColor: Color.mainWhite }}>
           <View style={{ flex: 1 }}></View>
@@ -258,12 +270,12 @@ export default class CollapseExample extends Component {
 }
 
 const styles = StyleSheet.create({
-  headerTopTitle:{
-     backgroundColor: Color.mainGrey, 
-     flexDirection: "row",
+  headerTopTitle: {
+    backgroundColor: Color.mainGrey,
+    flexDirection: "row",
   },
-  headerRemoveButton:{
-    flex:1,
+  headerRemoveButton: {
+    flex: 1,
   },
   listContainer: {
     backgroundColor: Color.mainGrey,
@@ -285,7 +297,7 @@ const styles = StyleSheet.create({
     alignContent: "flex-start",
   },
   headerText: {
-    flex:8,
+    flex: 8,
     textAlign: "left",
     fontSize: 16,
     fontWeight: '500',
