@@ -7,6 +7,7 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import Colors from '../templates/Colors';
 import ArmyScreen from '../screens/ArmyScreen';
+import CollapseExampleTestTemplate from '../screens/CollapseExampleTestTemplate';
 
 
 const AllCartStackNavigator = createStackNavigator({
@@ -62,6 +63,19 @@ const AllCartTabNavigator = createBottomTabNavigator({
     },
     Carts: {
         screen: CollapseExample, navigationOptions: {
+            tabBarLabel: 'Choosen List',
+            tabBarIcon: (tabInfo) => {
+                return <Ionicons name='ios-star' size={24} color={tabInfo.tintColor} />
+            },
+            tabBarOnPress: ({defaultHandler,navigation}) => {
+                navigation.setParams({name:'test'});
+                defaultHandler();
+            },
+
+        }
+    },
+    Carts2: {
+        screen: CollapseExampleTestTemplate, navigationOptions: {
             tabBarLabel: 'Choosen List',
             tabBarIcon: (tabInfo) => {
                 return <Ionicons name='ios-star' size={24} color={tabInfo.tintColor} />
