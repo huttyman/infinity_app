@@ -1,19 +1,79 @@
 self.__precacheManifest = [
   {
-    "revision": "33db59cd7ad58d2327f4",
-    "url": "/infinity_app/static/js/app.f726338f.chunk.js"
+    "revision": "2b7e63a95a81c7124757",
+    "url": "/infinity_app/static/js/app.12985390.chunk.js"
   },
   {
     "revision": "910ec9977756ac925f1c",
     "url": "/infinity_app/static/js/runtime~app.66033198.js"
   },
   {
-    "revision": "d902dbe50458227d8b84",
-    "url": "/infinity_app/static/js/2.7f57e4d2.chunk.js"
+    "revision": "42f167d2be48ece4c31b",
+    "url": "/infinity_app/static/js/2.9b803e6a.chunk.js"
+  },
+  {
+    "revision": "004c2bbb035d8d06bb830efc4673c886",
+    "url": "/infinity_app/static/media/star.69c71386.png"
+  },
+  {
+    "revision": "2327736b3ea09c41abfb69be1221f430",
+    "url": "/infinity_app/static/media/heart.23b5c2c0.png"
+  },
+  {
+    "revision": "51671417ef20e0bbc32f0a2bc6edfa95",
+    "url": "/infinity_app/static/media/rocket.d2f3bf41.png"
+  },
+  {
+    "revision": "a7b9dc9de5f8f1fb1afbef917619a5ac",
+    "url": "/infinity_app/static/media/bell.cf04af27.png"
+  },
+  {
+    "revision": "a37b0c01c0baf1888ca812cc0508f6e2",
+    "url": "/infinity_app/./fonts/MaterialIcons.ttf"
+  },
+  {
+    "revision": "3c851d60ad5ef3f2fe43ebd263490d78",
+    "url": "/infinity_app/./fonts/MaterialCommunityIcons.ttf"
   },
   {
     "revision": "b2e0fc821c6886fb3940f85a3320003e",
     "url": "/infinity_app/./fonts/Ionicons.ttf"
+  },
+  {
+    "revision": "e20945d7c929279ef7a6f1db184a4470",
+    "url": "/infinity_app/./fonts/Foundation.ttf"
+  },
+  {
+    "revision": "744ce60078c17d86006dd0edabcd59a7",
+    "url": "/infinity_app/./fonts/Entypo.ttf"
+  },
+  {
+    "revision": "b06871f281fee6b241d60582ae9369b9",
+    "url": "/infinity_app/./fonts/FontAwesome.ttf"
+  },
+  {
+    "revision": "d2285965fe34b05465047401b8595dd0",
+    "url": "/infinity_app/./fonts/SimpleLineIcons.ttf"
+  },
+  {
+    "revision": "ca9ce9ff0676a9b04ef0f8a3ad17dd08",
+    "url": "/infinity_app/./fonts/Feather.ttf"
+  },
+  {
+    "revision": "3a2ba31570920eeb9b1d217cabe58315",
+    "url": "/infinity_app/./fonts/AntDesign.ttf"
+  },
+  {
+    "revision": "b49ae8ab2dbccb02c4d11caaacf09eab",
+    "url": "/infinity_app/./fonts/Fontisto.ttf"
+  },
+  {
+    "revision": "b70cea0339374107969eb53e5b1f603f",
+    "url": "/infinity_app/./fonts/FontAwesome5_Solid.ttf"
+  },
+  {
+    "revision": "c39278f7abfc798a241551194f55e29f",
+    "url": "/infinity_app/./fonts/FontAwesome5_Brands.ttf"
   },
   {
     "revision": "4e2386c7cc4bc2213c452c74934823ea",
@@ -64,51 +124,7 @@ self.__precacheManifest = [
     "url": "/infinity_app/static/media/yu-jin.61efa295.svg"
   },
   {
-    "revision": "3a2ba31570920eeb9b1d217cabe58315",
-    "url": "/infinity_app/./fonts/AntDesign.ttf"
-  },
-  {
-    "revision": "744ce60078c17d86006dd0edabcd59a7",
-    "url": "/infinity_app/./fonts/Entypo.ttf"
-  },
-  {
-    "revision": "ca9ce9ff0676a9b04ef0f8a3ad17dd08",
-    "url": "/infinity_app/./fonts/Feather.ttf"
-  },
-  {
-    "revision": "b06871f281fee6b241d60582ae9369b9",
-    "url": "/infinity_app/./fonts/FontAwesome.ttf"
-  },
-  {
-    "revision": "c39278f7abfc798a241551194f55e29f",
-    "url": "/infinity_app/./fonts/FontAwesome5_Brands.ttf"
-  },
-  {
-    "revision": "b70cea0339374107969eb53e5b1f603f",
-    "url": "/infinity_app/./fonts/FontAwesome5_Solid.ttf"
-  },
-  {
-    "revision": "b49ae8ab2dbccb02c4d11caaacf09eab",
-    "url": "/infinity_app/./fonts/Fontisto.ttf"
-  },
-  {
-    "revision": "e20945d7c929279ef7a6f1db184a4470",
-    "url": "/infinity_app/./fonts/Foundation.ttf"
-  },
-  {
-    "revision": "3c851d60ad5ef3f2fe43ebd263490d78",
-    "url": "/infinity_app/./fonts/MaterialCommunityIcons.ttf"
-  },
-  {
-    "revision": "a37b0c01c0baf1888ca812cc0508f6e2",
-    "url": "/infinity_app/./fonts/MaterialIcons.ttf"
-  },
-  {
-    "revision": "d2285965fe34b05465047401b8595dd0",
-    "url": "/infinity_app/./fonts/SimpleLineIcons.ttf"
-  },
-  {
-    "revision": "7a49dadc92fedf8d1ba88515296b3578",
+    "revision": "1c7f1c8e423e6bdc52012ebd4a6fc1c7",
     "url": "/infinity_app/index.html"
   },
   {
@@ -124,8 +140,8 @@ self.__precacheManifest = [
     "url": "/infinity_app/register-service-worker.js"
   },
   {
-    "revision": "1cca25f2e61cdb7dd28b898e81578b23",
-    "url": "/infinity_app/static/js/2.7f57e4d2.chunk.js.LICENSE.txt"
+    "revision": "5e491f7873b4041cbc4cea6b70b3b6cf",
+    "url": "/infinity_app/static/js/2.9b803e6a.chunk.js.LICENSE.txt"
   },
   {
     "revision": "d324ddc823eca6c86688f62576c81e76",
