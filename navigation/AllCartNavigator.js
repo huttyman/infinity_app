@@ -16,7 +16,7 @@ const AllCartStackNavigator = createStackNavigator({
     Army: {
         screen: ArmyScreen,
         navigationOptions: {
-            headerTitle: "Army selection",
+            headerTitle: "Army selection v2.4",
             headerStyle: {
                 backgroundColor: Colors.mainGrey,
                 height: 40,
@@ -51,7 +51,15 @@ const AllCartStackNavigator = createStackNavigator({
 const OrderSummaryStackNavigator = createStackNavigator({
     All: AllOrderScreen,
     Order: SummaryOrderScreen,
-    Teaching: TeachOrderScreen,
+    Teaching:{
+        screen: TeachOrderScreen,
+        navigationOptions: {
+            headerTitle: "Teaching",
+            headerStyle: {
+                height: 35,
+            },
+        },
+    },
 });
 
 const AllCartTabNavigator = createBottomTabNavigator({
@@ -83,7 +91,15 @@ const AllCartTabNavigator = createBottomTabNavigator({
 
         }
     },
-    Order: OrderSummaryStackNavigator,
+    Order: {
+        screen: OrderSummaryStackNavigator, navigationOptions: {
+            tabBarLabel: 'All summary',
+            tabBarIcon: (tabInfo) => {
+                return <Ionicons name='ios-book' size={24} color={tabInfo.tintColor} />
+            },
+
+        }
+    },
 }, {
     tabBarOptions: {
         activeTintColor: '#ffffff',

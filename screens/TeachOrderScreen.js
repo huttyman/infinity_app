@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, ScrollView, TouchableOpacity } from 'react-native';
 import Colors from '../templates/Colors';
+import SummaryOrderScreen from './SummaryOrderScreen';
 
 const TeachOrderScreen = props => {
     const [toggleFirstCard, setToggleFirstCard] = useState(false);
@@ -19,44 +20,58 @@ const TeachOrderScreen = props => {
     }
 
     return (
-        <View>
-            <View>
-                <Text>Choose both in any order</Text>
-            </View>
-            <View style={styles.cardContainer}>
-                <TouchableOpacity onPress={() => { setToggleFirstCard(!toggleFirstCard) }}>
+        <ScrollView>
 
-                    <View style={[styles.card, { backgroundColor: Colors.shortMovement }]}>
-                        <Text style={[styles.cardText, { paddingTop: 20 }]}>Move/Idle/
-            Discovery</Text>
-                        <Text style={[styles.cardText, { fontWeight: "bold" }]}>Short Movement</Text>
-                    </View>
-                    {firstCard}
-
-
+            <View style={{ justifyContent: "space-around", flexDirection: "row",padding:5 }}>
+                <TouchableOpacity>
+                    <Text style={{textDecorationLine:"underline"}}>Turn Order</Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => { setToggleSecondCard(!toggleSecondCard)} }>
-                    <View style={styles.card}>
-                        <View style={[styles.bottomTopBox, { backgroundColor: Colors.shortMovement }]}>
+                <TouchableOpacity>
+                    <Text style={{textDecorationLine:"underline"}}>Attack order</Text>
+                </TouchableOpacity>
+            </View>
+            <View>
+                <View style={{ width: '100%', backgroundColor: 'white',paddingTop:5 }}>
+                    <Text style={{ width: '100%', textAlign: "center", padding: 5, backgroundColor: 'white' }}><Text style={{ color: "red" }}>1 Order</Text> = Choose both action in any order</Text>
+                </View>
+                <View style={styles.cardContainer}>
+                    <TouchableOpacity onPress={() => { setToggleFirstCard(!toggleFirstCard) }}>
 
-                            <Text style={styles.cardText}>Move/Idle/
-                                Discovery</Text>
+                        <View style={[styles.card, { backgroundColor: Colors.shortMovement }]}>
+                            <Text style={[styles.cardText, { paddingTop: 20 }]}>Move/Idle/
+            Discovery</Text>
                             <Text style={[styles.cardText, { fontWeight: "bold" }]}>Short Movement</Text>
                         </View>
-                        <View style={styles.middleBox}>
-                            <Text style={styles.cardText}>or</Text>
-                        </View>
-                        <View style={[styles.bottomTopBox, { backgroundColor: Colors.shortSkill }]}>
-                            <Text style={[styles.cardText, { paddingTop: 10 }]}>Attack/Hack/
-                                                        Heal/etc.</Text>
-                            <Text style={[styles.cardText, { fontWeight: "bold" }]}>Short Skills</Text>
-                        </View>
-                    </View>
+                        {firstCard}
 
-                    {secondCard}
-                </TouchableOpacity>
+
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => { setToggleSecondCard(!toggleSecondCard) }}>
+                        <View style={styles.card}>
+                            <View style={[styles.bottomTopBox, { backgroundColor: Colors.shortMovement }]}>
+
+                                <Text style={[styles.cardText, { paddingTop: 3 }]}>Move/Idle/
+                                Discovery</Text>
+                                <Text style={[styles.cardText, { fontWeight: "bold" }]}>Short Movement</Text>
+                            </View>
+                            <View style={styles.middleBox}>
+                                <Text style={styles.cardText}>or</Text>
+                            </View>
+                            <View style={[styles.bottomTopBox, { backgroundColor: Colors.shortSkill }]}>
+                                <Text style={[styles.cardText, { paddingTop: 12 }]}>Attack/Hack/
+                                                        Heal/etc.</Text>
+                                <Text style={[styles.cardText, { fontWeight: "bold" }]}>Short Skills</Text>
+                            </View>
+                        </View>
+
+                        {secondCard}
+                    </TouchableOpacity>
+                </View>
+                <View>
+                    <SummaryOrderScreen />
+                </View>
             </View>
-        </View>
+        </ScrollView>
     );
 }
 
@@ -117,7 +132,7 @@ const styles = StyleSheet.create({
         textAlign: "center",
     },
     middleBox: {
-        backgroundColor: 'yellow',
+        backgroundColor: 'white',
         width: '40%',
         height: '15%',
         zIndex: 1,

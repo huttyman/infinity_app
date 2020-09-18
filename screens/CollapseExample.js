@@ -8,7 +8,8 @@ import {
   Text,
   View,
   TouchableOpacity,
-  TextInput
+  TextInput,
+  Clipboard,
 } from 'react-native';
 import { Button } from 'react-native-elements';
 //import basic react native components
@@ -31,9 +32,9 @@ const weaponItem = (weaponId, index, gunLength) => {
     endText = "";
   }
   const weaponObject = WEAPON.filter(item => item.idTitle == weaponId);
-  if(weaponObject[0].type=="main"){
+  if (weaponObject[0].type == "main") {
     return (<Text style={styles.listTitle}>{weaponObject[0].shortTitle}{endText}</Text>);
-  }else{
+  } else {
     return (<Text >{weaponObject[0].shortTitle}{endText}</Text>);
   }
 };
@@ -71,6 +72,33 @@ const removeUnitHandler = (key, unitItem) => {
 
 };
 
+const importUnit = (unitText) => {
+  try {
+    JSON.parse(unitText);
+  } catch (e) {
+    alert('Import code is wrong!!');
+    return false;
+  }
+  const importUnit = JSON.parse(unitText);
+  global.unitList = importUnit;
+  console.log(global.unitList);
+  global.swc = 0;
+  global.points = 0;
+  global.unit = 0;
+  global.unitList.map(unit=>{ addUnitSetProp(unit.unitSetId) });
+
+};
+
+const addUnitSetProp = (unitSetId) => {
+  const unitItem = UNITLIST.filter(item => item.idTitle == unitSetId)[0];
+  console.log(unitItem);
+  console.log(global.points,",",unitItem.swc);
+  global.swc = global.swc+parseFloat(unitItem.swc);
+  console.log(global.points);
+  global.points = global.points+ parseFloat(unitItem.points);
+  global.unit = global.unit +parseInt(1);
+};
+
 export default class CollapseExampleTestTemplate extends Component {
   state = {
     //default active selector
@@ -82,8 +110,18 @@ export default class CollapseExampleTestTemplate extends Component {
     //false: One can be expand at a time and other will be closed automatically
     multipleSelect: false,
     toggleFalse: false,
+    clibboardText: "",
   };
 
+  readFromClipboard = () => {
+    
+    importUnit(this.state.clibboardText);
+  };
+
+  writeToClipboard = async () => {
+    await Clipboard.setString(JSON.stringify(global.unitList));
+    alert('Copied to Clipboard! Put in your note somewhere.');
+  };
 
   toggleExpanded = () => {
     //Toggling the state of single Collapsible
@@ -135,11 +173,11 @@ export default class CollapseExampleTestTemplate extends Component {
     let equipmentText = <Text></Text>;
 
     if (skillLength != 0) {
-      skillText = <Text style={[styles.headerDetailText,{ color: 'green' }]}>Skill: {combinedSkill.map((gunId, index) => <Text key={index}>{skillItem(gunId, index, skillLength)}</Text>)}</Text>;
+      skillText = <Text style={[styles.headerDetailText, { color: 'green' }]}>Skill: {combinedSkill.map((gunId, index) => <Text key={index}>{skillItem(gunId, index, skillLength)}</Text>)}</Text>;
     }
 
     if (equipmentLength != 0) {
-      equipmentText = <Text style={[styles.headerDetailText,{ color: 'red' }]} >Equipment: {combinedEquipment.map((gunId, index) => <Text key={index}>{equipmentItem(gunId, index, equipmentLength)}</Text>)}</Text>;
+      equipmentText = <Text style={[styles.headerDetailText, { color: 'red' }]} >Equipment: {combinedEquipment.map((gunId, index) => <Text key={index}>{equipmentItem(gunId, index, equipmentLength)}</Text>)}</Text>;
     }
     //Accordion Header view
     return (
@@ -148,7 +186,7 @@ export default class CollapseExampleTestTemplate extends Component {
         style={[styles.header, isActive ? styles.active : styles.inactive]}
         transition="backgroundColor">
         <View style={styles.headerTopTitle}>
-          <Text style={styles.headerText}>{unitItem.shortTitle}</Text><TextInput style={{height:'90%',width:80,color:Color.mainBlack,textAlign:"right",borderBottomColor:Color.mainBlack,borderBottomWidth:1,fontSize:16}}/>
+          <Text style={styles.headerText}>{unitItem.shortTitle}</Text><TextInput style={{ height: '90%', width: 70, color: Color.mainBlack, textAlign: "right", borderBottomColor: Color.mainBlack, borderBottomWidth: 1, fontSize: 16 }} />
           <Text style={styles.headerSizeText}>{unitItem.size.toUpperCase()}</Text>
           <Button
             style={styles.headerRemoveButton}
@@ -160,13 +198,13 @@ export default class CollapseExampleTestTemplate extends Component {
               />
             }
             title=""
-            buttonStyle={{ backgroundColor: 'red', borderRadius: 0 }}
+            buttonStyle={{ backgroundColor: 'red', borderRadius: -1 }}
             onPress={() => { removeUnitHandler(section.randomKey, unitSetItem); this.setToggleFalse(); }}
           />
         </View>
         <View style={styles.headerDetailContainer}>
           <View style={{ flex: 1 }}></View>
-          <View style={{ flex: 6, alignItems: "flex-start", paddingHorizontal: 5,paddingBottom:5 }}>
+          <View style={{ flex: 6, alignItems: "flex-start", paddingHorizontal: 5, paddingBottom: 5 }}>
             <View style={styles.headerDetailText} >
               <Text style={{ textAlign: "left" }}>{unitSetItem.gunList.map((gunId, index) => <Text key={index}>{weaponItem(gunId, index, gunLength)}</Text>)}</Text>
             </View>
@@ -242,6 +280,15 @@ export default class CollapseExampleTestTemplate extends Component {
                 </View>
               </TouchableOpacity>
             ))}
+            <Button title="export" onPress={this.writeToClipboard}
+              buttonStyle={{ borderRadius: -1, height: '39px', width: '80px', marginLeft: 2 }} />
+            <Button title="import" onPress={()=>{this.readFromClipboard(); this.setToggleFalse();}}
+              buttonStyle={{ borderRadius: -1, height: '39px', width: '80px', marginLeft: 2 }} />
+
+          </View>
+          <View style={{paddingHorizontal:5}}>
+            <Text style={{color:Color.mainWhite}}>import text</Text>
+            <TextInput style={{ color: Color.mainWhite, borderBottomWidth:1, borderColor:Color.mainWhite }} onChangeText={(text) => this.setState({ clibboardText: text })} />
           </View>
           {/*Code for Selector ends here*/}
 
@@ -290,7 +337,7 @@ const styles = StyleSheet.create({
   },
   headerRemoveButton: {
     flex: 1,
-    height:1,
+    height: 1,
   },
   listContainer: {
     backgroundColor: Color.mainGrey,
@@ -310,7 +357,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 3,
     backgroundColor: Color.mainWhite,
     alignContent: "flex-start",
-    paddingTop:5,
+    paddingTop: 5,
   },
   headerText: {
     flex: 8,
@@ -318,19 +365,19 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '500',
     color: Color.mainBlack,
-    paddingLeft:10,
-    paddingTop:3,
-    textAlignVertical:"center",
+    paddingLeft: 10,
+    paddingTop: 3,
+    textAlignVertical: "center",
   },
-  headerSizeText:{
+  headerSizeText: {
     flex: 1,
     textAlign: "right",
     fontSize: 16,
     fontWeight: '500',
     color: Color.mainBlack,
-    paddingRight:7,
-    paddingTop:3,
-    textAlignVertical:"center",
+    paddingRight: 7,
+    paddingTop: 3,
+    textAlignVertical: "center",
   },
   content: {
     paddingHorizontal: 20,

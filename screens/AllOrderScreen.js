@@ -8,8 +8,8 @@ const AllOrderScreen = props =>{
             <View style={styles.buttonContainer}>
                 <Button title="Teach Order" onPress={()=>props.navigation.navigate({ routeName: 'Teaching' })} />
                 <Button title="Action Summary" onPress={()=>props.navigation.navigate({ routeName: 'Order' })} />
-                <Button title="Turn order summary"/>
-                <Button title="All keyword"/>
+                <Button title="Turn order summary" onPress={()=>{}}/>
+                <Button title="All keyword" onPress={()=>{}}/>
             </View>
         </View>
     );

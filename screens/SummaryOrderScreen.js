@@ -1,62 +1,11 @@
 import React from 'react';
 import { StyleSheet, View, Text, ScrollView } from 'react-native';
-import  Colors  from '../templates/Colors';
+import Colors from '../templates/Colors';
 
 const SummaryOrderScreen = props => {
     return (
         <ScrollView>
             <View style={styles.bodyContainer}>
-                {/*ARO*/}
-                <View style={styles.topicContainer}>
-                    <View style={[styles.mainHeader, { backgroundColor: Colors.aro }]}>
-                        <Text style={styles.headerText}>AROS</Text>
-                    </View>
-                    <View style={[styles.topicHeader, { backgroundColor: Colors.aro }]}>
-                        <Text style={styles.headerText}>NAME</Text>
-                        <Text style={styles.headerText}>TYPE</Text>
-                        <Text style={styles.headerText}>PAGE</Text>
-                    </View>
-                    <View style={styles.bodyRow}>
-                        <Text style={styles.bodyText}>BS ATTACK</Text>
-                        <Text style={styles.bodyText}>COMMON S.</Text>
-                        <Text style={styles.bodyText}>43</Text>
-                    </View>
-                    <View style={styles.bodyRow}>
-                        <Text style={styles.bodyText}>CARBONITE</Text>
-                        <Text style={styles.bodyText}>HACKER</Text>
-                        <Text style={styles.bodyText}>54</Text>
-                    </View>
-                    <View style={styles.bodyRow}>
-                        <Text style={styles.bodyText}>CC ATTACK</Text>
-                        <Text style={styles.bodyText}>COMMON S.</Text>
-                        <Text style={styles.bodyText}>48</Text>
-                    </View>
-                    <View style={styles.bodyRow}>
-                        <Text style={styles.bodyText}>DISCOVER</Text>
-                        <Text style={styles.bodyText}>COMMON S.</Text>
-                        <Text style={styles.bodyText}>61</Text>
-                    </View>
-                    <View style={styles.bodyRow}>
-                        <Text style={styles.bodyText}>DODGE</Text>
-                        <Text style={styles.bodyText}>COMMON S.</Text>
-                        <Text style={styles.bodyText}>64</Text>
-                    </View>
-                    <View style={styles.bodyRow}>
-                        <Text style={styles.bodyText}>PLACE DEPLOYABLE</Text>
-                        <Text style={styles.bodyText}>COMMON S.</Text>
-                        <Text style={styles.bodyText}>66</Text>
-                    </View>
-                    <View style={styles.bodyRow}>
-                        <Text style={styles.bodyText}>RESET</Text>
-                        <Text style={styles.bodyText}>COMMON S.</Text>
-                        <Text style={styles.bodyText}>66</Text>
-                    </View>
-                    <View style={styles.bodyRow}>
-                        <Text style={styles.bodyText}>SPOTLIGHT</Text>
-                        <Text style={styles.bodyText}>HACKER</Text>
-                        <Text style={styles.bodyText}>54</Text>
-                    </View>
-                </View>
 
                 {/*Short movement skills*/}
                 <View style={styles.topicContainer}>
@@ -148,6 +97,58 @@ const SummaryOrderScreen = props => {
 
                 </View>
 
+                {/*ARO*/}
+                <View style={styles.topicContainer}>
+                    <View style={[styles.mainHeader, { backgroundColor: Colors.aro }]}>
+                        <Text style={styles.headerText}>AROS</Text>
+                    </View>
+                    <View style={[styles.topicHeader, { backgroundColor: Colors.aro }]}>
+                        <Text style={styles.headerText}>NAME</Text>
+                        <Text style={styles.headerText}>TYPE</Text>
+                        <Text style={styles.headerText}>PAGE</Text>
+                    </View>
+                    <View style={styles.bodyRow}>
+                        <Text style={styles.bodyText}>BS ATTACK</Text>
+                        <Text style={styles.bodyText}>COMMON S.</Text>
+                        <Text style={styles.bodyText}>43</Text>
+                    </View>
+                    <View style={styles.bodyRow}>
+                        <Text style={styles.bodyText}>CARBONITE</Text>
+                        <Text style={styles.bodyText}>HACKER</Text>
+                        <Text style={styles.bodyText}>54</Text>
+                    </View>
+                    <View style={styles.bodyRow}>
+                        <Text style={styles.bodyText}>CC ATTACK</Text>
+                        <Text style={styles.bodyText}>COMMON S.</Text>
+                        <Text style={styles.bodyText}>48</Text>
+                    </View>
+                    <View style={styles.bodyRow}>
+                        <Text style={styles.bodyText}>DISCOVER</Text>
+                        <Text style={styles.bodyText}>COMMON S.</Text>
+                        <Text style={styles.bodyText}>61</Text>
+                    </View>
+                    <View style={styles.bodyRow}>
+                        <Text style={styles.bodyText}>DODGE</Text>
+                        <Text style={styles.bodyText}>COMMON S.</Text>
+                        <Text style={styles.bodyText}>64</Text>
+                    </View>
+                    <View style={styles.bodyRow}>
+                        <Text style={styles.bodyText}>PLACE DEPLOYABLE</Text>
+                        <Text style={styles.bodyText}>COMMON S.</Text>
+                        <Text style={styles.bodyText}>66</Text>
+                    </View>
+                    <View style={styles.bodyRow}>
+                        <Text style={styles.bodyText}>RESET</Text>
+                        <Text style={styles.bodyText}>COMMON S.</Text>
+                        <Text style={styles.bodyText}>66</Text>
+                    </View>
+                    <View style={styles.bodyRow}>
+                        <Text style={styles.bodyText}>SPOTLIGHT</Text>
+                        <Text style={styles.bodyText}>HACKER</Text>
+                        <Text style={styles.bodyText}>54</Text>
+                    </View>
+                </View>
+
                 {/*ENTIRE ORDER*/}
                 <View style={styles.topicContainer}>
                     <View style={[styles.mainHeader, { backgroundColor: Colors.entireOrder }]}>
@@ -214,17 +215,17 @@ const styles = StyleSheet.create({
         marginHorizontal: 10,
         marginVertical: 2
     },
-    headerText:{
+    headerText: {
         flex: 1,
         textAlign: "center",
-        paddingVertical:2,
-        fontWeight:"bold",
+        paddingVertical: 2,
+        fontWeight: "bold",
 
     },
     bodyText: {
         flex: 1,
         textAlign: "center",
-        paddingVertical:2,
+        paddingVertical: 2,
     }
 });
 
