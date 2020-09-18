@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "018ad9a534c5f0d31cd9",
-    "url": "/infinity_app/static/js/app.9d6e62e1.chunk.js"
+    "revision": "2048e3b874dcfe07b56a",
+    "url": "/infinity_app/static/js/app.38956a98.chunk.js"
   },
   {
     "revision": "910ec9977756ac925f1c",
     "url": "/infinity_app/static/js/runtime~app.66033198.js"
   },
   {
-    "revision": "d3ee6d6fe088c0b40d1b",
-    "url": "/infinity_app/static/js/2.f1134fd5.chunk.js"
+    "revision": "ebd88537e24b39bc16d8",
+    "url": "/infinity_app/static/js/2.efed3a74.chunk.js"
   },
   {
     "revision": "004c2bbb035d8d06bb830efc4673c886",
@@ -26,6 +26,10 @@ self.__precacheManifest = [
   {
     "revision": "a7b9dc9de5f8f1fb1afbef917619a5ac",
     "url": "/infinity_app/static/media/bell.cf04af27.png"
+  },
+  {
+    "revision": "82d8fcbe5b1f981283f1d88ad1dde6f3",
+    "url": "/infinity_app/static/media/ltToken.74fce08e.png"
   },
   {
     "revision": "a37b0c01c0baf1888ca812cc0508f6e2",
@@ -124,7 +128,7 @@ self.__precacheManifest = [
     "url": "/infinity_app/static/media/yu-jin.61efa295.svg"
   },
   {
-    "revision": "0bb515e3162d66b683077a644216ebc0",
+    "revision": "af21079a2724044812c2a440ca9783c6",
     "url": "/infinity_app/index.html"
   },
   {
@@ -141,7 +145,7 @@ self.__precacheManifest = [
   },
   {
     "revision": "5e491f7873b4041cbc4cea6b70b3b6cf",
-    "url": "/infinity_app/static/js/2.f1134fd5.chunk.js.LICENSE.txt"
+    "url": "/infinity_app/static/js/2.efed3a74.chunk.js.LICENSE.txt"
   },
   {
     "revision": "d324ddc823eca6c86688f62576c81e76",

@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/infinity_app/static/js/app.9d6e62e1.chunk.js",
-    "app.js.map": "/infinity_app/static/js/app.9d6e62e1.chunk.js.map",
+    "app.js": "/infinity_app/static/js/app.38956a98.chunk.js",
+    "app.js.map": "/infinity_app/static/js/app.38956a98.chunk.js.map",
     "runtime~app.js": "/infinity_app/static/js/runtime~app.66033198.js",
     "runtime~app.js.map": "/infinity_app/static/js/runtime~app.66033198.js.map",
-    "static/js/2.f1134fd5.chunk.js": "/infinity_app/static/js/2.f1134fd5.chunk.js",
-    "static/js/2.f1134fd5.chunk.js.map": "/infinity_app/static/js/2.f1134fd5.chunk.js.map",
+    "static/js/2.efed3a74.chunk.js": "/infinity_app/static/js/2.efed3a74.chunk.js",
+    "static/js/2.efed3a74.chunk.js.map": "/infinity_app/static/js/2.efed3a74.chunk.js.map",
     "fonts/AntDesign.ttf": "/infinity_app/./fonts/AntDesign.ttf",
     "fonts/Entypo.ttf": "/infinity_app/./fonts/Entypo.ttf",
     "fonts/Feather.ttf": "/infinity_app/./fonts/Feather.ttf",
@@ -24,9 +24,10 @@
     "index.html": "/infinity_app/index.html",
     "manifest.json": "/infinity_app/manifest.json",
     "serve.json": "/infinity_app/serve.json",
-    "static/js/2.f1134fd5.chunk.js.LICENSE.txt": "/infinity_app/static/js/2.f1134fd5.chunk.js.LICENSE.txt",
+    "static/js/2.efed3a74.chunk.js.LICENSE.txt": "/infinity_app/static/js/2.efed3a74.chunk.js.LICENSE.txt",
     "static/media/bell.png": "/infinity_app/static/media/bell.cf04af27.png",
     "static/media/heart.png": "/infinity_app/static/media/heart.23b5c2c0.png",
+    "static/media/ltToken.png": "/infinity_app/static/media/ltToken.74fce08e.png",
     "static/media/pano-fusi.svg": "/infinity_app/static/media/pano-fusi.19daa363.svg",
     "static/media/pano-infirm.svg": "/infinity_app/static/media/pano-infirm.94312b43.svg",
     "static/media/pano-koj.svg": "/infinity_app/static/media/pano-koj.6894da02.svg",
@@ -44,7 +45,7 @@
   },
   "entrypoints": [
     "static/js/runtime~app.66033198.js",
-    "static/js/2.f1134fd5.chunk.js",
-    "static/js/app.9d6e62e1.chunk.js"
+    "static/js/2.efed3a74.chunk.js",
+    "static/js/app.38956a98.chunk.js"
   ]
 }
