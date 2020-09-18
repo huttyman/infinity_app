@@ -3,7 +3,6 @@ import React, { useContext,useState } from 'react';
 import { StyleSheet, Text, View, FlatList, TouchableOpacity } from 'react-native';
 import Color from '../templates/Colors';
 import { EQUIPMENT, SKILL, UNITLIST, WEAPON } from '../datas/data-unit';
-import { ScoreContext } from '../App';
 
 const weaponItem = (weaponId, index, gunLength) => {
     let endText = " • ";
@@ -40,7 +39,6 @@ const skillItem = (skillId, index, length) => {
 };
 
 const unitTraitContainer = (item) => {
-    console.log(item);
     const skillLength = item.unitSkill ? item.unitSkill.length : 0;
     const equipmentLength = item.unitEquipment ? item.unitEquipment.length : 0;
 
@@ -67,10 +65,6 @@ const unitTraitContainer = (item) => {
 
 const AllCart = props => {
     const unitList = props.data.unitSet;
-    const scoreContext = useContext(ScoreContext);
-    const { addPointContext } = scoreContext;
-    console.log('what score');
-    console.log(scoreContext);
 
     const rederItemUnitList = (unitList) => {
         const item = UNITLIST.filter(unitSet => unitSet.idTitle == unitList.item)[0];
@@ -106,8 +100,6 @@ const AllCart = props => {
                 onPress={() => {
                     /*props.navigation.navigate({ routeName: 'CartScreen' })*/
                     addUnitListHandler(props.data.idTitle, unitList.item, item);
-                    // scoreContext.addSWCHandler(item.swc);
-                    //addPointContext(item.point);
                 }}
             //on Press of any selector sending the selector value to
             // setSections function which will expand the Accordion accordingly

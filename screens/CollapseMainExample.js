@@ -99,8 +99,6 @@ export default class CollapseMainExample extends Component {
   render() {
     const { multipleSelect, activeSections } = this.state;
     const armyId = this.props.navigation.getParam('armyId');
-    console.log('army id');
-    console.log(armyId);
     const filterArmy = ARMY_UNIT.filter(army => army.attr_armyId == armyId);
   
     return (

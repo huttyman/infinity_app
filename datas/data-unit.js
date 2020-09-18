@@ -16,7 +16,8 @@ export const ARMY_UNIT = [
         "attr_bts": "0",
         "attr_w": "1",
         "attr_s": "2",
-        "attr_ava": "T"
+        "attr_ava": "T",
+        "isHackable": "FALSE"
     },
     {
         "id": "2",
@@ -37,7 +38,8 @@ export const ARMY_UNIT = [
         "attr_bts": "3",
         "attr_w": "1",
         "attr_s": "2",
-        "attr_ava": "2"
+        "attr_ava": "2",
+        "isHackable": "FALSE"
     },
     {
         "id": "3",
@@ -59,7 +61,8 @@ export const ARMY_UNIT = [
         "attr_bts": "3",
         "attr_w": "1",
         "attr_s": "2",
-        "attr_ava": "2"
+        "attr_ava": "2",
+        "isHackable": "FALSE"
     },
     {
         "id": "4",
@@ -119,7 +122,8 @@ export const ARMY_UNIT = [
         "attr_bts": "0",
         "attr_w": "1",
         "attr_s": "2",
-        "attr_ava": "1"
+        "attr_ava": "1",
+        "isHackable": "FALSE"
     },
     {
         "id": "7",
@@ -140,7 +144,8 @@ export const ARMY_UNIT = [
         "attr_bts": "3",
         "attr_w": "1",
         "attr_s": "2",
-        "attr_ava": "2"
+        "attr_ava": "2",
+        "isHackable": "FALSE"
     },
     {
         "id": "8",
@@ -204,7 +209,8 @@ export const ARMY_UNIT = [
         "attr_bts": "0",
         "attr_w": "1",
         "attr_s": "2",
-        "attr_ava": "2"
+        "attr_ava": "2",
+        "isHackable": "FALSE"
     }
 ];
 

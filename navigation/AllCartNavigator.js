@@ -23,7 +23,6 @@ const AllCartStackNavigator = createStackNavigator({
                 height: 40,
                 borderColor: Colors.mainGrey,
                 borderWidth: 0,
-                marginBottom: -30,
             },
             headerTitleStyle: {
                 color: Colors.mainWhite,
@@ -39,7 +38,6 @@ const AllCartStackNavigator = createStackNavigator({
                 height: 40,
                 borderColor: Colors.mainGrey,
                 borderWidth: 0,
-                marginBottom: -30,
             },
             headerTitleStyle: {
                 color: Colors.mainWhite,

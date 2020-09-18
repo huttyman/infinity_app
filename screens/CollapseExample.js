@@ -187,7 +187,7 @@ export default class CollapseExampleTestTemplate extends Component {
         transition="backgroundColor">
         <View style={styles.headerTopTitle}>
           <Text style={styles.headerText}>{unitItem.shortTitle}</Text><TextInput style={{ height: '90%', width: 70, color: Color.mainBlack, textAlign: "right", borderBottomColor: Color.mainBlack, borderBottomWidth: 1, fontSize: 16 }} />
-          <Text style={styles.headerSizeText}>{unitItem.size.toUpperCase()}</Text>
+    <Text style={styles.headerSizeText}>{unitItem.size.toUpperCase()}{console.log(unitItem)}{unitItem.isHackable== "TRUE"?',HA':''}</Text>
           <Button
             style={styles.headerRemoveButton}
             icon={
