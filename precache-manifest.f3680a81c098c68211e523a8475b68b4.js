@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "3fc47f1cb0dcaf79f9ed",
-    "url": "/infinity_app/static/js/app.694ae6e2.chunk.js"
+    "revision": "ba944b4896ea4187a69c",
+    "url": "/infinity_app/static/js/app.bdd55c73.chunk.js"
   },
   {
     "revision": "910ec9977756ac925f1c",
     "url": "/infinity_app/static/js/runtime~app.66033198.js"
   },
   {
-    "revision": "d6f2c76bfccb8981adb4",
-    "url": "/infinity_app/static/js/2.2e8d032b.chunk.js"
+    "revision": "352d7a1de5929b60f2f8",
+    "url": "/infinity_app/static/js/2.a930af9f.chunk.js"
   },
   {
     "revision": "004c2bbb035d8d06bb830efc4673c886",
@@ -124,7 +124,7 @@ self.__precacheManifest = [
     "url": "/infinity_app/static/media/yu-jin.61efa295.svg"
   },
   {
-    "revision": "86126d85128cad9253664246a8b22843",
+    "revision": "6510b8e64cd3524aa8ef671100b778e1",
     "url": "/infinity_app/index.html"
   },
   {
@@ -141,7 +141,7 @@ self.__precacheManifest = [
   },
   {
     "revision": "5e491f7873b4041cbc4cea6b70b3b6cf",
-    "url": "/infinity_app/static/js/2.2e8d032b.chunk.js.LICENSE.txt"
+    "url": "/infinity_app/static/js/2.a930af9f.chunk.js.LICENSE.txt"
   },
   {
     "revision": "d324ddc823eca6c86688f62576c81e76",
