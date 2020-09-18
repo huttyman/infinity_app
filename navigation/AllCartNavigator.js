@@ -7,16 +7,17 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import Colors from '../templates/Colors';
 import ArmyScreen from '../screens/ArmyScreen';
-import CollapseExampleTestTemplate from '../screens/CollapseExampleTestTemplate';
 import SummaryOrderScreen from '../screens/SummaryOrderScreen';
 import TeachOrderScreen from '../screens/TeachOrderScreen';
 import AllOrderScreen from '../screens/AllOrderScreen';
+import TurnOrderScreen from '../screens/TurnOrderScreen';
+import ActionOrderScreen from '../screens/ActionOrderScreen';
 
 const AllCartStackNavigator = createStackNavigator({
     Army: {
         screen: ArmyScreen,
         navigationOptions: {
-            headerTitle: "Army selection v2.4",
+            headerTitle: "Army selection v2.5",
             headerStyle: {
                 backgroundColor: Colors.mainGrey,
                 height: 40,
@@ -49,12 +50,38 @@ const AllCartStackNavigator = createStackNavigator({
 });
 
 const OrderSummaryStackNavigator = createStackNavigator({
-    All: AllOrderScreen,
+    All:{
+        screen: AllOrderScreen,
+        navigationOptions: {
+            headerTitle: "Help",
+            headerStyle: {
+                height: 35,
+            },
+        },
+    },
     Order: SummaryOrderScreen,
     Teaching:{
         screen: TeachOrderScreen,
         navigationOptions: {
             headerTitle: "Teaching",
+            headerStyle: {
+                height: 35,
+            },
+        },
+    },
+    TurnOrder:{
+        screen: TurnOrderScreen,
+        navigationOptions: {
+            headerTitle: "Turn order",
+            headerStyle: {
+                height: 35,
+            },
+        },
+    },
+    ActionOrder:{
+        screen: ActionOrderScreen,
+        navigationOptions: {
+            headerTitle: "Action order",
             headerStyle: {
                 height: 35,
             },

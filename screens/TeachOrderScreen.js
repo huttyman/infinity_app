@@ -23,10 +23,10 @@ const TeachOrderScreen = props => {
         <ScrollView>
 
             <View style={{ justifyContent: "space-around", flexDirection: "row",padding:5 }}>
-                <TouchableOpacity>
+                <TouchableOpacity  onPress={()=>props.navigation.navigate({ routeName: 'TurnOrder' })}>
                     <Text style={{textDecorationLine:"underline"}}>Turn Order</Text>
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity  onPress={()=>props.navigation.navigate({ routeName: 'ActionOrder' })}>
                     <Text style={{textDecorationLine:"underline"}}>Attack order</Text>
                 </TouchableOpacity>
             </View>
@@ -137,8 +137,6 @@ const styles = StyleSheet.create({
         height: '15%',
         zIndex: 1,
         marginVertical: -11,
-        textAlignVertical: "center",
-
     },
     bottomTopBox: {
         height: '50%',
