@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useContext,useState } from 'react';
-import { StyleSheet, Text, View, FlatList, TouchableOpacity } from 'react-native';
+import React, { useContext, useState } from 'react';
+import { StyleSheet, Text, View, FlatList, TouchableOpacity,Image } from 'react-native';
 import Color from '../templates/Colors';
 import { EQUIPMENT, SKILL, UNITLIST, WEAPON } from '../datas/data-unit';
 
@@ -11,10 +11,10 @@ const weaponItem = (weaponId, index, gunLength) => {
     }
 
     const weaponObject = WEAPON.filter(item => item.idTitle == weaponId);
-    if(weaponObject[0].type=="main"){
-      return (<Text style={styles.listTitle}>{weaponObject[0].shortTitle}{endText}</Text>);
-    }else{
-      return (<Text >{weaponObject[0].shortTitle}{endText}</Text>);
+    if (weaponObject[0].type == "main") {
+        return (<Text style={styles.listTitle}>{weaponObject[0].shortTitle}{endText}</Text>);
+    } else {
+        return (<Text >{weaponObject[0].shortTitle}{endText}</Text>);
     }
 };
 
@@ -54,7 +54,7 @@ const unitTraitContainer = (item) => {
     }
 
     return (
-        <View>            
+        <View>
             {skillText}
             {equipmentText}
         </View>
@@ -74,8 +74,14 @@ const AllCart = props => {
         const equipmentLength = item.equipmentList ? item.equipmentList.length : 0;
         let skillText = <Text></Text>;
         let equipmentText = <Text></Text>;
+        let ltTokenImage;
+
+        
 
         if (skillLength != 0) {
+            if (item.skillList.includes('lt')) {
+                ltTokenImage = <Image source={require('../assets/ltToken.png')} style={{ height: 20, width: 20 }} />;
+            }
             skillText = <Text style={{ color: 'green' }}>Skill: {item.skillList.map((gunId, index) => <Text key={index}>{skillItem(gunId, index, skillLength)}</Text>)}</Text>;
         }
 
@@ -87,9 +93,9 @@ const AllCart = props => {
             const gUnitList = global.unitList;
 
             global.unitList = [...gUnitList, { randomKey: Math.random(), unitId: unitId, unitSetId: unitSetId }];
-            global.swc = global.swc+parseFloat(unitItem.swc);
-            global.points = global.points+ parseFloat(unitItem.points);
-            global.unit = global.unit +parseInt(1);
+            global.swc = global.swc + parseFloat(unitItem.swc);
+            global.points = global.points + parseFloat(unitItem.points);
+            global.unit = global.unit + parseInt(1);
             props.toggleFalse();
         };
 
@@ -105,8 +111,8 @@ const AllCart = props => {
             // setSections function which will expand the Accordion accordingly
             >
                 <View style={styles.itemContainer}>
-                    <View style={{ flex: 1 }}>
-
+                    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+                        {ltTokenImage}
                     </View>
                     <View style={{ flex: 6, alignItems: "flex-start" }}>
                         <Text>{props.data.title}</Text>

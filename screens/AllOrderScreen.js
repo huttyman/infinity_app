@@ -7,6 +7,7 @@ const AllOrderScreen = props =>{
         <View>
             <View style={styles.buttonContainer}>
                 <Button title="Teach Order" onPress={()=>props.navigation.navigate({ routeName: 'Teaching' })} />
+                <Button title="Teach Order (Thai)" onPress={()=>props.navigation.navigate({ routeName: 'TeachingTH' })} />
                 <Button title="Action Summary" onPress={()=>props.navigation.navigate({ routeName: 'Order' })} />
                 {/* <Button title="Turn order summary" onPress={()=>{}}/>
                 <Button title="All keyword" onPress={()=>{}}/> */}

@@ -11,13 +11,16 @@ import SummaryOrderScreen from '../screens/SummaryOrderScreen';
 import TeachOrderScreen from '../screens/TeachOrderScreen';
 import AllOrderScreen from '../screens/AllOrderScreen';
 import TurnOrderScreen from '../screens/TurnOrderScreen';
+import TurnOrderScreenTH from '../screens/TurnOrderScreenTH';
 import ActionOrderScreen from '../screens/ActionOrderScreen';
+import ActionOrderScreenTH from '../screens/ActionOrderScreenTH';
+import TeachOrderScreenTH from '../screens/TeachOrderScreenTH';
 
 const AllCartStackNavigator = createStackNavigator({
     Army: {
         screen: ArmyScreen,
         navigationOptions: {
-            headerTitle: "Army selection v2.5",
+            headerTitle: "Army selection v2.5b",
             headerStyle: {
                 backgroundColor: Colors.mainGrey,
                 height: 40,
@@ -67,10 +70,37 @@ const OrderSummaryStackNavigator = createStackNavigator({
             },
         },
     },
+    TeachingTH:{
+        screen: TeachOrderScreenTH,
+        navigationOptions: {
+            headerTitle: "Teaching",
+            headerStyle: {
+                height: 35,
+            },
+        },
+    },
     TurnOrder:{
         screen: TurnOrderScreen,
         navigationOptions: {
             headerTitle: "Turn order",
+            headerStyle: {
+                height: 35,
+            },
+        },
+    },
+    TurnOrderTH:{
+        screen: TurnOrderScreenTH,
+        navigationOptions: {
+            headerTitle: "Turn order",
+            headerStyle: {
+                height: 35,
+            },
+        },
+    },
+    ActionOrderTH:{
+        screen: ActionOrderScreenTH,
+        navigationOptions: {
+            headerTitle: "Action order",
             headerStyle: {
                 height: 35,
             },

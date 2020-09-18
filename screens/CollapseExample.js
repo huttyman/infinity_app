@@ -10,6 +10,7 @@ import {
   TouchableOpacity,
   TextInput,
   Clipboard,
+  Image,
 } from 'react-native';
 import { Button } from 'react-native-elements';
 //import basic react native components
@@ -85,18 +86,18 @@ const importUnit = (unitText) => {
   global.swc = 0;
   global.points = 0;
   global.unit = 0;
-  global.unitList.map(unit=>{ addUnitSetProp(unit.unitSetId) });
+  global.unitList.map(unit => { addUnitSetProp(unit.unitSetId) });
 
 };
 
 const addUnitSetProp = (unitSetId) => {
   const unitItem = UNITLIST.filter(item => item.idTitle == unitSetId)[0];
   console.log(unitItem);
-  console.log(global.points,",",unitItem.swc);
-  global.swc = global.swc+parseFloat(unitItem.swc);
+  console.log(global.points, ",", unitItem.swc);
+  global.swc = global.swc + parseFloat(unitItem.swc);
   console.log(global.points);
-  global.points = global.points+ parseFloat(unitItem.points);
-  global.unit = global.unit +parseInt(1);
+  global.points = global.points + parseFloat(unitItem.points);
+  global.unit = global.unit + parseInt(1);
 };
 
 export default class CollapseExampleTestTemplate extends Component {
@@ -114,7 +115,7 @@ export default class CollapseExampleTestTemplate extends Component {
   };
 
   readFromClipboard = () => {
-    
+
     importUnit(this.state.clibboardText);
   };
 
@@ -171,14 +172,22 @@ export default class CollapseExampleTestTemplate extends Component {
     const equipmentLength = combinedEquipment ? combinedEquipment.length : 0;
     let skillText = <Text></Text>;
     let equipmentText = <Text></Text>;
+    let ltTokenImage;
 
     if (skillLength != 0) {
       skillText = <Text style={[styles.headerDetailText, { color: 'green' }]}>Skill: {combinedSkill.map((gunId, index) => <Text key={index}>{skillItem(gunId, index, skillLength)}</Text>)}</Text>;
+
+      if(combinedSkill.includes('lt')){
+        ltTokenImage = <Image source={require('../assets/ltToken.png')} style={{ height: 20, width: 20 }} />;
+      }
     }
 
     if (equipmentLength != 0) {
       equipmentText = <Text style={[styles.headerDetailText, { color: 'red' }]} >Equipment: {combinedEquipment.map((gunId, index) => <Text key={index}>{equipmentItem(gunId, index, equipmentLength)}</Text>)}</Text>;
+      
     }
+
+    
     //Accordion Header view
     return (
       <Animatable.View
@@ -187,7 +196,7 @@ export default class CollapseExampleTestTemplate extends Component {
         transition="backgroundColor">
         <View style={styles.headerTopTitle}>
           <Text style={styles.headerText}>{unitItem.shortTitle}</Text><TextInput style={{ height: '90%', width: 70, color: Color.mainBlack, textAlign: "right", borderBottomColor: Color.mainBlack, borderBottomWidth: 1, fontSize: 16 }} />
-    <Text style={styles.headerSizeText}>{unitItem.size.toUpperCase()}{console.log(unitItem)}{unitItem.isHackable== "TRUE"?',HA':''}</Text>
+          <Text style={styles.headerSizeText}>{unitItem.size.toUpperCase()}{console.log(unitItem)}{unitItem.isHackable == "TRUE" ? ',HA' : ''}</Text>
           <Button
             style={styles.headerRemoveButton}
             icon={
@@ -203,7 +212,9 @@ export default class CollapseExampleTestTemplate extends Component {
           />
         </View>
         <View style={styles.headerDetailContainer}>
-          <View style={{ flex: 1 }}></View>
+          <View style={{ flex: 1,justifyContent:"center",alignItems:"center" }}>
+            {ltTokenImage}
+          </View>
           <View style={{ flex: 6, alignItems: "flex-start", paddingHorizontal: 5, paddingBottom: 5 }}>
             <View style={styles.headerDetailText} >
               <Text style={{ textAlign: "left" }}>{unitSetItem.gunList.map((gunId, index) => <Text key={index}>{weaponItem(gunId, index, gunLength)}</Text>)}</Text>
@@ -282,13 +293,13 @@ export default class CollapseExampleTestTemplate extends Component {
             ))}
             <Button title="export" onPress={this.writeToClipboard}
               buttonStyle={{ borderRadius: -1, height: '39px', width: '80px', marginLeft: 2 }} />
-            <Button title="import" onPress={()=>{this.readFromClipboard(); this.setToggleFalse();}}
+            <Button title="import" onPress={() => { this.readFromClipboard(); this.setToggleFalse(); }}
               buttonStyle={{ borderRadius: -1, height: '39px', width: '80px', marginLeft: 2 }} />
 
           </View>
-          <View style={{paddingHorizontal:5}}>
-            <Text style={{color:Color.mainWhite}}>import text</Text>
-            <TextInput style={{ color: Color.mainWhite, borderBottomWidth:1, borderColor:Color.mainWhite }} onChangeText={(text) => this.setState({ clibboardText: text })} />
+          <View style={{ paddingHorizontal: 5 }}>
+            <Text style={{ color: Color.mainWhite }}>import text</Text>
+            <TextInput style={{ color: Color.mainWhite, borderBottomWidth: 1, borderColor: Color.mainWhite }} onChangeText={(text) => this.setState({ clibboardText: text })} />
           </View>
           {/*Code for Selector ends here*/}
 
