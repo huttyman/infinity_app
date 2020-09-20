@@ -310,7 +310,7 @@ export default class CollapseExampleTestTemplate extends Component {
         modalVisible={this.state.modalVisible} 
         modalTitle={this.state.modalTitle} 
         toggleModalVisibility={this.toggleModalVisibility}
-          modalText={this.state.modalText}
+        modalText={this.state.modalText}
         />
 
         <View style={{ backgroundColor: Color.mainGrey, padding: 15 }}>

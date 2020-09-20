@@ -16,17 +16,17 @@ import * as Animatable from 'react-native-animatable';
 //import for the collapsible/Expandable view
 import Accordion from 'react-native-collapsible/Accordion';
 //import for the Accordion view
-import {  ARMY_UNIT } from '../datas/data-unit';
+import { ARMY_UNIT } from '../datas/data-unit';
 import AllCart from '../components/AllCart';
 import Color from '../templates/Colors'
 import ScoreTitle from '../components/ScoreTitle';
+import ClickModal from '../components/ClickModal';
 //Dummy content to show
 //You can also use dynamic data by calling webservice
 
 
-
 export default class CollapseMainExample extends Component {
-  
+
   state = {
     //default active selector
     activeSections: [],
@@ -36,14 +36,27 @@ export default class CollapseMainExample extends Component {
     //true: You can expand multiple at a time
     //false: One can be expand at a time and other will be closed automatically
     multipleSelect: false,
-    toggleFalse:false,
+    toggleFalse: false,
+    modalVisible: false,
+    modalTitle: "",
+    modalText: "",
 
   };
 
+  setToggleVisible = (title,text) =>{
+    this.setState({modalVisible:!this.state.modalVisible});
+  }
+  setModalState = (title,text) => {
+    this.setState({
+      modalVisible:!this.state.modalVisible,
+      modalTitle:title,
+      modalText:text
+    })
+  };
 
   setToggleFalse = () => {
-    this.setState({ toggleFalse: !this.state.toggleFalse});
- 
+    this.setState({ toggleFalse: !this.state.toggleFalse });
+
   };
 
   toggleExpanded = () => {
@@ -60,29 +73,29 @@ export default class CollapseMainExample extends Component {
 
   renderHeader = (section, _, isActive) => {
     //Accordion Header view
-  
+
     return (
       <Animatable.View
         duration={400}
-        style={[styles.header, isActive ? styles.active : styles.inactive,{flexDirection:"row",backgroundColor:Color.mainBlack}]}
+        style={[styles.header, isActive ? styles.active : styles.inactive, { flexDirection: "row", backgroundColor: Color.mainBlack }]}
         transition="backgroundColor">
-          <View style={{zIndex:1,backgroundColor:Color.mainBlack,borderRadius:45,maxWidth:80,minWidth:80,flex:1,borderWidth:4,borderColor:Color.mainBlack,overflow:"hidden"}}>
-            <Image source={require('../assets/logos/'+section.idTitle+'.svg')} style={{height:70,width:70}}/>
-          </View>
-          <View style={{zIndex:0, margin:2,backgroundColor:Color.mainGrey,flex:6,alignItems:"flex-start",marginLeft:-40, paddingLeft:50,paddingVertical:20,justifyContent:"center"}}>
-            <Text style={styles.headerText}>{section.shortTitle}</Text>
-          </View>
-          <View style={{margin:2,backgroundColor:Color.mainGrey,borderTopRightRadius:13,borderBottomRightRadius:13,flex:1,alignItems:"center",justifyContent:"center"}}>
-            <Text style={[styles.headerText,{textTransform:"uppercase"}]}>{section.size}</Text>
-          </View>
-      
+        <View style={{ zIndex: 1, backgroundColor: Color.mainBlack, borderRadius: 45, maxWidth: 80, minWidth: 80, flex: 1, borderWidth: 4, borderColor: Color.mainBlack, overflow: "hidden" }}>
+          <Image source={require('../assets/logos/' + section.idTitle + '.svg')} style={{ height: 70, width: 70 }} />
+        </View>
+        <View style={{ zIndex: 0, margin: 2, backgroundColor: Color.mainGrey, flex: 6, alignItems: "flex-start", marginLeft: -40, paddingLeft: 50, paddingVertical: 20, justifyContent: "center" }}>
+          <Text style={styles.headerText}>{section.shortTitle}</Text>
+        </View>
+        <View style={{ margin: 2, backgroundColor: Color.mainGrey, borderTopRightRadius: 13, borderBottomRightRadius: 13, flex: 1, alignItems: "center", justifyContent: "center" }}>
+          <Text style={[styles.headerText, { textTransform: "uppercase" }]}>{section.size}</Text>
+        </View>
+
       </Animatable.View>
     );
   };
 
   renderContent = (section, _, isActive) => {
     //Accordion Content view
-    
+
     return (
       <Animatable.View
         duration={400}
@@ -90,7 +103,7 @@ export default class CollapseMainExample extends Component {
         transition="backgroundColor">
         <Animatable.Text
           style={{ textAlign: 'center' }}>
-          <AllCart data={section} toggleFalse={this.setToggleFalse} navigation={this.props.navigation} />
+          <AllCart data={section} toggleFalse={this.setToggleFalse} setModalState={this.setModalState} navigation={this.props.navigation} />
         </Animatable.Text>
       </Animatable.View>
     );
@@ -100,15 +113,23 @@ export default class CollapseMainExample extends Component {
     const { multipleSelect, activeSections } = this.state;
     const armyId = this.props.navigation.getParam('armyId');
     const filterArmy = ARMY_UNIT.filter(army => army.attr_armyId == armyId);
-  
+
     return (
       <View style={styles.container}>
+
+        <ClickModal
+          modalVisible={this.state.modalVisible}
+          modalTitle={this.state.modalTitle}
+          toggleModalVisibility={this.setToggleVisible}
+          modalText={this.state.modalText}
+        />
+
         {/* score count header*/}
-        <View style={{backgroundColor:Color.mainGrey, paddingHorizontal:15,paddingBottom:15}}>
-           <ScoreTitle/>
+        <View style={{ backgroundColor: Color.mainGrey, paddingHorizontal: 15, paddingBottom: 15 }}>
+          <ScoreTitle />
         </View>
         <ScrollView contentContainerStyle={{ paddingTop: 5 }}>
-          
+
           <View style={styles.multipleToggle}>
             <Text style={styles.multipleToggle__title}>
               Multiple Expand Allowed?
@@ -168,7 +189,7 @@ const styles = StyleSheet.create({
     color: Color.mainWhite,
   },
   content: {
-    width:'100%',
+    width: '100%',
     backgroundColor: Color.mainWhite,
   },
   active: {
@@ -205,6 +226,6 @@ const styles = StyleSheet.create({
   multipleToggle__title: {
     fontSize: 16,
     marginRight: 8,
-    color:Color.mainWhite,
+    color: Color.mainWhite,
   },
 });

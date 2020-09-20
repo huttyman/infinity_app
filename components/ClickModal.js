@@ -31,7 +31,7 @@ const ClickModal = props =>{
                   <TouchableOpacity
                     style={{ height: "100%", justifyContent:"flex-end",alignItems:"flex-end",flex:1 }}
                     onPress={() => {
-                      this.toggleModalVisibility("fdfsd", "skill");
+                       props.toggleModalVisibility("fdfsd", "skill");
                     }}
                   >
                     <Text  style={styles.modalTextTitleStyle} >

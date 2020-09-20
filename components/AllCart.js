@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useContext, useState } from 'react';
-import { StyleSheet, Text, View, FlatList, TouchableOpacity,Image } from 'react-native';
+import { StyleSheet, Text, View, FlatList, TouchableOpacity, Image } from 'react-native';
 import Color from '../templates/Colors';
 import { EQUIPMENT, SKILL, UNITLIST, WEAPON } from '../datas/data-unit';
 
@@ -28,14 +28,19 @@ const equipmentItem = (equipmentId, index, length) => {
     return (<Text style={styles.listTitle}>{equipmentObject[0].title}{endText} </Text>);
 };
 
-const skillItem = (skillId, index, length) => {
+const skillItem = (skillId, index, length,toggleModalVisibility) => {
     let endText = " • ";
     if (length == index + 1) {
         endText = "";
     }
 
     const skillObject = SKILL.filter(item => item.idTitle == skillId);
-    return (<Text style={styles.listTitle}>{skillObject[0].title}{endText} </Text>);
+    return (<Text style={styles.listTitle}><TouchableOpacity
+        style={styles.openButton}
+        onPress={() => {
+          toggleModalVisibility(skillId, "skill");
+        }}
+      ><Text>{skillObject[0].title}</Text></TouchableOpacity>{endText} </Text>);
 };
 
 const unitTraitContainer = (item) => {
@@ -66,6 +71,35 @@ const unitTraitContainer = (item) => {
 const AllCart = props => {
     const unitList = props.data.unitSet;
 
+
+    const toggleModalVisibility = (input, type) => {
+        //Toggling the state of single Collapsible
+        let descriptionText = "";
+
+        if (type == "skill") {
+            const selectedSkill = SKILL.filter(item => item.idTitle == input)[0];
+            if (selectedSkill) {
+                descriptionText += selectedSkill.requirement ? "requirement\n" + selectedSkill.requirement + "\n\n" : "";
+                descriptionText += selectedSkill.activation ? "activation\n" + selectedSkill.activation + "\n\n" : "";
+                descriptionText += selectedSkill.effect ? "effect\n" + selectedSkill.effect + "\n\n" : "";
+                descriptionText += selectedSkill.cancellation ? "cancellation\n" + selectedSkill.cancellation + "\n\n" : "";
+
+                props.setModalState(selectedSkill.title, descriptionText);
+            }
+
+        } else if (type == "equipment") {
+            const selectedEquipment = EQUIPMENT.filter(item => item.idTitle == input)[0];
+            if (selectedEquipment) {
+                descriptionText += selectedEquipment.requirement ? "requirement\n" + selectedEquipment.requirement + "\n" : "";
+                descriptionText += selectedEquipment.activation ? "activation\n" + selectedEquipment.activation + "\n" : "";
+                descriptionText += selectedEquipment.effect ? "effect\n" + selectedEquipment.effect + "\n" : "";
+                descriptionText += selectedEquipment.cancellation ? "cancellation\n" + selectedEquipment.cancellation + "\n" : "";
+
+                props.setModalState(selectedEquipment.title, descriptionText);
+            }
+        }
+    };
+
     const rederItemUnitList = (unitList) => {
         const item = UNITLIST.filter(unitSet => unitSet.idTitle == unitList.item)[0];
 
@@ -76,17 +110,17 @@ const AllCart = props => {
         let equipmentText = <Text></Text>;
         let ltTokenImage;
 
-        
+
 
         if (skillLength != 0) {
             if (item.skillList.includes('lt')) {
                 ltTokenImage = <Image source={require('../assets/ltToken.png')} style={{ height: 20, width: 20 }} />;
             }
-            skillText = <Text style={{ color: 'green' }}>Skill: {item.skillList.map((gunId, index) => <Text key={index}>{skillItem(gunId, index, skillLength)}</Text>)}</Text>;
+            skillText = <Text style={{ color: 'green' }}>Skill: {item.skillList.map((gunId, index) => <Text key={index}>{skillItem(gunId, index, skillLength,toggleModalVisibility)}</Text>)}</Text>;
         }
 
         if (equipmentLength != 0) {
-            equipmentText = <Text style={{ color: 'red' }} >Equipment: {item.equipmentList.map((gunId, index) => <Text key={index}>{equipmentItem(gunId, index, equipmentLength)}</Text>)}</Text>;
+            equipmentText = <Text style={{ color: 'red' }} >Equipment: {item.equipmentList.map((gunId, index) => <Text key={index}>{equipmentItem(gunId, index, equipmentLength,toggleModalVisibility)}</Text>)}</Text>;
         }
 
         const addUnitListHandler = (unitId, unitSetId, unitItem) => {
