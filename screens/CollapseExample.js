@@ -1,5 +1,5 @@
 /*Example of Collapsible - Accordion - Expandable View in React Native*/
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 //import react in our project
 import {
   Switch,
@@ -10,11 +10,8 @@ import {
   TouchableOpacity,
   TextInput,
   Clipboard,
-  Image,
-  Alert,
-  TouchableHighlight
+  Image
 } from 'react-native';
-import Modal from 'modal-react-native-web';
 import { Button } from 'react-native-elements';
 //import basic react native components
 import * as Animatable from 'react-native-animatable';
@@ -26,6 +23,7 @@ import { WEAPON, EQUIPMENT, ARMY_UNIT, UNITLIST, SKILL } from '../datas/data-uni
 import ScoreTitle from '../components/ScoreTitle';
 import Color from '../templates/Colors';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import ClickModal from '../components/ClickModal';
 
 //Dummy content to show
 //You can also use dynamic data by calling webservice
@@ -308,45 +306,12 @@ export default class CollapseExampleTestTemplate extends Component {
     // global.unitList = [{ unitId: '1', unitSetId: '4' }, { unitId: '2', unitSetId: '2' }];
     return (
       <View style={styles.container}>
-        <Modal
-          animationType="fade"
-          transparent={true}
-          visible={this.state.modalVisible}
-          ariaHideApp={false}
-          onRequestClose={() => {
-            Alert.alert("Modal has been closed.");
-          }}
-        >
-          <View style={styles.centeredView}>
-            <View style={styles.modalView}>
-              <View style={styles.modalTouch}>
-
-
-                <View style={{flexDirection:"row"}}>
-                  <Text style={styles.modalTextTitleStyle}>{this.state.modalTitle}</Text>
-                  <TouchableOpacity
-                    style={{ height: "100%", justifyContent:"flex-end",alignItems:"flex-end",flex:1 }}
-                    onPress={() => {
-                      this.toggleModalVisibility("fdfsd", "skill");
-                    }}
-                  >
-                    <Text  style={styles.modalTextTitleStyle} >
-                      X
-                      </Text>
-                  </TouchableOpacity>
-                </View>
-                <ScrollView>
-                  <View style={{ height: "100%" }}>
-                    <Text style={styles.modalTextStyle}>{this.state.modalText}</Text>
-                  </View>
-                </ScrollView>
-              </View>
-            </View>
-          </View>
-          <View style={styles.backgroundTrans}>
-
-          </View>
-        </Modal>
+        <ClickModal 
+        modalVisible={this.state.modalVisible} 
+        modalTitle={this.state.modalTitle} 
+        toggleModalVisibility={this.toggleModalVisibility}
+          modalText={this.state.modalText}
+        />
 
         <View style={{ backgroundColor: Color.mainGrey, padding: 15 }}>
           <ScoreTitle />
@@ -527,45 +492,5 @@ const styles = StyleSheet.create({
   listTitle: {
     fontWeight: "bold",
   },
-  centeredView: {
-    height: '90%',
-    zIndex: 1,
-  },
-  modalView: {
-    alignItems: "center",
-    marginVertical: "auto",
-    height: "100%",
-  },
-  modalTextStyle: {
-    fontSize: 16,
-  },
-  modalTextTitleStyle: {
-    paddingVertical: 5,
-    fontWeight: "bold",
-    fontSize: 16,
-  },
-  modalTouch: {
-    backgroundColor: "white",
-    minWidth: "50%",
-    maxWidth: "90%",
-    borderRadius: 8,
-    padding: 10,
-    shadowColor: "black",
-    shadowOffset: {
-      width: 0,
-      height: 7,
-    },
-    shadowOpacity: 0.5,
-    shadowRadius: 15,
-    maxHeight: "70%",
-    marginVertical: "auto",
-    elevation: 14,
-  },
-  backgroundTrans: {
-    backgroundColor: "grey",
-    marginTop: -700,
-    height: 800,
-    opacity: 0.4,
-    zIndex: 0,
-  },
+
 });
