@@ -220,8 +220,6 @@ const modColor = modValue => {
 
 
 const Cart = props => {
-    console.log("vvv");
-    console.log(props);
     const unitId = props.data.unitId;
     const unitSetId = props.data.unitSetId;
 

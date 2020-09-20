@@ -53,7 +53,7 @@ const equipmentItem = (equipmentId, index, length) => {
   return (<Text style={styles.listTitle}>{equipmentObject[0].title}{endText} </Text>);
 };
 
-const skillItem = (skillId, index, length,toggleModalVisibility) => {
+const skillItem = (skillId, index, length, toggleModalVisibility) => {
   let endText = " • ";
   if (length == index + 1) {
     endText = "";
@@ -62,10 +62,10 @@ const skillItem = (skillId, index, length,toggleModalVisibility) => {
   const skillObject = SKILL.filter(item => item.idTitle == skillId);
   return (<Text style={styles.listTitle}>
     <TouchableOpacity
-        style={styles.openButton}
-        onPress={() => {
-            toggleModalVisibility("eng");
-        }}
+      style={styles.openButton}
+      onPress={() => {
+        toggleModalVisibility(skillId);
+      }}
     ><Text>{skillObject[0].title}</Text></TouchableOpacity>{endText} </Text>);
 };
 
@@ -139,13 +139,26 @@ export default class CollapseExampleTestTemplate extends Component {
 
   toggleModalVisibility = (input) => {
     //Toggling the state of single Collapsible
-    console.log('test');
+    console.log('testkkk', input);
     const selectedSkill = SKILL.filter(item => item.idTitle == input)[0];
-    console.log(selectedSkill);
-    this.setState({ modalText: selectedSkill.effect });
+
+    let descriptionText ="";
+
+    if(selectedSkill){
+      descriptionText += selectedSkill.requirement? "requirement\n"+selectedSkill.requirement+"\n":"";
+      descriptionText += selectedSkill.activation? "activation\n"+selectedSkill.activation+"\n":"";
+      descriptionText += selectedSkill.effect? "effect\n"+selectedSkill.effect+"\n":"";
+      descriptionText += selectedSkill.cancellation? "cancellation\n"+selectedSkill.cancellation+"\n":"";
+
+    }
+    if (selectedSkill) {
+      this.setState({
+        modalText: descriptionText,
+        modalTitle: selectedSkill.title
+      });
+    }
     this.setState({
-      modalVisible: !this.state.modalVisible,
-      modalTitle: selectedSkill.title
+      modalVisible: !this.state.modalVisible
     });
   };
 
@@ -197,7 +210,7 @@ export default class CollapseExampleTestTemplate extends Component {
     let ltTokenImage;
 
     if (skillLength != 0) {
-      skillText = <Text style={[styles.headerDetailText, { color: 'green' }]}>Skill: {combinedSkill.map((gunId, index) => <Text key={index}>{skillItem(gunId, index, skillLength,this.toggleModalVisibility)}</Text>)}</Text>;
+      skillText = <Text style={[styles.headerDetailText, { color: 'green' }]}>Skill: {combinedSkill.map((gunId, index) => <Text key={index}>{skillItem(gunId, index, skillLength, this.toggleModalVisibility)}</Text>)}</Text>;
 
       if (combinedSkill.includes('lt')) {
         ltTokenImage = <Image source={require('../assets/ltToken.png')} style={{ height: 20, width: 20 }} />;
@@ -256,9 +269,6 @@ export default class CollapseExampleTestTemplate extends Component {
   };
 
   renderContent(section, _, isActive) {
-    console.log("test2");
-    console.log(section);
-    console.log(this);
     //Accordion Content view
     return (
       <Animatable.View
@@ -280,7 +290,7 @@ export default class CollapseExampleTestTemplate extends Component {
     return (
       <View style={styles.container}>
         <Modal
-          animationType="slide"
+          animationType="fade"
           transparent={true}
           visible={this.state.modalVisible}
           ariaHideApp={false}
@@ -303,6 +313,9 @@ export default class CollapseExampleTestTemplate extends Component {
                 </TouchableOpacity>
               </View>
             </View>
+          </View>
+          <View style={styles.backgroundTrans}>
+
           </View>
         </Modal>
 
@@ -487,6 +500,7 @@ const styles = StyleSheet.create({
   },
   centeredView: {
     height: '90%',
+    zIndex: 1,
   },
   modalView: {
     alignItems: "center",
@@ -495,14 +509,15 @@ const styles = StyleSheet.create({
   modalTextStyle: {
     fontSize: 16,
   },
-  modalTextTitleStyle:{
-    paddingVertical:5,
-    fontWeight:"bold",
+  modalTextTitleStyle: {
+    paddingVertical: 5,
+    fontWeight: "bold",
     fontSize: 16,
   },
   modalTouch: {
     backgroundColor: "white",
     minWidth: "50%",
+    maxWidth: "90%",
     borderRadius: 8,
     padding: 10,
     shadowColor: "black",
@@ -514,5 +529,12 @@ const styles = StyleSheet.create({
     shadowRadius: 15,
 
     elevation: 14,
-  }
+  },
+  backgroundTrans: {
+    backgroundColor: "grey",
+    marginTop: -700,
+    height: 800,
+    opacity: 0.4,
+    zIndex: 0,
+  },
 });
