@@ -85,7 +85,7 @@ const AllCart = props => {
             const selectedSkill = SKILL.filter(item => item.idTitle == input)[0];
             if (selectedSkill) {
                 descriptionText += selectedSkill.requirement ? "Requirement\n" + selectedSkill.requirement + "\n\n" : "";
-                descriptionText += selectedSkill.activation ? "activation\n" + selectedSkill.activation + "\n\n" : "";
+                descriptionText += selectedSkill.activation ? "Activation\n" + selectedSkill.activation + "\n\n" : "";
                 descriptionText += selectedSkill.effect ? "Effect\n" + selectedSkill.effect + "\n\n" : "";
                 descriptionText += selectedSkill.cancellation ? "Cancellation\n" + selectedSkill.cancellation + "\n\n" : "";
 

@@ -147,10 +147,10 @@ export default class CollapseExampleTestTemplate extends Component {
     if (type == "skill") {
       const selectedSkill = SKILL.filter(item => item.idTitle == input)[0];
       if (selectedSkill) {
-        descriptionText += selectedSkill.requirement ? "requirement\n" + selectedSkill.requirement + "\n\n" : "";
-        descriptionText += selectedSkill.activation ? "activation\n" + selectedSkill.activation + "\n\n" : "";
-        descriptionText += selectedSkill.effect ? "effect\n" + selectedSkill.effect + "\n\n" : "";
-        descriptionText += selectedSkill.cancellation ? "cancellation\n" + selectedSkill.cancellation + "\n\n" : "";
+        descriptionText += selectedSkill.requirement ? "Requirement\n" + selectedSkill.requirement + "\n\n" : "";
+        descriptionText += selectedSkill.activation ? "Activation\n" + selectedSkill.activation + "\n\n" : "";
+        descriptionText += selectedSkill.effect ? "Effect\n" + selectedSkill.effect + "\n\n" : "";
+        descriptionText += selectedSkill.cancellation ? "Cancellation\n" + selectedSkill.cancellation + "\n\n" : "";
 
         this.setState({
           modalText: descriptionText,
@@ -161,10 +161,10 @@ export default class CollapseExampleTestTemplate extends Component {
     } else if (type == "equipment") {
       const selectedEquipment = EQUIPMENT.filter(item => item.idTitle == input)[0];
       if (selectedEquipment) {
-        descriptionText += selectedEquipment.requirement ? "requirement\n" + selectedEquipment.requirement + "\n" : "";
-        descriptionText += selectedEquipment.activation ? "activation\n" + selectedEquipment.activation + "\n" : "";
-        descriptionText += selectedEquipment.effect ? "effect\n" + selectedEquipment.effect + "\n" : "";
-        descriptionText += selectedEquipment.cancellation ? "cancellation\n" + selectedEquipment.cancellation + "\n" : "";
+        descriptionText += selectedEquipment.requirement ? "Requirement\n" + selectedEquipment.requirement + "\n\n" : "";
+        descriptionText += selectedEquipment.activation ? "Activation\n" + selectedEquipment.activation + "\n\n" : "";
+        descriptionText += selectedEquipment.effect ? "Effect\n" + selectedEquipment.effect + "\n\n" : "";
+        descriptionText += selectedEquipment.cancellation ? "Cancellation\n" + selectedEquipment.cancellation + "\n\n" : "";
 
         this.setState({
           modalText: descriptionText,
