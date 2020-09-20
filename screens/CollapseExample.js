@@ -43,7 +43,7 @@ const weaponItem = (weaponId, index, gunLength) => {
   }
 };
 
-const equipmentItem = (equipmentId, index, length,toggleModalVisibility) => {
+const equipmentItem = (equipmentId, index, length, toggleModalVisibility) => {
   let endText = " • ";
   if (length == index + 1) {
     endText = "";
@@ -53,7 +53,7 @@ const equipmentItem = (equipmentId, index, length,toggleModalVisibility) => {
   return (<Text style={styles.listTitle}><TouchableOpacity
     style={styles.openButton}
     onPress={() => {
-      toggleModalVisibility(equipmentId,"equipment");
+      toggleModalVisibility(equipmentId, "equipment");
     }}
   ><Text>{equipmentObject[0].title}</Text></TouchableOpacity>{endText} </Text>);
 };
@@ -69,7 +69,7 @@ const skillItem = (skillId, index, length, toggleModalVisibility) => {
     <TouchableOpacity
       style={styles.openButton}
       onPress={() => {
-        toggleModalVisibility(skillId,"skill");
+        toggleModalVisibility(skillId, "skill");
       }}
     ><Text>{skillObject[0].title}</Text></TouchableOpacity>{endText} </Text>);
 };
@@ -237,7 +237,7 @@ export default class CollapseExampleTestTemplate extends Component {
     }
 
     if (equipmentLength != 0) {
-      equipmentText = <Text style={[styles.headerDetailText, { color: 'red' }]} >Equipment: {combinedEquipment.map((gunId, index) => <Text key={index}>{equipmentItem(gunId, index, equipmentLength,this.toggleModalVisibility)}</Text>)}</Text>;
+      equipmentText = <Text style={[styles.headerDetailText, { color: 'red' }]} >Equipment: {combinedEquipment.map((gunId, index) => <Text key={index}>{equipmentItem(gunId, index, equipmentLength, this.toggleModalVisibility)}</Text>)}</Text>;
 
     }
 
@@ -321,20 +321,25 @@ export default class CollapseExampleTestTemplate extends Component {
             <View style={styles.modalView}>
               <View style={styles.modalTouch}>
 
-                <TouchableOpacity
-                  style={{ height: "100%" }}
-                  onPress={() => {
-                    this.toggleModalVisibility("fdfsd","skill");
-                  }}
-                >
 
+                <View style={{flexDirection:"row"}}>
                   <Text style={styles.modalTextTitleStyle}>{this.state.modalTitle}</Text>
-                  <ScrollView>
-                    <View style={{ height: "100%" }}>
-                      <Text style={styles.modalTextStyle}>{this.state.modalText}</Text>
-                    </View>
-                  </ScrollView>
-                </TouchableOpacity>
+                  <TouchableOpacity
+                    style={{ height: "100%", justifyContent:"flex-end",alignItems:"flex-end",flex:1 }}
+                    onPress={() => {
+                      this.toggleModalVisibility("fdfsd", "skill");
+                    }}
+                  >
+                    <Text  style={styles.modalTextTitleStyle} >
+                      X
+                      </Text>
+                  </TouchableOpacity>
+                </View>
+                <ScrollView>
+                  <View style={{ height: "100%" }}>
+                    <Text style={styles.modalTextStyle}>{this.state.modalText}</Text>
+                  </View>
+                </ScrollView>
               </View>
             </View>
           </View>
