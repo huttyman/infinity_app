@@ -920,6 +920,7 @@ export const WEAPON = [
 ];
 
 export const SKILL = [
+    
     {
         "id": "9",
         "idTitle": "camo",
@@ -981,12 +982,17 @@ export const SKILL = [
     {
         "id": "7",
         "idTitle": "mart2",
-        "title": "Martial Arts L2"
+        "title": "Martial Arts L2",
+        "type": "Automatic Skill",
+        "effect": "► Attack Mod: +3\r\n► Opponent Mod: -3\r\n► Damage Mod: +1\r\n► Burst Mod: 0"
     },
     {
         "id": "8",
         "idTitle": "mimet3",
-        "title": "Mimetism (-3)"
+        "title": "Mimetism (-3)",
+        "type": "Automatic Skill",
+        "trait": "NFB, Obligatory",
+        "effect": "► Any enemy declaring a BS Attack or Discover against the user of\r\nthis Skill must apply a negative MOD to their Atribute,The Mimetism MOD does not apply to CC Attacks"
     },
     {
         "id": "4",
@@ -994,7 +1000,7 @@ export const SKILL = [
         "title": "Mimetism (-6)",
         "type": "Automatic Skill",
         "trait": "NFB, Obligatory",
-        "effect": "Any enemy declaring a BS Attack or Discover against the user of\r\nthis Skill must apply a negative MOD to their Atribute,The Mimetism MOD does not apply to CC Attacks"
+        "effect": "► Any enemy declaring a BS Attack or Discover against the user of\r\nthis Skill must apply a negative MOD to their Atribute,The Mimetism MOD does not apply to CC Attacks"
     },
     {
         "id": "1",
@@ -1002,7 +1008,7 @@ export const SKILL = [
         "title": "Paramedic",
         "type": "Automatic Skill",
         "trait": "Obligatory.",
-        "effect": "Paramedics are equipped with MediKits to recover their Unconscious\r\ncomrades."
+        "effect": "► Paramedics are equipped with MediKits to recover their Unconscious\r\ncomrades."
     },
     {
         "id": "10",
@@ -1016,20 +1022,27 @@ export const SKILL = [
     
 ];
 export const EQUIPMENT = [
-        {
-            "id": "1",
-            "idTitle": "med",
-            "title": "Medkit"
-        },
-        {
-            "id": "2",
-            "idTitle": "hack",
-            "title": "Hacking Device"
-        },
-        {
-            "id": "3",
-            "idTitle": "mvisor1",
-            "title": "Multispectral Visor L1"
-        }
-    
+    {
+        "id": "1",
+        "idTitle": "med",
+        "title": "Medkit",
+        "requirement": "► A MediKit’s target must be an Allied Model in Unconscious State,\r\nunless certain scenario rules say otherwise.\r\n► A MediKit can be used in one of two ways, each one with their own\r\nRequirements:\r\n► To use it remotely, the user must have LoF to the target.\r\n► To use it as a piece of contact equipment, the user must be in\r\nSilhouette contact with the target.",
+        "effect": "► Used remotely, a MediKit is considered a Non-Lethal BS Weapon. If\r\nthe user passes a BS Attack Roll, applying the corresponding MODs\r\n(for Range, Cover, etc.), the target will perform a single PH Roll.\r\n► A MediKit can also be used in Silhouette contact. To do so, the user\r\nmust spend one Short Skill, without the need for a Roll, and their\r\ntarget will perform a PH Roll.\r\n► In both cases, by passing the PH Roll, the target’s Unconscious\r\nState is cancelled, by recovering a single point of their Wounds\r\nAttribute. If the PH Roll is failed, the target automatically enters\r\nthe Dead State and is removed from the game table.\r\n► A MediKit’s target does not perform a Saving Roll.\r\n► By using a MediKit, a Trooper may be recovered from the Unconscious\r\nState as many times as necessary, as long as they pass the\r\ncorresponding PH Roll.\r\n► If, due a Special Skill or rule, a Trooper receives more than one\r\nsuccessful hit or use of MediKit during the same Order, if any of the\r\ncorresponding PH Rolls is failed, the Trooper automatically enters\r\nthe Dead State. Even if the Trooper passes every PH Roll, they will\r\nonly recover a single point of their Wounds Attribute."
+    },
+    {
+        "id": "2",
+        "idTitle": "hack",
+        "title": "Hacking Device",
+        "type": "equipment",
+        "trait": "Comms Equipment",
+        "effect": "► Allows the use of the Carbonite and Spotlight Hacking Programs."
+    },
+    {
+        "id": "3",
+        "idTitle": "mvisor1",
+        "title": "Multispectral Visor L1",
+        "type": "SHORT SKILL",
+        "trait": "Non-Lethal.",
+        "effect": "► This Visor reduces the MOD of Mimetism (-3) from -3 to 0.\r\n► It also reduces the MOD of Mimetism (-6) from -6 to -3."
+    }
 ];
