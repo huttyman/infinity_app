@@ -43,14 +43,19 @@ const weaponItem = (weaponId, index, gunLength) => {
   }
 };
 
-const equipmentItem = (equipmentId, index, length) => {
+const equipmentItem = (equipmentId, index, length,toggleModalVisibility) => {
   let endText = " • ";
   if (length == index + 1) {
     endText = "";
   }
 
   const equipmentObject = EQUIPMENT.filter(item => item.idTitle == equipmentId);
-  return (<Text style={styles.listTitle}>{equipmentObject[0].title}{endText} </Text>);
+  return (<Text style={styles.listTitle}><TouchableOpacity
+    style={styles.openButton}
+    onPress={() => {
+      toggleModalVisibility(equipmentId,"equipment");
+    }}
+  ><Text>{equipmentObject[0].title}</Text></TouchableOpacity>{endText} </Text>);
 };
 
 const skillItem = (skillId, index, length, toggleModalVisibility) => {
@@ -64,7 +69,7 @@ const skillItem = (skillId, index, length, toggleModalVisibility) => {
     <TouchableOpacity
       style={styles.openButton}
       onPress={() => {
-        toggleModalVisibility(skillId);
+        toggleModalVisibility(skillId,"skill");
       }}
     ><Text>{skillObject[0].title}</Text></TouchableOpacity>{endText} </Text>);
 };
@@ -137,25 +142,40 @@ export default class CollapseExampleTestTemplate extends Component {
     this.setState({ collapsed: !this.state.collapsed });
   };
 
-  toggleModalVisibility = (input) => {
+  toggleModalVisibility = (input, type) => {
     //Toggling the state of single Collapsible
-    const selectedSkill = SKILL.filter(item => item.idTitle == input)[0];
-
     let descriptionText = "";
 
-    if (selectedSkill) {
-      descriptionText += selectedSkill.requirement ? "requirement\n" + selectedSkill.requirement + "\n" : "";
-      descriptionText += selectedSkill.activation ? "activation\n" + selectedSkill.activation + "\n" : "";
-      descriptionText += selectedSkill.effect ? "effect\n" + selectedSkill.effect + "\n" : "";
-      descriptionText += selectedSkill.cancellation ? "cancellation\n" + selectedSkill.cancellation + "\n" : "";
+    if (type == "skill") {
+      const selectedSkill = SKILL.filter(item => item.idTitle == input)[0];
+      if (selectedSkill) {
+        descriptionText += selectedSkill.requirement ? "requirement\n" + selectedSkill.requirement + "\n\n" : "";
+        descriptionText += selectedSkill.activation ? "activation\n" + selectedSkill.activation + "\n\n" : "";
+        descriptionText += selectedSkill.effect ? "effect\n" + selectedSkill.effect + "\n\n" : "";
+        descriptionText += selectedSkill.cancellation ? "cancellation\n" + selectedSkill.cancellation + "\n\n" : "";
+
+        this.setState({
+          modalText: descriptionText,
+          modalTitle: selectedSkill.title
+        });
+      }
+
+    } else if (type == "equipment") {
+      const selectedEquipment = EQUIPMENT.filter(item => item.idTitle == input)[0];
+      if (selectedEquipment) {
+        descriptionText += selectedEquipment.requirement ? "requirement\n" + selectedEquipment.requirement + "\n" : "";
+        descriptionText += selectedEquipment.activation ? "activation\n" + selectedEquipment.activation + "\n" : "";
+        descriptionText += selectedEquipment.effect ? "effect\n" + selectedEquipment.effect + "\n" : "";
+        descriptionText += selectedEquipment.cancellation ? "cancellation\n" + selectedEquipment.cancellation + "\n" : "";
+
+        this.setState({
+          modalText: descriptionText,
+          modalTitle: selectedEquipment.title
+        });
+      }
 
     }
-    if (selectedSkill) {
-      this.setState({
-        modalText: descriptionText,
-        modalTitle: selectedSkill.title
-      });
-    }
+
     this.setState({
       modalVisible: !this.state.modalVisible
     });
@@ -217,7 +237,7 @@ export default class CollapseExampleTestTemplate extends Component {
     }
 
     if (equipmentLength != 0) {
-      equipmentText = <Text style={[styles.headerDetailText, { color: 'red' }]} >Equipment: {combinedEquipment.map((gunId, index) => <Text key={index}>{equipmentItem(gunId, index, equipmentLength)}</Text>)}</Text>;
+      equipmentText = <Text style={[styles.headerDetailText, { color: 'red' }]} >Equipment: {combinedEquipment.map((gunId, index) => <Text key={index}>{equipmentItem(gunId, index, equipmentLength,this.toggleModalVisibility)}</Text>)}</Text>;
 
     }
 
@@ -302,16 +322,16 @@ export default class CollapseExampleTestTemplate extends Component {
               <View style={styles.modalTouch}>
 
                 <TouchableOpacity
-                  style={{height:"100%"}}
+                  style={{ height: "100%" }}
                   onPress={() => {
-                    this.toggleModalVisibility("fdfsd");
+                    this.toggleModalVisibility("fdfsd","skill");
                   }}
                 >
 
                   <Text style={styles.modalTextTitleStyle}>{this.state.modalTitle}</Text>
                   <ScrollView>
-                    <View style={{height:"100%"}}>
-                    <Text style={styles.modalTextStyle}>{this.state.modalText}</Text>
+                    <View style={{ height: "100%" }}>
+                      <Text style={styles.modalTextStyle}>{this.state.modalText}</Text>
                     </View>
                   </ScrollView>
                 </TouchableOpacity>
@@ -509,7 +529,7 @@ const styles = StyleSheet.create({
   modalView: {
     alignItems: "center",
     marginVertical: "auto",
-    height:"100%",
+    height: "100%",
   },
   modalTextStyle: {
     fontSize: 16,
