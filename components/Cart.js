@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { ARMY_UNIT, UNITLIST, WEAPON } from '../datas/data-unit';
 import Color from '../templates/Colors';
 
@@ -73,30 +73,30 @@ const HackerCard = props => {
 
 };
 
-const DiscoverCard = props =>{
-    return(
+const DiscoverCard = props => {
+    return (
         <View style={{ width: '100%' }} >
-                    <View key={Math.random()} style={styles.cardContainer}>
-                        <View style={styles.troopTitle}>
-                            <Text style={styles.troopTitleText}>Discover</Text>
-                        </View>
-                    </View>
-                    <View style={[styles.detailContainer,{paddingBottom:10}]}>
-                        <View style={styles.rowContainer}>
-                            <View style={styles.rowWidth}><Text>Short</Text></View>
-                            <View style={styles.rowWidth}><Text>Medium</Text></View>
-                            <View style={styles.rowWidth}><Text>Long</Text></View>
-                            <View style={styles.rowWidth}><Text>Max</Text></View>
-                        </View>
-                        <View style={styles.underline}></View>
-                        <View style={styles.rowContainer}>
-                            <View style={[styles.rowWidth, { backgroundColor: Color.rangeGreen }]}><Text style={styles.rowBodyText}>0-8" +3</Text></View>
-                            <View style={[styles.rowWidth, { backgroundColor: Color.rangeBlue }]}><Text style={styles.rowBodyText}>8-32" 0</Text></View>
-                            <View style={[styles.rowWidth, { backgroundColor: Color.rangeYellow }]}><Text style={styles.rowBodyText}>32-48" -3</Text></View>
-                            <View style={[styles.rowWidth, { backgroundColor: Color.rangeRed }]}><Text style={styles.rowBodyText}>48-96" -6</Text></View>
-                        </View>
-                    </View>
+            <View key={Math.random()} style={styles.cardContainer}>
+                <View style={styles.troopTitle}>
+                    <Text style={styles.troopTitleText}>Discover</Text>
                 </View>
+            </View>
+            <View style={[styles.detailContainer, { paddingBottom: 10 }]}>
+                <View style={styles.rowContainer}>
+                    <View style={styles.rowWidth}><Text>Short</Text></View>
+                    <View style={styles.rowWidth}><Text>Medium</Text></View>
+                    <View style={styles.rowWidth}><Text>Long</Text></View>
+                    <View style={styles.rowWidth}><Text>Max</Text></View>
+                </View>
+                <View style={styles.underline}></View>
+                <View style={styles.rowContainer}>
+                    <View style={[styles.rowWidth, { backgroundColor: Color.rangeGreen }]}><Text style={styles.rowBodyText}>0-8" +3</Text></View>
+                    <View style={[styles.rowWidth, { backgroundColor: Color.rangeBlue }]}><Text style={styles.rowBodyText}>8-32" 0</Text></View>
+                    <View style={[styles.rowWidth, { backgroundColor: Color.rangeYellow }]}><Text style={styles.rowBodyText}>32-48" -3</Text></View>
+                    <View style={[styles.rowWidth, { backgroundColor: Color.rangeRed }]}><Text style={styles.rowBodyText}>48-96" -6</Text></View>
+                </View>
+            </View>
+        </View>
     );
 }
 
@@ -110,7 +110,7 @@ const MedCard = props => {
                             <Text style={styles.troopTitleText}>Medikit</Text>
                         </View>
                     </View>
-                    <View style={[styles.detailContainer,{paddingBottom:10}]}>
+                    <View style={[styles.detailContainer, { paddingBottom: 10 }]}>
                         <View style={styles.rowContainer}>
                             <View style={styles.rowWidth}><Text>Short</Text></View>
                             <View style={styles.rowWidth}><Text>Medium</Text></View>
@@ -138,6 +138,7 @@ const MedCard = props => {
     }
 
 };
+
 
 const weaponCard = weaponId => {
     const weaponItem = WEAPON.filter(item => item.idTitle == weaponId)[0];
@@ -219,6 +220,8 @@ const modColor = modValue => {
 
 
 const Cart = props => {
+    console.log("vvv");
+    console.log(props);
     const unitId = props.data.unitId;
     const unitSetId = props.data.unitSetId;
 
@@ -231,7 +234,9 @@ const Cart = props => {
             <View style={styles.listContainer}>
                 <View style={styles.detailContainer}>
                     <View style={styles.rowContainer}>
-                        <View style={styles.rowWidth}><Text>MOV</Text></View>
+                        <View style={styles.rowWidth}>
+                                <Text>MOV</Text>
+                        </View>
                         <View style={styles.rowWidth}><Text>CC</Text></View>
                         <View style={styles.rowWidth}><Text>BS</Text></View>
                         <View style={styles.rowWidth}><Text>PH</Text></View>
@@ -257,13 +262,13 @@ const Cart = props => {
                     </View>
                 </View>
             </View>
-            {unitSetItem.gunList.map(item => weaponCard(item))}
+            { unitSetItem.gunList.map(item => weaponCard(item))}
             <HackerCard data={unitSetItem} />
-            <MedCard data={unitSetItem}/>
-            <DiscoverCard/>
+            <MedCard data={unitSetItem} />
+            <DiscoverCard />
 
 
-        </View>
+        </View >
 
     );
 };

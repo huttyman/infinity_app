@@ -11,7 +11,10 @@ import {
   TextInput,
   Clipboard,
   Image,
+  Alert,
+  TouchableHighlight
 } from 'react-native';
+import Modal from 'modal-react-native-web';
 import { Button } from 'react-native-elements';
 //import basic react native components
 import * as Animatable from 'react-native-animatable';
@@ -50,14 +53,20 @@ const equipmentItem = (equipmentId, index, length) => {
   return (<Text style={styles.listTitle}>{equipmentObject[0].title}{endText} </Text>);
 };
 
-const skillItem = (skillId, index, length) => {
+const skillItem = (skillId, index, length,toggleModalVisibility) => {
   let endText = " • ";
   if (length == index + 1) {
     endText = "";
   }
 
   const skillObject = SKILL.filter(item => item.idTitle == skillId);
-  return (<Text style={styles.listTitle}>{skillObject[0].title}{endText} </Text>);
+  return (<Text style={styles.listTitle}>
+    <TouchableOpacity
+        style={styles.openButton}
+        onPress={() => {
+            toggleModalVisibility("eng");
+        }}
+    ><Text>{skillObject[0].title}</Text></TouchableOpacity>{endText} </Text>);
 };
 
 //To make the selector (Something like tabs)
@@ -82,7 +91,6 @@ const importUnit = (unitText) => {
   }
   const importUnit = JSON.parse(unitText);
   global.unitList = importUnit;
-  console.log(global.unitList);
   global.swc = 0;
   global.points = 0;
   global.unit = 0;
@@ -92,10 +100,7 @@ const importUnit = (unitText) => {
 
 const addUnitSetProp = (unitSetId) => {
   const unitItem = UNITLIST.filter(item => item.idTitle == unitSetId)[0];
-  console.log(unitItem);
-  console.log(global.points, ",", unitItem.swc);
   global.swc = global.swc + parseFloat(unitItem.swc);
-  console.log(global.points);
   global.points = global.points + parseFloat(unitItem.points);
   global.unit = global.unit + parseInt(1);
 };
@@ -112,6 +117,9 @@ export default class CollapseExampleTestTemplate extends Component {
     multipleSelect: false,
     toggleFalse: false,
     clibboardText: "",
+    modalVisible: false,
+    modalText: "",
+    modalTitle: "",
   };
 
   readFromClipboard = () => {
@@ -129,10 +137,23 @@ export default class CollapseExampleTestTemplate extends Component {
     this.setState({ collapsed: !this.state.collapsed });
   };
 
+  toggleModalVisibility = (input) => {
+    //Toggling the state of single Collapsible
+    console.log('test');
+    const selectedSkill = SKILL.filter(item => item.idTitle == input)[0];
+    console.log(selectedSkill);
+    this.setState({ modalText: selectedSkill.effect });
+    this.setState({
+      modalVisible: !this.state.modalVisible,
+      modalTitle: selectedSkill.title
+    });
+  };
+
   setToggleFalse = () => {
     this.setState({ toggleFalse: !this.state.toggleFalse });
 
   };
+
 
   setSections = sections => {
     //setting up a active section state
@@ -142,6 +163,7 @@ export default class CollapseExampleTestTemplate extends Component {
   };
 
   renderHeader = (section, _, isActive) => {
+
     const unitItem = ARMY_UNIT.filter(item => item.idTitle == section.unitId)[0];
     const unitSetItem = UNITLIST.filter(item => item.idTitle == section.unitSetId)[0];
 
@@ -166,7 +188,7 @@ export default class CollapseExampleTestTemplate extends Component {
       combinedEquipment = unitItem.unitEquipment.concat(combinedEquipment);
     }
 
-
+    global.modalFunction = this.toggleModalVisibility;
     const gunLength = unitSetItem.gunList.length;
     const skillLength = combinedSkill ? combinedSkill.length : 0;
     const equipmentLength = combinedEquipment ? combinedEquipment.length : 0;
@@ -175,19 +197,19 @@ export default class CollapseExampleTestTemplate extends Component {
     let ltTokenImage;
 
     if (skillLength != 0) {
-      skillText = <Text style={[styles.headerDetailText, { color: 'green' }]}>Skill: {combinedSkill.map((gunId, index) => <Text key={index}>{skillItem(gunId, index, skillLength)}</Text>)}</Text>;
+      skillText = <Text style={[styles.headerDetailText, { color: 'green' }]}>Skill: {combinedSkill.map((gunId, index) => <Text key={index}>{skillItem(gunId, index, skillLength,this.toggleModalVisibility)}</Text>)}</Text>;
 
-      if(combinedSkill.includes('lt')){
+      if (combinedSkill.includes('lt')) {
         ltTokenImage = <Image source={require('../assets/ltToken.png')} style={{ height: 20, width: 20 }} />;
       }
     }
 
     if (equipmentLength != 0) {
       equipmentText = <Text style={[styles.headerDetailText, { color: 'red' }]} >Equipment: {combinedEquipment.map((gunId, index) => <Text key={index}>{equipmentItem(gunId, index, equipmentLength)}</Text>)}</Text>;
-      
+
     }
 
-    
+
     //Accordion Header view
     return (
       <Animatable.View
@@ -196,7 +218,7 @@ export default class CollapseExampleTestTemplate extends Component {
         transition="backgroundColor">
         <View style={styles.headerTopTitle}>
           <Text style={styles.headerText}>{unitItem.shortTitle}</Text><TextInput style={{ height: '90%', width: 70, color: Color.mainBlack, textAlign: "right", borderBottomColor: Color.mainBlack, borderBottomWidth: 1, fontSize: 16 }} />
-          <Text style={styles.headerSizeText}>{unitItem.size.toUpperCase()}{console.log(unitItem)}{unitItem.isHackable == "TRUE" ? ',HA' : ''}</Text>
+          <Text style={styles.headerSizeText}>{unitItem.size.toUpperCase()}{unitItem.isHackable == "TRUE" ? ',HA' : ''}</Text>
           <Button
             style={styles.headerRemoveButton}
             icon={
@@ -212,7 +234,7 @@ export default class CollapseExampleTestTemplate extends Component {
           />
         </View>
         <View style={styles.headerDetailContainer}>
-          <View style={{ flex: 1,justifyContent:"center",alignItems:"center" }}>
+          <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
             {ltTokenImage}
           </View>
           <View style={{ flex: 6, alignItems: "flex-start", paddingHorizontal: 5, paddingBottom: 5 }}>
@@ -234,6 +256,9 @@ export default class CollapseExampleTestTemplate extends Component {
   };
 
   renderContent(section, _, isActive) {
+    console.log("test2");
+    console.log(section);
+    console.log(this);
     //Accordion Content view
     return (
       <Animatable.View
@@ -242,7 +267,7 @@ export default class CollapseExampleTestTemplate extends Component {
         transition="backgroundColor">
         <Animatable.Text
           style={{ textAlign: 'center' }}>
-          <Cart data={section} />
+          <Cart data={section} toggleModalVisibility={global.modalFunction} />
         </Animatable.Text>
       </Animatable.View>
     );
@@ -250,9 +275,36 @@ export default class CollapseExampleTestTemplate extends Component {
 
   render() {
     const { multipleSelect, activeSections } = this.state;
+
     // global.unitList = [{ unitId: '1', unitSetId: '4' }, { unitId: '2', unitSetId: '2' }];
     return (
       <View style={styles.container}>
+        <Modal
+          animationType="slide"
+          transparent={true}
+          visible={this.state.modalVisible}
+          ariaHideApp={false}
+          onRequestClose={() => {
+            Alert.alert("Modal has been closed.");
+          }}
+        >
+          <View style={styles.centeredView}>
+            <View style={styles.modalView}>
+              <Text style={styles.modalText}>Hello World!</Text>
+              <View style={styles.modalTouch}>
+                <TouchableOpacity
+
+                  onPress={() => {
+                    this.toggleModalVisibility("fdfsd");
+                  }}
+                >
+                  <Text style={styles.modalTextTitleStyle}>{this.state.modalTitle}</Text>
+                  <Text style={styles.modalTextStyle}>{this.state.modalText}</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          </View>
+        </Modal>
 
         <View style={{ backgroundColor: Color.mainGrey, padding: 15 }}>
           <ScoreTitle />
@@ -433,4 +485,34 @@ const styles = StyleSheet.create({
   listTitle: {
     fontWeight: "bold",
   },
+  centeredView: {
+    height: '90%',
+  },
+  modalView: {
+    alignItems: "center",
+    marginVertical: "auto",
+  },
+  modalTextStyle: {
+    fontSize: 16,
+  },
+  modalTextTitleStyle:{
+    paddingVertical:5,
+    fontWeight:"bold",
+    fontSize: 16,
+  },
+  modalTouch: {
+    backgroundColor: "white",
+    minWidth: "50%",
+    borderRadius: 8,
+    padding: 10,
+    shadowColor: "black",
+    shadowOffset: {
+      width: 0,
+      height: 7,
+    },
+    shadowOpacity: 0.5,
+    shadowRadius: 15,
+
+    elevation: 14,
+  }
 });

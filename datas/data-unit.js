@@ -920,71 +920,99 @@ export const WEAPON = [
 ];
 
 export const SKILL = [
-        {
-            "id": "1",
-            "idTitle": "med",
-            "title": "Paramedic"
-        },
-        {
-            "id": "2",
-            "idTitle": "lt",
-            "title": "Lietenant"
-        },
-        {
-            "id": "3",
-            "idTitle": "hack",
-            "title": "Hacker"
-        },
-        {
-            "id": "4",
-            "idTitle": "mimet6",
-            "title": "Mimetism (-6)"
-        },
-        {
-            "id": "5",
-            "idTitle": "forwdep8",
-            "title": "Forward Deployment (+8\")"
-        },
-        {
-            "id": "6",
-            "idTitle": "doc",
-            "title": "Doctor"
-        },
-        {
-            "id": "7",
-            "idTitle": "mart2",
-            "title": "Martial Arts L2"
-        },
-        {
-            "id": "8",
-            "idTitle": "mimet3",
-            "title": "Mimetism (-3)"
-        },
-        {
-            "id": "9",
-            "idTitle": "camo",
-            "title": "Camouflage"
-        },
-        {
-            "id": "10",
-            "idTitle": "surpatk3",
-            "title": "Surprise Attack (-3)"
-        },
-        {
-            "id": "11",
-            "idTitle": "dodge1",
-            "title": "Dodge (+1\")"
-        },
-        {
-            "id": "12",
-            "idTitle": "eng",
-            "title": "Engineer"
-        },
-        {
-            "id": "13",
-            "idTitle": "infil",
-            "title": "Infiltration"
-        }
+    {
+        "id": "9",
+        "idTitle": "camo",
+        "title": "Camouflage",
+        "type": "Automatic Skill",
+        "trait": "Optional",
+        "activation": "► Automatic during the Deployment Phase\r\n► During the Active Turn, Troopers may only return to\r\nCamouflaged State by consuming 1 Entire Order, outside the LoF of\r\nenemy Markers or Troopers.",
+        "effect": "► In Camouflaged State, the Player does not place the Model on the\r\ntable, but instead places a Camouflaged Marker.\r\n► Camouflaged Markers can possess the Mimetism Skill, so\r\nCamouflaged Markers indicate the MOD level that Mimetism\r\napplies, if they have it.\r\n► You cannot enter Silhouette contact with an Enemy Camouflaged\r\nMarker.\r\n► You cannot declare Attacks against Camouflaged Markers, it is\r\nnecessary to Discover that Marker first, unless otherwise specified\r\nby a rule or Skill.\r\n► To reveal a Camouflaged Marker, a Discover Roll must be passed,\r\napplying MODs listed for Discover, including the Marker’s\r\nMimetism, if they have it.\r\n► If the Discover Roll is successful, the Camouflaged Marker is\r\nreplaced with the corresponding Model, facing in any direction its\r\nplayer chooses.\r\n► A Trooper that fails a WIP Roll to Discover a Marker cannot attempt\r\nto Discover the same Marker until the next Player Turn. Note\r\nthat a Trooper that has been revealed, and re-entered Camouflaged\r\nState again, does not count as the same Marker.\r\n► A Camouflage Marker has a LoF of 360º.\r\n► A Camouflage Marker has the same Silhouette (S) value as the\r\nTrooper it represents.\r\n► However, a Weapon or piece of Equipment in Camouflaged State\r\nwill have a Silhouette (S) value of 2.\r\n► This State does not interfere with Automatic Special Skills or\r\nAutomatic Equipment, which will remain functioning normally.\r\n► The only AROs that can be declared against a Camouflaged Marker\r\nare: Discover, Dodge or Reset.\r\n► When a Trooper in Camouflaged state is activated, each Reactive\r\nTrooper can delay the declaration of their ARO until the second half\r\nof the Active Trooper’s Order has been declared. In this case:\r\n► If the Trooper in Camouflaged state reveals themselves with the\r\nsecond half of their Order (by declaring a BS Attack, moving into\r\nSilhouette contact with an enemy…), the delaying Trooper can\r\ndeclare their ARO.\r\n► If the Trooper in Camouflaged state does not reveal themselves,\r\nthe delaying Trooper loses their right to declare an ARO.",
+        "cancellation": "The Camouflaged State is cancelled whenever:\r\n► The Camouflaged Marker declares an Attack or any Skill that\r\nrequires a Roll.\r\n► The Camouflaged Marker declares an Entire Order of any kind.\r\n► The Camouflaged Marker enters Silhouette contact with an enemy\r\nModel.\r\n► The Camouflaged Marker is Discovered.\r\n► The Camouflaged Marker receives a successful Attack.► When Camouflage state is cancelled, its player must replace the\r\nMarker with the corresponding Model, facing in any direction the\r\nplayer chooses.\r\n► When replacing the Marker with the Model, the player must provide\r\ntheir adversary with the Trooper’s complete Public Information."
+    },
+    {
+        "id": "6",
+        "idTitle": "doc",
+        "title": "Doctor",
+        "type": "Short Skill",
+        "trait": "Optional",
+        "requirement": "► Troopers using this Special Skill must be in Silhouette contact\r\nwith their target.\r\n► The target must have the Wounds Attribute and be in Unconscious\r\nState.",
+        "effect": "► By passing a Normal WIP Roll, the target’s Unconscious State is\r\ncancelled, by recovering 1 single point of their Wounds Attribute,\r\nunless a rule or Skill specifies otherwise. If the WIP Roll fails, the\r\ntarget automatically enters the Dead State and is removed from\r\nthe game table."
+    },
+    {
+        "id": "11",
+        "idTitle": "dodge1",
+        "title": "Dodge (+1\")",
+        "type": "Automatic Skill",
+        "trait": "Optional"
+    },
+    {
+        "id": "12",
+        "idTitle": "eng",
+        "title": "Engineer",
+        "type": "Short Skill",
+        "trait": "Optional",
+        "requirement": "► Troopers using this Special Skill must be in Silhouette contact\r\nwith their target.",
+        "effect": "► Engineer allows recovery of 1 Structure (STR) point, by passing a\r\nNormal WIP Roll.\r\n► This Special Skill can be declared as many times as necessary to\r\nrecover as many STR points as the target has lost.\r\n► If the Engineer fails the Normal WIP Roll, the target loses 1 STR\r\npoint instead of recovering it, entering the Unconscious or Dead\r\nState, if applicable.\r\n► Alternatively, by passing a Normal WIP Roll, a Trooper with Engineer\r\nmay cancel all of their target’s States that can be canceled by this\r\nSpecial Skill (Unconscious, Immobilized-A and B, Targeted, etc.),\r\nremoving the corresponding State Tokens..\r\n► Failing the Normal WIP Roll when trying to cancel other states than\r\nUnconscious has no negative consequence, and the Roll can be\r\nperformed again in future Orders."
+    },
+    {
+        "id": "5",
+        "idTitle": "forwdep8",
+        "title": "Forward Deployment (+8\")",
+        "type": "Deployment Skill",
+        "trait": "Superior Deployment, Optional.",
+        "effect": "► The users of this Special Skill can be deployed beyond the limit of\r\ntheir Deployment Zone. The number of inches that those Troopers\r\nmay deploy beyond their Deployment Zone appears between round\r\nbrackets in their Unit Profile."
+    },
+    {
+        "id": "3",
+        "idTitle": "hack",
+        "title": "Hacker"
+    },
+    {
+        "id": "13",
+        "idTitle": "infil",
+        "title": "Infiltration"
+    },
+    {
+        "id": "2",
+        "idTitle": "lt",
+        "title": "Lietenant"
+    },
+    {
+        "id": "7",
+        "idTitle": "mart2",
+        "title": "Martial Arts L2"
+    },
+    {
+        "id": "8",
+        "idTitle": "mimet3",
+        "title": "Mimetism (-3)"
+    },
+    {
+        "id": "4",
+        "idTitle": "mimet6",
+        "title": "Mimetism (-6)",
+        "type": "Automatic Skill",
+        "trait": "NFB, Obligatory",
+        "effect": "Any enemy declaring a BS Attack or Discover against the user of\r\nthis Skill must apply a negative MOD to their Atribute,The Mimetism MOD does not apply to CC Attacks"
+    },
+    {
+        "id": "1",
+        "idTitle": "med",
+        "title": "Paramedic",
+        "type": "Automatic Skill",
+        "trait": "Obligatory.",
+        "effect": "Paramedics are equipped with MediKits to recover their Unconscious\r\ncomrades."
+    },
+    {
+        "id": "10",
+        "idTitle": "surpatk3",
+        "title": "Surprise Attack (-3)",
+        "type": "Automatic Skill",
+        "trait": "Obligatory.",
+        "requirement": "► To use this Special Skill, Troopers must be in Marker form\r\n(Camouflaged, for example) at the start of the Order in which\r\nthey are activated.\r\n► The user must declare a CC Attack, BS Attack, Hacking Program or\r\nother Comms Attack.\r\n► The user of this Special Skill must be in their Active Turn.",
+        "effect": "► This Attack imposes an additional negative MOD, as shown in round\r\nbrackets in the Unit Profile [Surprise Attack (-3), Surprise Attack\r\n(-6)…]. This MOD only applies to targets of the Attack, and applies\r\nto any Skill Roll that those targets perform in ARO.\r\n► This Skill cannot be used again until the Trooper returns to Marker\r\nform."
+    }
     
 ];
 export const EQUIPMENT = [

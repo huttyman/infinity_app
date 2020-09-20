@@ -115,7 +115,7 @@ const AllCart = props => {
                         {ltTokenImage}
                     </View>
                     <View style={{ flex: 6, alignItems: "flex-start" }}>
-                        <Text>{props.data.title}</Text>
+                        <Text>{props.data.shortTitle}</Text>
                         <View style={{ marginVertical: 2, alignContent: "flex-start" }} ><Text style={{ textAlign: "left" }}>{item.gunList.map((gunId, index) => <Text key={index}>{weaponItem(gunId, index, gunLength)}</Text>)}</Text></View>
                         {skillText}
                         {equipmentText}
