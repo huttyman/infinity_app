@@ -139,16 +139,15 @@ export default class CollapseExampleTestTemplate extends Component {
 
   toggleModalVisibility = (input) => {
     //Toggling the state of single Collapsible
-    console.log('testkkk', input);
     const selectedSkill = SKILL.filter(item => item.idTitle == input)[0];
 
-    let descriptionText ="";
+    let descriptionText = "";
 
-    if(selectedSkill){
-      descriptionText += selectedSkill.requirement? "requirement\n"+selectedSkill.requirement+"\n":"";
-      descriptionText += selectedSkill.activation? "activation\n"+selectedSkill.activation+"\n":"";
-      descriptionText += selectedSkill.effect? "effect\n"+selectedSkill.effect+"\n":"";
-      descriptionText += selectedSkill.cancellation? "cancellation\n"+selectedSkill.cancellation+"\n":"";
+    if (selectedSkill) {
+      descriptionText += selectedSkill.requirement ? "requirement\n" + selectedSkill.requirement + "\n" : "";
+      descriptionText += selectedSkill.activation ? "activation\n" + selectedSkill.activation + "\n" : "";
+      descriptionText += selectedSkill.effect ? "effect\n" + selectedSkill.effect + "\n" : "";
+      descriptionText += selectedSkill.cancellation ? "cancellation\n" + selectedSkill.cancellation + "\n" : "";
 
     }
     if (selectedSkill) {
@@ -300,16 +299,21 @@ export default class CollapseExampleTestTemplate extends Component {
         >
           <View style={styles.centeredView}>
             <View style={styles.modalView}>
-              <Text style={styles.modalText}>Hello World!</Text>
               <View style={styles.modalTouch}>
-                <TouchableOpacity
 
+                <TouchableOpacity
+                  style={{height:"100%"}}
                   onPress={() => {
                     this.toggleModalVisibility("fdfsd");
                   }}
                 >
+
                   <Text style={styles.modalTextTitleStyle}>{this.state.modalTitle}</Text>
-                  <Text style={styles.modalTextStyle}>{this.state.modalText}</Text>
+                  <ScrollView>
+                    <View style={{height:"100%"}}>
+                    <Text style={styles.modalTextStyle}>{this.state.modalText}</Text>
+                    </View>
+                  </ScrollView>
                 </TouchableOpacity>
               </View>
             </View>
@@ -505,6 +509,7 @@ const styles = StyleSheet.create({
   modalView: {
     alignItems: "center",
     marginVertical: "auto",
+    height:"100%",
   },
   modalTextStyle: {
     fontSize: 16,
@@ -527,7 +532,8 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.5,
     shadowRadius: 15,
-
+    maxHeight: "70%",
+    marginVertical: "auto",
     elevation: 14,
   },
   backgroundTrans: {
