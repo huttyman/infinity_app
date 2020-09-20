@@ -18,14 +18,19 @@ const weaponItem = (weaponId, index, gunLength) => {
     }
 };
 
-const equipmentItem = (equipmentId, index, length) => {
+const equipmentItem = (equipmentId, index, length,toggleModalVisibility) => {
     let endText = " • ";
     if (length == index + 1) {
         endText = "";
     }
 
     const equipmentObject = EQUIPMENT.filter(item => item.idTitle == equipmentId);
-    return (<Text style={styles.listTitle}>{equipmentObject[0].title}{endText} </Text>);
+    return (<Text style={styles.listTitle}><TouchableOpacity
+        style={styles.openButton}
+        onPress={() => {
+          toggleModalVisibility(equipmentId, "equipment");
+        }}
+      ><Text>{equipmentObject[0].title}</Text></TouchableOpacity>{endText} </Text>);
 };
 
 const skillItem = (skillId, index, length,toggleModalVisibility) => {
@@ -43,7 +48,7 @@ const skillItem = (skillId, index, length,toggleModalVisibility) => {
       ><Text>{skillObject[0].title}</Text></TouchableOpacity>{endText} </Text>);
 };
 
-const unitTraitContainer = (item) => {
+const unitTraitContainer = (item,toggleModalVisibility) => {
     const skillLength = item.unitSkill ? item.unitSkill.length : 0;
     const equipmentLength = item.unitEquipment ? item.unitEquipment.length : 0;
 
@@ -51,11 +56,11 @@ const unitTraitContainer = (item) => {
     let equipmentText = <Text></Text>;
 
     if (skillLength != 0) {
-        skillText = <Text style={{ color: 'green' }}>Skill: {item.unitSkill.map((gunId, index) => <Text key={index}>{skillItem(gunId, index, skillLength)}</Text>)}</Text>;
+        skillText = <Text style={{ color: 'green' }}>Skill: {item.unitSkill.map((gunId, index) => <Text key={index}>{skillItem(gunId, index, skillLength,toggleModalVisibility)}</Text>)}</Text>;
     }
 
     if (equipmentLength != 0) {
-        equipmentText = <Text style={{ color: 'red' }} >Equipment: {item.unitEquipment.map((gunId, index) => <Text key={index}>{equipmentItem(gunId, index, equipmentLength)}</Text>)}</Text>;
+        equipmentText = <Text style={{ color: 'red' }} >Equipment: {item.unitEquipment.map((gunId, index) => <Text key={index}>{equipmentItem(gunId, index, equipmentLength,toggleModalVisibility)}</Text>)}</Text>;
     }
 
     return (
@@ -79,10 +84,10 @@ const AllCart = props => {
         if (type == "skill") {
             const selectedSkill = SKILL.filter(item => item.idTitle == input)[0];
             if (selectedSkill) {
-                descriptionText += selectedSkill.requirement ? "requirement\n" + selectedSkill.requirement + "\n\n" : "";
+                descriptionText += selectedSkill.requirement ? "Requirement\n" + selectedSkill.requirement + "\n\n" : "";
                 descriptionText += selectedSkill.activation ? "activation\n" + selectedSkill.activation + "\n\n" : "";
-                descriptionText += selectedSkill.effect ? "effect\n" + selectedSkill.effect + "\n\n" : "";
-                descriptionText += selectedSkill.cancellation ? "cancellation\n" + selectedSkill.cancellation + "\n\n" : "";
+                descriptionText += selectedSkill.effect ? "Effect\n" + selectedSkill.effect + "\n\n" : "";
+                descriptionText += selectedSkill.cancellation ? "Cancellation\n" + selectedSkill.cancellation + "\n\n" : "";
 
                 props.setModalState(selectedSkill.title, descriptionText);
             }
@@ -90,10 +95,10 @@ const AllCart = props => {
         } else if (type == "equipment") {
             const selectedEquipment = EQUIPMENT.filter(item => item.idTitle == input)[0];
             if (selectedEquipment) {
-                descriptionText += selectedEquipment.requirement ? "requirement\n" + selectedEquipment.requirement + "\n" : "";
-                descriptionText += selectedEquipment.activation ? "activation\n" + selectedEquipment.activation + "\n" : "";
-                descriptionText += selectedEquipment.effect ? "effect\n" + selectedEquipment.effect + "\n" : "";
-                descriptionText += selectedEquipment.cancellation ? "cancellation\n" + selectedEquipment.cancellation + "\n" : "";
+                descriptionText += selectedEquipment.requirement ? "Requirement\n" + selectedEquipment.requirement + "\n\n" : "";
+                descriptionText += selectedEquipment.activation ? "Activation\n" + selectedEquipment.activation + "\n\n" : "";
+                descriptionText += selectedEquipment.effect ? "Effect\n" + selectedEquipment.effect + "\n\n" : "";
+                descriptionText += selectedEquipment.cancellation ? "Cancellation\n" + selectedEquipment.cancellation + "\n\n" : "";
 
                 props.setModalState(selectedEquipment.title, descriptionText);
             }
@@ -201,7 +206,7 @@ const AllCart = props => {
                         <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{props.data.attr_s}</Text></View>
                         <View style={styles.rowWidth}><Text style={styles.rowBodyText}>{props.data.attr_ava}</Text></View>
                     </View>
-                    {unitTraitContainer(props.data)}
+                    {unitTraitContainer(props.data,toggleModalVisibility)}
                 </View>
                 <View style={{ backgroundColor: Color.mainGrey, flexDirection: 'row', width: '100%', paddingVertical: 3 }}>
                     <View style={{ flex: 1 }}></View>
