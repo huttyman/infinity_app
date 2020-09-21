@@ -22,6 +22,7 @@ const AllOrderScreen = props => {
                 <Button style={styles.orderButton} title={i18n.t('all_order_screen.Teach Order')} onPress={() => props.navigation.navigate({ routeName: 'Teaching' })} />
                 <Button style={styles.orderButton} title={i18n.t('all_order_screen.Action Summary')} onPress={() => props.navigation.navigate({ routeName: 'Order' })} />
                 <Button style={styles.orderButton} title={i18n.t('all_order_screen.Donate')} onPress={() => { Linking.openURL('https://www.patreon.com/infinity_custom_app');}} />
+                <Button style={styles.orderButton} title={i18n.t('all_order_screen.Report bug')} onPress={() => { Linking.openURL('https://www.patreon.com/infinity_custom_app');}} />
                 {/* <Button title="Turn order summary" onPress={()=>{}}/>
                 <Button title="All keyword" onPress={()=>{}}/> */}
             </View>

@@ -4,6 +4,7 @@ export const EN_lang =  {
         "Teach Order": "Teach Order",
         "Teach Order RouteName": "Teaching",
         "Action Summary": "Action Summary",
+        "Report bug": "Report bug",
         teach_order_screen: {
             " = Choose both action in any order": " = Choose both action in any order",
             "Move/Idle/Discovery": "Move/Idle/\nDiscovery",
