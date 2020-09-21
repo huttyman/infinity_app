@@ -4,7 +4,7 @@ export const TH_lang = {
         "Teach Order": "สอนผู้เล่น",
         "Teach Order RouteName": "TeachingTH",
         "Action Summary": "Action Summary",
-        "Report bug": "Report bug",
+        "Report bug / Suggestion": "Report bug / แนะนำเพิ่มเติม",
         teach_order_screen: {
             " = Choose both action in any order": " = ทำได้2อย่าง เลือกอันไหนก่อนก็ได้",
             "Move/Idle/Discovery": "เดิน/นิ่ง/\nค้นหา",
