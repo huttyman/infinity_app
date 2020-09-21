@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, ScrollView, Button } from 'react-native';
+import { StyleSheet, View, Text, Button,Linking } from 'react-native';
 import Colors from '../templates/Colors';
 import i18n from 'i18n-js';
 
@@ -21,7 +21,7 @@ const AllOrderScreen = props => {
             <View style={styles.buttonContainer}>
                 <Button style={styles.orderButton} title={i18n.t('all_order_screen.Teach Order')} onPress={() => props.navigation.navigate({ routeName: 'Teaching' })} />
                 <Button style={styles.orderButton} title={i18n.t('all_order_screen.Action Summary')} onPress={() => props.navigation.navigate({ routeName: 'Order' })} />
-                <Button style={styles.orderButton} title={i18n.t('all_order_screen.Donate')} onPress={() => { }} />
+                <Button style={styles.orderButton} title={i18n.t('all_order_screen.Donate')} onPress={() => { Linking.openURL('https://www.patreon.com/infinity_custom_app');}} />
                 {/* <Button title="Turn order summary" onPress={()=>{}}/>
                 <Button title="All keyword" onPress={()=>{}}/> */}
             </View>
