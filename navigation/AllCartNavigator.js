@@ -3,7 +3,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 import CollapseExample from '../screens/CollapseExample';
 import CollapseMainExample from '../screens/CollapseMainExample';
-import { createBottomTabNavigator,createMaterialTopTabNavigator } from 'react-navigation-tabs';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import Colors from '../templates/Colors';
 import ArmyScreen from '../screens/ArmyScreen';
@@ -117,7 +117,7 @@ const OrderSummaryStackNavigator = createStackNavigator({
     },
 });
 
-const AllCartTabNavigator = createMaterialTopTabNavigator({
+const AllCartTabNavigator = createBottomTabNavigator({
     
     Army: {
         screen: AllCartStackNavigator,
@@ -160,9 +160,7 @@ const AllCartTabNavigator = createMaterialTopTabNavigator({
         activeTintColor: '#ffffff',
         activeBackgroundColor: Colors.mainBlack,
         style: { backgroundColor: Colors.mainGrey }
-    },
-    swipeEnabled: true,
-    tabBarPosition: "bottom"
+    }
 });
 
 
