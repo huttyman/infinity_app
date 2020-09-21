@@ -1,6 +1,12 @@
 import React from 'react';
 import { StyleSheet, View, Text, ScrollView, Button } from 'react-native';
 import Colors from '../templates/Colors';
+import i18n from 'i18n-js';
+
+
+
+i18n.locale = global.language;
+i18n.fallbacks = true;
 
 const RedText = props =>{
     return(
@@ -12,6 +18,7 @@ const Bold = props =>{
     <Text style={{fontWeight:"bold"}} >{props.children}</Text>
     );
 };
+
 
 const TurnOrderScreenTH = props => {
     return (
@@ -33,7 +40,7 @@ const TurnOrderScreenTH = props => {
                         <View style={styles.bodyLine}>
                             <Text style={styles.indent}></Text>
                             <Text style={styles.bodyTextTopic}>2.1</Text>
-                            <Text style={styles.bodyTextDesc}>ประกาศ<Bold>first action</Bold>(เช่น ถ้าเดิน ให้วางมินิที่ปลายทางที่จะเดิน หรือ ถ้ายิง ก็ประกาศว่าจะยิงใครด้วยปืนอะไร เป้นต้น).</Text>
+                            <Text style={styles.bodyTextDesc}>ประกาศ<Bold>first action</Bold>(เช่น ถ้าเดินให้วัดระยะ และให้วางมินิที่ปลายทางที่จะเดิน หรือ ถ้ายิง ก็ประกาศว่าจะยิงใครด้วยปืนอะไร เป้นต้น).</Text>
                         </View>
                         <View style={styles.bodyLine}>
                             <Text style={styles.indent}></Text>
@@ -53,7 +60,7 @@ const TurnOrderScreenTH = props => {
                         <View style={styles.bodyLine}>
                             <Text style={styles.indent}></Text>
                             <Text style={styles.bodyTextTopic}>2.5</Text>
-                            <Text style={styles.bodyTextDesc}><Bold>Resolve</Bold> – <RedText>ทอยเต๋าทั้งหมด</RedText> ที่ทำใน 2action ที่ประกาศไว้ (เราจะสามารถวัดไม้บรรทัด พร้อม +/- mod ในstepนี้เท่านั้น).</Text>
+                            <Text style={styles.bodyTextDesc}><Bold>Resolve</Bold> – <RedText>ทอยเต๋าทั้งหมด</RedText> ที่ทำใน 2action ที่ประกาศไว้ (เราจะสามารถวัดไม้บรรทัดระยะยิง พร้อม +/- mod ในstepนี้เท่านั้น).</Text>
                         </View>
                         <View style={styles.bodyLine}>
                             <Text style={styles.bodyTextTopic}>3.</Text>

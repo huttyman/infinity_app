@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, View, Text, ScrollView, Button } from 'react-native';
 import Colors from '../templates/Colors';
+import i18n from 'i18n-js';
+
 
 const RedText = props =>{
     return(
@@ -24,7 +26,7 @@ const TurnOrderScreen = props => {
                     <View>
                         <View style={styles.bodyLine}>
                             <Text style={styles.bodyTextTopic}>1.</Text>
-                            <Text style={styles.bodyTextDesc}>Count all <RedText>Order</RedText> in field.</Text>
+                            <Text style={styles.bodyTextDesc}>Count all  <RedText>Order</RedText> in field.</Text>
                         </View>
                         <View style={styles.bodyLine}>
                             <Text style={styles.bodyTextTopic}>2.</Text>
@@ -33,7 +35,7 @@ const TurnOrderScreen = props => {
                         <View style={styles.bodyLine}>
                             <Text style={styles.indent}></Text>
                             <Text style={styles.bodyTextTopic}>2.1</Text>
-                            <Text style={styles.bodyTextDesc}>Declare <Bold>first action</Bold> (i.e. if move, put miniature there. If attack, tell them attack who).</Text>
+                            <Text style={styles.bodyTextDesc}>Declare <Bold>first action</Bold> (i.e. if move, measure after declare and put miniature there. If attack, tell them attack who).</Text>
                         </View>
                         <View style={styles.bodyLine}>
                             <Text style={styles.indent}></Text>
@@ -53,7 +55,7 @@ const TurnOrderScreen = props => {
                         <View style={styles.bodyLine}>
                             <Text style={styles.indent}></Text>
                             <Text style={styles.bodyTextTopic}>2.5</Text>
-                            <Text style={styles.bodyTextDesc}><Bold>Resolve</Bold> – <RedText>Roll dice</RedText> both first and second action here (measure everything and apply mod in this step).</Text>
+                            <Text style={styles.bodyTextDesc}><Bold>Resolve</Bold> – <RedText>Roll dice</RedText> both first and second action here (measure gun range and apply mod in this step).</Text>
                         </View>
                         <View style={styles.bodyLine}>
                             <Text style={styles.bodyTextTopic}>3.</Text>

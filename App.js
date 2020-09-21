@@ -1,51 +1,32 @@
 /*Example of Collapsible - Accordion - Expandable View in React Native*/
-import React, { useState } from 'react';
+import React from 'react';
 //import react in our project
 
 import AllCartNavigator from './navigation/AllCartNavigator';
+import i18n from 'i18n-js';
+import {TH_lang} from './assets/language/th';
+import {EN_lang} from './assets/language/en';
+
+i18n.translations = {
+  en: EN_lang ,
+  th: TH_lang
+}
+
+i18n.fallbacks = true;
 
 global.unitList = [];
 global.swc = 0;
 global.points = 0;
 global.unit = 0;
+global.language = 'en';
+
 
 export const ScoreContext = React.createContext();
 
 
 export default function App() {
-
-  const [scoreContext, setScoreContext] = useState({ points: 1, swc: 3, unit: 0 });
-  const [pointContext, setPointContext] = useState(0);
-
-  const addSWCHandler = (input) => {
-    console.log("old");
-    console.log(scoreContext)
-
-    let tempScore = scoreContext;
-    tempScore.swc = scoreContext.swc + input;
-    setScoreContext(tempScore);
-  };
-
-  const addSWCHandler_but = (input) => {
-    console.log("old");
-    console.log(scoreContext)
-
-    let tempScore = scoreContext;
-    tempScore.swc = scoreContext.swc + input;
-    setScoreContext(tempScore);
-    
-  };
-
-  const addPointsHandler = (input) =>{
-     console.log("vv");
-   //  setPointContext(input+pointContext);
-  };
-
-
   return (
-    <ScoreContext.Provider value={{ state: scoreContext,points: pointContext, addSWCHandler: addSWCHandler,addPointContext:addPointsHandler }}>
       <AllCartNavigator />
-    </ScoreContext.Provider>
   );
 };
 
