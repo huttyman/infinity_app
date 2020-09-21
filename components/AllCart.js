@@ -10,7 +10,10 @@ const weaponItem = (weaponId, index, gunLength) => {
         endText = "";
     }
 
-    const weaponObject = WEAPON.filter(item => item.idTitle == weaponId);
+    const weaponObject = WEAPON.filter(item => item.titleId == weaponId);
+    //     console.log("weapon");
+    // console.log(weaponId);
+    // console.log(weaponObject);
     if (weaponObject[0].type == "main") {
         return (<Text style={styles.listTitle}>{weaponObject[0].shortTitle}{endText}</Text>);
     } else {
@@ -23,8 +26,10 @@ const equipmentItem = (equipmentId, index, length,toggleModalVisibility) => {
     if (length == index + 1) {
         endText = "";
     }
-
-    const equipmentObject = EQUIPMENT.filter(item => item.idTitle == equipmentId);
+    const equipmentObject = EQUIPMENT.filter(item => item.titleId == equipmentId);
+    // console.log("equip");
+    // console.log(equipmentId);
+    // console.log(equipmentObject);
     return (<Text style={styles.listTitle}><TouchableOpacity
         style={styles.openButton}
         onPress={() => {
@@ -38,8 +43,12 @@ const skillItem = (skillId, index, length,toggleModalVisibility) => {
     if (length == index + 1) {
         endText = "";
     }
-
-    const skillObject = SKILL.filter(item => item.idTitle == skillId);
+    
+    const skillObject = SKILL.filter(item => item.titleId == skillId);
+    
+    // console.log("skill");
+    // console.log(skillId);
+    // console.log(skillObject);
     return (<Text style={styles.listTitle}><TouchableOpacity
         style={styles.openButton}
         onPress={() => {
@@ -75,14 +84,15 @@ const unitTraitContainer = (item,toggleModalVisibility) => {
 
 const AllCart = props => {
     const unitList = props.data.unitSet;
-
+    // console.log("unit");
+    // console.log(unitList);
 
     const toggleModalVisibility = (input, type) => {
         //Toggling the state of single Collapsible
         let descriptionText = "";
 
         if (type == "skill") {
-            const selectedSkill = SKILL.filter(item => item.idTitle == input)[0];
+            const selectedSkill = SKILL.filter(item => item.titleId == input)[0];
             if (selectedSkill) {
                 descriptionText += selectedSkill.requirement ? "Requirement\n" + selectedSkill.requirement + "\n\n" : "";
                 descriptionText += selectedSkill.activation ? "Activation\n" + selectedSkill.activation + "\n\n" : "";
@@ -93,7 +103,7 @@ const AllCart = props => {
             }
 
         } else if (type == "equipment") {
-            const selectedEquipment = EQUIPMENT.filter(item => item.idTitle == input)[0];
+            const selectedEquipment = EQUIPMENT.filter(item => item.titleId == input)[0];
             if (selectedEquipment) {
                 descriptionText += selectedEquipment.requirement ? "Requirement\n" + selectedEquipment.requirement + "\n\n" : "";
                 descriptionText += selectedEquipment.activation ? "Activation\n" + selectedEquipment.activation + "\n\n" : "";
@@ -106,7 +116,8 @@ const AllCart = props => {
     };
 
     const rederItemUnitList = (unitList) => {
-        const item = UNITLIST.filter(unitSet => unitSet.idTitle == unitList.item)[0];
+
+        const item = UNITLIST.filter(unitSet => unitSet.titleId == unitList.item)[0];
 
         const gunLength = item.gunList.length;
         const skillLength = item.skillList ? item.skillList.length : 0;
@@ -141,10 +152,10 @@ const AllCart = props => {
 
         return (
             <TouchableOpacity
-
+                style={{width:"100%"}}
                 onPress={() => {
                     /*props.navigation.navigate({ routeName: 'CartScreen' })*/
-                    addUnitListHandler(props.data.idTitle, unitList.item, item);
+                    addUnitListHandler(props.data.titleId, unitList.item, item);
                 }}
             //on Press of any selector sending the selector value to
             // setSections function which will expand the Accordion accordingly
@@ -216,8 +227,8 @@ const AllCart = props => {
                 </View>
             </View>
             {/*List section*/}
-            <View>
-                <FlatList data={unitList} renderItem={rederItemUnitList} />
+            <View style={styles.chooseListContainer}>
+                <FlatList style={{width:"100%"}} data={unitList} renderItem={rederItemUnitList} />
             </View>
         </View>
 
@@ -278,6 +289,10 @@ const styles = StyleSheet.create({
         paddingHorizontal: 7,
     },
     listContainer: {
+        width: '100%',
+        alignItems: "center",
+    },
+    chooseListContainer:{
         width: '100%',
         alignItems: "center",
     },

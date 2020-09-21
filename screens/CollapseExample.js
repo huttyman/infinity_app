@@ -33,7 +33,7 @@ const weaponItem = (weaponId, index, gunLength) => {
   if (gunLength == index + 1) {
     endText = "";
   }
-  const weaponObject = WEAPON.filter(item => item.idTitle == weaponId);
+  const weaponObject = WEAPON.filter(item => item.titleId == weaponId);
   if (weaponObject[0].type == "main") {
     return (<Text style={styles.listTitle}>{weaponObject[0].shortTitle}{endText}</Text>);
   } else {
@@ -47,7 +47,7 @@ const equipmentItem = (equipmentId, index, length, toggleModalVisibility) => {
     endText = "";
   }
 
-  const equipmentObject = EQUIPMENT.filter(item => item.idTitle == equipmentId);
+  const equipmentObject = EQUIPMENT.filter(item => item.titleId == equipmentId);
   return (<Text style={styles.listTitle}><TouchableOpacity
     style={styles.openButton}
     onPress={() => {
@@ -62,7 +62,7 @@ const skillItem = (skillId, index, length, toggleModalVisibility) => {
     endText = "";
   }
 
-  const skillObject = SKILL.filter(item => item.idTitle == skillId);
+  const skillObject = SKILL.filter(item => item.titleId == skillId);
   return (<Text style={styles.listTitle}>
     <TouchableOpacity
       style={styles.openButton}
@@ -102,7 +102,7 @@ const importUnit = (unitText) => {
 };
 
 const addUnitSetProp = (unitSetId) => {
-  const unitItem = UNITLIST.filter(item => item.idTitle == unitSetId)[0];
+  const unitItem = UNITLIST.filter(item => item.titleId == unitSetId)[0];
   global.swc = global.swc + parseFloat(unitItem.swc);
   global.points = global.points + parseFloat(unitItem.points);
   global.unit = global.unit + parseInt(1);
@@ -145,7 +145,7 @@ export default class CollapseExampleTestTemplate extends Component {
     let descriptionText = "";
 
     if (type == "skill") {
-      const selectedSkill = SKILL.filter(item => item.idTitle == input)[0];
+      const selectedSkill = SKILL.filter(item => item.titleId == input)[0];
       if (selectedSkill) {
         descriptionText += selectedSkill.requirement ? "Requirement\n" + selectedSkill.requirement + "\n\n" : "";
         descriptionText += selectedSkill.activation ? "Activation\n" + selectedSkill.activation + "\n\n" : "";
@@ -159,7 +159,7 @@ export default class CollapseExampleTestTemplate extends Component {
       }
 
     } else if (type == "equipment") {
-      const selectedEquipment = EQUIPMENT.filter(item => item.idTitle == input)[0];
+      const selectedEquipment = EQUIPMENT.filter(item => item.titleId == input)[0];
       if (selectedEquipment) {
         descriptionText += selectedEquipment.requirement ? "Requirement\n" + selectedEquipment.requirement + "\n\n" : "";
         descriptionText += selectedEquipment.activation ? "Activation\n" + selectedEquipment.activation + "\n\n" : "";
@@ -194,8 +194,8 @@ export default class CollapseExampleTestTemplate extends Component {
 
   renderHeader = (section, _, isActive) => {
 
-    const unitItem = ARMY_UNIT.filter(item => item.idTitle == section.unitId)[0];
-    const unitSetItem = UNITLIST.filter(item => item.idTitle == section.unitSetId)[0];
+    const unitItem = ARMY_UNIT.filter(item => item.titleId == section.unitId)[0];
+    const unitSetItem = UNITLIST.filter(item => item.titleId == section.unitSetId)[0];
 
     let combinedSkill;
     if (unitSetItem.skillList) {

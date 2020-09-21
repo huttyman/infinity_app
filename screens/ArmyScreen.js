@@ -59,7 +59,7 @@ export default class ArmyScreen extends Component {
                     }}>
                 <View key={section.section.id} style={styles.header} >
                     <View style={{ zIndex: 1, backgroundColor: Color.mainBlack, borderRadius: 45,maxWidth:80,minWidth:80,flex:1,borderWidth:4,borderColor:Color.mainBlack,overflow:"hidden"}}>
-                        <Image source={require('../assets/logos/'+section.section.title+'.svg')} style={{ height: 70, width: 70 }} />
+                        <Image source={require('../assets/logos/'+section.section.titleId.toLowerCase()+'.svg')} style={{ height: 70, width: 70 }} />
                     </View>
                     <View style={{ zIndex: 0, backgroundColor: Color.mainGrey, flex: 6, alignItems: "flex-start", marginLeft: -40, paddingLeft: 50, paddingVertical: 20, justifyContent: "center" }}>
                         <Text style={styles.headerText}>{section.section.title}</Text>

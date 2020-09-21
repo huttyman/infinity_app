@@ -4,7 +4,7 @@ export const ARMY_UNIT = [
         "titleId": "pano-fusi",
         "title": "Fusilliers",
         "shortTitle": "Fusilliers",
-        "unitSet": "['fusi1','fusi2','fusi3','fusi4','fusi5','fusi6','fusi7']",
+        "unitSet": ['fusi1','fusi2','fusi3','fusi4','fusi5','fusi6','fusi7'],
         "size": "li",
         "attr_armyId": "1",
         "attr_mov": "4-4",
@@ -25,8 +25,8 @@ export const ARMY_UNIT = [
         "titleId": "pano-nok",
         "title": "Nokken, Special Intervention and Recon Team",
         "shortTitle": "Nokken",
-        "unitSet": "['nok1','nok2','nok3']",
-        "unitSkill": "['mimet6','forwdep8']",
+        "unitSet": ['nok1','nok2','nok3'],
+        "unitSkill": ['mimet6','forwdep8'],
         "size": "li",
         "trait": "Veteran Troops",
         "attr_armyId": "1",
@@ -48,9 +48,9 @@ export const ARMY_UNIT = [
         "titleId": "pano-infirm",
         "title": "Infirmarer of Saint Lazarus",
         "shortTitle": "Infirmarer",
-        "unitSet": "['infi1','infi2']",
-        "unitSkill": "['doc']",
-        "unitEquipment": "['med']",
+        "unitSet": ['infi1','infi2'],
+        "unitSkill": ['doc'],
+        "unitEquipment": ['med'],
         "size": "mi",
         "trait": "Spec. Trained Troops",
         "attr_armyId": "1",
@@ -72,8 +72,8 @@ export const ARMY_UNIT = [
         "titleId": "pano-koj",
         "title": "Knight of justice (KoJ) of the Order of the Hospital",
         "shortTitle": "Knight of justice",
-        "unitSet": "['koj1','koj2','koj3','koj4']",
-        "unitSkill": "['mart2']",
+        "unitSet": ['koj1','koj2','koj3','koj4'],
+        "unitSkill": ['mart2'],
         "size": "hi",
         "attr_armyId": "1",
         "attr_mov": "6-2",
@@ -94,7 +94,7 @@ export const ARMY_UNIT = [
         "titleId": "pano-orc",
         "title": "Orc Troops",
         "shortTitle": "Orc",
-        "unitSet": "['orc1','orc2','orc3','orc4','orc5','orc6','orc7']",
+        "unitSet": ['orc1','orc2','orc3','orc4','orc5','orc6','orc7'],
         "size": "hi",
         "attr_armyId": "1",
         "attr_mov": "6-2",
@@ -115,7 +115,7 @@ export const ARMY_UNIT = [
         "titleId": "yj-zhan",
         "title": "Zhanshi Yisheng",
         "shortTitle": "Zhanshi Yisheng",
-        "unitSet": "['zhan1','zhan2','zhan3','zhan4','zhan5','zhan6','zhan7']",
+        "unitSet": ['zhan1','zhan2','zhan3','zhan4','zhan5','zhan6','zhan7'],
         "size": "li",
         "attr_armyId": "2",
         "attr_mov": "4-4",
@@ -136,8 +136,8 @@ export const ARMY_UNIT = [
         "titleId": "yj-hundun",
         "title": "Hundun Ambush Unit",
         "shortTitle": "Hundun",
-        "unitSet": "['hun1','hun2']",
-        "unitSkill": "['surpatk3','camo','mimet3']",
+        "unitSet": ['hun1','hun2'],
+        "unitSkill": ['surpatk3','camo','mimet3'],
         "size": "mi",
         "trait": "Elite Troops",
         "attr_armyId": "2",
@@ -159,8 +159,8 @@ export const ARMY_UNIT = [
         "titleId": "yj-daofei",
         "title": "Daofei Tactical Section",
         "shortTitle": "Daofei",
-        "unitSet": "['dao1','dao2','dao3','dao4','dao5','dao6']",
-        "unitSkill": "['camo','infil','surpatk3','dodge1inch','mimet3']",
+        "unitSet": ['dao1','dao2','dao3','dao4','dao5','dao6'],
+        "unitSkill": ['camo','infil','surpatk3','dodge1inch','mimet3'],
         "size": "hi",
         "attr_armyId": "2",
         "attr_mov": "6-2",
@@ -181,8 +181,8 @@ export const ARMY_UNIT = [
         "titleId": "yj-jujak",
         "title": "Jujak Regiment, Korean Shock infantry",
         "shortTitle": "Jujak",
-        "unitSet": "['juj1','juj2','juj3','juj4','juj5','juj6','juj7']",
-        "unitSkill": "['dodge1inch']",
+        "unitSet": ['juj1','juj2','juj3','juj4','juj5','juj6','juj7'],
+        "unitSkill": ['dodge1inch'],
         "size": "hi",
         "trait": "Veteran Troops",
         "attr_armyId": "2",
@@ -204,9 +204,9 @@ export const ARMY_UNIT = [
         "titleId": "yj-guliang",
         "title": "Guiliang Skirmishers",
         "shortTitle": "Guiliang",
-        "unitSet": "['guila1','guila2','guila3']",
-        "unitSkill": "['surpatk3','camo','mimet3','infil']",
-        "unitEquipment": "['mvisor1']",
+        "unitSet": ['guila1','guila2','guila3'],
+        "unitSkill": ['surpatk3','camo','mimet3','infil'],
+        "unitEquipment": ['mvisor1'],
         "size": "sk",
         "attr_armyId": "2",
         "attr_mov": "4-4",
@@ -227,8 +227,8 @@ export const ARMY_UNIT = [
         "titleId": "pa-machin",
         "title": "Machinists",
         "shortTitle": "Machinists",
-        "unitSet": "['mach1','mach2']",
-        "unitSkill": "['eng']",
+        "unitSet": ['mach1','mach2'],
+        "unitSkill": ['eng'],
         "size": "li",
         "attr_armyId": "1",
         "attr_mov": "4-4",
@@ -249,9 +249,9 @@ export const ARMY_UNIT = [
         "titleId": "pa-trauma-doc",
         "title": "Trauma-Docs",
         "shortTitle": "Trauma-Docs",
-        "unitSet": "['traudoc1']",
-        "unitSkill": "['doc']",
-        "unitEquipment": "['med']",
+        "unitSet": ['traudoc1'],
+        "unitSkill": ['doc'],
+        "unitEquipment": ['med'],
         "size": "li",
         "attr_armyId": "1",
         "attr_mov": "4-4",
@@ -272,8 +272,8 @@ export const ARMY_UNIT = [
         "titleId": "pa-akalis",
         "title": "AKALIS, Sikh Commandos",
         "shortTitle": "Akalis",
-        "unitSet": "['akalis1','akalis2','akalis3','akalis4']",
-        "unitSkill": "['combatjump','parachut']",
+        "unitSet": ['akalis1','akalis2','akalis3','akalis4'],
+        "unitSkill": ['combatjump','parachut'],
         "size": "mi",
         "attr_armyId": "1",
         "attr_mov": "4-4",
@@ -294,9 +294,9 @@ export const ARMY_UNIT = [
         "titleId": "pa-nisses",
         "title": "Svalarheima NISSES",
         "shortTitle": "Nisses",
-        "unitSet": "['niss1','niss2','niss3','niss4','niss5','niss6']",
-        "unitSkill": "['mimet3']",
-        "unitEquipment": "['mvisor2']",
+        "unitSet": ['niss1','niss2','niss3','niss4','niss5','niss6'],
+        "unitSkill": ['mimet3'],
+        "unitEquipment": ['mvisor2'],
         "size": "mi",
         "attr_armyId": "1",
         "attr_mov": "4-4",
@@ -317,8 +317,8 @@ export const ARMY_UNIT = [
         "titleId": "pa-troll-hunter",
         "title": "Troll-hunter Gunnar Lundmark",
         "shortTitle": "Troll-hunter Gunnar Lundmark",
-        "unitSet": "['troll1']",
-        "unitSkill": "['mart1','dodge1inch','specops','climplus']",
+        "unitSet": ['troll1'],
+        "unitSkill": ['mart1','dodge1inch','specops','climbplus'],
         "size": "mi",
         "trait": "Character",
         "attr_armyId": "1",
@@ -340,8 +340,8 @@ export const ARMY_UNIT = [
         "titleId": "pa-vargar",
         "title": "Vargar Maximum Security Team",
         "shortTitle": "Varg",
-        "unitSet": "['vagar1','vagar2','vagar3']",
-        "unitSkill": "['superjump']",
+        "unitSet": ['vagar1','vagar2','vagar3'],
+        "unitSkill": ['superjump'],
         "size": "mi",
         "trait": "Elite Troops",
         "attr_armyId": "1",
@@ -363,8 +363,8 @@ export const ARMY_UNIT = [
         "titleId": "pa-aquila",
         "title": "Aquila Guard",
         "shortTitle": "Aquila Guard",
-        "unitSet": "['aquila1','aquila2','aquila3','aquila4']",
-        "unitEquipment": "['mvisor3']",
+        "unitSet": ['aquila1','aquila2','aquila3','aquila4'],
+        "unitEquipment": ['mvisor3'],
         "size": "hi",
         "attr_armyId": "1",
         "attr_mov": "4-4",
@@ -385,8 +385,8 @@ export const ARMY_UNIT = [
         "titleId": "pa-boyg",
         "title": "Boyg Soldiers",
         "shortTitle": "Boyg Soldiers",
-        "unitSet": "['boyg1','boyg2']",
-        "unitSkill": "['bsatk1','dodge3']",
+        "unitSet": ['boyg1','boyg2'],
+        "unitSkill": ['bsatk1','dodge3'],
         "size": "hi",
         "trait": "Sec. Trained Troops",
         "attr_armyId": "1",
@@ -408,8 +408,8 @@ export const ARMY_UNIT = [
         "titleId": "pa-swiss",
         "title": "Swiss Guard",
         "shortTitle": "Swiss Guard",
-        "unitSet": "['swiss1','swiss2','swiss3']",
-        "unitSkill": "['suratk3','camo','mimet6']",
+        "unitSet": ['swiss1','swiss2','swiss3'],
+        "unitSkill": ['surpatk3','camo','mimet6'],
         "size": "hi",
         "attr_armyId": "1",
         "attr_mov": "4-4",
@@ -430,7 +430,7 @@ export const ARMY_UNIT = [
         "titleId": "pa-clipper",
         "title": "Clipper Dronbot",
         "shortTitle": "Clipper Dronbot",
-        "unitSet": "['clipper1']",
+        "unitSet": ['clipper1'],
         "size": "rem",
         "attr_armyId": "1",
         "attr_mov": "6-4",
@@ -451,7 +451,7 @@ export const ARMY_UNIT = [
         "titleId": "pa-fugazi",
         "title": "Fugazi Dronbot",
         "shortTitle": "Fugazi Dronbot",
-        "unitSet": "['fugazi']",
+        "unitSet": ['fugazi'],
         "size": "rem",
         "attr_armyId": "1",
         "attr_mov": "6-6",
@@ -472,8 +472,8 @@ export const ARMY_UNIT = [
         "titleId": "pa-palbots",
         "title": "Palbots",
         "shortTitle": "Palbots",
-        "unitSet": "['palbot1']",
-        "unitSkill": "['peripheral','mimet3']",
+        "unitSet": ['palbot1'],
+        "unitSkill": ['peripheral','mimet3'],
         "size": "rem",
         "attr_armyId": "1",
         "attr_mov": "6-4",
@@ -494,8 +494,8 @@ export const ARMY_UNIT = [
         "titleId": "pa-path",
         "title": "Pathfinder Dronbot",
         "shortTitle": "Pathfinder Dronbot",
-        "unitSet": "['pathfinder1']",
-        "unitSkill": "['specops']",
+        "unitSet": ['pathfinder1'],
+        "unitSkill": ['specops'],
         "size": "rem",
         "attr_armyId": "1",
         "attr_mov": "6-4",
@@ -516,9 +516,9 @@ export const ARMY_UNIT = [
         "titleId": "pa-sierra",
         "title": "Sierra Dronbot",
         "shortTitle": "Sierra Dronbot",
-        "unitSet": "['sierra1']",
-        "unitSkill": "['totalreact']",
-        "unitEquipment": "['360view']",
+        "unitSet": ['sierra1'],
+        "unitSkill": ['totalreact'],
+        "unitEquipment": ['360visor'],
         "size": "rem",
         "attr_armyId": "1",
         "attr_mov": "6-4",
@@ -539,8 +539,8 @@ export const ARMY_UNIT = [
         "titleId": "pa-crocmen",
         "title": "Paradiso CROC MEN",
         "shortTitle": "Croc Men",
-        "unitSet": "['crocmen1','crocmen2','crocmen3','crocmen4']",
-        "unitSkill": "['suratk3','camo','infil','mimet6']",
+        "unitSet": ['crocmen1','crocmen2','crocmen3','crocmen4'],
+        "unitSkill": ['surpatk3','camo','infil','mimet6'],
         "size": "sk",
         "attr_armyId": "1",
         "attr_mov": "4-4",
@@ -561,8 +561,8 @@ export const ARMY_UNIT = [
         "titleId": "pa-kunai",
         "title": "Kunai Solutions Ninjas",
         "shortTitle": "Kunai Solutions Ninjas",
-        "unitSet": "['kunai1','kunai2']",
-        "unitSkill": "['suratk3','mart3','camo','dodge1inch','mimet6','climbplus']",
+        "unitSet": ['kunai1','kunai2'],
+        "unitSkill": ['surpatk3','mart3','camo','dodge1inch','mimet6','climbplus'],
         "size": "sk",
         "trait": "Mercenary Troops",
         "attr_armyId": "1",
@@ -584,8 +584,8 @@ export const ARMY_UNIT = [
         "titleId": "pa-locust",
         "title": "Locust Clandestine Action Team",
         "shortTitle": "Locust",
-        "unitSet": "['lucust1','lucust2','lucust3','lucust4']",
-        "unitSkill": "['mimet6','infil']",
+        "unitSet": ['lucust1','lucust2','lucust3','lucust4'],
+        "unitSkill": ['mimet6','infil'],
         "size": "sk",
         "attr_armyId": "1",
         "attr_mov": "4-4",
@@ -606,8 +606,8 @@ export const ARMY_UNIT = [
         "titleId": "pa-liangkai",
         "title": "Liang Kai, Wandering Shaolin Monk",
         "shortTitle": "Lian Kai",
-        "unitSet": "['liangkai1','liangkai2']",
-        "unitSkill": "['mart4','forwdep4','dodge1inchinch','dodge3','mimet3','superjump']",
+        "unitSet": ['liangkai1','liangkai2'],
+        "unitSkill": ['mart4','forwdep4','dodge1inch','dodge3','mimet3','superjump'],
         "size": "wb",
         "trait": "Character",
         "attr_armyId": "1",
@@ -626,626 +626,626 @@ export const ARMY_UNIT = [
     }
 ];
 
-export const UNITSET = [
+export const UNITLIST = [
     {
         "id": "1",
-        "idTitle": "fusi1",
-        "gunList": "['combi','pist','ccwp']",
-        "skillList": "['med']",
-        "equipmentList": "['med']",
+        "titleId": "fusi1",
+        "gunList": ['combi','pist','ccwp'],
+        "skillList": ['med'],
+        "equipmentList": ['med'],
         "swc": "0",
         "points": "1"
     },
     {
         "id": "2",
-        "idTitle": "fusi2",
-        "gunList": "['combi','pist','ccwp']",
-        "skillList": "['lt']",
+        "titleId": "fusi2",
+        "gunList": ['combi','pist','ccwp'],
+        "skillList": ['lt'],
         "swc": "0",
         "points": "1"
     },
     {
         "id": "3",
-        "idTitle": "fusi3",
-        "gunList": "['combi','pist','ccwp']",
-        "skillList": "['hack']",
-        "equipmentList": "['hack']",
+        "titleId": "fusi3",
+        "gunList": ['combi','pist','ccwp'],
+        "skillList": ['hack'],
+        "equipmentList": ['hack'],
         "swc": "0",
         "points": "1"
     },
     {
         "id": "4",
-        "idTitle": "fusi4",
-        "gunList": "['combi','pist','ccwp']",
+        "titleId": "fusi4",
+        "gunList": ['combi','pist','ccwp'],
         "swc": "0.5",
         "points": "1"
     },
     {
         "id": "5",
-        "idTitle": "fusi5",
-        "gunList": "['miss','pist','ccwp']",
+        "titleId": "fusi5",
+        "gunList": ['miss','pist','ccwp'],
         "swc": "1.5",
         "points": "1"
     },
     {
         "id": "6",
-        "idTitle": "fusi6",
-        "gunList": "['hmg','pist','ccwp']",
+        "titleId": "fusi6",
+        "gunList": ['hmg','pist','ccwp'],
         "swc": "1",
         "points": "1.5"
     },
     {
         "id": "7",
-        "idTitle": "fusi7",
-        "gunList": "['msnipe1','msnipe2','pist','ccwp']",
+        "titleId": "fusi7",
+        "gunList": ['msnipe1','msnipe2','pist','ccwp'],
         "swc": "1.5",
         "points": "1.5"
     },
     {
         "id": "8",
-        "idTitle": "nok1",
-        "gunList": "['bshot1','bshot2','pist','ccwp']",
-        "equipmentList": "['mvisor1']",
+        "titleId": "nok1",
+        "gunList": ['bshot1','bshot2','pist','ccwp'],
+        "equipmentList": ['mvisor1'],
         "swc": "0",
         "points": "2"
     },
     {
         "id": "9",
-        "idTitle": "nok2",
-        "gunList": "['spit','pist','ccwp']",
+        "titleId": "nok2",
+        "gunList": ['spit','pist','ccwp'],
         "swc": "1.5",
         "points": "2.5"
     },
     {
         "id": "10",
-        "idTitle": "nok3",
-        "gunList": "['combi','bshot1','bshot2','pist','ccwp']",
-        "skillList": "['hack']",
-        "equipmentList": "['hack']",
+        "titleId": "nok3",
+        "gunList": ['combi','bshot1','bshot2','pist','ccwp'],
+        "skillList": ['hack'],
+        "equipmentList": ['hack'],
         "swc": "0.5",
         "points": "3"
     },
     {
         "id": "11",
-        "idTitle": "infi1",
-        "gunList": "['combi','pist','mnccwp']",
+        "titleId": "infi1",
+        "gunList": ['combi','pist','mnccwp'],
         "swc": "0",
         "points": "2"
     },
     {
         "id": "12",
-        "idTitle": "infi2",
-        "gunList": "['bshot1','bshot2','pist','mnccwp']",
+        "titleId": "infi2",
+        "gunList": ['bshot1','bshot2','pist','mnccwp'],
         "swc": "0",
         "points": "2"
     },
     {
         "id": "13",
-        "idTitle": "koj1",
-        "gunList": "['combi','hpist1','daccwp']",
-        "skillList": "['hack']",
-        "equipmentList": "['hack']",
+        "titleId": "koj1",
+        "gunList": ['combi','hpist1','daccwp'],
+        "skillList": ['hack'],
+        "equipmentList": ['hack'],
         "swc": "0.5",
         "points": "4.5"
     },
     {
         "id": "14",
-        "idTitle": "koj2",
-        "gunList": "['miss','hpist1','daccwp']",
+        "titleId": "koj2",
+        "gunList": ['miss','hpist1','daccwp'],
         "swc": "1.5",
         "points": "4.5"
     },
     {
         "id": "15",
-        "idTitle": "koj3",
-        "gunList": "['spit','hpist1','daccwp']",
+        "titleId": "koj3",
+        "gunList": ['spit','hpist1','daccwp'],
         "swc": "1.5",
         "points": "5"
     },
     {
         "id": "16",
-        "idTitle": "koj4",
-        "gunList": "['spit','hpist1','daccwp']",
-        "skillList": "['lt']",
+        "titleId": "koj4",
+        "gunList": ['spit','hpist1','daccwp'],
+        "skillList": ['lt'],
         "swc": "1.5",
         "points": "5"
     },
     {
         "id": "17",
-        "idTitle": "orc1",
-        "gunList": "['bshot1','bshot2','pist','ccwp']",
+        "titleId": "orc1",
+        "gunList": ['bshot1','bshot2','pist','ccwp'],
         "swc": "0",
         "points": "2.5"
     },
     {
         "id": "18",
-        "idTitle": "orc2",
-        "gunList": "['combi','pist','ccwp']",
+        "titleId": "orc2",
+        "gunList": ['combi','pist','ccwp'],
         "swc": "0",
         "points": "2.5"
     },
     {
         "id": "19",
-        "idTitle": "orc3",
-        "gunList": "['mrifle1','mrifle2','pist','ccwp']",
+        "titleId": "orc3",
+        "gunList": ['mrifle1','mrifle2','pist','ccwp'],
         "swc": "0",
         "points": "3"
     },
     {
         "id": "20",
-        "idTitle": "orc4",
-        "gunList": "['mrifle1','mrifle2','pist','ccwp']",
-        "skillList": "['lt']",
+        "titleId": "orc4",
+        "gunList": ['mrifle1','mrifle2','pist','ccwp'],
+        "skillList": ['lt'],
         "swc": "0",
         "points": "3"
     },
     {
         "id": "21",
-        "idTitle": "orc5",
-        "gunList": "['combi','pist','ccwp']",
-        "skillList": "['hack']",
-        "equipmentList": "['hack']",
+        "titleId": "orc5",
+        "gunList": ['combi','pist','ccwp'],
+        "skillList": ['hack'],
+        "equipmentList": ['hack'],
         "swc": "0.5",
         "points": "3"
     },
     {
         "id": "22",
-        "idTitle": "orc6",
-        "gunList": "['hmg','pist','ccwp']",
-        "skillList": "['lt']",
+        "titleId": "orc6",
+        "gunList": ['hmg','pist','ccwp'],
+        "skillList": ['lt'],
         "swc": "1",
         "points": "3.5"
     },
     {
         "id": "23",
-        "idTitle": "orc7",
-        "gunList": "['hmg','pist','ccwp']",
+        "titleId": "orc7",
+        "gunList": ['hmg','pist','ccwp'],
         "swc": "1.5",
         "points": "3.5"
     },
     {
-        "idTitle": "zhan1",
-        "gunList": "['combi','pist','ccwp']",
+        "titleId": "zhan1",
+        "gunList": ['combi','pist','ccwp'],
         "swc": "0",
         "points": "1"
     },
     {
-        "idTitle": "zhan2",
-        "gunList": "['combi','pist','ccwp']",
-        "skillList": "['med']",
-        "equipmentList": "['med']",
+        "titleId": "zhan2",
+        "gunList": ['combi','pist','ccwp'],
+        "skillList": ['med'],
+        "equipmentList": ['med'],
         "swc": "0",
         "points": "1"
     },
     {
-        "idTitle": "zhan3",
-        "gunList": "['combi','pist','ccwp']",
-        "skillList": "['lt']",
+        "titleId": "zhan3",
+        "gunList": ['combi','pist','ccwp'],
+        "skillList": ['lt'],
         "swc": "0",
         "points": "1"
     },
     {
-        "idTitle": "zhan4",
-        "gunList": "['combi','pist','ccwp']",
-        "skillList": "['hack']",
-        "equipmentList": "['hack']",
+        "titleId": "zhan4",
+        "gunList": ['combi','pist','ccwp'],
+        "skillList": ['hack'],
+        "equipmentList": ['hack'],
         "swc": "0.5",
         "points": "1.5"
     },
     {
-        "idTitle": "zhan5",
-        "gunList": "['hmg','pist','ccwp']",
+        "titleId": "zhan5",
+        "gunList": ['hmg','pist','ccwp'],
         "swc": "1",
         "points": "1.5"
     },
     {
-        "idTitle": "zhan6",
-        "gunList": "['msnipe1','msnipe2','pist','ccwp']",
+        "titleId": "zhan6",
+        "gunList": ['msnipe1','msnipe2','pist','ccwp'],
         "swc": "1.5",
         "points": "1.5"
     },
     {
-        "idTitle": "zhan7",
-        "gunList": "['miss','pist','ccwp']",
+        "titleId": "zhan7",
+        "gunList": ['miss','pist','ccwp'],
         "swc": "1.5",
         "points": "1.5"
     },
     {
-        "idTitle": "hun1",
-        "gunList": "['markrifle','pist','ccwp']",
-        "equipmentList": "['mvisor1']",
+        "titleId": "hun1",
+        "gunList": ['markrifle','pist','ccwp'],
+        "equipmentList": ['mvisor1'],
         "swc": "0.5",
         "points": "3"
     },
     {
-        "idTitle": "hun2",
-        "gunList": "['msnipe1','msnipe2','pist','ccwp']",
+        "titleId": "hun2",
+        "gunList": ['msnipe1','msnipe2','pist','ccwp'],
         "swc": "1.5",
         "points": "3"
     },
     {
-        "idTitle": "dao1",
-        "gunList": "['bshot1','bshot2','pist','ccwp']",
+        "titleId": "dao1",
+        "gunList": ['bshot1','bshot2','pist','ccwp'],
         "swc": "0",
         "points": "4.5"
     },
     {
-        "idTitle": "dao2",
-        "gunList": "['bshot1','bshot2','pist','ccwp']",
-        "skillList": "['lt']",
+        "titleId": "dao2",
+        "gunList": ['bshot1','bshot2','pist','ccwp'],
+        "skillList": ['lt'],
         "swc": "0",
         "points": "4.5"
     },
     {
-        "idTitle": "dao3",
-        "gunList": "['spit','pist','ccwp']",
+        "titleId": "dao3",
+        "gunList": ['spit','pist','ccwp'],
         "swc": "1.5",
         "points": "5"
     },
     {
-        "idTitle": "dao4",
-        "gunList": "['spit','pist','ccwp']",
-        "skillList": "['lt']",
+        "titleId": "dao4",
+        "gunList": ['spit','pist','ccwp'],
+        "skillList": ['lt'],
         "swc": "1.5",
         "points": "5"
     },
     {
-        "idTitle": "dao5",
-        "gunList": "['mrifle1','mrifle2','pist','ccwp']",
-        "skillList": "['hack']",
-        "equipmentList": "['hack']",
+        "titleId": "dao5",
+        "gunList": ['mrifle1','mrifle2','pist','ccwp'],
+        "skillList": ['hack'],
+        "equipmentList": ['hack'],
         "swc": "0.5",
         "points": "5.5"
     },
     {
-        "idTitle": "dao6",
-        "gunList": "['mrifle1','mrifle2','pist','ccwp']",
-        "skillList": "['hack','lt']",
-        "equipmentList": "['hack']",
+        "titleId": "dao6",
+        "gunList": ['mrifle1','mrifle2','pist','ccwp'],
+        "skillList": ['hack','lt'],
+        "equipmentList": ['hack'],
         "swc": "0.5",
         "points": "5.5"
     },
     {
-        "idTitle": "juj1",
-        "gunList": "['combi','hflam','pist','ccwp']",
+        "titleId": "juj1",
+        "gunList": ['combi','hflam','pist','ccwp'],
         "swc": "0",
         "points": "2"
     },
     {
-        "idTitle": "juj2",
-        "gunList": "['bshot1','bshot2','pist','ccwp']",
+        "titleId": "juj2",
+        "gunList": ['bshot1','bshot2','pist','ccwp'],
         "swc": "0",
         "points": "2"
     },
     {
-        "idTitle": "juj3",
-        "gunList": "['combi','hflam','pist','ccwp']",
-        "skillList": "['lt']",
+        "titleId": "juj3",
+        "gunList": ['combi','hflam','pist','ccwp'],
+        "skillList": ['lt'],
         "swc": "0",
         "points": "2"
     },
     {
-        "idTitle": "juj4",
-        "gunList": "['bcombi','hflam','pist','ccwp']",
+        "titleId": "juj4",
+        "gunList": ['bcombi','hflam','pist','ccwp'],
         "swc": "0",
         "points": "2.5"
     },
     {
-        "idTitle": "juj5",
-        "gunList": "['bshot1','bshot2','pist','ccwp']",
-        "skillList": "['eng']",
+        "titleId": "juj5",
+        "gunList": ['bshot1','bshot2','pist','ccwp'],
+        "skillList": ['eng'],
         "swc": "0",
         "points": "2.5"
     },
     {
-        "idTitle": "juj6",
-        "gunList": "['miss','lflam','pist','ccwp']",
+        "titleId": "juj6",
+        "gunList": ['miss','lflam','pist','ccwp'],
         "swc": "1.5",
         "points": "3"
     },
     {
-        "idTitle": "juj7",
-        "gunList": "['spit','hflam','pist','ccwp']",
+        "titleId": "juj7",
+        "gunList": ['spit','hflam','pist','ccwp'],
         "swc": "1.5",
         "points": "3"
     },
     {
-        "idTitle": "guila1",
-        "gunList": "['bshot1','bshot2','antm','pist','ccwp']",
+        "titleId": "guila1",
+        "gunList": ['bshot1','bshot2','antm','pist','ccwp'],
         "swc": "0",
         "points": "2"
     },
     {
-        "idTitle": "guila2",
-        "gunList": "['combi','antm','pist','ccwp']",
-        "skillList": "['lt']",
+        "titleId": "guila2",
+        "gunList": ['combi','antm','pist','ccwp'],
+        "skillList": ['lt'],
         "swc": "2",
         "points": "2"
     },
     {
-        "idTitle": "guila3",
-        "gunList": "['combi','antm','pist','ccwp']",
-        "skillList": "['hack']",
-        "equipmentList": "['hack']",
+        "titleId": "guila3",
+        "gunList": ['combi','antm','pist','ccwp'],
+        "skillList": ['hack'],
+        "equipmentList": ['hack'],
         "swc": "0.5",
         "points": "3"
     },
     {
-        "idTitle": "mach1",
-        "gunList": "['combi','pist','ccwp']",
+        "titleId": "mach1",
+        "gunList": ['combi','pist','ccwp'],
         "swc": "0",
         "points": "1",
         "undefined": "combi"
     },
     {
-        "idTitle": "mach2",
-        "gunList": "['combi','pist','ccwp']",
-        "skillList": "['mimet3']",
+        "titleId": "mach2",
+        "gunList": ['combi','pist','ccwp'],
+        "skillList": ['mimet3'],
         "swc": "0",
         "points": "1.5",
         "undefined": "pist"
     },
     {
-        "idTitle": "traudoc1",
-        "gunList": "['combi','pist','ccwp']",
+        "titleId": "traudoc1",
+        "gunList": ['combi','pist','ccwp'],
         "swc": "0",
         "points": "1",
         "undefined": "ccwp"
     },
     {
-        "idTitle": "akalis1",
-        "gunList": "['combi','pist','ccwp']",
+        "titleId": "akalis1",
+        "gunList": ['combi','pist','ccwp'],
         "swc": "0",
         "points": "2"
     },
     {
-        "idTitle": "akalis2",
-        "gunList": "['bshot1','bshot2','pist','ccwp']",
+        "titleId": "akalis2",
+        "gunList": ['bshot1','bshot2','pist','ccwp'],
         "swc": "0",
         "points": "2"
     },
     {
-        "idTitle": "akalis3",
-        "gunList": "['combi','pist','ccwp']",
-        "skillList": "['hack']",
-        "equipmentList": "['hack']",
+        "titleId": "akalis3",
+        "gunList": ['combi','pist','ccwp'],
+        "skillList": ['hack'],
+        "equipmentList": ['hack'],
         "swc": "0.5",
         "points": "2"
     },
     {
-        "idTitle": "akalis4",
-        "gunList": "['spit','pist','ccwp']",
+        "titleId": "akalis4",
+        "gunList": ['spit','pist','ccwp'],
         "swc": "1.5",
         "points": "2.5"
     },
     {
-        "idTitle": "niss1",
-        "gunList": "['combi','lshot1','lshot2','pist','ccwp']",
+        "titleId": "niss1",
+        "gunList": ['combi','lshot1','lshot2','pist','ccwp'],
         "swc": "0",
         "points": "2.5"
     },
     {
-        "idTitle": "niss2",
-        "gunList": "['combi','lshot1','lshot2','pist','ccwp']",
-        "skillList": "['lt']",
+        "titleId": "niss2",
+        "gunList": ['combi','lshot1','lshot2','pist','ccwp'],
+        "skillList": ['lt'],
         "swc": "1",
         "points": "2.5"
     },
     {
-        "idTitle": "niss3",
-        "gunList": "['combi','lshot1','lshot2','pist','ccwp']",
-        "skillList": "['med']",
-        "equipmentList": "['med']",
+        "titleId": "niss3",
+        "gunList": ['combi','lshot1','lshot2','pist','ccwp'],
+        "skillList": ['med'],
+        "equipmentList": ['med'],
         "swc": "0",
         "points": "3"
     },
     {
-        "idTitle": "niss4",
-        "gunList": "['combi','lshot1','lshot2','pist','ccwp']",
-        "skillList": "['hack']",
-        "equipmentList": "['hack']",
+        "titleId": "niss4",
+        "gunList": ['combi','lshot1','lshot2','pist','ccwp'],
+        "skillList": ['hack'],
+        "equipmentList": ['hack'],
         "swc": "0.5",
         "points": "3"
     },
     {
-        "idTitle": "niss5",
-        "gunList": "['hmg','pist','ccwp']",
+        "titleId": "niss5",
+        "gunList": ['hmg','pist','ccwp'],
         "swc": "1.5",
         "points": "3"
     },
     {
-        "idTitle": "niss6",
-        "gunList": "['msnipe1','msnipe2','pist','ccwp']",
+        "titleId": "niss6",
+        "gunList": ['msnipe1','msnipe2','pist','ccwp'],
         "swc": "1.5",
         "points": "3"
     },
     {
-        "idTitle": "troll1",
-        "gunList": "['mrifle1','mrifle2','chaincolt','pistol','daccwp']",
+        "titleId": "troll1",
+        "gunList": ['mrifle1','mrifle2','chaincolt','pist','daccwp'],
         "swc": "0",
         "points": "2"
     },
     {
-        "idTitle": "vagar1",
-        "gunList": "['combi','hflam','pist','ccwp']",
+        "titleId": "vagar1",
+        "gunList": ['combi','hflam','pist','ccwp'],
         "swc": "0",
         "points": "1.5"
     },
     {
-        "idTitle": "vagar2",
-        "gunList": "['markrifle','antm','pist','ccwp']",
+        "titleId": "vagar2",
+        "gunList": ['markrifle','antm','pist','ccwp'],
         "swc": "0",
         "points": "2"
     },
     {
-        "idTitle": "vagar3",
-        "gunList": "['spit','pist','ccwp']",
+        "titleId": "vagar3",
+        "gunList": ['spit','pist','ccwp'],
         "swc": "1.5",
         "points": "2"
     },
     {
-        "idTitle": "aquila1",
-        "gunList": "['apmrifle','pist','ccwp']",
+        "titleId": "aquila1",
+        "gunList": ['apmrifle','pist','ccwp'],
         "swc": "0",
         "points": "4.5"
     },
     {
-        "idTitle": "aquila2",
-        "gunList": "['apmrifle','pist','ccwp']",
-        "skillList": "['specops']",
+        "titleId": "aquila2",
+        "gunList": ['apmrifle','pist','ccwp'],
+        "skillList": ['specops'],
         "swc": "0",
         "points": "4.5"
     },
     {
-        "idTitle": "aquila3",
-        "gunList": "['apmrifle','pist','ccwp']",
-        "skillList": "['lt']",
+        "titleId": "aquila3",
+        "gunList": ['apmrifle','pist','ccwp'],
+        "skillList": ['lt'],
         "swc": "0",
         "points": "4.5"
     },
     {
-        "idTitle": "aquila4",
-        "gunList": "['hmg','pist','ccwp']",
+        "titleId": "aquila4",
+        "gunList": ['hmg','pist','ccwp'],
         "swc": "1.5",
         "points": "5"
     },
     {
-        "idTitle": "boyg1",
-        "gunList": "['mk12','hpist1','hpist2','ccwp']",
+        "titleId": "boyg1",
+        "gunList": ['mk12','hpist1','hpist2','ccwp'],
         "swc": "0",
         "points": "4.5"
     },
     {
-        "idTitle": "boyg2",
-        "gunList": "['miss','hpist1','hpist2','ccwp']",
+        "titleId": "boyg2",
+        "gunList": ['miss','hpist1','hpist2','ccwp'],
         "swc": "1.5",
         "points": "4.5"
     },
     {
-        "idTitle": "swiss1",
-        "gunList": "['mrifle1','mrifle2','pist','apccwp']",
-        "skillList": "['hack']",
-        "equipmentList": "['hack']",
+        "titleId": "swiss1",
+        "gunList": ['mrifle1','mrifle2','pist','apccwp'],
+        "skillList": ['hack'],
+        "equipmentList": ['hack'],
         "swc": "0.5",
         "points": "6"
     },
     {
-        "idTitle": "swiss2",
-        "gunList": "['hmg','pist','apccwp']",
+        "titleId": "swiss2",
+        "gunList": ['hmg','pist','apccwp'],
         "swc": "1.5",
         "points": "6"
     },
     {
-        "idTitle": "swiss3",
-        "gunList": "['miss','lshot1','lshot2','pist','apccwp']",
+        "titleId": "swiss3",
+        "gunList": ['miss','lshot1','lshot2','pist','apccwp'],
         "swc": "1.5",
         "points": "6"
     },
     {
-        "idTitle": "clipper1",
-        "gunList": "['miss','paraccwp-3']",
+        "titleId": "clipper1",
+        "gunList": ['miss','paraccwp-3'],
         "swc": "1.5",
         "points": "1.5"
     },
     {
-        "idTitle": "fugazi",
-        "gunList": "['paraccwp-3']",
+        "titleId": "fugazi",
+        "gunList": ['paraccwp-3'],
         "swc": "0",
         "points": "0.5"
     },
     {
-        "idTitle": "palbot1",
-        "gunList": "['paraccwp-3']",
+        "titleId": "palbot1",
+        "gunList": ['paraccwp-3'],
         "swc": "0",
         "points": "0.5"
     },
     {
-        "idTitle": "pathfinder1",
-        "gunList": "['combi','paraccwp-3']",
+        "titleId": "pathfinder1",
+        "gunList": ['combi','paraccwp-3'],
         "swc": "0",
         "points": "1"
     },
     {
-        "idTitle": "sierra1",
-        "gunList": "['hmg','paraccwp-3']",
+        "titleId": "sierra1",
+        "gunList": ['hmg','paraccwp-3'],
         "swc": "1",
         "points": "2"
     },
     {
-        "idTitle": "crocmen1",
-        "gunList": "['bshot1','bshot2','antm','pist','ccwp']",
+        "titleId": "crocmen1",
+        "gunList": ['bshot1','bshot2','antm','pist','ccwp'],
         "swc": "0",
         "points": "2.5"
     },
     {
-        "idTitle": "crocmen2",
-        "gunList": "['combi','antm','pist','ccwp']",
-        "skillList": "['lt']",
+        "titleId": "crocmen2",
+        "gunList": ['combi','antm','pist','ccwp'],
+        "skillList": ['lt'],
         "swc": "2",
         "points": "2.5"
     },
     {
-        "idTitle": "crocmen3",
-        "gunList": "['combi','antm','pist','ccwp']",
-        "skillList": "['hack']",
-        "equipmentList": "['hack']",
+        "titleId": "crocmen3",
+        "gunList": ['combi','antm','pist','ccwp'],
+        "skillList": ['hack'],
+        "equipmentList": ['hack'],
         "swc": "0.5",
         "points": "3"
     },
     {
-        "idTitle": "crocmen4",
-        "gunList": "['msnipe1','msnipe2','antm','pist','ccwp']",
+        "titleId": "crocmen4",
+        "gunList": ['msnipe1','msnipe2','antm','pist','ccwp'],
         "swc": "1.5",
         "points": "3.5"
     },
     {
-        "idTitle": "kunai1",
-        "gunList": "['mrifle1','mrifle2','pist','ccwp']",
-        "skillList": "['forwdep4']",
+        "titleId": "kunai1",
+        "gunList": ['mrifle1','mrifle2','pist','ccwp'],
+        "skillList": ['forwdep4'],
         "swc": "0",
         "points": "2.5"
     },
     {
-        "idTitle": "kunai2",
-        "gunList": "['msnipe1','msnipe2','pist','ccwp']",
+        "titleId": "kunai2",
+        "gunList": ['msnipe1','msnipe2','pist','ccwp'],
         "swc": "1.5",
         "points": "3"
     },
     {
-        "idTitle": "lucust1",
-        "gunList": "['bshot1','bshot2','pist','ccwp']",
+        "titleId": "lucust1",
+        "gunList": ['bshot1','bshot2','pist','ccwp'],
         "swc": "0",
         "points": "2.5"
     },
     {
-        "idTitle": "lucust2",
-        "gunList": "['bcombi','pist','daccwp']",
+        "titleId": "lucust2",
+        "gunList": ['bcombi','pist','daccwp'],
         "swc": "0",
         "points": "3"
     },
     {
-        "idTitle": "lucust3",
-        "gunList": "['markrifle','pist','ccwp']",
+        "titleId": "lucust3",
+        "gunList": ['markrifle','pist','ccwp'],
         "swc": "0",
         "points": "3"
     },
     {
-        "idTitle": "lucust4",
-        "gunList": "['bcombi','pist','daccwp']",
-        "skillList": "['hack']",
-        "equipmentList": "['hack']",
+        "titleId": "lucust4",
+        "gunList": ['bcombi','pist','daccwp'],
+        "skillList": ['hack'],
+        "equipmentList": ['hack'],
         "swc": "0.5",
         "points": "3"
     },
     {
-        "idTitle": "liangkai1",
-        "gunList": "['chainrifle','lshot1','lshot2','pist','daccwp']",
+        "titleId": "liangkai1",
+        "gunList": ['chainrifle','lshot1','lshot2','pist','daccwp'],
         "swc": "0",
         "points": "1.5"
     },
     {
-        "idTitle": "liangkai2",
-        "gunList": "['chainrifle','combi','pist','daccwp']",
+        "titleId": "liangkai2",
+        "gunList": ['chainrifle','combi','pist','daccwp'],
         "swc": "0",
         "points": "2"
     }
@@ -1269,7 +1269,7 @@ export const ARMY = [
 export const WEAPON = [
     {
         "id": "1",
-        "idTitle": "combi",
+        "titleId": "combi",
         "title": "CombiRifle",
         "shortTitle": "CombiRifle",
         "type": "main",
@@ -1289,7 +1289,7 @@ export const WEAPON = [
     },
     {
         "id": "10",
-        "idTitle": "bshot2",
+        "titleId": "bshot2",
         "title": "Boarding Shotgun (Hit Mode)",
         "shortTitle": "Boarding Shotgun (Hit)",
         "type": "main",
@@ -1307,7 +1307,7 @@ export const WEAPON = [
     },
     {
         "id": "11",
-        "idTitle": "antm",
+        "titleId": "antm",
         "title": "Antipersonel Mines",
         "shortTitle": "Antipersonel Mines",
         "type": "equip",
@@ -1320,7 +1320,7 @@ export const WEAPON = [
     },
     {
         "id": "12",
-        "idTitle": "bcombi",
+        "titleId": "bcombi",
         "title": "Breaker Combi Rifle",
         "shortTitle": "Breaker Combi Rifle",
         "type": "main",
@@ -1340,7 +1340,7 @@ export const WEAPON = [
     },
     {
         "id": "13",
-        "idTitle": "hflam",
+        "titleId": "hflam",
         "title": "Heavy Flamethrower",
         "shortTitle": "Heavy Flamethrower",
         "type": "main",
@@ -1353,7 +1353,7 @@ export const WEAPON = [
     },
     {
         "id": "14",
-        "idTitle": "lflam",
+        "titleId": "lflam",
         "title": "Light Flamethrower",
         "shortTitle": "Light Flamethrower",
         "type": "main",
@@ -1366,7 +1366,7 @@ export const WEAPON = [
     },
     {
         "id": "15",
-        "idTitle": "mrifle1",
+        "titleId": "mrifle1",
         "title": "MULTI Rifle (Burst Mode)",
         "shortTitle": "MULTI Rifle (Burst)",
         "type": "main",
@@ -1387,7 +1387,7 @@ export const WEAPON = [
     },
     {
         "id": "16",
-        "idTitle": "mrifle2",
+        "titleId": "mrifle2",
         "title": "MULTI Rifle (Anti-materiel Mode)",
         "shortTitle": "MULTI Rifle (Anti-materiel)",
         "type": "main",
@@ -1408,7 +1408,7 @@ export const WEAPON = [
     },
     {
         "id": "17",
-        "idTitle": "mnccwp",
+        "titleId": "mnccwp",
         "title": "Monofilament CC Weapon",
         "shortTitle": "Monofilament CC Weapon",
         "type": "close",
@@ -1421,7 +1421,7 @@ export const WEAPON = [
     },
     {
         "id": "18",
-        "idTitle": "daccwp",
+        "titleId": "daccwp",
         "title": "DA CC Weapon",
         "shortTitle": "DA CC Weapon",
         "type": "close",
@@ -1434,7 +1434,7 @@ export const WEAPON = [
     },
     {
         "id": "19",
-        "idTitle": "hpist1",
+        "titleId": "hpist1",
         "title": "Heavy Pistol (Burst Mode)",
         "shortTitle": "Heavy Pistol (Burst)",
         "type": "sub",
@@ -1452,7 +1452,7 @@ export const WEAPON = [
     },
     {
         "id": "2",
-        "idTitle": "spit",
+        "titleId": "spit",
         "title": "Spitfire",
         "shortTitle": "Spitfire",
         "type": "main",
@@ -1472,7 +1472,7 @@ export const WEAPON = [
     },
     {
         "id": "20",
-        "idTitle": "markrifle",
+        "titleId": "markrifle",
         "title": "Marksman Rifle",
         "shortTitle": "Marksman Rifle",
         "type": "main",
@@ -1492,7 +1492,7 @@ export const WEAPON = [
     },
     {
         "id": "3",
-        "idTitle": "pist",
+        "titleId": "pist",
         "title": "Pisto (CC Mode)",
         "shortTitle": "Pistol CC",
         "type": "sub",
@@ -1505,7 +1505,7 @@ export const WEAPON = [
     },
     {
         "id": "4",
-        "idTitle": "ccwp",
+        "titleId": "ccwp",
         "title": "CC Weapon",
         "shortTitle": "CC Weapon",
         "type": "close",
@@ -1518,7 +1518,7 @@ export const WEAPON = [
     },
     {
         "id": "5",
-        "idTitle": "miss",
+        "titleId": "miss",
         "title": "Missile Launcher (Blast Mode)",
         "shortTitle": "Missile Launcher (Blast Mode)",
         "type": "main",
@@ -1538,7 +1538,7 @@ export const WEAPON = [
     },
     {
         "id": "6",
-        "idTitle": "msnipe1",
+        "titleId": "msnipe1",
         "title": "MULTI Sniper (Burst Mode)",
         "shortTitle": "MULTI Sniper (Burst)",
         "type": "main",
@@ -1558,7 +1558,7 @@ export const WEAPON = [
     },
     {
         "id": "7",
-        "idTitle": "msnipe2",
+        "titleId": "msnipe2",
         "title": "MULTI Sniper (Anti-materiel Mode)",
         "shortTitle": "MULTI Sniper (Anti Material)",
         "type": "main",
@@ -1578,7 +1578,7 @@ export const WEAPON = [
     },
     {
         "id": "8",
-        "idTitle": "hmg",
+        "titleId": "hmg",
         "title": "HMG",
         "shortTitle": "HMG",
         "type": "main",
@@ -1598,7 +1598,7 @@ export const WEAPON = [
     },
     {
         "id": "9",
-        "idTitle": "bshot1",
+        "titleId": "bshot1",
         "title": "Boarding Shotgun (Blast Mode)",
         "shortTitle": "Boarding Shotgun (Blast)",
         "type": "main",
@@ -1611,7 +1611,7 @@ export const WEAPON = [
     },
     {
         "id": "21",
-        "idTitle": "apccwp",
+        "titleId": "apccwp",
         "title": "AP CC Weapon",
         "shortTitle": "AP CC Weapon",
         "type": "close",
@@ -1624,7 +1624,7 @@ export const WEAPON = [
     },
     {
         "id": "22",
-        "idTitle": "apmrifle",
+        "titleId": "apmrifle",
         "title": "AP Marksman Rifle",
         "shortTitle": "AP Marksman Rifle",
         "type": "main",
@@ -1644,7 +1644,7 @@ export const WEAPON = [
     },
     {
         "id": "23",
-        "idTitle": "chainrifle",
+        "titleId": "chainrifle",
         "title": "Chain Rifle",
         "shortTitle": "Chain Rifle",
         "type": "main",
@@ -1657,7 +1657,7 @@ export const WEAPON = [
     },
     {
         "id": "24",
-        "idTitle": "chaincolt",
+        "titleId": "chaincolt",
         "title": "Chain-Colt",
         "shortTitle": "Chain-Colt",
         "type": "main",
@@ -1670,7 +1670,7 @@ export const WEAPON = [
     },
     {
         "id": "25",
-        "idTitle": "hpist2",
+        "titleId": "hpist2",
         "title": "Heavy Pistol (CC Mode)",
         "shortTitle": "Heavy Pistol (CC)",
         "type": "close",
@@ -1683,7 +1683,7 @@ export const WEAPON = [
     },
     {
         "id": "26",
-        "idTitle": "lshot1",
+        "titleId": "lshot1",
         "title": "Light Shotgun (Blast Mode)",
         "shortTitle": "Light Shotgun (Blast)",
         "type": "main",
@@ -1696,7 +1696,7 @@ export const WEAPON = [
     },
     {
         "id": "27",
-        "idTitle": "lshot2",
+        "titleId": "lshot2",
         "title": "Light Shotgun (Hit Mode)",
         "shortTitle": "Light Shotgun (Hit)",
         "type": "main",
@@ -1714,7 +1714,7 @@ export const WEAPON = [
     },
     {
         "id": "28",
-        "idTitle": "mk12",
+        "titleId": "mk12",
         "title": "Mk12",
         "shortTitle": "Mk12",
         "type": "main",
@@ -1734,7 +1734,7 @@ export const WEAPON = [
     },
     {
         "id": "29",
-        "idTitle": "paraccwp",
+        "titleId": "paraccwp",
         "title": "PARA CC Weapon",
         "shortTitle": "PARA CC Weapon",
         "type": "close",
@@ -1747,7 +1747,7 @@ export const WEAPON = [
     },
     {
         "id": "29",
-        "idTitle": "paraccwp-3",
+        "titleId": "paraccwp-3",
         "title": "PARA CC Weapon (-3)",
         "shortTitle": "PARA CC Weapon (-3)",
         "type": "close",
@@ -1763,7 +1763,7 @@ export const SKILL = [
     {
         "id": "1",
         "page": "74",
-        "idTitle": "med",
+        "titleId": "med",
         "title": "Paramedic",
         "type": "Automatic Skill",
         "trait": "Obligatory.",
@@ -1772,18 +1772,18 @@ export const SKILL = [
     {
         "id": "2",
         "page": "71",
-        "idTitle": "lt",
+        "titleId": "lt",
         "title": "Lietenant"
     },
     {
         "id": "3",
-        "idTitle": "hack",
+        "titleId": "hack",
         "title": "Hacker"
     },
     {
         "id": "4",
         "page": "74",
-        "idTitle": "mimet6",
+        "titleId": "mimet6",
         "title": "Mimetism (-6)",
         "type": "Automatic Skill",
         "trait": "NFB, Obligatory",
@@ -1792,7 +1792,7 @@ export const SKILL = [
     {
         "id": "5",
         "page": "70",
-        "idTitle": "forwdep8",
+        "titleId": "forwdep8",
         "title": "Forward Deployment (+8\")",
         "type": "Deployment Skill",
         "trait": "Superior Deployment, Optional.",
@@ -1801,7 +1801,7 @@ export const SKILL = [
     {
         "id": "5",
         "page": "70",
-        "idTitle": "forwdep4",
+        "titleId": "forwdep4",
         "title": "Forward Deployment (+4\")",
         "type": "Deployment Skill",
         "trait": "Superior Deployment, Optional.",
@@ -1810,7 +1810,7 @@ export const SKILL = [
     {
         "id": "6",
         "page": "70",
-        "idTitle": "doc",
+        "titleId": "doc",
         "title": "Doctor",
         "type": "Short Skill",
         "trait": "Optional",
@@ -1820,7 +1820,7 @@ export const SKILL = [
     {
         "id": "7",
         "page": "71",
-        "idTitle": "mart2",
+        "titleId": "mart2",
         "title": "Martial Arts L2",
         "type": "Automatic Skill",
         "effect": "► Attack Mod: +3\r\n► Opponent Mod: -3\r\n► Damage Mod: +1\r\n► Burst Mod: 0",
@@ -1829,7 +1829,7 @@ export const SKILL = [
     {
         "id": "8",
         "page": "74",
-        "idTitle": "mimet3",
+        "titleId": "mimet3",
         "title": "Mimetism (-3)",
         "type": "Automatic Skill",
         "trait": "NFB, Obligatory",
@@ -1838,7 +1838,7 @@ export const SKILL = [
     {
         "id": "9",
         "page": "67",
-        "idTitle": "camo",
+        "titleId": "camo",
         "title": "Camouflage",
         "type": "Automatic Skill",
         "trait": "Optional",
@@ -1849,7 +1849,7 @@ export const SKILL = [
     {
         "id": "10",
         "page": "77",
-        "idTitle": "surpatk3",
+        "titleId": "surpatk3",
         "title": "Surprise Attack (-3)",
         "type": "Automatic Skill",
         "trait": "Obligatory.",
@@ -1858,14 +1858,14 @@ export const SKILL = [
     },
     {
         "id": "11",
-        "idTitle": "dodge1inch",
+        "titleId": "dodge1inch",
         "title": "Dodge (+1\")",
         "type": "Automatic Skill",
         "trait": "Optional"
     },
     {
         "id": "11",
-        "idTitle": "dodge3",
+        "titleId": "dodge3",
         "title": "Dodge (+3)",
         "type": "Automatic Skill",
         "trait": "Optional"
@@ -1873,7 +1873,7 @@ export const SKILL = [
     {
         "id": "12",
         "page": "70",
-        "idTitle": "eng",
+        "titleId": "eng",
         "title": "Engineer",
         "type": "Short Skill",
         "trait": "Optional",
@@ -1883,13 +1883,13 @@ export const SKILL = [
     {
         "id": "13",
         "page": "71",
-        "idTitle": "infil",
+        "titleId": "infil",
         "title": "Infiltration"
     },
     {
         "id": "14",
         "page": "69",
-        "idTitle": "climbplus",
+        "titleId": "climbplus",
         "title": "Climbing Plus",
         "type": "Automatic Skill",
         "trait": "Movement, Optional.",
@@ -1899,7 +1899,7 @@ export const SKILL = [
     {
         "id": "15",
         "page": "70",
-        "idTitle": "combatjump",
+        "titleId": "combatjump",
         "title": "Combat Jump",
         "type": "Entire Order",
         "trait": "Airborne Deployment (AD), Private Information, Optional.",
@@ -1907,7 +1907,7 @@ export const SKILL = [
     },
     {
         "id": "16",
-        "idTitle": "bsatk1",
+        "titleId": "bsatk1",
         "title": "BS Attack (+1B)",
         "type": "Automatic Skill",
         "trait": "Optional"
@@ -1915,7 +1915,7 @@ export const SKILL = [
     {
         "id": "17",
         "page": "71",
-        "idTitle": "mart1",
+        "titleId": "mart1",
         "title": "Martial Arts L1",
         "type": "Automatic Skill",
         "effect": "► Attack Mod: 0\r\n► Opponent Mod: -3\r\n► Damage Mod: +1\r\n► Burst Mod: 0",
@@ -1924,7 +1924,7 @@ export const SKILL = [
     {
         "id": "18",
         "page": "71",
-        "idTitle": "mart3",
+        "titleId": "mart3",
         "title": "Martial Arts L3",
         "type": "Automatic Skill",
         "effect": "► Attack Mod: +3\r\n► Opponent Mod: -3\r\n► Damage Mod: +2\r\n► Burst Mod: 0",
@@ -1933,7 +1933,7 @@ export const SKILL = [
     {
         "id": "19",
         "page": "71",
-        "idTitle": "mart4",
+        "titleId": "mart4",
         "title": "Martial Arts L4",
         "type": "Automatic Skill",
         "effect": "► Attack Mod: +3\r\n► Opponent Mod: -3\r\n► Damage Mod: +3\r\n► Burst Mod: 0",
@@ -1942,7 +1942,7 @@ export const SKILL = [
     {
         "id": "20",
         "page": "71",
-        "idTitle": "mart5",
+        "titleId": "mart5",
         "title": "Martial Arts L5",
         "type": "Automatic Skill",
         "effect": "► Attack Mod: +3\r\n► Opponent Mod: -3\r\n► Damage Mod: +3\r\n► Burst Mod: +1",
@@ -1951,7 +1951,7 @@ export const SKILL = [
     {
         "id": "21",
         "page": "74",
-        "idTitle": "nonhack",
+        "titleId": "nonhack",
         "title": "Non-Hackable",
         "type": "Automatic Skill",
         "trait": "Obligatory.",
@@ -1960,7 +1960,7 @@ export const SKILL = [
     {
         "id": "22",
         "page": "74",
-        "idTitle": "parachut",
+        "titleId": "parachut",
         "title": "Parachutist",
         "type": "Entire Order",
         "trait": "Airborne Deployment (AD), Optional, Private Information.",
@@ -1969,7 +1969,7 @@ export const SKILL = [
     {
         "id": "23",
         "page": "74",
-        "idTitle": "peripheral",
+        "titleId": "peripheral",
         "title": "Peripheral (Servant)",
         "type": "Automatic Skill",
         "trait": "Obligatory.",
@@ -1978,7 +1978,7 @@ export const SKILL = [
     {
         "id": "24",
         "page": "75",
-        "idTitle": "protheion",
+        "titleId": "protheion",
         "title": "Protheion",
         "type": "Automatic Skill",
         "trait": "CC Special Skill, Optional.",
@@ -1988,7 +1988,7 @@ export const SKILL = [
     {
         "id": "25",
         "page": "76",
-        "idTitle": "regen",
+        "titleId": "regen",
         "title": "Regeneration",
         "type": "Automatic Skill",
         "trait": "States Phase, Optional.",
@@ -1998,7 +1998,7 @@ export const SKILL = [
     {
         "id": "26",
         "page": "76",
-        "idTitle": "remdriver",
+        "titleId": "remdriver",
         "title": "Remdriver",
         "type": "Deployment Skill",
         "trait": "Optional.",
@@ -2007,7 +2007,7 @@ export const SKILL = [
     {
         "id": "27",
         "page": "76",
-        "idTitle": "shasvastii",
+        "titleId": "shasvastii",
         "title": "Shasvastii",
         "type": "Automatic Skill",
         "trait": "Obligatory.",
@@ -2016,7 +2016,7 @@ export const SKILL = [
     {
         "id": "28",
         "page": "76",
-        "idTitle": "shasvastiiempbryo",
+        "titleId": "shasvastiiempbryo",
         "title": "Shasvastii-Embryo",
         "type": "null",
         "effect": "In game terms, this State works like the Unconscious State with the\r\nfollowing features:\r\n► Rather than placing an Unconscious State Token besides the\r\nTrooper, a Shasvastii Embryo State Token is placed instead.\r\n► The Trooper counts as being in a non-Null state when computing\r\nVictory Points, and they do not count as Troopers eliminated by the\r\nenemy.",
@@ -2025,7 +2025,7 @@ export const SKILL = [
     {
         "id": "29",
         "page": "76",
-        "idTitle": "specops",
+        "titleId": "specops",
         "title": "Specialist Operative",
         "type": "Automatic Skill",
         "trait": "Optional.",
@@ -2034,7 +2034,7 @@ export const SKILL = [
     {
         "id": "30",
         "page": "77",
-        "idTitle": "superjump",
+        "titleId": "superjump",
         "title": "Super Jump",
         "type": "Automatic Skill",
         "trait": "Movement, Optional.",
@@ -2043,7 +2043,7 @@ export const SKILL = [
     {
         "id": "31",
         "page": "77",
-        "idTitle": "totalreact",
+        "titleId": "totalreact",
         "title": "Total Reaction",
         "type": "Automatic Skill",
         "trait": "Optional.",
@@ -2053,14 +2053,14 @@ export const SKILL = [
 export const EQUIPMENT = [
     {
         "id": "1",
-        "idTitle": "med",
+        "titleId": "med",
         "title": "Medkit",
         "requirement": "► A MediKit’s target must be an Allied Model in Unconscious State,\r\nunless certain scenario rules say otherwise.\r\n► A MediKit can be used in one of two ways, each one with their own\r\nRequirements:\r\n► To use it remotely, the user must have LoF to the target.\r\n► To use it as a piece of contact equipment, the user must be in\r\nSilhouette contact with the target.",
         "effect": "► Used remotely, a MediKit is considered a Non-Lethal BS Weapon. If\r\nthe user passes a BS Attack Roll, applying the corresponding MODs\r\n(for Range, Cover, etc.), the target will perform a single PH Roll.\r\n► A MediKit can also be used in Silhouette contact. To do so, the user\r\nmust spend one Short Skill, without the need for a Roll, and their\r\ntarget will perform a PH Roll.\r\n► In both cases, by passing the PH Roll, the target’s Unconscious\r\nState is cancelled, by recovering a single point of their Wounds\r\nAttribute. If the PH Roll is failed, the target automatically enters\r\nthe Dead State and is removed from the game table.\r\n► A MediKit’s target does not perform a Saving Roll.\r\n► By using a MediKit, a Trooper may be recovered from the Unconscious\r\nState as many times as necessary, as long as they pass the\r\ncorresponding PH Roll.\r\n► If, due a Special Skill or rule, a Trooper receives more than one\r\nsuccessful hit or use of MediKit during the same Order, if any of the\r\ncorresponding PH Rolls is failed, the Trooper automatically enters\r\nthe Dead State. Even if the Trooper passes every PH Roll, they will\r\nonly recover a single point of their Wounds Attribute."
     },
     {
         "id": "2",
-        "idTitle": "hack",
+        "titleId": "hack",
         "title": "Hacking Device",
         "type": "equipment",
         "trait": "Comms Equipment",
@@ -2068,7 +2068,7 @@ export const EQUIPMENT = [
     },
     {
         "id": "3",
-        "idTitle": "mvisor1",
+        "titleId": "mvisor1",
         "title": "Multispectral Visor L1",
         "type": "SHORT SKILL",
         "trait": "Non-Lethal.",
@@ -2076,15 +2076,15 @@ export const EQUIPMENT = [
     },
     {
         "id": "4",
-        "idTitle": "360visor",
-        "title": "360º VISOR",
+        "titleId": "360visor",
+        "title": "360 VISOR",
         "type": "AUTOMATIC EQUIPMENT",
         "trait": "Obligatory.",
         "effect": "► This type of Visor provides its user with a 360˚ LoF arc, rather than\r\nthe usual 180˚ arc."
     },
     {
         "id": "5",
-        "idTitle": "mvisor2",
+        "titleId": "mvisor2",
         "title": "MULTISPECTRAL VISOR LEVEL 2",
         "type": "AUTOMATIC EQUIPMENT",
         "trait": "Obligatory.",
@@ -2092,7 +2092,7 @@ export const EQUIPMENT = [
     },
     {
         "id": "6",
-        "idTitle": "mvisor3",
+        "titleId": "mvisor3",
         "title": "MULTISPECTRAL VISOR LEVEL 3",
         "type": "AUTOMATIC EQUIPMENT",
         "trait": "Obligatory.",
@@ -2100,7 +2100,7 @@ export const EQUIPMENT = [
     },
     {
         "id": "7",
-        "idTitle": "nanoscreen",
+        "titleId": "nanoscreen",
         "title": "NANOSCREEN",
         "type": "AUTOMATIC EQUIPMENT",
         "trait": "Obligatory.",

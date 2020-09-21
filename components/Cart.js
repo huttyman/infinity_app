@@ -141,7 +141,7 @@ const MedCard = props => {
 
 
 const weaponCard = weaponId => {
-    const weaponItem = WEAPON.filter(item => item.idTitle == weaponId)[0];
+    const weaponItem = WEAPON.filter(item => item.titleId == weaponId)[0];
 
     let rangDetail = <View></View>;
 
@@ -223,8 +223,8 @@ const Cart = props => {
     const unitId = props.data.unitId;
     const unitSetId = props.data.unitSetId;
 
-    const unitItem = ARMY_UNIT.filter(item => item.idTitle == unitId)[0];
-    const unitSetItem = UNITLIST.filter(item => item.idTitle == unitSetId)[0];
+    const unitItem = ARMY_UNIT.filter(item => item.titleId == unitId)[0];
+    const unitSetItem = UNITLIST.filter(item => item.titleId == unitSetId)[0];
 
     return (
         <View style={styles.container}>

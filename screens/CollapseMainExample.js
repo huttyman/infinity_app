@@ -73,14 +73,14 @@ export default class CollapseMainExample extends Component {
 
   renderHeader = (section, _, isActive) => {
     //Accordion Header view
-
+    console.log(section);
     return (
       <Animatable.View
         duration={400}
         style={[styles.header, isActive ? styles.active : styles.inactive, { flexDirection: "row", backgroundColor: Color.mainBlack }]}
         transition="backgroundColor">
         <View style={{ zIndex: 1, backgroundColor: Color.mainBlack, borderRadius: 45, maxWidth: 80, minWidth: 80, flex: 1, borderWidth: 4, borderColor: Color.mainBlack, overflow: "hidden" }}>
-          <Image source={require('../assets/logos/' + section.idTitle + '.svg')} style={{ height: 70, width: 70 }} />
+          <Image source={require('../assets/logos/' + section.titleId + '.svg')} style={{ height: 70, width: 70 }} />
         </View>
         <View style={{ zIndex: 0, margin: 2, backgroundColor: Color.mainGrey, flex: 6, alignItems: "flex-start", marginLeft: -40, paddingLeft: 50, paddingVertical: 20, justifyContent: "center" }}>
           <Text style={styles.headerText}>{section.shortTitle}</Text>
@@ -101,10 +101,8 @@ export default class CollapseMainExample extends Component {
         duration={400}
         style={[styles.content, isActive ? styles.active : styles.inactive]}
         transition="backgroundColor">
-        <Animatable.Text
-          style={{ textAlign: 'center' }}>
           <AllCart data={section} toggleFalse={this.setToggleFalse} setModalState={this.setModalState} navigation={this.props.navigation} />
-        </Animatable.Text>
+        
       </Animatable.View>
     );
   };
