@@ -1,10 +1,10 @@
 export const ARMY_UNIT = [
     {
         "id": "1",
-        "idTitle": "pano-fusi",
+        "titleId": "pano-fusi",
         "title": "Fusilliers",
         "shortTitle": "Fusilliers",
-        "unitSet": ['fusi1','fusi2','fusi3','fusi4','fusi5','fusi6','fusi7'],
+        "unitSet": "['fusi1','fusi2','fusi3','fusi4','fusi5','fusi6','fusi7']",
         "size": "li",
         "attr_armyId": "1",
         "attr_mov": "4-4",
@@ -17,15 +17,16 @@ export const ARMY_UNIT = [
         "attr_w": "1",
         "attr_s": "2",
         "attr_ava": "T",
-        "isHackable": "FALSE"
+        "isHackable": "FALSE",
+        "isPeriperial": "FALSE"
     },
     {
         "id": "2",
-        "idTitle": "pano-nok",
+        "titleId": "pano-nok",
         "title": "Nokken, Special Intervention and Recon Team",
         "shortTitle": "Nokken",
-        "unitSet": ['nok1','nok2','nok3'],
-        "unitSkill": ['mimet6','forwdep8'],
+        "unitSet": "['nok1','nok2','nok3']",
+        "unitSkill": "['mimet6','forwdep8']",
         "size": "li",
         "trait": "Veteran Troops",
         "attr_armyId": "1",
@@ -39,16 +40,17 @@ export const ARMY_UNIT = [
         "attr_w": "1",
         "attr_s": "2",
         "attr_ava": "2",
-        "isHackable": "FALSE"
+        "isHackable": "FALSE",
+        "isPeriperial": "FALSE"
     },
     {
         "id": "3",
-        "idTitle": "pano-infirm",
+        "titleId": "pano-infirm",
         "title": "Infirmarer of Saint Lazarus",
         "shortTitle": "Infirmarer",
-        "unitSet": ['infi1','infi2'],
-        "unitSkill": ['doc'],
-        "unitEquipment": ['med'],
+        "unitSet": "['infi1','infi2']",
+        "unitSkill": "['doc']",
+        "unitEquipment": "['med']",
         "size": "mi",
         "trait": "Spec. Trained Troops",
         "attr_armyId": "1",
@@ -62,15 +64,16 @@ export const ARMY_UNIT = [
         "attr_w": "1",
         "attr_s": "2",
         "attr_ava": "2",
-        "isHackable": "FALSE"
+        "isHackable": "FALSE",
+        "isPeriperial": "FALSE"
     },
     {
         "id": "4",
-        "idTitle": "pano-koj",
+        "titleId": "pano-koj",
         "title": "Knight of justice (KoJ) of the Order of the Hospital",
         "shortTitle": "Knight of justice",
-        "unitSet": ['koj1','koj2','koj3','koj4'],
-        "unitSkill": ['mart2'],
+        "unitSet": "['koj1','koj2','koj3','koj4']",
+        "unitSkill": "['mart2']",
         "size": "hi",
         "attr_armyId": "1",
         "attr_mov": "6-2",
@@ -83,14 +86,15 @@ export const ARMY_UNIT = [
         "attr_w": "2",
         "attr_s": "2",
         "attr_ava": "2",
-        "isHackable": "TRUE"
+        "isHackable": "TRUE",
+        "isPeriperial": "FALSE"
     },
     {
         "id": "5",
-        "idTitle": "pano-orc",
+        "titleId": "pano-orc",
         "title": "Orc Troops",
         "shortTitle": "Orc",
-        "unitSet": ['orc1','orc2','orc3','orc4','orc5','orc6','orc7'],
+        "unitSet": "['orc1','orc2','orc3','orc4','orc5','orc6','orc7']",
         "size": "hi",
         "attr_armyId": "1",
         "attr_mov": "6-2",
@@ -103,14 +107,15 @@ export const ARMY_UNIT = [
         "attr_w": "2",
         "attr_s": "2",
         "attr_ava": "3",
-        "isHackable": "TRUE"
+        "isHackable": "TRUE",
+        "isPeriperial": "FALSE"
     },
     {
         "id": "6",
-        "idTitle": "yj-zhan",
+        "titleId": "yj-zhan",
         "title": "Zhanshi Yisheng",
         "shortTitle": "Zhanshi Yisheng",
-        "unitSet": ['zhan1','zhan2','zhan3','zhan4','zhan5','zhan6','zhan7'],
+        "unitSet": "['zhan1','zhan2','zhan3','zhan4','zhan5','zhan6','zhan7']",
         "size": "li",
         "attr_armyId": "2",
         "attr_mov": "4-4",
@@ -123,15 +128,16 @@ export const ARMY_UNIT = [
         "attr_w": "1",
         "attr_s": "2",
         "attr_ava": "1",
-        "isHackable": "FALSE"
+        "isHackable": "FALSE",
+        "isPeriperial": "FALSE"
     },
     {
         "id": "7",
-        "idTitle": "yj-hundun",
+        "titleId": "yj-hundun",
         "title": "Hundun Ambush Unit",
         "shortTitle": "Hundun",
-        "unitSet": ['hun1','hun2'],
-        "unitSkill": ['surpatk3','camo','mimet3'],
+        "unitSet": "['hun1','hun2']",
+        "unitSkill": "['surpatk3','camo','mimet3']",
         "size": "mi",
         "trait": "Elite Troops",
         "attr_armyId": "2",
@@ -145,15 +151,16 @@ export const ARMY_UNIT = [
         "attr_w": "1",
         "attr_s": "2",
         "attr_ava": "2",
-        "isHackable": "FALSE"
+        "isHackable": "FALSE",
+        "isPeriperial": "FALSE"
     },
     {
         "id": "8",
-        "idTitle": "yj-daofei",
+        "titleId": "yj-daofei",
         "title": "Daofei Tactical Section",
         "shortTitle": "Daofei",
-        "unitSet": ['dao1','dao2','dao3','dao4','dao5','dao6'],
-        "unitSkill": ['camo','infil','surpatk3','dodge1','mimet3'],
+        "unitSet": "['dao1','dao2','dao3','dao4','dao5','dao6']",
+        "unitSkill": "['camo','infil','surpatk3','dodge1inch','mimet3']",
         "size": "hi",
         "attr_armyId": "2",
         "attr_mov": "6-2",
@@ -166,15 +173,16 @@ export const ARMY_UNIT = [
         "attr_w": "2",
         "attr_s": "2",
         "attr_ava": "1",
-        "isHackable": "TRUE"
+        "isHackable": "TRUE",
+        "isPeriperial": "FALSE"
     },
     {
         "id": "9",
-        "idTitle": "yj-jujak",
+        "titleId": "yj-jujak",
         "title": "Jujak Regiment, Korean Shock infantry",
         "shortTitle": "Jujak",
-        "unitSet": ['juj1','juj2','juj3','juj4','juj5','juj6','juj7'],
-        "unitSkill": ['dodge1'],
+        "unitSet": "['juj1','juj2','juj3','juj4','juj5','juj6','juj7']",
+        "unitSkill": "['dodge1inch']",
         "size": "hi",
         "trait": "Veteran Troops",
         "attr_armyId": "2",
@@ -188,16 +196,17 @@ export const ARMY_UNIT = [
         "attr_w": "2",
         "attr_s": "2",
         "attr_ava": "2",
-        "isHackable": "TRUE"
+        "isHackable": "TRUE",
+        "isPeriperial": "FALSE"
     },
     {
         "id": "10",
-        "idTitle": "yj-guliang",
+        "titleId": "yj-guliang",
         "title": "Guiliang Skirmishers",
         "shortTitle": "Guiliang",
-        "unitSet": ['guila1','guila2','guila3'],
-        "unitSkill": ['surpatk3','camo','mimet3','infil'],
-        "unitEquipment": ['mvisor1'],
+        "unitSet": "['guila1','guila2','guila3']",
+        "unitSkill": "['surpatk3','camo','mimet3','infil']",
+        "unitEquipment": "['mvisor1']",
         "size": "sk",
         "attr_armyId": "2",
         "attr_mov": "4-4",
@@ -210,800 +219,1550 @@ export const ARMY_UNIT = [
         "attr_w": "1",
         "attr_s": "2",
         "attr_ava": "2",
-        "isHackable": "FALSE"
-    }
-];
-
-export const UNITLIST = [
-        {
-            "id": "1",
-            "idTitle": "fusi1",
-            "gunList": ['combi','pist','ccwp'],
-            "skillList": ['med'],
-            "equipmentList": ['med'],
-            "swc": "0",
-            "points": "1"
-        },
-        {
-            "id": "2",
-            "idTitle": "fusi2",
-            "gunList": ['combi','pist','ccwp'],
-            "skillList": ['lt'],
-            "swc": "0",
-            "points": "1"
-        },
-        {
-            "id": "3",
-            "idTitle": "fusi3",
-            "gunList": ['combi','pist','ccwp'],
-            "skillList": ['hack'],
-            "equipmentList": ['hack'],
-            "swc": "0",
-            "points": "1"
-        },
-        {
-            "id": "4",
-            "idTitle": "fusi4",
-            "gunList": ['combi','pist','ccwp'],
-            "swc": "0.5",
-            "points": "1"
-        },
-        {
-            "id": "5",
-            "idTitle": "fusi5",
-            "gunList": ['miss','pist','ccwp'],
-            "swc": "1.5",
-            "points": "1"
-        },
-        {
-            "id": "6",
-            "idTitle": "fusi6",
-            "gunList": ['hmg','pist','ccwp'],
-            "swc": "1",
-            "points": "1.5"
-        },
-        {
-            "id": "7",
-            "idTitle": "fusi7",
-            "gunList": ['msnipe1','msnipe2','pist','ccwp'],
-            "swc": "1.5",
-            "points": "1.5"
-        },
-        {
-            "id": "8",
-            "idTitle": "nok1",
-            "gunList": ['bshot1','bshot2','pist','ccwp'],
-            "equipmentList": ['mvisor1'],
-            "swc": "0",
-            "points": "2"
-        },
-        {
-            "id": "9",
-            "idTitle": "nok2",
-            "gunList": ['spit','pist','ccwp'],
-            "swc": "1.5",
-            "points": "2.5"
-        },
-        {
-            "id": "10",
-            "idTitle": "nok3",
-            "gunList": ['combi','bshot1','bshot2','pist','ccwp'],
-            "skillList": ['hack'],
-            "equipmentList": ['hack'],
-            "swc": "0.5",
-            "points": "3"
-        },
-        {
-            "id": "11",
-            "idTitle": "infi1",
-            "gunList": ['combi','pist','mnccwp'],
-            "swc": "0",
-            "points": "2"
-        },
-        {
-            "id": "12",
-            "idTitle": "infi2",
-            "gunList": ['bshot1','bshot2','pist','mnccwp'],
-            "swc": "0",
-            "points": "2"
-        },
-        {
-            "id": "13",
-            "idTitle": "koj1",
-            "gunList": ['combi','hpist','daccwp'],
-            "skillList": ['hack'],
-            "equipmentList": ['hack'],
-            "swc": "0.5",
-            "points": "4.5"
-        },
-        {
-            "id": "14",
-            "idTitle": "koj2",
-            "gunList": ['miss','hpist','daccwp'],
-            "swc": "1.5",
-            "points": "4.5"
-        },
-        {
-            "id": "15",
-            "idTitle": "koj3",
-            "gunList": ['spit','hpist','daccwp'],
-            "swc": "1.5",
-            "points": "5"
-        },
-        {
-            "id": "16",
-            "idTitle": "koj4",
-            "gunList": ['spit','hpist','daccwp'],
-            "skillList": ['lt'],
-            "swc": "1.5",
-            "points": "5"
-        },
-        {
-            "id": "17",
-            "idTitle": "orc1",
-            "gunList": ['bshot1','bshot2','pist','ccwp'],
-            "swc": "0",
-            "points": "2.5"
-        },
-        {
-            "id": "18",
-            "idTitle": "orc2",
-            "gunList": ['combi','pist','ccwp'],
-            "swc": "0",
-            "points": "2.5"
-        },
-        {
-            "id": "19",
-            "idTitle": "orc3",
-            "gunList": ['mrifle1','mrifle2','pist','ccwp'],
-            "swc": "0",
-            "points": "3"
-        },
-        {
-            "id": "20",
-            "idTitle": "orc4",
-            "gunList": ['mrifle1','mrifle2','pist','ccwp'],
-            "skillList": ['lt'],
-            "swc": "0",
-            "points": "3"
-        },
-        {
-            "id": "21",
-            "idTitle": "orc5",
-            "gunList": ['combi','pist','ccwp'],
-            "skillList": ['hack'],
-            "equipmentList": ['hack'],
-            "swc": "0.5",
-            "points": "3"
-        },
-        {
-            "id": "22",
-            "idTitle": "orc6",
-            "gunList": ['hmg','pist','ccwp'],
-            "skillList": ['lt'],
-            "swc": "1",
-            "points": "3.5"
-        },
-        {
-            "id": "23",
-            "idTitle": "orc7",
-            "gunList": ['hmg','pist','ccwp'],
-            "swc": "1.5",
-            "points": "3.5"
-        },
-        {
-            "idTitle": "zhan1",
-            "gunList": ['combi','pist','ccwp'],
-            "swc": "0",
-            "points": "1"
-        },
-        {
-            "idTitle": "zhan2",
-            "gunList": ['combi','pist','ccwp'],
-            "skillList": ['med'],
-            "equipmentList": ['med'],
-            "swc": "0",
-            "points": "1"
-        },
-        {
-            "idTitle": "zhan3",
-            "gunList": ['combi','pist','ccwp'],
-            "skillList": ['lt'],
-            "swc": "0",
-            "points": "1"
-        },
-        {
-            "idTitle": "zhan4",
-            "gunList": ['combi','pist','ccwp'],
-            "skillList": ['hack'],
-            "equipmentList": ['hack'],
-            "swc": "0.5",
-            "points": "1.5"
-        },
-        {
-            "idTitle": "zhan5",
-            "gunList": ['hmg','pist','ccwp'],
-            "swc": "1",
-            "points": "1.5"
-        },
-        {
-            "idTitle": "zhan6",
-            "gunList": ['msnipe1','msnipe2','pist','ccwp'],
-            "swc": "1.5",
-            "points": "1.5"
-        },
-        {
-            "idTitle": "zhan7",
-            "gunList": ['miss','pist','ccwp'],
-            "swc": "1.5",
-            "points": "1.5"
-        },
-        {
-            "idTitle": "hun1",
-            "gunList": ['markrifle','pist','ccwp'],
-            "equipmentList": ['mvisor1'],
-            "swc": "0.5",
-            "points": "3"
-        },
-        {
-            "idTitle": "hun2",
-            "gunList": ['msnipe1','msnipe2','pist','ccwp'],
-            "swc": "1.5",
-            "points": "3"
-        },
-        {
-            "idTitle": "dao1",
-            "gunList": ['bshot1','bshot2','pist','ccwp'],
-            "swc": "0",
-            "points": "4.5"
-        },
-        {
-            "idTitle": "dao2",
-            "gunList": ['bshot1','bshot2','pist','ccwp'],
-            "skillList": ['lt'],
-            "swc": "0",
-            "points": "4.5"
-        },
-        {
-            "idTitle": "dao3",
-            "gunList": ['spit','pist','ccwp'],
-            "swc": "1.5",
-            "points": "5"
-        },
-        {
-            "idTitle": "dao4",
-            "gunList": ['spit','pist','ccwp'],
-            "skillList": ['lt'],
-            "swc": "1.5",
-            "points": "5"
-        },
-        {
-            "idTitle": "dao5",
-            "gunList": ['mrifle1','mrifle2','pist','ccwp'],
-            "skillList": ['hack'],
-            "equipmentList": ['hack'],
-            "swc": "0.5",
-            "points": "5.5"
-        },
-        {
-            "idTitle": "dao6",
-            "gunList": ['mrifle1','mrifle2','pist','ccwp'],
-            "skillList": ['hack','lt'],
-            "equipmentList": ['hack'],
-            "swc": "0.5",
-            "points": "5.5"
-        },
-        {
-            "idTitle": "juj1",
-            "gunList": ['combi','hflam','pist','ccwp'],
-            "swc": "0",
-            "points": "2"
-        },
-        {
-            "idTitle": "juj2",
-            "gunList": ['bshot1','bshot2','pist','ccwp'],
-            "swc": "0",
-            "points": "2"
-        },
-        {
-            "idTitle": "juj3",
-            "gunList": ['combi','hflam','pist','ccwp'],
-            "skillList": ['lt'],
-            "swc": "0",
-            "points": "2"
-        },
-        {
-            "idTitle": "juj4",
-            "gunList": ['bcombi','hflam','pist','ccwp'],
-            "swc": "0",
-            "points": "2.5"
-        },
-        {
-            "idTitle": "juj5",
-            "gunList": ['bshot1','bshot2','pist','ccwp'],
-            "skillList": ['eng'],
-            "swc": "0",
-            "points": "2.5"
-        },
-        {
-            "idTitle": "juj6",
-            "gunList": ['miss','lflam','pist','ccwp'],
-            "swc": "1.5",
-            "points": "3"
-        },
-        {
-            "idTitle": "juj7",
-            "gunList": ['spit','hflam','pist','ccwp'],
-            "swc": "1.5",
-            "points": "3"
-        },
-        {
-            "idTitle": "guila1",
-            "gunList": ['bshot1','bshot2','antm','pist','ccwp'],
-            "swc": "0",
-            "points": "2"
-        },
-        {
-            "idTitle": "guila2",
-            "gunList": ['combi','antm','pist','ccwp'],
-            "skillList": ['lt'],
-            "swc": "2",
-            "points": "2"
-        },
-        {
-            "idTitle": "guila3",
-            "gunList": ['combi','antm','pist','ccwp'],
-            "skillList": ['hack'],
-            "equipmentList": ['hack'],
-            "swc": "0.5",
-            "points": "3"
-        }
-    
-];
-
-export const ARMY = [
-        {
-            "id": "1",
-            "title": "panoceania"
-        },
-        {
-            "id": "2",
-            "title": "yu-jin"
-        }
-    
-];
-
-export const WEAPON = [
-        {
-            "id": "1",
-            "idTitle": "combi",
-            "title": "CombiRifle",
-            "shortTitle": "CombiRifle",
-            "type": "main",
-            "attr_dam": "13",
-            "attr_b": "3",
-            "attr_ammo": "N",
-            "attr_save": "ARM",
-            "noRange": "false",
-            "short_range": "0-8\"",
-            "short_mod": "+3",
-            "medium_range": "8-16\"",
-            "medium_mod": "+3",
-            "long_range": "16-32\"",
-            "long_mod": "-3",
-            "max_range": "32-48\"",
-            "max_mod": "-6"
-        },
-        {
-            "id": "2",
-            "idTitle": "spit",
-            "title": "Spitfire",
-            "shortTitle": "Spitfire",
-            "type": "main",
-            "attr_dam": "14",
-            "attr_b": "4",
-            "attr_ammo": "N",
-            "attr_save": "ARM",
-            "noRange": "false",
-            "short_range": "0-8\"",
-            "short_mod": "0",
-            "medium_range": "8-24\"",
-            "medium_mod": "+3",
-            "long_range": "24-32\"",
-            "long_mod": "-3",
-            "max_range": "32-48\"",
-            "max_mod": "-6"
-        },
-        {
-            "id": "3",
-            "idTitle": "pist",
-            "title": "Pistol(CC Mode)",
-            "shortTitle": "Pistol",
-            "type": "sub",
-            "attr_dam": "11",
-            "attr_b": "1",
-            "attr_ammo": "N",
-            "attr_save": "--",
-            "noRange": "true",
-            "trait": "CC"
-        },
-        {
-            "id": "4",
-            "idTitle": "ccwp",
-            "title": "CC Weapon",
-            "shortTitle": "CC Weapon",
-            "type": "close",
-            "attr_dam": "PH",
-            "attr_b": "1",
-            "attr_ammo": "N",
-            "attr_save": "ARM",
-            "noRange": "true",
-            "trait": "CC"
-        },
-        {
-            "id": "5",
-            "idTitle": "miss",
-            "title": "Missile Launcher (Blast Mode)",
-            "shortTitle": "Missile Launcher (Blast Mode)",
-            "type": "main",
-            "attr_dam": "14",
-            "attr_b": "1",
-            "attr_ammo": "AP+Exp",
-            "attr_save": "ARM",
-            "noRange": "false",
-            "short_range": "0-8\"",
-            "short_mod": "-3",
-            "medium_range": "8-24\"",
-            "medium_mod": "0",
-            "long_range": "24-40\"",
-            "long_mod": "+3",
-            "max_range": "40-96\"",
-            "max_mod": "-3"
-        },
-        {
-            "id": "6",
-            "idTitle": "msnipe1",
-            "title": "MULTI Sniper (Burst Mode)",
-            "shortTitle": "MULTI Sniper (Burst)",
-            "type": "main",
-            "attr_dam": "15",
-            "attr_b": "2",
-            "attr_ammo": "AP",
-            "attr_save": "ARM",
-            "noRange": "false",
-            "short_range": "0-8\"",
-            "short_mod": "-3",
-            "medium_range": "8-16\"",
-            "medium_mod": "0",
-            "long_range": "16-48\"",
-            "long_mod": "+3",
-            "max_range": "48-96\"",
-            "max_mod": "-3"
-        },
-        {
-            "id": "7",
-            "idTitle": "msnipe2",
-            "title": "MULTI Sniper (Anti-materiel Mode)",
-            "shortTitle": "MULTI Sniper (Anti Material)",
-            "type": "main",
-            "attr_dam": "15",
-            "attr_b": "1",
-            "attr_ammo": "DA",
-            "attr_save": "ARM",
-            "noRange": "false",
-            "short_range": "0-8\"",
-            "short_mod": "-3",
-            "medium_range": "8-16\"",
-            "medium_mod": "0",
-            "long_range": "16-48\"",
-            "long_mod": "+3",
-            "max_range": "48-96\"",
-            "max_mod": "-3"
-        },
-        {
-            "id": "8",
-            "idTitle": "hmg",
-            "title": "HMG",
-            "shortTitle": "HMG",
-            "type": "main",
-            "attr_dam": "15",
-            "attr_b": "4",
-            "attr_ammo": "N",
-            "attr_save": "ARM",
-            "noRange": "false",
-            "short_range": "0-8\"",
-            "short_mod": "-3",
-            "medium_range": "8-16\"",
-            "medium_mod": "0",
-            "long_range": "16-32\"",
-            "long_mod": "+3",
-            "max_range": "32-48\"",
-            "max_mod": "-3"
-        },
-        {
-            "id": "9",
-            "idTitle": "bshot1",
-            "title": "Boarding Shotgun (Blast Mode)",
-            "shortTitle": "Boarding Shotgun (Blast)",
-            "type": "main",
-            "attr_dam": "14",
-            "attr_b": "2",
-            "attr_ammo": "N",
-            "attr_save": "ARM",
-            "noRange": "true",
-            "trait": "Direct Template (Small Teardrop)"
-        },
-        {
-            "id": "10",
-            "idTitle": "bshot2",
-            "title": "Boarding Shotgun (Hit Mode)",
-            "shortTitle": "Boarding Shotgun (Hit)",
-            "type": "main",
-            "attr_dam": "14",
-            "attr_b": "2",
-            "attr_ammo": "AP",
-            "attr_save": "ARM",
-            "noRange": "false",
-            "short_range": "0-8\"",
-            "short_mod": "+6",
-            "medium_range": "8-16\"",
-            "medium_mod": "0",
-            "long_range": "16-24\"",
-            "long_mod": "-3"
-        },
-        {
-            "id": "11",
-            "idTitle": "antm",
-            "title": "Antipersonel Mines",
-            "shortTitle": "Antipersonel Mines",
-            "type": "equip",
-            "attr_dam": "13",
-            "attr_b": "1",
-            "attr_ammo": "N",
-            "attr_save": "ARM",
-            "noRange": "true",
-            "trait": "Concealed, Disposable(3), Direct Template (Small Teardrop)"
-        },
-        {
-            "id": "12",
-            "idTitle": "bcombi",
-            "title": "Breaker Combi Rifle",
-            "shortTitle": "Breaker Combi Rifle",
-            "type": "main",
-            "attr_dam": "13",
-            "attr_b": "3",
-            "attr_ammo": "AP",
-            "attr_save": "BTS",
-            "noRange": "false",
-            "short_range": "0-8\"",
-            "short_mod": "+3",
-            "medium_range": "8-16\"",
-            "medium_mod": "+3",
-            "long_range": "16-32\"",
-            "long_mod": "-3",
-            "max_range": "32-48\"",
-            "max_mod": "-6"
-        },
-        {
-            "id": "13",
-            "idTitle": "hflam",
-            "title": "Heavy Flamethrower",
-            "shortTitle": "Heavy Flamethrower",
-            "type": "main",
-            "attr_dam": "14",
-            "attr_b": "1",
-            "attr_ammo": "N",
-            "attr_save": "ARM",
-            "noRange": "true",
-            "trait": "Continous Damage, Direct Template (Large Teardrop)"
-        },
-        {
-            "id": "14",
-            "idTitle": "lflam",
-            "title": "Light Flamethrower",
-            "shortTitle": "Light Flamethrower",
-            "type": "main",
-            "attr_dam": "13",
-            "attr_b": "1",
-            "attr_ammo": "N",
-            "attr_save": "ARM",
-            "noRange": "true",
-            "trait": "Continous Damage, Direct Template (Small Teardrop)"
-        },
-        {
-            "id": "15",
-            "idTitle": "mrifle1",
-            "title": "MULTI Rifle (Burst Mode)",
-            "shortTitle": "MULTI Rifle (Burst)",
-            "type": "main",
-            "attr_dam": "13",
-            "attr_b": "3",
-            "attr_ammo": "AP",
-            "attr_save": "ARM",
-            "noRange": "false",
-            "short_range": "0-8\"",
-            "short_mod": "+3",
-            "medium_range": "8-16\"",
-            "medium_mod": "+3",
-            "long_range": "16-32\"",
-            "long_mod": "-3",
-            "max_range": "32-48\"",
-            "max_mod": "-6",
-            "trait": "Light MULTI"
-        },
-        {
-            "id": "16",
-            "idTitle": "mrifle2",
-            "title": "MULTI Rifle (Anti-materiel Mode)",
-            "shortTitle": "MULTI Rifle (Anti-materiel)",
-            "type": "main",
-            "attr_dam": "13",
-            "attr_b": "1",
-            "attr_ammo": "DA",
-            "attr_save": "ARM",
-            "noRange": "false",
-            "short_range": "0-8\"",
-            "short_mod": "+3",
-            "medium_range": "8-16\"",
-            "medium_mod": "+3",
-            "long_range": "16-32\"",
-            "long_mod": "-3",
-            "max_range": "32-48\"",
-            "max_mod": "-6",
-            "trait": "Light MULTI"
-        },
-        {
-            "id": "17",
-            "idTitle": "mnccwp",
-            "title": "Monofilament CC Weapon",
-            "shortTitle": "Monofilament CC Weapon",
-            "type": "close",
-            "attr_dam": "12",
-            "attr_b": "1",
-            "attr_ammo": "N",
-            "attr_save": "ARM",
-            "noRange": "true",
-            "trait": "CC"
-        },
-        {
-            "id": "18",
-            "idTitle": "daccwp",
-            "title": "DA CC Weapon",
-            "shortTitle": "DA CC Weapon",
-            "type": "close",
-            "attr_dam": "PH",
-            "attr_b": "1",
-            "attr_ammo": "DA",
-            "attr_save": "ARM",
-            "noRange": "true",
-            "trait": "CC"
-        },
-        {
-            "id": "19",
-            "idTitle": "hpist",
-            "title": "Heavy Pistol (Burst Mode)",
-            "shortTitle": "Heavy Pistol",
-            "type": "sub",
-            "attr_dam": "14",
-            "attr_b": "2",
-            "attr_ammo": "N",
-            "attr_save": "ARM",
-            "noRange": "false",
-            "short_range": "0-8\"",
-            "short_mod": "+3",
-            "medium_range": "8-16\"",
-            "medium_mod": "0",
-            "long_range": "16-24\" ",
-            "long_mod": "-6"
-        },
-        {
-            "id": "20",
-            "idTitle": "markrifle",
-            "title": "Marksman Rifle",
-            "shortTitle": "Marksman Rifle",
-            "type": "main",
-            "attr_dam": "13",
-            "attr_b": "3",
-            "attr_ammo": "N",
-            "attr_save": "ARM",
-            "noRange": "false",
-            "short_range": "0.8\"",
-            "short_mod": "-3",
-            "medium_range": "8-16\"",
-            "medium_mod": "+3",
-            "long_range": "24-40\"",
-            "long_mod": "-3",
-            "max_range": "40-48\"",
-            "max_mod": "-6"
-        }
-    
-];
-
-export const SKILL = [
-    
-    {
-        "id": "9",
-        "idTitle": "camo",
-        "title": "Camouflage",
-        "type": "Automatic Skill",
-        "trait": "Optional",
-        "activation": "► Automatic during the Deployment Phase\r\n► During the Active Turn, Troopers may only return to\r\nCamouflaged State by consuming 1 Entire Order, outside the LoF of\r\nenemy Markers or Troopers.",
-        "effect": "► In Camouflaged State, the Player does not place the Model on the\r\ntable, but instead places a Camouflaged Marker.\r\n► Camouflaged Markers can possess the Mimetism Skill, so\r\nCamouflaged Markers indicate the MOD level that Mimetism\r\napplies, if they have it.\r\n► You cannot enter Silhouette contact with an Enemy Camouflaged\r\nMarker.\r\n► You cannot declare Attacks against Camouflaged Markers, it is\r\nnecessary to Discover that Marker first, unless otherwise specified\r\nby a rule or Skill.\r\n► To reveal a Camouflaged Marker, a Discover Roll must be passed,\r\napplying MODs listed for Discover, including the Marker’s\r\nMimetism, if they have it.\r\n► If the Discover Roll is successful, the Camouflaged Marker is\r\nreplaced with the corresponding Model, facing in any direction its\r\nplayer chooses.\r\n► A Trooper that fails a WIP Roll to Discover a Marker cannot attempt\r\nto Discover the same Marker until the next Player Turn. Note\r\nthat a Trooper that has been revealed, and re-entered Camouflaged\r\nState again, does not count as the same Marker.\r\n► A Camouflage Marker has a LoF of 360º.\r\n► A Camouflage Marker has the same Silhouette (S) value as the\r\nTrooper it represents.\r\n► However, a Weapon or piece of Equipment in Camouflaged State\r\nwill have a Silhouette (S) value of 2.\r\n► This State does not interfere with Automatic Special Skills or\r\nAutomatic Equipment, which will remain functioning normally.\r\n► The only AROs that can be declared against a Camouflaged Marker\r\nare: Discover, Dodge or Reset.\r\n► When a Trooper in Camouflaged state is activated, each Reactive\r\nTrooper can delay the declaration of their ARO until the second half\r\nof the Active Trooper’s Order has been declared. In this case:\r\n► If the Trooper in Camouflaged state reveals themselves with the\r\nsecond half of their Order (by declaring a BS Attack, moving into\r\nSilhouette contact with an enemy…), the delaying Trooper can\r\ndeclare their ARO.\r\n► If the Trooper in Camouflaged state does not reveal themselves,\r\nthe delaying Trooper loses their right to declare an ARO.",
-        "cancellation": "The Camouflaged State is cancelled whenever:\r\n► The Camouflaged Marker declares an Attack or any Skill that\r\nrequires a Roll.\r\n► The Camouflaged Marker declares an Entire Order of any kind.\r\n► The Camouflaged Marker enters Silhouette contact with an enemy\r\nModel.\r\n► The Camouflaged Marker is Discovered.\r\n► The Camouflaged Marker receives a successful Attack.► When Camouflage state is cancelled, its player must replace the\r\nMarker with the corresponding Model, facing in any direction the\r\nplayer chooses.\r\n► When replacing the Marker with the Model, the player must provide\r\ntheir adversary with the Trooper’s complete Public Information."
-    },
-    {
-        "id": "6",
-        "idTitle": "doc",
-        "title": "Doctor",
-        "type": "Short Skill",
-        "trait": "Optional",
-        "requirement": "► Troopers using this Special Skill must be in Silhouette contact\r\nwith their target.\r\n► The target must have the Wounds Attribute and be in Unconscious\r\nState.",
-        "effect": "► By passing a Normal WIP Roll, the target’s Unconscious State is\r\ncancelled, by recovering 1 single point of their Wounds Attribute,\r\nunless a rule or Skill specifies otherwise. If the WIP Roll fails, the\r\ntarget automatically enters the Dead State and is removed from\r\nthe game table."
+        "isHackable": "FALSE",
+        "isPeriperial": "FALSE"
     },
     {
         "id": "11",
-        "idTitle": "dodge1",
-        "title": "Dodge (+1\")",
-        "type": "Automatic Skill",
-        "trait": "Optional"
+        "titleId": "pa-machin",
+        "title": "Machinists",
+        "shortTitle": "Machinists",
+        "unitSet": "['mach1','mach2']",
+        "unitSkill": "['eng']",
+        "size": "li",
+        "attr_armyId": "1",
+        "attr_mov": "4-4",
+        "attr_cc": "13",
+        "attr_bs": "12",
+        "attr_ph": "10",
+        "attr_wip": "12",
+        "attr_arm": "1",
+        "attr_bts": "3",
+        "attr_w": "1",
+        "attr_s": "2",
+        "attr_ava": "1",
+        "isHackable": "FALSE",
+        "isPeriperial": "FALSE"
     },
     {
         "id": "12",
-        "idTitle": "eng",
-        "title": "Engineer",
-        "type": "Short Skill",
-        "trait": "Optional",
-        "requirement": "► Troopers using this Special Skill must be in Silhouette contact\r\nwith their target.",
-        "effect": "► Engineer allows recovery of 1 Structure (STR) point, by passing a\r\nNormal WIP Roll.\r\n► This Special Skill can be declared as many times as necessary to\r\nrecover as many STR points as the target has lost.\r\n► If the Engineer fails the Normal WIP Roll, the target loses 1 STR\r\npoint instead of recovering it, entering the Unconscious or Dead\r\nState, if applicable.\r\n► Alternatively, by passing a Normal WIP Roll, a Trooper with Engineer\r\nmay cancel all of their target’s States that can be canceled by this\r\nSpecial Skill (Unconscious, Immobilized-A and B, Targeted, etc.),\r\nremoving the corresponding State Tokens..\r\n► Failing the Normal WIP Roll when trying to cancel other states than\r\nUnconscious has no negative consequence, and the Roll can be\r\nperformed again in future Orders."
-    },
-    {
-        "id": "5",
-        "idTitle": "forwdep8",
-        "title": "Forward Deployment (+8\")",
-        "type": "Deployment Skill",
-        "trait": "Superior Deployment, Optional.",
-        "effect": "► The users of this Special Skill can be deployed beyond the limit of\r\ntheir Deployment Zone. The number of inches that those Troopers\r\nmay deploy beyond their Deployment Zone appears between round\r\nbrackets in their Unit Profile."
-    },
-    {
-        "id": "3",
-        "idTitle": "hack",
-        "title": "Hacker"
+        "titleId": "pa-trauma-doc",
+        "title": "Trauma-Docs",
+        "shortTitle": "Trauma-Docs",
+        "unitSet": "['traudoc1']",
+        "unitSkill": "['doc']",
+        "unitEquipment": "['med']",
+        "size": "li",
+        "attr_armyId": "1",
+        "attr_mov": "4-4",
+        "attr_cc": "13",
+        "attr_bs": "12",
+        "attr_ph": "10",
+        "attr_wip": "12",
+        "attr_arm": "1",
+        "attr_bts": "0",
+        "attr_w": "1",
+        "attr_s": "2",
+        "attr_ava": "1",
+        "isHackable": "FALSE",
+        "isPeriperial": "FALSE"
     },
     {
         "id": "13",
-        "idTitle": "infil",
-        "title": "Infiltration"
+        "titleId": "pa-akalis",
+        "title": "AKALIS, Sikh Commandos",
+        "shortTitle": "Akalis",
+        "unitSet": "['akalis1','akalis2','akalis3','akalis4']",
+        "unitSkill": "['combatjump','parachut']",
+        "size": "mi",
+        "attr_armyId": "1",
+        "attr_mov": "4-4",
+        "attr_cc": "15",
+        "attr_bs": "13",
+        "attr_ph": "11",
+        "attr_wip": "13",
+        "attr_arm": "2",
+        "attr_bts": "0",
+        "attr_w": "1",
+        "attr_s": "2",
+        "attr_ava": "3",
+        "isHackable": "FALSE",
+        "isPeriperial": "FALSE"
+    },
+    {
+        "id": "14",
+        "titleId": "pa-nisses",
+        "title": "Svalarheima NISSES",
+        "shortTitle": "Nisses",
+        "unitSet": "['niss1','niss2','niss3','niss4','niss5','niss6']",
+        "unitSkill": "['mimet3']",
+        "unitEquipment": "['mvisor2']",
+        "size": "mi",
+        "attr_armyId": "1",
+        "attr_mov": "4-4",
+        "attr_cc": "14",
+        "attr_bs": "13",
+        "attr_ph": "12",
+        "attr_wip": "13",
+        "attr_arm": "3",
+        "attr_bts": "0",
+        "attr_w": "1",
+        "attr_s": "2",
+        "attr_ava": "2",
+        "isHackable": "FALSE",
+        "isPeriperial": "FALSE"
+    },
+    {
+        "id": "15",
+        "titleId": "pa-troll-hunter",
+        "title": "Troll-hunter Gunnar Lundmark",
+        "shortTitle": "Troll-hunter Gunnar Lundmark",
+        "unitSet": "['troll1']",
+        "unitSkill": "['mart1','dodge1inch','specops','climplus']",
+        "size": "mi",
+        "trait": "Character",
+        "attr_armyId": "1",
+        "attr_mov": "4-4",
+        "attr_cc": "23",
+        "attr_bs": "13",
+        "attr_ph": "14",
+        "attr_wip": "13",
+        "attr_arm": "3",
+        "attr_bts": "3",
+        "attr_w": "1",
+        "attr_s": "2",
+        "attr_ava": "1",
+        "isHackable": "FALSE",
+        "isPeriperial": "FALSE"
+    },
+    {
+        "id": "16",
+        "titleId": "pa-vargar",
+        "title": "Vargar Maximum Security Team",
+        "shortTitle": "Varg",
+        "unitSet": "['vagar1','vagar2','vagar3']",
+        "unitSkill": "['superjump']",
+        "size": "mi",
+        "trait": "Elite Troops",
+        "attr_armyId": "1",
+        "attr_mov": "4-4",
+        "attr_cc": "15",
+        "attr_bs": "13",
+        "attr_ph": "11",
+        "attr_wip": "13",
+        "attr_arm": "3",
+        "attr_bts": "3",
+        "attr_w": "1",
+        "attr_s": "2",
+        "attr_ava": "2",
+        "isHackable": "FALSE",
+        "isPeriperial": "FALSE"
+    },
+    {
+        "id": "17",
+        "titleId": "pa-aquila",
+        "title": "Aquila Guard",
+        "shortTitle": "Aquila Guard",
+        "unitSet": "['aquila1','aquila2','aquila3','aquila4']",
+        "unitEquipment": "['mvisor3']",
+        "size": "hi",
+        "attr_armyId": "1",
+        "attr_mov": "4-4",
+        "attr_cc": "15",
+        "attr_bs": "15",
+        "attr_ph": "14",
+        "attr_wip": "13",
+        "attr_arm": "4",
+        "attr_bts": "6",
+        "attr_w": "2",
+        "attr_s": "2",
+        "attr_ava": "1",
+        "isHackable": "TRUE",
+        "isPeriperial": "FALSE"
+    },
+    {
+        "id": "18",
+        "titleId": "pa-boyg",
+        "title": "Boyg Soldiers",
+        "shortTitle": "Boyg Soldiers",
+        "unitSet": "['boyg1','boyg2']",
+        "unitSkill": "['bsatk1','dodge3']",
+        "size": "hi",
+        "trait": "Sec. Trained Troops",
+        "attr_armyId": "1",
+        "attr_mov": "4-4",
+        "attr_cc": "19",
+        "attr_bs": "14",
+        "attr_ph": "13",
+        "attr_wip": "12",
+        "attr_arm": "5",
+        "attr_bts": "6",
+        "attr_w": "2",
+        "attr_s": "5",
+        "attr_ava": "2",
+        "isHackable": "TRUE",
+        "isPeriperial": "FALSE"
+    },
+    {
+        "id": "19",
+        "titleId": "pa-swiss",
+        "title": "Swiss Guard",
+        "shortTitle": "Swiss Guard",
+        "unitSet": "['swiss1','swiss2','swiss3']",
+        "unitSkill": "['suratk3','camo','mimet6']",
+        "size": "hi",
+        "attr_armyId": "1",
+        "attr_mov": "4-4",
+        "attr_cc": "15",
+        "attr_bs": "15",
+        "attr_ph": "14",
+        "attr_wip": "13",
+        "attr_arm": "5",
+        "attr_bts": "6",
+        "attr_w": "2",
+        "attr_s": "2",
+        "attr_ava": "1",
+        "isHackable": "TRUE",
+        "isPeriperial": "FALSE"
+    },
+    {
+        "id": "20",
+        "titleId": "pa-clipper",
+        "title": "Clipper Dronbot",
+        "shortTitle": "Clipper Dronbot",
+        "unitSet": "['clipper1']",
+        "size": "rem",
+        "attr_armyId": "1",
+        "attr_mov": "6-4",
+        "attr_cc": "13",
+        "attr_bs": "12",
+        "attr_ph": "10",
+        "attr_wip": "13",
+        "attr_arm": "0",
+        "attr_bts": "3",
+        "attr_w": "1",
+        "attr_s": "3",
+        "attr_ava": "2",
+        "isHackable": "TRUE",
+        "isPeriperial": "FALSE"
+    },
+    {
+        "id": "21",
+        "titleId": "pa-fugazi",
+        "title": "Fugazi Dronbot",
+        "shortTitle": "Fugazi Dronbot",
+        "unitSet": "['fugazi']",
+        "size": "rem",
+        "attr_armyId": "1",
+        "attr_mov": "6-6",
+        "attr_cc": "13",
+        "attr_bs": "8",
+        "attr_ph": "11",
+        "attr_wip": "13",
+        "attr_arm": "0",
+        "attr_bts": "3",
+        "attr_w": "1",
+        "attr_s": "3",
+        "attr_ava": "2",
+        "isHackable": "TRUE",
+        "isPeriperial": "FALSE"
+    },
+    {
+        "id": "22",
+        "titleId": "pa-palbots",
+        "title": "Palbots",
+        "shortTitle": "Palbots",
+        "unitSet": "['palbot1']",
+        "unitSkill": "['peripheral','mimet3']",
+        "size": "rem",
+        "attr_armyId": "1",
+        "attr_mov": "6-4",
+        "attr_cc": "31",
+        "attr_bs": "8",
+        "attr_ph": "10",
+        "attr_wip": "13",
+        "attr_arm": "0",
+        "attr_bts": "3",
+        "attr_w": "1",
+        "attr_s": "1",
+        "attr_ava": "4",
+        "isHackable": "TRUE",
+        "isPeriperial": "TRUE"
+    },
+    {
+        "id": "23",
+        "titleId": "pa-path",
+        "title": "Pathfinder Dronbot",
+        "shortTitle": "Pathfinder Dronbot",
+        "unitSet": "['pathfinder1']",
+        "unitSkill": "['specops']",
+        "size": "rem",
+        "attr_armyId": "1",
+        "attr_mov": "6-4",
+        "attr_cc": "13",
+        "attr_bs": "11",
+        "attr_ph": "10",
+        "attr_wip": "13",
+        "attr_arm": "0",
+        "attr_bts": "3",
+        "attr_w": "1",
+        "attr_s": "3",
+        "attr_ava": "2",
+        "isHackable": "TRUE",
+        "isPeriperial": "FALSE"
+    },
+    {
+        "id": "24",
+        "titleId": "pa-sierra",
+        "title": "Sierra Dronbot",
+        "shortTitle": "Sierra Dronbot",
+        "unitSet": "['sierra1']",
+        "unitSkill": "['totalreact']",
+        "unitEquipment": "['360view']",
+        "size": "rem",
+        "attr_armyId": "1",
+        "attr_mov": "6-4",
+        "attr_cc": "13",
+        "attr_bs": "11",
+        "attr_ph": "10",
+        "attr_wip": "13",
+        "attr_arm": "0",
+        "attr_bts": "3",
+        "attr_w": "1",
+        "attr_s": "3",
+        "attr_ava": "2",
+        "isHackable": "TRUE",
+        "isPeriperial": "FALSE"
+    },
+    {
+        "id": "25",
+        "titleId": "pa-crocmen",
+        "title": "Paradiso CROC MEN",
+        "shortTitle": "Croc Men",
+        "unitSet": "['crocmen1','crocmen2','crocmen3','crocmen4']",
+        "unitSkill": "['suratk3','camo','infil','mimet6']",
+        "size": "sk",
+        "attr_armyId": "1",
+        "attr_mov": "4-4",
+        "attr_cc": "14",
+        "attr_bs": "12",
+        "attr_ph": "12",
+        "attr_wip": "13",
+        "attr_arm": "1",
+        "attr_bts": "0",
+        "attr_w": "1",
+        "attr_s": "2",
+        "attr_ava": "2",
+        "isHackable": "FALSE",
+        "isPeriperial": "FALSE"
+    },
+    {
+        "id": "26",
+        "titleId": "pa-kunai",
+        "title": "Kunai Solutions Ninjas",
+        "shortTitle": "Kunai Solutions Ninjas",
+        "unitSet": "['kunai1','kunai2']",
+        "unitSkill": "['suratk3','mart3','camo','dodge1inch','mimet6','climbplus']",
+        "size": "sk",
+        "trait": "Mercenary Troops",
+        "attr_armyId": "1",
+        "attr_mov": "4-4",
+        "attr_cc": "22",
+        "attr_bs": "11",
+        "attr_ph": "12",
+        "attr_wip": "13",
+        "attr_arm": "1",
+        "attr_bts": "0",
+        "attr_w": "1",
+        "attr_s": "2",
+        "attr_ava": "1",
+        "isHackable": "FALSE",
+        "isPeriperial": "FALSE"
+    },
+    {
+        "id": "27",
+        "titleId": "pa-locust",
+        "title": "Locust Clandestine Action Team",
+        "shortTitle": "Locust",
+        "unitSet": "['lucust1','lucust2','lucust3','lucust4']",
+        "unitSkill": "['mimet6','infil']",
+        "size": "sk",
+        "attr_armyId": "1",
+        "attr_mov": "4-4",
+        "attr_cc": "20",
+        "attr_bs": "12",
+        "attr_ph": "12",
+        "attr_wip": "13",
+        "attr_arm": "1",
+        "attr_bts": "3",
+        "attr_w": "1",
+        "attr_s": "2",
+        "attr_ava": "1",
+        "isHackable": "FALSE",
+        "isPeriperial": "FALSE"
+    },
+    {
+        "id": "28",
+        "titleId": "pa-liangkai",
+        "title": "Liang Kai, Wandering Shaolin Monk",
+        "shortTitle": "Lian Kai",
+        "unitSet": "['liangkai1','liangkai2']",
+        "unitSkill": "['mart4','forwdep4','dodge1inchinch','dodge3','mimet3','superjump']",
+        "size": "wb",
+        "trait": "Character",
+        "attr_armyId": "1",
+        "attr_mov": "4-4",
+        "attr_cc": "23",
+        "attr_bs": "11",
+        "attr_ph": "13",
+        "attr_wip": "14",
+        "attr_arm": "1",
+        "attr_bts": "0",
+        "attr_w": "1",
+        "attr_s": "2",
+        "attr_ava": "1",
+        "isHackable": "FALSE",
+        "isPeriperial": "FALSE"
+    }
+];
+
+export const UNITSET = [
+    {
+        "id": "1",
+        "idTitle": "fusi1",
+        "gunList": "['combi','pist','ccwp']",
+        "skillList": "['med']",
+        "equipmentList": "['med']",
+        "swc": "0",
+        "points": "1"
     },
     {
         "id": "2",
-        "idTitle": "lt",
-        "title": "Lietenant"
+        "idTitle": "fusi2",
+        "gunList": "['combi','pist','ccwp']",
+        "skillList": "['lt']",
+        "swc": "0",
+        "points": "1"
     },
     {
-        "id": "7",
-        "idTitle": "mart2",
-        "title": "Martial Arts L2",
-        "type": "Automatic Skill",
-        "effect": "► Attack Mod: +3\r\n► Opponent Mod: -3\r\n► Damage Mod: +1\r\n► Burst Mod: 0"
-    },
-    {
-        "id": "8",
-        "idTitle": "mimet3",
-        "title": "Mimetism (-3)",
-        "type": "Automatic Skill",
-        "trait": "NFB, Obligatory",
-        "effect": "► Any enemy declaring a BS Attack or Discover against the user of\r\nthis Skill must apply a negative MOD to their Atribute,The Mimetism MOD does not apply to CC Attacks"
+        "id": "3",
+        "idTitle": "fusi3",
+        "gunList": "['combi','pist','ccwp']",
+        "skillList": "['hack']",
+        "equipmentList": "['hack']",
+        "swc": "0",
+        "points": "1"
     },
     {
         "id": "4",
-        "idTitle": "mimet6",
-        "title": "Mimetism (-6)",
-        "type": "Automatic Skill",
-        "trait": "NFB, Obligatory",
-        "effect": "► Any enemy declaring a BS Attack or Discover against the user of\r\nthis Skill must apply a negative MOD to their Atribute,The Mimetism MOD does not apply to CC Attacks"
+        "idTitle": "fusi4",
+        "gunList": "['combi','pist','ccwp']",
+        "swc": "0.5",
+        "points": "1"
     },
     {
+        "id": "5",
+        "idTitle": "fusi5",
+        "gunList": "['miss','pist','ccwp']",
+        "swc": "1.5",
+        "points": "1"
+    },
+    {
+        "id": "6",
+        "idTitle": "fusi6",
+        "gunList": "['hmg','pist','ccwp']",
+        "swc": "1",
+        "points": "1.5"
+    },
+    {
+        "id": "7",
+        "idTitle": "fusi7",
+        "gunList": "['msnipe1','msnipe2','pist','ccwp']",
+        "swc": "1.5",
+        "points": "1.5"
+    },
+    {
+        "id": "8",
+        "idTitle": "nok1",
+        "gunList": "['bshot1','bshot2','pist','ccwp']",
+        "equipmentList": "['mvisor1']",
+        "swc": "0",
+        "points": "2"
+    },
+    {
+        "id": "9",
+        "idTitle": "nok2",
+        "gunList": "['spit','pist','ccwp']",
+        "swc": "1.5",
+        "points": "2.5"
+    },
+    {
+        "id": "10",
+        "idTitle": "nok3",
+        "gunList": "['combi','bshot1','bshot2','pist','ccwp']",
+        "skillList": "['hack']",
+        "equipmentList": "['hack']",
+        "swc": "0.5",
+        "points": "3"
+    },
+    {
+        "id": "11",
+        "idTitle": "infi1",
+        "gunList": "['combi','pist','mnccwp']",
+        "swc": "0",
+        "points": "2"
+    },
+    {
+        "id": "12",
+        "idTitle": "infi2",
+        "gunList": "['bshot1','bshot2','pist','mnccwp']",
+        "swc": "0",
+        "points": "2"
+    },
+    {
+        "id": "13",
+        "idTitle": "koj1",
+        "gunList": "['combi','hpist1','daccwp']",
+        "skillList": "['hack']",
+        "equipmentList": "['hack']",
+        "swc": "0.5",
+        "points": "4.5"
+    },
+    {
+        "id": "14",
+        "idTitle": "koj2",
+        "gunList": "['miss','hpist1','daccwp']",
+        "swc": "1.5",
+        "points": "4.5"
+    },
+    {
+        "id": "15",
+        "idTitle": "koj3",
+        "gunList": "['spit','hpist1','daccwp']",
+        "swc": "1.5",
+        "points": "5"
+    },
+    {
+        "id": "16",
+        "idTitle": "koj4",
+        "gunList": "['spit','hpist1','daccwp']",
+        "skillList": "['lt']",
+        "swc": "1.5",
+        "points": "5"
+    },
+    {
+        "id": "17",
+        "idTitle": "orc1",
+        "gunList": "['bshot1','bshot2','pist','ccwp']",
+        "swc": "0",
+        "points": "2.5"
+    },
+    {
+        "id": "18",
+        "idTitle": "orc2",
+        "gunList": "['combi','pist','ccwp']",
+        "swc": "0",
+        "points": "2.5"
+    },
+    {
+        "id": "19",
+        "idTitle": "orc3",
+        "gunList": "['mrifle1','mrifle2','pist','ccwp']",
+        "swc": "0",
+        "points": "3"
+    },
+    {
+        "id": "20",
+        "idTitle": "orc4",
+        "gunList": "['mrifle1','mrifle2','pist','ccwp']",
+        "skillList": "['lt']",
+        "swc": "0",
+        "points": "3"
+    },
+    {
+        "id": "21",
+        "idTitle": "orc5",
+        "gunList": "['combi','pist','ccwp']",
+        "skillList": "['hack']",
+        "equipmentList": "['hack']",
+        "swc": "0.5",
+        "points": "3"
+    },
+    {
+        "id": "22",
+        "idTitle": "orc6",
+        "gunList": "['hmg','pist','ccwp']",
+        "skillList": "['lt']",
+        "swc": "1",
+        "points": "3.5"
+    },
+    {
+        "id": "23",
+        "idTitle": "orc7",
+        "gunList": "['hmg','pist','ccwp']",
+        "swc": "1.5",
+        "points": "3.5"
+    },
+    {
+        "idTitle": "zhan1",
+        "gunList": "['combi','pist','ccwp']",
+        "swc": "0",
+        "points": "1"
+    },
+    {
+        "idTitle": "zhan2",
+        "gunList": "['combi','pist','ccwp']",
+        "skillList": "['med']",
+        "equipmentList": "['med']",
+        "swc": "0",
+        "points": "1"
+    },
+    {
+        "idTitle": "zhan3",
+        "gunList": "['combi','pist','ccwp']",
+        "skillList": "['lt']",
+        "swc": "0",
+        "points": "1"
+    },
+    {
+        "idTitle": "zhan4",
+        "gunList": "['combi','pist','ccwp']",
+        "skillList": "['hack']",
+        "equipmentList": "['hack']",
+        "swc": "0.5",
+        "points": "1.5"
+    },
+    {
+        "idTitle": "zhan5",
+        "gunList": "['hmg','pist','ccwp']",
+        "swc": "1",
+        "points": "1.5"
+    },
+    {
+        "idTitle": "zhan6",
+        "gunList": "['msnipe1','msnipe2','pist','ccwp']",
+        "swc": "1.5",
+        "points": "1.5"
+    },
+    {
+        "idTitle": "zhan7",
+        "gunList": "['miss','pist','ccwp']",
+        "swc": "1.5",
+        "points": "1.5"
+    },
+    {
+        "idTitle": "hun1",
+        "gunList": "['markrifle','pist','ccwp']",
+        "equipmentList": "['mvisor1']",
+        "swc": "0.5",
+        "points": "3"
+    },
+    {
+        "idTitle": "hun2",
+        "gunList": "['msnipe1','msnipe2','pist','ccwp']",
+        "swc": "1.5",
+        "points": "3"
+    },
+    {
+        "idTitle": "dao1",
+        "gunList": "['bshot1','bshot2','pist','ccwp']",
+        "swc": "0",
+        "points": "4.5"
+    },
+    {
+        "idTitle": "dao2",
+        "gunList": "['bshot1','bshot2','pist','ccwp']",
+        "skillList": "['lt']",
+        "swc": "0",
+        "points": "4.5"
+    },
+    {
+        "idTitle": "dao3",
+        "gunList": "['spit','pist','ccwp']",
+        "swc": "1.5",
+        "points": "5"
+    },
+    {
+        "idTitle": "dao4",
+        "gunList": "['spit','pist','ccwp']",
+        "skillList": "['lt']",
+        "swc": "1.5",
+        "points": "5"
+    },
+    {
+        "idTitle": "dao5",
+        "gunList": "['mrifle1','mrifle2','pist','ccwp']",
+        "skillList": "['hack']",
+        "equipmentList": "['hack']",
+        "swc": "0.5",
+        "points": "5.5"
+    },
+    {
+        "idTitle": "dao6",
+        "gunList": "['mrifle1','mrifle2','pist','ccwp']",
+        "skillList": "['hack','lt']",
+        "equipmentList": "['hack']",
+        "swc": "0.5",
+        "points": "5.5"
+    },
+    {
+        "idTitle": "juj1",
+        "gunList": "['combi','hflam','pist','ccwp']",
+        "swc": "0",
+        "points": "2"
+    },
+    {
+        "idTitle": "juj2",
+        "gunList": "['bshot1','bshot2','pist','ccwp']",
+        "swc": "0",
+        "points": "2"
+    },
+    {
+        "idTitle": "juj3",
+        "gunList": "['combi','hflam','pist','ccwp']",
+        "skillList": "['lt']",
+        "swc": "0",
+        "points": "2"
+    },
+    {
+        "idTitle": "juj4",
+        "gunList": "['bcombi','hflam','pist','ccwp']",
+        "swc": "0",
+        "points": "2.5"
+    },
+    {
+        "idTitle": "juj5",
+        "gunList": "['bshot1','bshot2','pist','ccwp']",
+        "skillList": "['eng']",
+        "swc": "0",
+        "points": "2.5"
+    },
+    {
+        "idTitle": "juj6",
+        "gunList": "['miss','lflam','pist','ccwp']",
+        "swc": "1.5",
+        "points": "3"
+    },
+    {
+        "idTitle": "juj7",
+        "gunList": "['spit','hflam','pist','ccwp']",
+        "swc": "1.5",
+        "points": "3"
+    },
+    {
+        "idTitle": "guila1",
+        "gunList": "['bshot1','bshot2','antm','pist','ccwp']",
+        "swc": "0",
+        "points": "2"
+    },
+    {
+        "idTitle": "guila2",
+        "gunList": "['combi','antm','pist','ccwp']",
+        "skillList": "['lt']",
+        "swc": "2",
+        "points": "2"
+    },
+    {
+        "idTitle": "guila3",
+        "gunList": "['combi','antm','pist','ccwp']",
+        "skillList": "['hack']",
+        "equipmentList": "['hack']",
+        "swc": "0.5",
+        "points": "3"
+    },
+    {
+        "idTitle": "mach1",
+        "gunList": "['combi','pist','ccwp']",
+        "swc": "0",
+        "points": "1",
+        "undefined": "combi"
+    },
+    {
+        "idTitle": "mach2",
+        "gunList": "['combi','pist','ccwp']",
+        "skillList": "['mimet3']",
+        "swc": "0",
+        "points": "1.5",
+        "undefined": "pist"
+    },
+    {
+        "idTitle": "traudoc1",
+        "gunList": "['combi','pist','ccwp']",
+        "swc": "0",
+        "points": "1",
+        "undefined": "ccwp"
+    },
+    {
+        "idTitle": "akalis1",
+        "gunList": "['combi','pist','ccwp']",
+        "swc": "0",
+        "points": "2"
+    },
+    {
+        "idTitle": "akalis2",
+        "gunList": "['bshot1','bshot2','pist','ccwp']",
+        "swc": "0",
+        "points": "2"
+    },
+    {
+        "idTitle": "akalis3",
+        "gunList": "['combi','pist','ccwp']",
+        "skillList": "['hack']",
+        "equipmentList": "['hack']",
+        "swc": "0.5",
+        "points": "2"
+    },
+    {
+        "idTitle": "akalis4",
+        "gunList": "['spit','pist','ccwp']",
+        "swc": "1.5",
+        "points": "2.5"
+    },
+    {
+        "idTitle": "niss1",
+        "gunList": "['combi','lshot1','lshot2','pist','ccwp']",
+        "swc": "0",
+        "points": "2.5"
+    },
+    {
+        "idTitle": "niss2",
+        "gunList": "['combi','lshot1','lshot2','pist','ccwp']",
+        "skillList": "['lt']",
+        "swc": "1",
+        "points": "2.5"
+    },
+    {
+        "idTitle": "niss3",
+        "gunList": "['combi','lshot1','lshot2','pist','ccwp']",
+        "skillList": "['med']",
+        "equipmentList": "['med']",
+        "swc": "0",
+        "points": "3"
+    },
+    {
+        "idTitle": "niss4",
+        "gunList": "['combi','lshot1','lshot2','pist','ccwp']",
+        "skillList": "['hack']",
+        "equipmentList": "['hack']",
+        "swc": "0.5",
+        "points": "3"
+    },
+    {
+        "idTitle": "niss5",
+        "gunList": "['hmg','pist','ccwp']",
+        "swc": "1.5",
+        "points": "3"
+    },
+    {
+        "idTitle": "niss6",
+        "gunList": "['msnipe1','msnipe2','pist','ccwp']",
+        "swc": "1.5",
+        "points": "3"
+    },
+    {
+        "idTitle": "troll1",
+        "gunList": "['mrifle1','mrifle2','chaincolt','pistol','daccwp']",
+        "swc": "0",
+        "points": "2"
+    },
+    {
+        "idTitle": "vagar1",
+        "gunList": "['combi','hflam','pist','ccwp']",
+        "swc": "0",
+        "points": "1.5"
+    },
+    {
+        "idTitle": "vagar2",
+        "gunList": "['markrifle','antm','pist','ccwp']",
+        "swc": "0",
+        "points": "2"
+    },
+    {
+        "idTitle": "vagar3",
+        "gunList": "['spit','pist','ccwp']",
+        "swc": "1.5",
+        "points": "2"
+    },
+    {
+        "idTitle": "aquila1",
+        "gunList": "['apmrifle','pist','ccwp']",
+        "swc": "0",
+        "points": "4.5"
+    },
+    {
+        "idTitle": "aquila2",
+        "gunList": "['apmrifle','pist','ccwp']",
+        "skillList": "['specops']",
+        "swc": "0",
+        "points": "4.5"
+    },
+    {
+        "idTitle": "aquila3",
+        "gunList": "['apmrifle','pist','ccwp']",
+        "skillList": "['lt']",
+        "swc": "0",
+        "points": "4.5"
+    },
+    {
+        "idTitle": "aquila4",
+        "gunList": "['hmg','pist','ccwp']",
+        "swc": "1.5",
+        "points": "5"
+    },
+    {
+        "idTitle": "boyg1",
+        "gunList": "['mk12','hpist1','hpist2','ccwp']",
+        "swc": "0",
+        "points": "4.5"
+    },
+    {
+        "idTitle": "boyg2",
+        "gunList": "['miss','hpist1','hpist2','ccwp']",
+        "swc": "1.5",
+        "points": "4.5"
+    },
+    {
+        "idTitle": "swiss1",
+        "gunList": "['mrifle1','mrifle2','pist','apccwp']",
+        "skillList": "['hack']",
+        "equipmentList": "['hack']",
+        "swc": "0.5",
+        "points": "6"
+    },
+    {
+        "idTitle": "swiss2",
+        "gunList": "['hmg','pist','apccwp']",
+        "swc": "1.5",
+        "points": "6"
+    },
+    {
+        "idTitle": "swiss3",
+        "gunList": "['miss','lshot1','lshot2','pist','apccwp']",
+        "swc": "1.5",
+        "points": "6"
+    },
+    {
+        "idTitle": "clipper1",
+        "gunList": "['miss','paraccwp-3']",
+        "swc": "1.5",
+        "points": "1.5"
+    },
+    {
+        "idTitle": "fugazi",
+        "gunList": "['paraccwp-3']",
+        "swc": "0",
+        "points": "0.5"
+    },
+    {
+        "idTitle": "palbot1",
+        "gunList": "['paraccwp-3']",
+        "swc": "0",
+        "points": "0.5"
+    },
+    {
+        "idTitle": "pathfinder1",
+        "gunList": "['combi','paraccwp-3']",
+        "swc": "0",
+        "points": "1"
+    },
+    {
+        "idTitle": "sierra1",
+        "gunList": "['hmg','paraccwp-3']",
+        "swc": "1",
+        "points": "2"
+    },
+    {
+        "idTitle": "crocmen1",
+        "gunList": "['bshot1','bshot2','antm','pist','ccwp']",
+        "swc": "0",
+        "points": "2.5"
+    },
+    {
+        "idTitle": "crocmen2",
+        "gunList": "['combi','antm','pist','ccwp']",
+        "skillList": "['lt']",
+        "swc": "2",
+        "points": "2.5"
+    },
+    {
+        "idTitle": "crocmen3",
+        "gunList": "['combi','antm','pist','ccwp']",
+        "skillList": "['hack']",
+        "equipmentList": "['hack']",
+        "swc": "0.5",
+        "points": "3"
+    },
+    {
+        "idTitle": "crocmen4",
+        "gunList": "['msnipe1','msnipe2','antm','pist','ccwp']",
+        "swc": "1.5",
+        "points": "3.5"
+    },
+    {
+        "idTitle": "kunai1",
+        "gunList": "['mrifle1','mrifle2','pist','ccwp']",
+        "skillList": "['forwdep4']",
+        "swc": "0",
+        "points": "2.5"
+    },
+    {
+        "idTitle": "kunai2",
+        "gunList": "['msnipe1','msnipe2','pist','ccwp']",
+        "swc": "1.5",
+        "points": "3"
+    },
+    {
+        "idTitle": "lucust1",
+        "gunList": "['bshot1','bshot2','pist','ccwp']",
+        "swc": "0",
+        "points": "2.5"
+    },
+    {
+        "idTitle": "lucust2",
+        "gunList": "['bcombi','pist','daccwp']",
+        "swc": "0",
+        "points": "3"
+    },
+    {
+        "idTitle": "lucust3",
+        "gunList": "['markrifle','pist','ccwp']",
+        "swc": "0",
+        "points": "3"
+    },
+    {
+        "idTitle": "lucust4",
+        "gunList": "['bcombi','pist','daccwp']",
+        "skillList": "['hack']",
+        "equipmentList": "['hack']",
+        "swc": "0.5",
+        "points": "3"
+    },
+    {
+        "idTitle": "liangkai1",
+        "gunList": "['chainrifle','lshot1','lshot2','pist','daccwp']",
+        "swc": "0",
+        "points": "1.5"
+    },
+    {
+        "idTitle": "liangkai2",
+        "gunList": "['chainrifle','combi','pist','daccwp']",
+        "swc": "0",
+        "points": "2"
+    }
+];
+
+
+
+export const ARMY = [
+    {
         "id": "1",
+        "titleId": "panoceania",
+        "title": "Panoceania"
+    },
+    {
+        "id": "2",
+        "titleId": "yu-jin",
+        "title": "Yu-Jin"
+    }
+];
+
+export const WEAPON = [
+    {
+        "id": "1",
+        "idTitle": "combi",
+        "title": "CombiRifle",
+        "shortTitle": "CombiRifle",
+        "type": "main",
+        "attr_dam": "13",
+        "attr_b": "3",
+        "attr_ammo": "N",
+        "attr_save": "ARM",
+        "noRange": "false",
+        "short_range": "0-8\"",
+        "short_mod": "+3",
+        "medium_range": "8-16\"",
+        "medium_mod": "+3",
+        "long_range": "16-32\"",
+        "long_mod": "-3",
+        "max_range": "32-48\"",
+        "max_mod": "-6"
+    },
+    {
+        "id": "10",
+        "idTitle": "bshot2",
+        "title": "Boarding Shotgun (Hit Mode)",
+        "shortTitle": "Boarding Shotgun (Hit)",
+        "type": "main",
+        "attr_dam": "14",
+        "attr_b": "2",
+        "attr_ammo": "AP",
+        "attr_save": "ARM",
+        "noRange": "false",
+        "short_range": "0-8\"",
+        "short_mod": "+6",
+        "medium_range": "8-16\"",
+        "medium_mod": "0",
+        "long_range": "16-24\"",
+        "long_mod": "-3"
+    },
+    {
+        "id": "11",
+        "idTitle": "antm",
+        "title": "Antipersonel Mines",
+        "shortTitle": "Antipersonel Mines",
+        "type": "equip",
+        "attr_dam": "13",
+        "attr_b": "1",
+        "attr_ammo": "N",
+        "attr_save": "ARM",
+        "noRange": "true",
+        "trait": "Concealed, Disposable(3), Direct Template (Small Teardrop)"
+    },
+    {
+        "id": "12",
+        "idTitle": "bcombi",
+        "title": "Breaker Combi Rifle",
+        "shortTitle": "Breaker Combi Rifle",
+        "type": "main",
+        "attr_dam": "13",
+        "attr_b": "3",
+        "attr_ammo": "AP",
+        "attr_save": "BTS",
+        "noRange": "false",
+        "short_range": "0-8\"",
+        "short_mod": "+3",
+        "medium_range": "8-16\"",
+        "medium_mod": "+3",
+        "long_range": "16-32\"",
+        "long_mod": "-3",
+        "max_range": "32-48\"",
+        "max_mod": "-6"
+    },
+    {
+        "id": "13",
+        "idTitle": "hflam",
+        "title": "Heavy Flamethrower",
+        "shortTitle": "Heavy Flamethrower",
+        "type": "main",
+        "attr_dam": "14",
+        "attr_b": "1",
+        "attr_ammo": "N",
+        "attr_save": "ARM",
+        "noRange": "true",
+        "trait": "Continous Damage, Direct Template (Large Teardrop)"
+    },
+    {
+        "id": "14",
+        "idTitle": "lflam",
+        "title": "Light Flamethrower",
+        "shortTitle": "Light Flamethrower",
+        "type": "main",
+        "attr_dam": "13",
+        "attr_b": "1",
+        "attr_ammo": "N",
+        "attr_save": "ARM",
+        "noRange": "true",
+        "trait": "Continous Damage, Direct Template (Small Teardrop)"
+    },
+    {
+        "id": "15",
+        "idTitle": "mrifle1",
+        "title": "MULTI Rifle (Burst Mode)",
+        "shortTitle": "MULTI Rifle (Burst)",
+        "type": "main",
+        "attr_dam": "13",
+        "attr_b": "3",
+        "attr_ammo": "AP",
+        "attr_save": "ARM",
+        "noRange": "false",
+        "short_range": "0-8\"",
+        "short_mod": "+3",
+        "medium_range": "8-16\"",
+        "medium_mod": "+3",
+        "long_range": "16-32\"",
+        "long_mod": "-3",
+        "max_range": "32-48\"",
+        "max_mod": "-6",
+        "trait": "Light MULTI"
+    },
+    {
+        "id": "16",
+        "idTitle": "mrifle2",
+        "title": "MULTI Rifle (Anti-materiel Mode)",
+        "shortTitle": "MULTI Rifle (Anti-materiel)",
+        "type": "main",
+        "attr_dam": "13",
+        "attr_b": "1",
+        "attr_ammo": "DA",
+        "attr_save": "ARM",
+        "noRange": "false",
+        "short_range": "0-8\"",
+        "short_mod": "+3",
+        "medium_range": "8-16\"",
+        "medium_mod": "+3",
+        "long_range": "16-32\"",
+        "long_mod": "-3",
+        "max_range": "32-48\"",
+        "max_mod": "-6",
+        "trait": "Light MULTI"
+    },
+    {
+        "id": "17",
+        "idTitle": "mnccwp",
+        "title": "Monofilament CC Weapon",
+        "shortTitle": "Monofilament CC Weapon",
+        "type": "close",
+        "attr_dam": "12",
+        "attr_b": "1",
+        "attr_ammo": "N",
+        "attr_save": "ARM",
+        "noRange": "true",
+        "trait": "CC"
+    },
+    {
+        "id": "18",
+        "idTitle": "daccwp",
+        "title": "DA CC Weapon",
+        "shortTitle": "DA CC Weapon",
+        "type": "close",
+        "attr_dam": "PH",
+        "attr_b": "1",
+        "attr_ammo": "DA",
+        "attr_save": "ARM",
+        "noRange": "true",
+        "trait": "CC"
+    },
+    {
+        "id": "19",
+        "idTitle": "hpist1",
+        "title": "Heavy Pistol (Burst Mode)",
+        "shortTitle": "Heavy Pistol (Burst)",
+        "type": "sub",
+        "attr_dam": "14",
+        "attr_b": "2",
+        "attr_ammo": "N",
+        "attr_save": "ARM",
+        "noRange": "false",
+        "short_range": "0-8\"",
+        "short_mod": "+3",
+        "medium_range": "8-16\"",
+        "medium_mod": "0",
+        "long_range": "16-24\" ",
+        "long_mod": "-6"
+    },
+    {
+        "id": "2",
+        "idTitle": "spit",
+        "title": "Spitfire",
+        "shortTitle": "Spitfire",
+        "type": "main",
+        "attr_dam": "14",
+        "attr_b": "4",
+        "attr_ammo": "N",
+        "attr_save": "ARM",
+        "noRange": "false",
+        "short_range": "0-8\"",
+        "short_mod": "0",
+        "medium_range": "8-24\"",
+        "medium_mod": "+3",
+        "long_range": "24-32\"",
+        "long_mod": "-3",
+        "max_range": "32-48\"",
+        "max_mod": "-6"
+    },
+    {
+        "id": "20",
+        "idTitle": "markrifle",
+        "title": "Marksman Rifle",
+        "shortTitle": "Marksman Rifle",
+        "type": "main",
+        "attr_dam": "13",
+        "attr_b": "3",
+        "attr_ammo": "N",
+        "attr_save": "ARM",
+        "noRange": "false",
+        "short_range": "0-8\"",
+        "short_mod": "-3",
+        "medium_range": "8-16\"",
+        "medium_mod": "+3",
+        "long_range": "24-40\"",
+        "long_mod": "-3",
+        "max_range": "40-48\"",
+        "max_mod": "-6"
+    },
+    {
+        "id": "3",
+        "idTitle": "pist",
+        "title": "Pisto (CC Mode)",
+        "shortTitle": "Pistol CC",
+        "type": "sub",
+        "attr_dam": "11",
+        "attr_b": "1",
+        "attr_ammo": "N",
+        "attr_save": "--",
+        "noRange": "true",
+        "trait": "CC"
+    },
+    {
+        "id": "4",
+        "idTitle": "ccwp",
+        "title": "CC Weapon",
+        "shortTitle": "CC Weapon",
+        "type": "close",
+        "attr_dam": "PH",
+        "attr_b": "1",
+        "attr_ammo": "N",
+        "attr_save": "ARM",
+        "noRange": "true",
+        "trait": "CC"
+    },
+    {
+        "id": "5",
+        "idTitle": "miss",
+        "title": "Missile Launcher (Blast Mode)",
+        "shortTitle": "Missile Launcher (Blast Mode)",
+        "type": "main",
+        "attr_dam": "14",
+        "attr_b": "1",
+        "attr_ammo": "AP+Exp",
+        "attr_save": "ARM",
+        "noRange": "false",
+        "short_range": "0-8\"",
+        "short_mod": "-3",
+        "medium_range": "8-24\"",
+        "medium_mod": "0",
+        "long_range": "24-40\"",
+        "long_mod": "+3",
+        "max_range": "40-96\"",
+        "max_mod": "-3"
+    },
+    {
+        "id": "6",
+        "idTitle": "msnipe1",
+        "title": "MULTI Sniper (Burst Mode)",
+        "shortTitle": "MULTI Sniper (Burst)",
+        "type": "main",
+        "attr_dam": "15",
+        "attr_b": "2",
+        "attr_ammo": "AP",
+        "attr_save": "ARM",
+        "noRange": "false",
+        "short_range": "0-8\"",
+        "short_mod": "-3",
+        "medium_range": "8-16\"",
+        "medium_mod": "0",
+        "long_range": "16-48\"",
+        "long_mod": "+3",
+        "max_range": "48-96\"",
+        "max_mod": "-3"
+    },
+    {
+        "id": "7",
+        "idTitle": "msnipe2",
+        "title": "MULTI Sniper (Anti-materiel Mode)",
+        "shortTitle": "MULTI Sniper (Anti Material)",
+        "type": "main",
+        "attr_dam": "15",
+        "attr_b": "1",
+        "attr_ammo": "DA",
+        "attr_save": "ARM",
+        "noRange": "false",
+        "short_range": "0-8\"",
+        "short_mod": "-3",
+        "medium_range": "8-16\"",
+        "medium_mod": "0",
+        "long_range": "16-48\"",
+        "long_mod": "+3",
+        "max_range": "48-96\"",
+        "max_mod": "-3"
+    },
+    {
+        "id": "8",
+        "idTitle": "hmg",
+        "title": "HMG",
+        "shortTitle": "HMG",
+        "type": "main",
+        "attr_dam": "15",
+        "attr_b": "4",
+        "attr_ammo": "N",
+        "attr_save": "ARM",
+        "noRange": "false",
+        "short_range": "0-8\"",
+        "short_mod": "-3",
+        "medium_range": "8-16\"",
+        "medium_mod": "0",
+        "long_range": "16-32\"",
+        "long_mod": "+3",
+        "max_range": "32-48\"",
+        "max_mod": "-3"
+    },
+    {
+        "id": "9",
+        "idTitle": "bshot1",
+        "title": "Boarding Shotgun (Blast Mode)",
+        "shortTitle": "Boarding Shotgun (Blast)",
+        "type": "main",
+        "attr_dam": "14",
+        "attr_b": "2",
+        "attr_ammo": "N",
+        "attr_save": "ARM",
+        "noRange": "true",
+        "trait": "Direct Template (Small Teardrop)"
+    },
+    {
+        "id": "21",
+        "idTitle": "apccwp",
+        "title": "AP CC Weapon",
+        "shortTitle": "AP CC Weapon",
+        "type": "close",
+        "attr_dam": "PH",
+        "attr_b": "1",
+        "attr_ammo": "AP",
+        "attr_save": "ARM",
+        "noRange": "true",
+        "trait": "CC"
+    },
+    {
+        "id": "22",
+        "idTitle": "apmrifle",
+        "title": "AP Marksman Rifle",
+        "shortTitle": "AP Marksman Rifle",
+        "type": "main",
+        "attr_dam": "13",
+        "attr_b": "3",
+        "attr_ammo": "AP",
+        "attr_save": "ARM",
+        "noRange": "false",
+        "short_range": "0-8\"",
+        "short_mod": "-3",
+        "medium_range": "8-24\"",
+        "medium_mod": "+3",
+        "long_range": "24-40\"",
+        "long_mod": "-3",
+        "max_range": "40-48\"",
+        "max_mod": "-6"
+    },
+    {
+        "id": "23",
+        "idTitle": "chainrifle",
+        "title": "Chain Rifle",
+        "shortTitle": "Chain Rifle",
+        "type": "main",
+        "attr_dam": "13",
+        "attr_b": "1",
+        "attr_ammo": "N",
+        "attr_save": "ARM",
+        "noRange": "true",
+        "trait": "Direct Template (Large Teardrop)"
+    },
+    {
+        "id": "24",
+        "idTitle": "chaincolt",
+        "title": "Chain-Colt",
+        "shortTitle": "Chain-Colt",
+        "type": "main",
+        "attr_dam": "13",
+        "attr_b": "1",
+        "attr_ammo": "N",
+        "attr_save": "ARM",
+        "noRange": "true",
+        "trait": "Direct Template (Small Teardrop)"
+    },
+    {
+        "id": "25",
+        "idTitle": "hpist2",
+        "title": "Heavy Pistol (CC Mode)",
+        "shortTitle": "Heavy Pistol (CC)",
+        "type": "close",
+        "attr_dam": "14",
+        "attr_b": "1",
+        "attr_ammo": "N",
+        "attr_save": "ARM",
+        "noRange": "true",
+        "trait": "CC"
+    },
+    {
+        "id": "26",
+        "idTitle": "lshot1",
+        "title": "Light Shotgun (Blast Mode)",
+        "shortTitle": "Light Shotgun (Blast)",
+        "type": "main",
+        "attr_dam": "13",
+        "attr_b": "2",
+        "attr_ammo": "N",
+        "attr_save": "ARM",
+        "noRange": "true",
+        "trait": "Direct Template (Small Teardrop)"
+    },
+    {
+        "id": "27",
+        "idTitle": "lshot2",
+        "title": "Light Shotgun (Hit Mode)",
+        "shortTitle": "Light Shotgun (Hit)",
+        "type": "main",
+        "attr_dam": "13",
+        "attr_b": "2",
+        "attr_ammo": "N",
+        "attr_save": "ARM",
+        "noRange": "false",
+        "short_range": "0-8\"",
+        "short_mod": "+6",
+        "medium_range": "8-16\"",
+        "medium_mod": "0",
+        "long_range": "16-24\" ",
+        "long_mod": "-3"
+    },
+    {
+        "id": "28",
+        "idTitle": "mk12",
+        "title": "Mk12",
+        "shortTitle": "Mk12",
+        "type": "main",
+        "attr_dam": "15",
+        "attr_b": "3",
+        "attr_ammo": "N",
+        "attr_save": "ARM",
+        "noRange": "false",
+        "short_range": "0-8\"",
+        "short_mod": "0",
+        "medium_range": "8-24\"",
+        "medium_mod": "+3",
+        "long_range": "24-32\"",
+        "long_mod": "-3",
+        "max_range": "32-48\"",
+        "max_mod": "-6"
+    },
+    {
+        "id": "29",
+        "idTitle": "paraccwp",
+        "title": "PARA CC Weapon",
+        "shortTitle": "PARA CC Weapon",
+        "type": "close",
+        "attr_dam": "-",
+        "attr_b": "1",
+        "attr_ammo": "PARA",
+        "attr_save": "PH-6",
+        "noRange": "true",
+        "trait": "CC, State:IMM-A, Non-lethal"
+    },
+    {
+        "id": "29",
+        "idTitle": "paraccwp-3",
+        "title": "PARA CC Weapon (-3)",
+        "shortTitle": "PARA CC Weapon (-3)",
+        "type": "close",
+        "attr_dam": "-",
+        "attr_b": "1",
+        "attr_ammo": "PARA",
+        "attr_save": "PH-6",
+        "noRange": "true",
+        "trait": "CC, State:IMM-A, Non-lethal"
+    }
+];
+export const SKILL = [
+    {
+        "id": "1",
+        "page": "74",
         "idTitle": "med",
         "title": "Paramedic",
         "type": "Automatic Skill",
@@ -1011,15 +1770,285 @@ export const SKILL = [
         "effect": "► Paramedics are equipped with MediKits to recover their Unconscious\r\ncomrades."
     },
     {
+        "id": "2",
+        "page": "71",
+        "idTitle": "lt",
+        "title": "Lietenant"
+    },
+    {
+        "id": "3",
+        "idTitle": "hack",
+        "title": "Hacker"
+    },
+    {
+        "id": "4",
+        "page": "74",
+        "idTitle": "mimet6",
+        "title": "Mimetism (-6)",
+        "type": "Automatic Skill",
+        "trait": "NFB, Obligatory",
+        "effect": "► Any enemy declaring a BS Attack or Discover against the user of\r\nthis Skill must apply a negative MOD to their Atribute,The Mimetism MOD does not apply to CC Attacks"
+    },
+    {
+        "id": "5",
+        "page": "70",
+        "idTitle": "forwdep8",
+        "title": "Forward Deployment (+8\")",
+        "type": "Deployment Skill",
+        "trait": "Superior Deployment, Optional.",
+        "effect": "► The users of this Special Skill can be deployed beyond the limit of\r\ntheir Deployment Zone. The number of inches that those Troopers\r\nmay deploy beyond their Deployment Zone appears between round\r\nbrackets in their Unit Profile."
+    },
+    {
+        "id": "5",
+        "page": "70",
+        "idTitle": "forwdep4",
+        "title": "Forward Deployment (+4\")",
+        "type": "Deployment Skill",
+        "trait": "Superior Deployment, Optional.",
+        "effect": "► The users of this Special Skill can be deployed beyond the limit of\r\ntheir Deployment Zone. The number of inches that those Troopers\r\nmay deploy beyond their Deployment Zone appears between round\r\nbrackets in their Unit Profile."
+    },
+    {
+        "id": "6",
+        "page": "70",
+        "idTitle": "doc",
+        "title": "Doctor",
+        "type": "Short Skill",
+        "trait": "Optional",
+        "effect": "► By passing a Normal WIP Roll, the target’s Unconscious State is\r\ncancelled, by recovering 1 single point of their Wounds Attribute,\r\nunless a rule or Skill specifies otherwise. If the WIP Roll fails, the\r\ntarget automatically enters the Dead State and is removed from\r\nthe game table.",
+        "requirement": "► Troopers using this Special Skill must be in Silhouette contact\r\nwith their target.\r\n► The target must have the Wounds Attribute and be in Unconscious\r\nState."
+    },
+    {
+        "id": "7",
+        "page": "71",
+        "idTitle": "mart2",
+        "title": "Martial Arts L2",
+        "type": "Automatic Skill",
+        "effect": "► Attack Mod: +3\r\n► Opponent Mod: -3\r\n► Damage Mod: +1\r\n► Burst Mod: 0",
+        "requirement": "REQUIREMENTS\r\n► In the Active or Reactive Turn, the Trooper must reach or be in\r\nSilhouette contact with the target and declare a CC Attack."
+    },
+    {
+        "id": "8",
+        "page": "74",
+        "idTitle": "mimet3",
+        "title": "Mimetism (-3)",
+        "type": "Automatic Skill",
+        "trait": "NFB, Obligatory",
+        "effect": "► Any enemy declaring a BS Attack or Discover against the user of\r\nthis Skill must apply a negative MOD to their Atribute,The Mimetism MOD does not apply to CC Attacks"
+    },
+    {
+        "id": "9",
+        "page": "67",
+        "idTitle": "camo",
+        "title": "Camouflage",
+        "type": "Automatic Skill",
+        "trait": "Optional",
+        "effect": "► In Camouflaged State, the Player does not place the Model on the\r\ntable, but instead places a Camouflaged Marker.\r\n► Camouflaged Markers can possess the Mimetism Skill, so\r\nCamouflaged Markers indicate the MOD level that Mimetism\r\napplies, if they have it.\r\n► You cannot enter Silhouette contact with an Enemy Camouflaged\r\nMarker.\r\n► You cannot declare Attacks against Camouflaged Markers, it is\r\nnecessary to Discover that Marker first, unless otherwise specified\r\nby a rule or Skill.\r\n► To reveal a Camouflaged Marker, a Discover Roll must be passed,\r\napplying MODs listed for Discover, including the Marker’s\r\nMimetism, if they have it.\r\n► If the Discover Roll is successful, the Camouflaged Marker is\r\nreplaced with the corresponding Model, facing in any direction its\r\nplayer chooses.\r\n► A Trooper that fails a WIP Roll to Discover a Marker cannot attempt\r\nto Discover the same Marker until the next Player Turn. Note\r\nthat a Trooper that has been revealed, and re-entered Camouflaged\r\nState again, does not count as the same Marker.\r\n► A Camouflage Marker has a LoF of 360º.\r\n► A Camouflage Marker has the same Silhouette (S) value as the\r\nTrooper it represents.\r\n► However, a Weapon or piece of Equipment in Camouflaged State\r\nwill have a Silhouette (S) value of 2.\r\n► This State does not interfere with Automatic Special Skills or\r\nAutomatic Equipment, which will remain functioning normally.\r\n► The only AROs that can be declared against a Camouflaged Marker\r\nare: Discover, Dodge or Reset.\r\n► When a Trooper in Camouflaged state is activated, each Reactive\r\nTrooper can delay the declaration of their ARO until the second half\r\nof the Active Trooper’s Order has been declared. In this case:\r\n► If the Trooper in Camouflaged state reveals themselves with the\r\nsecond half of their Order (by declaring a BS Attack, moving into\r\nSilhouette contact with an enemy…), the delaying Trooper can\r\ndeclare their ARO.\r\n► If the Trooper in Camouflaged state does not reveal themselves,\r\nthe delaying Trooper loses their right to declare an ARO.",
+        "activation": "► Automatic during the Deployment Phase\r\n► During the Active Turn, Troopers may only return to\r\nCamouflaged State by consuming 1 Entire Order, outside the LoF of\r\nenemy Markers or Troopers.",
+        "cancellation": "The Camouflaged State is cancelled whenever:\r\n► The Camouflaged Marker declares an Attack or any Skill that\r\nrequires a Roll.\r\n► The Camouflaged Marker declares an Entire Order of any kind.\r\n► The Camouflaged Marker enters Silhouette contact with an enemy\r\nModel.\r\n► The Camouflaged Marker is Discovered.\r\n► The Camouflaged Marker receives a successful Attack.► When Camouflage state is cancelled, its player must replace the\r\nMarker with the corresponding Model, facing in any direction the\r\nplayer chooses.\r\n► When replacing the Marker with the Model, the player must provide\r\ntheir adversary with the Trooper’s complete Public Information."
+    },
+    {
         "id": "10",
+        "page": "77",
         "idTitle": "surpatk3",
         "title": "Surprise Attack (-3)",
         "type": "Automatic Skill",
         "trait": "Obligatory.",
-        "requirement": "► To use this Special Skill, Troopers must be in Marker form\r\n(Camouflaged, for example) at the start of the Order in which\r\nthey are activated.\r\n► The user must declare a CC Attack, BS Attack, Hacking Program or\r\nother Comms Attack.\r\n► The user of this Special Skill must be in their Active Turn.",
-        "effect": "► This Attack imposes an additional negative MOD, as shown in round\r\nbrackets in the Unit Profile [Surprise Attack (-3), Surprise Attack\r\n(-6)…]. This MOD only applies to targets of the Attack, and applies\r\nto any Skill Roll that those targets perform in ARO.\r\n► This Skill cannot be used again until the Trooper returns to Marker\r\nform."
+        "effect": "► This Attack imposes an additional negative MOD, as shown in round\r\nbrackets in the Unit Profile [Surprise Attack (-3), Surprise Attack\r\n(-6)…]. This MOD only applies to targets of the Attack, and applies\r\nto any Skill Roll that those targets perform in ARO.\r\n► This Skill cannot be used again until the Trooper returns to Marker\r\nform.",
+        "requirement": "► To use this Special Skill, Troopers must be in Marker form\r\n(Camouflaged, for example) at the start of the Order in which\r\nthey are activated.\r\n► The user must declare a CC Attack, BS Attack, Hacking Program or\r\nother Comms Attack.\r\n► The user of this Special Skill must be in their Active Turn."
+    },
+    {
+        "id": "11",
+        "idTitle": "dodge1inch",
+        "title": "Dodge (+1\")",
+        "type": "Automatic Skill",
+        "trait": "Optional"
+    },
+    {
+        "id": "11",
+        "idTitle": "dodge3",
+        "title": "Dodge (+3)",
+        "type": "Automatic Skill",
+        "trait": "Optional"
+    },
+    {
+        "id": "12",
+        "page": "70",
+        "idTitle": "eng",
+        "title": "Engineer",
+        "type": "Short Skill",
+        "trait": "Optional",
+        "effect": "► Engineer allows recovery of 1 Structure (STR) point, by passing a\r\nNormal WIP Roll.\r\n► This Special Skill can be declared as many times as necessary to\r\nrecover as many STR points as the target has lost.\r\n► If the Engineer fails the Normal WIP Roll, the target loses 1 STR\r\npoint instead of recovering it, entering the Unconscious or Dead\r\nState, if applicable.\r\n► Alternatively, by passing a Normal WIP Roll, a Trooper with Engineer\r\nmay cancel all of their target’s States that can be canceled by this\r\nSpecial Skill (Unconscious, Immobilized-A and B, Targeted, etc.),\r\nremoving the corresponding State Tokens..\r\n► Failing the Normal WIP Roll when trying to cancel other states than\r\nUnconscious has no negative consequence, and the Roll can be\r\nperformed again in future Orders.",
+        "requirement": "► Troopers using this Special Skill must be in Silhouette contact\r\nwith their target."
+    },
+    {
+        "id": "13",
+        "page": "71",
+        "idTitle": "infil",
+        "title": "Infiltration"
+    },
+    {
+        "id": "14",
+        "page": "69",
+        "idTitle": "climbplus",
+        "title": "Climbing Plus",
+        "type": "Automatic Skill",
+        "trait": "Movement, Optional.",
+        "effect": "► This Special Skill alters the user’s Climb Skill from an Entire Order\r\nSkill to the Short Movement Skill Move.\r\n► Climbing Plus allows the user to move along vertical surfaces as if\r\nperforming a normal Movement on a horizontal surface.\r\n► By turning Climb into the Short Movement Skill Move, the Climbing\r\nPlus Special Skill allows its user to perform other Short Movement\r\nSkills or Short Skills (for example: Move + BS Attack) while moving\r\non a vertical surface, or if hanging from a height (See Trooper\r\nActivation, p. 22).\r\n► As with the Climb Skill, Troopers using Climbing Plus do not benefit\r\nfrom Partial Cover MODs while they are on a vertical surface.\r\n► For visualization purposes, Troopers using this Skill move with\r\nat least half of their base’s underside in contact with the vertical\r\nsurface, as indicated in the Requirements of the Move and Climb\r\nSkills.\r\n► During the Reactive Turn, Climbing Plus allows its owner to react\r\nin ARO, if applicable, while being on a vertical surface.",
+        "requirement": "► At the end of the movement, Troopers must be able to place\r\nthemselves on a surface that is equal or larger than their base."
+    },
+    {
+        "id": "15",
+        "page": "70",
+        "idTitle": "combatjump",
+        "title": "Combat Jump",
+        "type": "Entire Order",
+        "trait": "Airborne Deployment (AD), Private Information, Optional.",
+        "effect": "► This Trooper is not required to deploy during the Deployment\r\nPhase, remaining off-table until their player decides to deploy\r\nthem during their Active Turn.\r\n► While off-table, the Trooper will not add their Order to the Order Pool\r\nduring the Tactical Phase. However, they may enter the table using\r\ntheir own Order to use this Special Skill, when the player chooses.\r\n► By using this Special Skill, the player cannot place the Trooper in\r\nProne State, or in Silhouette contact with enemy and neutral Models,\r\nMarkers, or Tokens, or in contact with any scenario objective, or in\r\nSilhouette contact with a scenery element to get Cover.\r\n► The player may deploy the Trooper on any surface of the game table,\r\nas long as the size of the surface is equal to or larger than their base.\r\n► Deploying inside buildings or enclosed pieces of Scenery is not\r\npermitted, even if they have an open roof or open doors or windows\r\nas, for example, an Objective Room.\r\n► After placing the Trooper on their landing spot, the player performs\r\na PH Roll. If the Roll is passed, the Trooper lands successfully and\r\nremains where the player has placed them. Then, the Reactive\r\nPlayer declares all their AROs.\r\n► If the PH Roll fails, the Trooper must be placed within their player’s\r\nDeployment Zone, always in contact with the edge of the game\r\ntable. Then, the Reactive Player declares all their AROs."
+    },
+    {
+        "id": "16",
+        "idTitle": "bsatk1",
+        "title": "BS Attack (+1B)",
+        "type": "Automatic Skill",
+        "trait": "Optional"
+    },
+    {
+        "id": "17",
+        "page": "71",
+        "idTitle": "mart1",
+        "title": "Martial Arts L1",
+        "type": "Automatic Skill",
+        "effect": "► Attack Mod: 0\r\n► Opponent Mod: -3\r\n► Damage Mod: +1\r\n► Burst Mod: 0",
+        "requirement": "REQUIREMENTS\r\n► In the Active or Reactive Turn, the Trooper must reach or be in\r\nSilhouette contact with the target and declare a CC Attack."
+    },
+    {
+        "id": "18",
+        "page": "71",
+        "idTitle": "mart3",
+        "title": "Martial Arts L3",
+        "type": "Automatic Skill",
+        "effect": "► Attack Mod: +3\r\n► Opponent Mod: -3\r\n► Damage Mod: +2\r\n► Burst Mod: 0",
+        "requirement": "REQUIREMENTS\r\n► In the Active or Reactive Turn, the Trooper must reach or be in\r\nSilhouette contact with the target and declare a CC Attack."
+    },
+    {
+        "id": "19",
+        "page": "71",
+        "idTitle": "mart4",
+        "title": "Martial Arts L4",
+        "type": "Automatic Skill",
+        "effect": "► Attack Mod: +3\r\n► Opponent Mod: -3\r\n► Damage Mod: +3\r\n► Burst Mod: 0",
+        "requirement": "REQUIREMENTS\r\n► In the Active or Reactive Turn, the Trooper must reach or be in\r\nSilhouette contact with the target and declare a CC Attack."
+    },
+    {
+        "id": "20",
+        "page": "71",
+        "idTitle": "mart5",
+        "title": "Martial Arts L5",
+        "type": "Automatic Skill",
+        "effect": "► Attack Mod: +3\r\n► Opponent Mod: -3\r\n► Damage Mod: +3\r\n► Burst Mod: +1",
+        "requirement": "REQUIREMENTS\r\n► In the Active or Reactive Turn, the Trooper must reach or be in\r\nSilhouette contact with the target and declare a CC Attack."
+    },
+    {
+        "id": "21",
+        "page": "74",
+        "idTitle": "nonhack",
+        "title": "Non-Hackable",
+        "type": "Automatic Skill",
+        "trait": "Obligatory.",
+        "effect": "► The user of this Special Skill cannot be the target of Comms Attacks\r\nwhose Requirements require the target have a specific Unit Type\r\n(HI, REM, TAG, etc.).\r\n► This Special Skill remains active even when its owner is in a Null\r\nstate."
+    },
+    {
+        "id": "22",
+        "page": "74",
+        "idTitle": "parachut",
+        "title": "Parachutist",
+        "type": "Entire Order",
+        "trait": "Airborne Deployment (AD), Optional, Private Information.",
+        "effect": "► This Trooper is not required to deploy during the Deployment\r\nPhase, remaining off-table until their player decides to deploy\r\nthem during their Active Turn.\r\n► While off-table, the Trooper will not add their Order to the Order Pool\r\nduring the Tactical Phase. However, they may enter the table using\r\ntheir own Order to use this Special Skill, when the player chooses.\r\n► By using this Special Skill, the player cannot place the Trooper in\r\nProne State, or in Silhouette contact with enemy and neutral Models,\r\nMarkers, or Tokens, or in contact with any scenario objective, or in\r\nSilhouette contact with a scenery element to get Cover.\r\n► The player may deploy the Trooper on any surface of the game\r\ntable, as long as that surface’s size is equal to or larger than their\r\nbase and is in contact with the edge of the table.\r\n► They may not be deployed within the enemy Deployment Zone.\r\n► Once the Trooper is placed on their entry point, the Reactive Player\r\ndeclares all their AROs."
+    },
+    {
+        "id": "23",
+        "page": "74",
+        "idTitle": "peripheral",
+        "title": "Peripheral (Servant)",
+        "type": "Automatic Skill",
+        "trait": "Obligatory.",
+        "effect": "► Peripherals are deployed on the game table at the same time as\r\ntheir Controller.\r\n► Peripherals are always activated with the same Order as their\r\nController, executing the same Short Skills of the Order, or Entire\r\nOrder, although they are not required to have the same target.\r\n► If any of the game elements (Controller or Peripheral) cannot\r\nperform part of the Order or Entire Order declared by the Controller\r\nand Peripherals, then they will be considered to have declared an\r\nIdle, while the other may act normally.\r\n► AROs must choose one of the Troopers activated by the Order as\r\ntheir target.\r\n► During the Reactive Turn, both the Controller and the Peripherals\r\ngain their own separate AROs. However, unless a specific rule\r\nsays otherwise, any declared AROs must be the same for both the\r\nController and the Peripherals.\r\n► In Close Combat, the rules described in the Close Combat with\r\nMultiple Troopers (see p. 49) must be applied.\r\n► If the Controller enters any Null State, the Peripheral will enter the\r\nDisconnected State at the end of that Order.\r\n► Peripherals with a point cost in their profile will count towards\r\nVictory Points, Zone of Operations control, etc. Remember that the\r\ntotal cost of the Unit includes Peripherals and, therefore, the value\r\nof the Peripherals must be deducted to determine the itemized\r\npoints of the Units.\r\n► Only Troopers with the Doctor or Engineer Special Skill may have\r\nPeripherals (Servant).\r\n► There is no limit to the operating distance between the Trooper\r\nwith Peripheral (Servant) and their Controller.\r\n► The Controller may have a maximum of two Peripherals (Servant)\r\nunder their control. In this case, they may only activate them one\r\nat a time, applying the previous conditions. Meanwhile, the other\r\nPeripheral (Servant) will be inactive.\r\n► Peripheral (Servant) and Doctor/Engineer:\r\n► This Special Skill allows the Controllers, if they are Doctors\r\nor Engineers, to use their Special Skill even if they are not in\r\nSilhouette contact with the target.\r\n► If a Peripheral is in Silhouette contact with an allied Model, their\r\nController can perform the Doctor/Engineer Skill, targeting that Model.\r\n► In this case, by using the Doctor/Engineer Skill, the Doctor/\r\nEngineer will be the one performing the Roll, even if the Trooper\r\nin Silhouette contact with the target is the Peripheral (Servant).\r\n► The Doctor/Engineer Skill can only be performed on one target per\r\nOrder."
+    },
+    {
+        "id": "24",
+        "page": "75",
+        "idTitle": "protheion",
+        "title": "Protheion",
+        "type": "Automatic Skill",
+        "trait": "CC Special Skill, Optional.",
+        "effect": "► For each Wound inflicted upon the target of the CC Attack, the user\r\nof Protheion will recover 1 Wounds point. If the user hasn’t lost any\r\nWounds points, they will increase their Wounds Attribute by 1.\r\n► The Wounds Attribute cannot be more than two higher than its\r\noriginal value.\r\n► If the user’s Wounds Attribute is higher than its original value, the\r\nplayer must place a Power-Up, or Power-Up 2 Token to indicate the\r\ncurrent value of the Trooper’s Wounds Attribute.",
+        "requirement": "► In the Active or Reactive Turn, the Trooper must reach or be in\r\nSilhouette contact with the target, and declare a CC Attack.\r\n► The target must have the Wounds Attribute."
+    },
+    {
+        "id": "25",
+        "page": "76",
+        "idTitle": "regen",
+        "title": "Regeneration",
+        "type": "Automatic Skill",
+        "trait": "States Phase, Optional.",
+        "effect": "During the States Phase, the user makes a Normal PH Roll:\r\n► If the Roll is a success, the Trooper recovers 1 lost Wounds/STR point.\r\n► If the Roll is failed, the Trooper loses 1 additional Wounds/STR point.\r\n► This Special Skill remains active even when its owner is in a Null\r\nstate.",
+        "activation": "► Automatic during the States Phase, if the player decides to use\r\nthis Special Skill."
+    },
+    {
+        "id": "26",
+        "page": "76",
+        "idTitle": "remdriver",
+        "title": "Remdriver",
+        "type": "Deployment Skill",
+        "trait": "Optional.",
+        "effect": "► When deploying the owner of this Special Skill, the player will\r\nplace a REMDRIVER Token beside a Remote already deployed on\r\nthe game table.\r\n► A Remote possessing a REMDRIVER Token will benefit from the\r\nMODs appearing in round brackets in the Unit Profile of the owner\r\nof this Special Skill.\r\n► The player will remove the REMDRIVER Token at the end of the\r\nOrder in which the owner of this Special Skill enters any Null state.\r\n► A Remote cannot have more than one REMDRIVER Token."
+    },
+    {
+        "id": "27",
+        "page": "76",
+        "idTitle": "shasvastii",
+        "title": "Shasvastii",
+        "type": "Automatic Skill",
+        "trait": "Obligatory.",
+        "effect": "► Troopers with this Special Skill have a special form of Unconscious\r\nstate called Shasvastii-Embryo."
+    },
+    {
+        "id": "28",
+        "page": "76",
+        "idTitle": "shasvastiiempbryo",
+        "title": "Shasvastii-Embryo",
+        "type": "null",
+        "effect": "In game terms, this State works like the Unconscious State with the\r\nfollowing features:\r\n► Rather than placing an Unconscious State Token besides the\r\nTrooper, a Shasvastii Embryo State Token is placed instead.\r\n► The Trooper counts as being in a non-Null state when computing\r\nVictory Points, and they do not count as Troopers eliminated by the\r\nenemy.",
+        "activation": "► The Trooper with the Shasvastii Special Skill enters\r\nUnconscious State."
+    },
+    {
+        "id": "29",
+        "page": "76",
+        "idTitle": "specops",
+        "title": "Specialist Operative",
+        "type": "Automatic Skill",
+        "trait": "Optional.",
+        "effect": "► Playing a mission or a scenario, the user of this Special Skill is\r\nconsidered to be a Specialist Troop and may use the special rules\r\nthe mission or scenario specifies for this type of Trooper.\r\n► The user of this Special Skill will be considered to be a Specialist\r\nTroop, even if he doesn’t fulfill any of the defining characteristics\r\nof this type of Trooper (not being an Engineer, Doctor, Hacker, etc.)\r\nin the scenario rules."
+    },
+    {
+        "id": "30",
+        "page": "77",
+        "idTitle": "superjump",
+        "title": "Super Jump",
+        "type": "Automatic Skill",
+        "trait": "Movement, Optional.",
+        "effect": "► This Special Skill alters the user’s Jump Skill from an Entire Order\r\nSkill to a Short Movement Skill.\r\n► It also allows Troopers to jump vertically, diagonally or horizontally,\r\nup to his first MOV Attribute value in inches if declaring Jump as\r\na Short Movement Skill, and up to his second MOV Attribute value\r\nif declaring a second Jump as a Short Movement Skill.\r\n► By transforming Jump into a Short Movement Skill, the Super-Jump\r\nSpecial Skill allows its user to perform other Short Movement Skills\r\nor Short Skills while performing a jump (for example: Jump + BS\r\nAttack). (See Trooper Activation, p. 22).\r\n► The user of this Special Skill may declare Jump as an Entire Order\r\nby adding both values of their MOV Attribute into a single jump.\r\n► As with the Jump Skill, by declaring Jump Troopers with\r\nSuper-Jump are not benefitted by Partial Cover MODs during their\r\ntrajectory of their jump."
+    },
+    {
+        "id": "31",
+        "page": "77",
+        "idTitle": "totalreact",
+        "title": "Total Reaction",
+        "type": "Automatic Skill",
+        "trait": "Optional.",
+        "effect": "► When performing a BS Attack ARO, the user may use the full Burst\r\n(B) of their weapon.\r\n► AROs must choose one of the Troopers activated by the Order\r\nas their target."
     }
-    
 ];
 export const EQUIPMENT = [
     {
@@ -1044,5 +2073,37 @@ export const EQUIPMENT = [
         "type": "SHORT SKILL",
         "trait": "Non-Lethal.",
         "effect": "► This Visor reduces the MOD of Mimetism (-3) from -3 to 0.\r\n► It also reduces the MOD of Mimetism (-6) from -6 to -3."
+    },
+    {
+        "id": "4",
+        "idTitle": "360visor",
+        "title": "360º VISOR",
+        "type": "AUTOMATIC EQUIPMENT",
+        "trait": "Obligatory.",
+        "effect": "► This type of Visor provides its user with a 360˚ LoF arc, rather than\r\nthe usual 180˚ arc."
+    },
+    {
+        "id": "5",
+        "idTitle": "mvisor2",
+        "title": "MULTISPECTRAL VISOR LEVEL 2",
+        "type": "AUTOMATIC EQUIPMENT",
+        "trait": "Obligatory.",
+        "effect": "► Reduces Mimetism-imposed MODs to 0."
+    },
+    {
+        "id": "6",
+        "idTitle": "mvisor3",
+        "title": "MULTISPECTRAL VISOR LEVEL 3",
+        "type": "AUTOMATIC EQUIPMENT",
+        "trait": "Obligatory.",
+        "effect": "► Reduces Mimetism-imposed MODs to 0.\r\n► When declaring Discover against a target in the Camouflaged State,\r\nthe user of this piece of Equipment automatically passes, without\r\nneed for a Roll, any necessary WIP Rolls against that target.\r\n► Users of a Multispectral Visor L3 ignore Surprise Attack MODs if they\r\nhave LoF to the attacker. In addition, they also ignore Surprise Attack\r\nMODs from CC Attacks even if they don’t have LoF to the attacker."
+    },
+    {
+        "id": "7",
+        "idTitle": "nanoscreen",
+        "title": "NANOSCREEN",
+        "type": "AUTOMATIC EQUIPMENT",
+        "trait": "Obligatory.",
+        "effect": "► In game terms, a Nanoscreen provides its user with 360˚ Partial\r\nCover, providing the Trooper with the corresponding MODs for\r\nPartial Cover, which cannot be added to other Cover MODs.\r\n► To represent the Nanoscreen, the player must place a Nanoscreen\r\nToken in Silhouette contact with the user.\r\n► This device cannot be used against CC Attacks."
     }
 ];
