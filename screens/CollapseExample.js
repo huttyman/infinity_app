@@ -48,7 +48,7 @@ const equipmentItem = (equipmentId, index, length, toggleModalVisibility) => {
   }
 
   const equipmentObject = EQUIPMENT.filter(item => item.titleId == equipmentId);
-  return (<Text style={styles.listTitle}><TouchableOpacity
+  return (<Text><TouchableOpacity
     style={styles.openButton}
     onPress={() => {
       toggleModalVisibility(equipmentId, "equipment");
@@ -63,7 +63,7 @@ const skillItem = (skillId, index, length, toggleModalVisibility) => {
   }
 
   const skillObject = SKILL.filter(item => item.titleId == skillId);
-  return (<Text style={styles.listTitle}>
+  return (<Text>
     <TouchableOpacity
       style={styles.openButton}
       onPress={() => {
@@ -442,8 +442,7 @@ const styles = StyleSheet.create({
   headerSizeText: {
     flex: 1,
     textAlign: "right",
-    fontSize: 16,
-    fontWeight: '500',
+    fontSize: 14,
     color: Color.mainBlack,
     paddingRight: 7,
     paddingTop: 3,

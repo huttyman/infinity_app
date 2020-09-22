@@ -3,7 +3,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 import CollapseExample from '../screens/CollapseExample';
 import CollapseMainExample from '../screens/CollapseMainExample';
-import { createBottomTabNavigator } from 'react-navigation-tabs';
+import { createBottomTabNavigator,createMaterialTopTabNavigator } from 'react-navigation-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import Colors from '../templates/Colors';
 import ArmyScreen from '../screens/ArmyScreen';
@@ -20,7 +20,7 @@ const AllCartStackNavigator = createStackNavigator({
     Army: {
         screen: ArmyScreen,
         navigationOptions: {
-            headerTitle: "Army selection [CODE ONE] v2.6b",
+            headerTitle: "Army selection [CODE ONE] v2.7b",
             headerStyle: {
                 backgroundColor: Colors.mainGrey,
                 height: 40,

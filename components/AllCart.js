@@ -73,7 +73,7 @@ const unitTraitContainer = (item,toggleModalVisibility) => {
     }
 
     return (
-        <View>
+        <View style={{paddingTop:5}}>
             {skillText}
             {equipmentText}
         </View>
@@ -246,6 +246,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: '3%',
         width: '100%',
         backgroundColor: Color.mainWhite,
+        paddingVertical: 5,
     },
     cardContainer: {
         width: '100%',

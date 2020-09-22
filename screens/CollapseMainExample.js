@@ -82,11 +82,11 @@ export default class CollapseMainExample extends Component {
         <View style={{ zIndex: 1, backgroundColor: Color.mainBlack, borderRadius: 45, maxWidth: 80, minWidth: 80, flex: 1, borderWidth: 4, borderColor: Color.mainBlack, overflow: "hidden" }}>
           <Image source={require('../assets/logos/' + section.titleId + '.svg')} style={{ height: 70, width: 70 }} />
         </View>
-        <View style={{ zIndex: 0, margin: 2, backgroundColor: Color.mainGrey, flex: 6, alignItems: "flex-start", marginLeft: -40, paddingLeft: 50, paddingVertical: 20, justifyContent: "center" }}>
-          <Text style={styles.headerText}>{section.shortTitle}</Text>
+        <View style={{ zIndex: 0, margin: 2, backgroundColor: Color.mainGrey, flex: 6, alignItems: "flex-start", marginLeft: -40, paddingLeft: 50, paddingVertical: 3, justifyContent: "center" }}>
+          <Text style={styles.headerText}>{section.title}</Text>
         </View>
         <View style={{ margin: 2, backgroundColor: Color.mainGrey, borderTopRightRadius: 13, borderBottomRightRadius: 13, flex: 1, alignItems: "center", justifyContent: "center" }}>
-          <Text style={[styles.headerText, { textTransform: "uppercase" }]}>{section.size}</Text>
+          <Text style={[styles.headerText, { textTransform: "uppercase",textAlign: "center",fontSize:14 }]}>{section.size}</Text>
         </View>
 
       </Animatable.View>
@@ -181,9 +181,8 @@ const styles = StyleSheet.create({
     padding: 3,
   },
   headerText: {
-    textAlign: 'center',
-    fontSize: 18,
-    fontWeight: '500',
+    textAlign: 'left',
+    fontSize: 16,
     color: Color.mainWhite,
   },
   content: {
