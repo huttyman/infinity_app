@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/infinity_app/static/js/app.a0d4dc1e.chunk.js",
-    "app.js.map": "/infinity_app/static/js/app.a0d4dc1e.chunk.js.map",
+    "app.js": "/infinity_app/static/js/app.5b59cd3b.chunk.js",
+    "app.js.map": "/infinity_app/static/js/app.5b59cd3b.chunk.js.map",
     "runtime~app.js": "/infinity_app/static/js/runtime~app.66033198.js",
     "runtime~app.js.map": "/infinity_app/static/js/runtime~app.66033198.js.map",
-    "static/js/2.ce614821.chunk.js": "/infinity_app/static/js/2.ce614821.chunk.js",
-    "static/js/2.ce614821.chunk.js.map": "/infinity_app/static/js/2.ce614821.chunk.js.map",
+    "static/js/2.2370b178.chunk.js": "/infinity_app/static/js/2.2370b178.chunk.js",
+    "static/js/2.2370b178.chunk.js.map": "/infinity_app/static/js/2.2370b178.chunk.js.map",
     "fonts/AntDesign.ttf": "/infinity_app/./fonts/AntDesign.ttf",
     "fonts/Entypo.ttf": "/infinity_app/./fonts/Entypo.ttf",
     "fonts/Feather.ttf": "/infinity_app/./fonts/Feather.ttf",
@@ -24,11 +24,22 @@
     "index.html": "/infinity_app/index.html",
     "manifest.json": "/infinity_app/manifest.json",
     "serve.json": "/infinity_app/serve.json",
-    "static/js/2.ce614821.chunk.js.LICENSE.txt": "/infinity_app/static/js/2.ce614821.chunk.js.LICENSE.txt",
+    "static/js/2.2370b178.chunk.js.LICENSE.txt": "/infinity_app/static/js/2.2370b178.chunk.js.LICENSE.txt",
     "static/media/bell.png": "/infinity_app/static/media/bell.cf04af27.png",
+    "static/media/climb1.PNG": "/infinity_app/static/media/climb1.65f67b97.PNG",
+    "static/media/climb2.PNG": "/infinity_app/static/media/climb2.0746fd7f.PNG",
+    "static/media/cover1.PNG": "/infinity_app/static/media/cover1.2b29e1b2.PNG",
+    "static/media/cover2.PNG": "/infinity_app/static/media/cover2.eddd171d.PNG",
+    "static/media/cover3.PNG": "/infinity_app/static/media/cover3.516cabda.PNG",
     "static/media/gun.png": "/infinity_app/static/media/gun.b8a50bd2.png",
     "static/media/heart.png": "/infinity_app/static/media/heart.23b5c2c0.png",
+    "static/media/jump1.PNG": "/infinity_app/static/media/jump1.81c8be6d.PNG",
     "static/media/ltToken.png": "/infinity_app/static/media/ltToken.74fce08e.png",
+    "static/media/move1.PNG": "/infinity_app/static/media/move1.ecad6857.PNG",
+    "static/media/move2.PNG": "/infinity_app/static/media/move2.b280f47a.PNG",
+    "static/media/move3.PNG": "/infinity_app/static/media/move3.ad539206.PNG",
+    "static/media/move4.PNG": "/infinity_app/static/media/move4.51e3b8cc.PNG",
+    "static/media/move5.PNG": "/infinity_app/static/media/move5.787ad4de.PNG",
     "static/media/pa-akalis.svg": "/infinity_app/static/media/pa-akalis.0e1eafbf.svg",
     "static/media/pa-aquila.svg": "/infinity_app/static/media/pa-aquila.e5564f9f.svg",
     "static/media/pa-boyg.svg": "/infinity_app/static/media/pa-boyg.e1159182.svg",
@@ -82,7 +93,7 @@
   },
   "entrypoints": [
     "static/js/runtime~app.66033198.js",
-    "static/js/2.ce614821.chunk.js",
-    "static/js/app.a0d4dc1e.chunk.js"
+    "static/js/2.2370b178.chunk.js",
+    "static/js/app.5b59cd3b.chunk.js"
   ]
 }
