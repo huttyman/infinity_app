@@ -9,7 +9,9 @@ const TopicContainer = props => {
     return (
         <View style={styles.topicContainer}>
             <Text>{props.data.desc}</Text>
-            <Image source={require('../../assets/tutorial/'+props.data.image)} resizeMode="cover" style={styles.tutorImage} />
+            <View style={{width:'100%',alignItems:"center"}}>
+            <Image source={require('../../assets/tutorial/'+props.data.image)}   style={{width: 300 ,height: (props.data.imageSize.height/props.data.imageSize.width)*300}} />
+            </View>
         </View>
     );
 };
