@@ -23,7 +23,7 @@ const AllOrderScreen = props => {
             <Button style={styles.orderButton} title={i18n.t('all_order_screen.Explain Unit Stat')} onPress={() => props.navigation.navigate({ routeName: 'ExplainStat' })} />
                 {/* <Button style={styles.orderButton} title={i18n.t('all_order_screen.How to roll dice?')} onPress={() => {Linking.openURL('https://www.facebook.com/wgcinfinitythailand/photos/ms.c.eJw9jssJAFEIAzta~;Ef7b2xByTsOyWgUPjEdYSLu~;ulyGtK9pskhXRAXcl9u5Fq~;lDzLSb9sfWO~;8vLHvvca5Nq~_Pv~;~_NfvQy7kXsveCPm6vci9yWYZ8e4N7MZfn4~;0H5q3LNT~_~_Nz3t.bps.a.173949520867032/173949844200333/?type=3&theater'); }} /> */}
                 <Button style={styles.orderButton} title={i18n.t('all_order_screen.Teach Order')} onPress={() => props.navigation.navigate({ routeName: 'Teaching' })} />
-                <Button style={styles.orderButton} title="Action tutorial" onPress={() => props.navigation.navigate({ routeName: 'MoveTutorial' })} />
+                <Button style={styles.orderButton} title="Action tutorial" onPress={() => props.navigation.navigate({ routeName: 'AllTutorial' })} />
                 {/* <Button style={styles.orderButton}  title={i18n.t('all_order_screen.Action Summary')} onPress={() => props.navigation.navigate({ routeName: 'Order' })} /> */}
                 {/* <Button title="Turn order summary" onPress={()=>{}}/>
                 <Button title="All keyword" onPress={()=>{}}/> */}

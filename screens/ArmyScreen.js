@@ -54,7 +54,6 @@ export default class ArmyScreen extends Component {
         return (
             
             <TouchableOpacity onPress={()=>{
-                    console.log('test');
                     this.props.navigation.navigate({ routeName: 'AllCartScreen',params:{armyId:section.section.id} });
                     }}>
                 <View key={section.section.id} style={styles.header} >

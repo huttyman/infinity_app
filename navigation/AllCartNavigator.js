@@ -16,6 +16,7 @@ import ActionOrderScreen from '../screens/ActionOrderScreen';
 import ActionOrderScreenTH from '../screens/ActionOrderScreenTH';
 import ExplainStat from '../screens/teaching/ExplainStat';
 import MoveTutorialScreen from '../screens/teaching/MoveTutorialScreen'
+import AllTutorialScreen from '../screens/teaching/AllTutorialScreen';
 
 const AllCartStackNavigator = createStackNavigator({
     Army: {
@@ -63,9 +64,18 @@ const OrderSummaryStackNavigator = createStackNavigator({
             },
         },
     },
+    AllTutorial: AllTutorialScreen,
     ExplainStat: ExplainStat,
     Order: SummaryOrderScreen,
-    MoveTutorial: MoveTutorialScreen,
+    MoveTutorial:{
+        screen: MoveTutorialScreen,
+        navigationOptions: {
+            headerTitle: "Tutorial",
+            headerStyle: {
+                height: 35,
+            },
+        },
+    },
     Teaching:{
         screen: TeachOrderScreen,
         navigationOptions: {
