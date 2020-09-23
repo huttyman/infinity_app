@@ -3,7 +3,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 import CollapseExample from '../screens/CollapseExample';
 import CollapseMainExample from '../screens/CollapseMainExample';
-import { createBottomTabNavigator,createMaterialTopTabNavigator } from 'react-navigation-tabs';
+import { createBottomTabNavigator,createMaterialTopTabNavigator, } from 'react-navigation-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import Colors from '../templates/Colors';
 import ArmyScreen from '../screens/ArmyScreen';
@@ -14,21 +14,23 @@ import TurnOrderScreen from '../screens/TurnOrderScreen';
 import TurnOrderScreenTH from '../screens/TurnOrderScreenTH';
 import ActionOrderScreen from '../screens/ActionOrderScreen';
 import ActionOrderScreenTH from '../screens/ActionOrderScreenTH';
-import TeachOrderScreenTH from '../screens/TeachOrderScreenTH';
+import ExplainStat from '../screens/teaching/ExplainStat';
+import MoveTutorialScreen from '../screens/teaching/MoveTutorialScreen'
 
 const AllCartStackNavigator = createStackNavigator({
     Army: {
         screen: ArmyScreen,
         navigationOptions: {
-            headerTitle: "Army selection [CODE ONE] v2.8b",
+            headerTitle: "Army selection [CODE ONE] v2.8f",
             headerStyle: {
                 backgroundColor: Colors.mainGrey,
-                height: 40,
+                height: 35,
                 borderColor: Colors.mainGrey,
                 borderWidth: 0,
             },
             headerTitleStyle: {
                 color: Colors.mainWhite,
+                fontSize:16,
             },
         },
     },
@@ -38,12 +40,13 @@ const AllCartStackNavigator = createStackNavigator({
             headerTitle: "Unit selection",
             headerStyle: {
                 backgroundColor: Colors.mainGrey,
-                height: 40,
+                height: 35,
                 borderColor: Colors.mainGrey,
                 borderWidth: 0,
             },
             headerTitleStyle: {
                 color: Colors.mainWhite,
+                fontSize:16,
             },
             headerTintColor: Colors.mainWhite,
         },
@@ -60,18 +63,11 @@ const OrderSummaryStackNavigator = createStackNavigator({
             },
         },
     },
+    ExplainStat: ExplainStat,
     Order: SummaryOrderScreen,
+    MoveTutorial: MoveTutorialScreen,
     Teaching:{
         screen: TeachOrderScreen,
-        navigationOptions: {
-            headerTitle: "Teaching",
-            headerStyle: {
-                height: 35,
-            },
-        },
-    },
-    TeachingTH:{
-        screen: TeachOrderScreenTH,
         navigationOptions: {
             headerTitle: "Teaching",
             headerStyle: {
@@ -144,7 +140,9 @@ const AllCartTabNavigator = createBottomTabNavigator({
                 defaultHandler();
             },
 
-        }
+
+        },
+        
     },
     Order: {
         screen: OrderSummaryStackNavigator, navigationOptions: {
@@ -159,8 +157,11 @@ const AllCartTabNavigator = createBottomTabNavigator({
     tabBarOptions: {
         activeTintColor: '#ffffff',
         activeBackgroundColor: Colors.mainBlack,
-        style: { backgroundColor: Colors.mainGrey }
-    }
+        style: { backgroundColor: Colors.mainGrey },
+        
+    },
+    
+
 });
 
 

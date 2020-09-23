@@ -81,7 +81,7 @@ const DiscoverCard = props => {
                     <Text style={styles.troopTitleText}>Discover</Text>
                 </View>
             </View>
-            <View style={[styles.detailContainer, { paddingBottom: 10 }]}>
+            <View style={[styles.detailContainer, { paddingBottom: 10,paddingTop:5 }]}>
                 <View style={styles.rowContainer}>
                     <View style={styles.rowWidth}><Text>Short</Text></View>
                     <View style={styles.rowWidth}><Text>Medium</Text></View>
@@ -293,14 +293,14 @@ const styles = StyleSheet.create({
     },
     troopTitle: {
         paddingHorizontal: 10,
-        paddingVertical: 3,
+        paddingVertical: 5,
         backgroundColor: Color.mainGrey,
         width: '100%',
         borderTopRightRadius: 45
 
     },
     troopTitleText: {
-        fontSize: 18,
+        fontSize: 16,
         color: 'white',
     },
     rowBodyText: {

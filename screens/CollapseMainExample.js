@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 //import react in our project
 import {
   Switch,
-  ScrollView,
   StyleSheet,
   Text,
   View,
@@ -21,6 +20,7 @@ import AllCart from '../components/AllCart';
 import Color from '../templates/Colors'
 import ScoreTitle from '../components/ScoreTitle';
 import ClickModal from '../components/ClickModal';
+import { ScrollView } from 'react-native-gesture-handler';
 //Dummy content to show
 //You can also use dynamic data by calling webservice
 
@@ -86,7 +86,7 @@ export default class CollapseMainExample extends Component {
           <Text style={styles.headerText}>{section.title}</Text>
         </View>
         <View style={{ margin: 2, backgroundColor: Color.mainGrey, borderTopRightRadius: 13, borderBottomRightRadius: 13, flex: 1, alignItems: "center", justifyContent: "center" }}>
-          <Text style={[styles.headerText, { textTransform: "uppercase",textAlign: "center",fontSize:14 }]}>{section.size}</Text>
+          <Text style={[styles.headerText, { textTransform: "uppercase",textAlign: "center",fontSize:14 }]}>{section.size}{section.isHackable == "TRUE" ? ', HA' : ''}{section.isPeriperial == "TRUE" ? ', Per' : ''}</Text>
         </View>
 
       </Animatable.View>
@@ -123,10 +123,10 @@ export default class CollapseMainExample extends Component {
         />
 
         {/* score count header*/}
-        <View style={{ backgroundColor: Color.mainGrey, paddingHorizontal: 15, paddingBottom: 15 }}>
+        <View style={{ backgroundColor: Color.mainGrey, paddingHorizontal: 15,height:25 }}>
           <ScoreTitle />
         </View>
-        <ScrollView contentContainerStyle={{ paddingTop: 5 }}>
+        <ScrollView nestedScrollEnabled={true} contentContainerStyle={{ paddingTop: 5 }}>
 
           <View style={styles.multipleToggle}>
             <Text style={styles.multipleToggle__title}>

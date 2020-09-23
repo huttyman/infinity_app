@@ -1,11 +1,13 @@
 export const EN_lang =  {
     all_order_screen:{
-        "Donate": "Donate",
-        "Teach Order": "Teach Order",
+        "Donate": "Support/Donate",
+        "Teach Order": "All Action / Turn Order",
         "Teach Order RouteName": "Teaching",
-        "Action Summary": "Action Summary",
+        "Action Summary": "All Action / Turn Order",
         "Report bug / Suggestion": "Report bug / Suggestion",
         "Activity page/Change log": "Activity page/Change log",
+        "Explain Unit Stat": "Explain Unit profile/Weapon/Ammo",
+        "How to roll dice?": "How to roll dice?",
         teach_order_screen: {
             " = Choose both action in any order": " = Choose both action in any order",
             "Move/Idle/Discovery": "Move/Idle/\nDiscovery",

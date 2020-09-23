@@ -53,7 +53,7 @@ const equipmentItem = (equipmentId, index, length, toggleModalVisibility) => {
     onPress={() => {
       toggleModalVisibility(equipmentId, "equipment");
     }}
-  ><Text>{equipmentObject[0].title}</Text></TouchableOpacity>{endText} </Text>);
+  ><Text><Text style={styles.listTitle}>{equipmentObject[0].title}</Text></Text></TouchableOpacity>{endText} </Text>);
 };
 
 const skillItem = (skillId, index, length, toggleModalVisibility) => {
@@ -69,7 +69,7 @@ const skillItem = (skillId, index, length, toggleModalVisibility) => {
       onPress={() => {
         toggleModalVisibility(skillId, "skill");
       }}
-    ><Text>{skillObject[0].title}</Text></TouchableOpacity>{endText} </Text>);
+    ><Text><Text style={styles.listTitle}>{skillObject[0].title}</Text></Text></TouchableOpacity>{endText} </Text>);
 };
 
 //To make the selector (Something like tabs)
@@ -248,7 +248,7 @@ export default class CollapseExampleTestTemplate extends Component {
         transition="backgroundColor">
         <View style={styles.headerTopTitle}>
           <Text style={styles.headerText}>{unitItem.shortTitle}</Text><TextInput style={{ height: '90%', width: 70, color: Color.mainBlack, textAlign: "right", borderBottomColor: Color.mainBlack, borderBottomWidth: 1, fontSize: 16 }} />
-          <Text style={styles.headerSizeText}>{unitItem.size.toUpperCase()}{unitItem.isHackable == "TRUE" ? ',HA' : ''}</Text>
+          <Text style={styles.headerSizeText}>{unitItem.size.toUpperCase()}{unitItem.isHackable == "TRUE" ? ', HA' : ''}{unitItem.isPeriperial == "TRUE" ? ', Per' : ''}</Text>
           <Button
             style={styles.headerRemoveButton}
             icon={
@@ -313,7 +313,7 @@ export default class CollapseExampleTestTemplate extends Component {
         modalText={this.state.modalText}
         />
 
-        <View style={{ backgroundColor: Color.mainGrey, padding: 15 }}>
+        <View style={{ backgroundColor: Color.mainGrey, paddingHorizontal: 15, height:35,justifyContent:"center" }}>
           <ScoreTitle />
         </View>
         <ScrollView contentContainerStyle={{ paddingTop: 3 }}>
@@ -394,7 +394,7 @@ export default class CollapseExampleTestTemplate extends Component {
 const styles = StyleSheet.create({
   headerDetailText: {
     alignContent: "flex-start",
-    paddingVertical: 0,
+    paddingVertical: 2,
   },
   headerDetailContainer: {
     flexDirection: "row",

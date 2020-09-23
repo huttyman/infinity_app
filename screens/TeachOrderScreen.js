@@ -24,7 +24,7 @@ const TeachOrderScreen = props => {
     return (
         <ScrollView>
 
-            <View style={{ justifyContent: "space-around", flexDirection: "row",padding:5 }}>
+            <View style={{ justifyContent: "space-around", flexDirection: "row",padding:10 }}>
                 <TouchableOpacity  onPress={()=>{props.navigation.navigate({ routeName: i18n.t("all_order_screen.teach_order_screen.Turn Order RouteName") });}}>
                     <Text style={{textDecorationLine:"underline"}}>{i18n.t("all_order_screen.teach_order_screen.Turn Order")}</Text>
                 </TouchableOpacity>
@@ -33,7 +33,7 @@ const TeachOrderScreen = props => {
                 </TouchableOpacity>
             </View>
             <View>
-                <View style={{ width: '100%', backgroundColor: 'white',paddingTop:5 }}>
+                <View style={{ width: '100%', backgroundColor: 'white',paddingTop:20 ,paddingBottom:0}}>
                     <Text style={{ width: '100%', textAlign: "center", padding: 5, backgroundColor: 'white' }}><Text style={{ color: "red" }}>1 Order</Text>{i18n.t('all_order_screen.teach_order_screen. = Choose both action in any order')}</Text>
                 </View>
                 <View style={styles.cardContainer}>
@@ -87,6 +87,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         width: '100%',
         backgroundColor: 'white',
+        paddingBottom: 20,
 
     },
     card: {

@@ -8,7 +8,7 @@ const ScoreTitle = props => {
 
       return(
             
-        <Text style={{textAlign:"right", color:Color.mainWhite, fontSize:16}} >
+        <Text style={{textAlign:"right", color:Color.mainWhite, fontSize:14}} >
             Unit: <Text style={{fontWeight:"bold"}}>{global.unit} </Text> 
       SWC: <Text style={{fontWeight:"bold"}}>{global.swc}/6 </Text> 
             Point: <Text style={{fontWeight:"bold"}}>{global.points}/30 </Text>

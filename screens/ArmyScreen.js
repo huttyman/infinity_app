@@ -15,6 +15,7 @@ import { ARMY_UNIT, ARMY } from '../datas/data-unit';
 import AllCart from '../components/AllCart';
 import Color from '../templates/Colors'
 import ScoreTitle from '../components/ScoreTitle';
+import { ScrollView } from 'react-native-gesture-handler';
 //Dummy content to show
 //You can also use dynamic data by calling webservice
 
@@ -49,7 +50,6 @@ export default class ArmyScreen extends Component {
 
     renderHeader = (section, _, isActive) => {
         //Accordion Header view
-        console.log(this);
 
         return (
             
@@ -96,14 +96,17 @@ export default class ArmyScreen extends Component {
             <View style={styles.container}>
 
                 {/* score count header*/}
-                <View style={{ backgroundColor: Color.mainGrey,  paddingHorizontal:15,paddingBottom:15,marginBottom:3}}>
+                
+                <View style={{ backgroundColor: Color.mainGrey, paddingHorizontal: 15,height:25 }}>
                     <ScoreTitle />
                 </View>
-
-                {ARMY.map((army) => {
+                
+                <ScrollView>
+                {ARMY.map((army) => {   
                     return (<this.renderHeader key={army.id} section={army} />)
                 })}
-
+                
+                </ScrollView>
 
             </View>
         );

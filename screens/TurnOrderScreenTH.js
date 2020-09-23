@@ -40,7 +40,7 @@ const TurnOrderScreenTH = props => {
                         <View style={styles.bodyLine}>
                             <Text style={styles.indent}></Text>
                             <Text style={styles.bodyTextTopic}>2.1</Text>
-                            <Text style={styles.bodyTextDesc}>ประกาศ<Bold>first action</Bold>(เช่น ถ้าเดินให้วัดระยะ และให้วางมินิที่ปลายทางที่จะเดิน หรือ ถ้ายิง ก็ประกาศว่าจะยิงใครด้วยปืนอะไร เป้นต้น).</Text>
+                            <Text style={styles.bodyTextDesc}>ประกาศ<Bold>first action</Bold>(เช่น ถ้าเดินให้วัดระยะหลังประกาศว่าจะไปที่ไหนแล้วและให้วางมินิที่ปลายทางที่จะเดิน หรือ ถ้ายิง ก็ประกาศว่าจะยิงใครด้วยปืนอะไร เป้นต้น).</Text>
                         </View>
                         <View style={styles.bodyLine}>
                             <Text style={styles.indent}></Text>
@@ -60,7 +60,7 @@ const TurnOrderScreenTH = props => {
                         <View style={styles.bodyLine}>
                             <Text style={styles.indent}></Text>
                             <Text style={styles.bodyTextTopic}>2.5</Text>
-                            <Text style={styles.bodyTextDesc}><Bold>Resolve</Bold> – <RedText>ทอยเต๋าทั้งหมด</RedText> ที่ทำใน 2action ที่ประกาศไว้ (เราจะสามารถวัดไม้บรรทัดระยะยิง พร้อม +/- mod ในstepนี้เท่านั้น).</Text>
+                            <Text style={styles.bodyTextDesc}><Bold>Resolve</Bold> – <RedText>ทอยเต๋าทั้งหมด</RedText> ที่ทำใน 2action ที่ประกาศไว้ (เราจะสามารถวัดไม้บรรทัดระยะยิง พร้อม +/- mod และ Alert ในstepนี้).</Text>
                         </View>
                         <View style={styles.bodyLine}>
                             <Text style={styles.bodyTextTopic}>3.</Text>
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     },
     bodyLine: {
         flexDirection: "row",
-        paddingBottom: 5,
+        paddingBottom: 10,
     },
     bodyTextTopic: {
         width: 35,

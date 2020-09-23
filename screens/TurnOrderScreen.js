@@ -35,7 +35,7 @@ const TurnOrderScreen = props => {
                         <View style={styles.bodyLine}>
                             <Text style={styles.indent}></Text>
                             <Text style={styles.bodyTextTopic}>2.1</Text>
-                            <Text style={styles.bodyTextDesc}>Declare <Bold>first action</Bold> (i.e. if move, measure after declare and put miniature there. If attack, tell them attack who).</Text>
+                            <Text style={styles.bodyTextDesc}>Declare <Bold>first action</Bold> (i.e. if move, measure after declare where to move and put miniature there. If attack, tell them attack who).</Text>
                         </View>
                         <View style={styles.bodyLine}>
                             <Text style={styles.indent}></Text>
@@ -55,7 +55,7 @@ const TurnOrderScreen = props => {
                         <View style={styles.bodyLine}>
                             <Text style={styles.indent}></Text>
                             <Text style={styles.bodyTextTopic}>2.5</Text>
-                            <Text style={styles.bodyTextDesc}><Bold>Resolve</Bold> – <RedText>Roll dice</RedText> both first and second action here (measure gun range and apply mod in this step).</Text>
+                            <Text style={styles.bodyTextDesc}><Bold>Resolve</Bold> – <RedText>Roll dice</RedText> both first and second action here (measure gun range, apply mod and do Alert in this step).</Text>
                         </View>
                         <View style={styles.bodyLine}>
                             <Text style={styles.bodyTextTopic}>3.</Text>
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     },
     bodyLine: {
         flexDirection: "row",
-        paddingBottom: 5,
+        paddingBottom: 10,
     },
     bodyTextTopic: {
         width: 35,

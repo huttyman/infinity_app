@@ -84,6 +84,21 @@ const ActionOrderScreen = props => {
                     </View>
                 </View>
             </View>
+            <View style={styles.topicContainer}>
+                <Text>Attack</Text>
+                <View style={styles.topicCotent}>
+
+                </View>
+
+            </View>
+            <View style={styles.topicContainer}>
+                <Text>ARO</Text>
+                <View style={styles.topicCotent}>
+                    <Text>*everytime your unit see opponent's unit do something (in opponent's unit turn). Your unit(every unit that can see have 1 ARO)</Text>
+                    <Text>*ARO must use same action they see opponent's unit or else you lose ARO for the rest of opponent Order</Text>
+                    <Text>*ARO regenerate everytime opponent use new Order</Text>
+                </View>
+            </View>
         </ScrollView>
 
         
