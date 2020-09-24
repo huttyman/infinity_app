@@ -1,7 +1,7 @@
 {
   "files": {
-    "app.js": "/infinity_app/static/js/app.3afc7f32.chunk.js",
-    "app.js.map": "/infinity_app/static/js/app.3afc7f32.chunk.js.map",
+    "app.js": "/infinity_app/static/js/app.659ce497.chunk.js",
+    "app.js.map": "/infinity_app/static/js/app.659ce497.chunk.js.map",
     "runtime~app.js": "/infinity_app/static/js/runtime~app.66033198.js",
     "runtime~app.js.map": "/infinity_app/static/js/runtime~app.66033198.js.map",
     "static/js/2.b79dde8b.chunk.js": "/infinity_app/static/js/2.b79dde8b.chunk.js",
@@ -101,6 +101,6 @@
   "entrypoints": [
     "static/js/runtime~app.66033198.js",
     "static/js/2.b79dde8b.chunk.js",
-    "static/js/app.3afc7f32.chunk.js"
+    "static/js/app.659ce497.chunk.js"
   ]
 }
