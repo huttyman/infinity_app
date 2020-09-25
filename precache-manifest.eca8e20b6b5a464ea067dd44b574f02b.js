@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "74e18df58a1ff2b9c872",
-    "url": "/infinity_app/static/js/app.6488b835.chunk.js"
+    "revision": "e8b1a4cbe4f3409cc6a6",
+    "url": "/infinity_app/static/js/app.5c0881cb.chunk.js"
   },
   {
     "revision": "910ec9977756ac925f1c",
@@ -440,7 +440,7 @@ self.__precacheManifest = [
     "url": "/infinity_app/static/media/rangeCombat1.efeb8f7b.PNG"
   },
   {
-    "revision": "8bade1d5b8aa730c4f7a8c9f3c2d819f",
+    "revision": "f362f8a7f3809ceed4aa3a0b941a7396",
     "url": "/infinity_app/index.html"
   },
   {
