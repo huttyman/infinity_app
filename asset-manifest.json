@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/infinity_app/static/js/app.1a6ab88a.chunk.js",
-    "app.js.map": "/infinity_app/static/js/app.1a6ab88a.chunk.js.map",
+    "app.js": "/infinity_app/static/js/app.6488b835.chunk.js",
+    "app.js.map": "/infinity_app/static/js/app.6488b835.chunk.js.map",
     "runtime~app.js": "/infinity_app/static/js/runtime~app.66033198.js",
     "runtime~app.js.map": "/infinity_app/static/js/runtime~app.66033198.js.map",
-    "static/js/2.9074ca18.chunk.js": "/infinity_app/static/js/2.9074ca18.chunk.js",
-    "static/js/2.9074ca18.chunk.js.map": "/infinity_app/static/js/2.9074ca18.chunk.js.map",
+    "static/js/2.d7e2a437.chunk.js": "/infinity_app/static/js/2.d7e2a437.chunk.js",
+    "static/js/2.d7e2a437.chunk.js.map": "/infinity_app/static/js/2.d7e2a437.chunk.js.map",
     "fonts/AntDesign.ttf": "/infinity_app/./fonts/AntDesign.ttf",
     "fonts/Entypo.ttf": "/infinity_app/./fonts/Entypo.ttf",
     "fonts/Feather.ttf": "/infinity_app/./fonts/Feather.ttf",
@@ -24,7 +24,7 @@
     "index.html": "/infinity_app/index.html",
     "manifest.json": "/infinity_app/manifest.json",
     "serve.json": "/infinity_app/serve.json",
-    "static/js/2.9074ca18.chunk.js.LICENSE.txt": "/infinity_app/static/js/2.9074ca18.chunk.js.LICENSE.txt",
+    "static/js/2.d7e2a437.chunk.js.LICENSE.txt": "/infinity_app/static/js/2.d7e2a437.chunk.js.LICENSE.txt",
     "static/media/bell.png": "/infinity_app/static/media/bell.cf04af27.png",
     "static/media/cb-caliban.svg": "/infinity_app/static/media/cb-caliban.da0665e8.svg",
     "static/media/cb-gwailo.svg": "/infinity_app/static/media/cb-gwailo.084499a6.svg",
@@ -123,7 +123,7 @@
   },
   "entrypoints": [
     "static/js/runtime~app.66033198.js",
-    "static/js/2.9074ca18.chunk.js",
-    "static/js/app.1a6ab88a.chunk.js"
+    "static/js/2.d7e2a437.chunk.js",
+    "static/js/app.6488b835.chunk.js"
   ]
 }
