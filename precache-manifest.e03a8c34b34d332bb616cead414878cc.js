@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "57c87eaf9c96ab13c349",
-    "url": "/static/js/app.f200811a.chunk.js"
+    "revision": "64d8b30625673bedbd31",
+    "url": "/static/js/app.e224409e.chunk.js"
   },
   {
     "revision": "66090dc4495d4ce3dfb9",
@@ -440,7 +440,7 @@ self.__precacheManifest = [
     "url": "/static/media/rangeCombat1.efeb8f7b.PNG"
   },
   {
-    "revision": "189c58a03d1618e5ae4a2880a7962809",
+    "revision": "69c015906835593fbbc7ffa86f300e87",
     "url": "/index.html"
   },
   {
